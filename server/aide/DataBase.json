@@ -1,0 +1,256 @@
+
+
+{
+  "create": {
+    "user": {
+      "username":"string",
+      "email": "string",
+      "password":"string",
+      "position":"integer",
+      "isAdmin":"boolean",
+      "isManager":"boolean",
+      "isOperator":"boolean",
+      "isVisitor":"boolean",
+      "isActif":"boolean",
+      "idFactory":"string"
+    },
+    "factory": {
+      "idNode":"string",
+      "position":"integer",
+      "name":"string",
+      "name1":"string",
+      "langue":"string",
+      "address":"string",
+      "currency":"string",
+      "currencyEuro":"string",
+      "isCartography":"boolean",
+      "isTraceability":"boolean",
+      "isOptimisation":"boolean"
+    },
+    "computer": {
+      "idNode":"string",
+      "name":"string",
+      "name1":"string",
+      "position":"integer",
+      "isServerMain":"boolean",
+      "isServerLocal":"boolean",
+      "isComputerLocal":"boolean",
+      "isComputerCarto":"boolean",
+      "idFactory":"string"
+    },
+    "area": {
+      "idNode":"string",
+      "name":"string",
+      "name1":"string",
+      "position":"integer",
+      "menu":"string",
+      "idFactory":"string"
+    },
+    "tankArea": {
+      "idNode":"string",
+      "name":"string",
+      "name1":"string",
+      "position":"integer",
+      "idArea":"string"
+    },
+    "tankAreaDefEmptying": {
+      "idNode":"string",
+      "position":"integer",
+      "name":"string",
+      "name1":"string",
+      "dataComment":"string",
+      "dataType":"string",
+      "options": {
+            "0": {
+              "number": "1",
+              "idTank": "b36b06be.75d61",
+              "inLine": true,
+              "inColl": false,
+              "volCollInlet": "48",
+              "volCollOutlet": "54"
+            },
+            "1": {
+              "number": "2",
+              "idTank": "cbbc3536.158ed8",
+              "inLine": true,
+              "inColl": false,
+              "volCollInlet": "24",
+              "volCollOutlet": "10"
+            }
+      }
+
+    },
+    "tankAreaDefFilling": {
+      "idNode":"string",
+      "position":"integer",
+      "name":"string",
+      "name1":"string"
+    },
+    "server": {
+      "idNode":"string",
+      "position":"integer",
+      "name":"string",
+      "serverType":"string"
+    },
+    "plc": {
+      "idNode":"string",
+      "position":"integer",
+      "name":"string",
+      "name1":"string",
+      "brand":"string",
+      "connection":"string",
+      "slot":"string",
+      "rack":"string",
+      "ip":"string",
+      "idServer":"string",
+      "idArea":"string"
+    },
+    "tank": {
+      "idNode":"string",
+      "name":"string",
+      "name1":"string",
+      "position":"integer",
+      "idTankArea":"string",
+      "idTankDef":"string"
+    },
+    "equip": {
+      "idNode":"string",
+      "name":"string",
+      "name1":"string",
+      "position":"integer",
+      "menu":"string",
+      "idPlc":"string",
+      "idEquipDef":"string"
+    },
+    "digital": {
+      "name":"string",
+      "name1":"string",
+      "tag":"string",
+      "address":"string",
+      "position":"integer",
+      "idEquip":"string",
+      "idTank":"string",
+      "indexCreation":"integer"
+    },
+    "analog": {
+      "name":"string",
+      "name1":"string",
+      "tag":"string",
+      "address":"string",
+      "type":"string",
+      "position":"integer",
+      "idEquip":"string",
+      "idTank":"string",
+      "indexCreation":"integer"
+    },
+    "product": {
+      "name":"string",
+      "position":"integer",
+      "totalSolid":"float",
+      "price":"float",
+      "idFactory":"string"
+    },
+
+    "fonction": {
+      "name":"string",
+      "position":"integer",
+      "idType":"integer",
+      "idAreaSource":"string",
+      "idAreaDest":"string",
+      "freqCheck":"integer",
+      "freqDelay":"integer",
+      "maxLosse":"integer",
+      "haveToBeCheck":"boolean",
+      "haveBeenCheck":"boolean",
+      "modeAutoCheckActif":"boolean",
+      "picture1":"string",
+      "picture2":"string",
+      "idProjectLink":"integer",
+      "projectPosition":"integer",
+      "projectPercentRecovery":"float",
+      "idFactory":"string",
+      "idArea":"string",
+      "idPlc":"string",
+      "idEquip":"string",
+      "idEquipIndex":"integer"
+    },
+    "measure": {
+      "name":"string",
+      "type":"integer",
+      "position":"integer",
+      "comment":"string",
+      "losses":"float",
+      "ts":"float",
+      "measure1":"float",
+      "measure2":"float",
+      "measure3":"float",
+      "ts1":"float",
+      "ts2":"float",
+      "ts3":"float",
+      "idProduct":"string",
+      "idFonction":"string"
+    },
+    "project": {
+      "position": "integer",
+      "name": "string",
+      "type": "integer",
+      "comment": "string",
+      "idOwner": "integer",
+      "priority": "integer",
+      "difficulty": "integer",
+      "idArea": "string",
+      "materialPrice":"float"
+    },
+    "dataProject": {
+      "comment": "string",
+      "position": "integer",
+      "creationDate": "date",
+      "dueDate": "date",
+      "status": "integer",
+      "idProject": "integer"
+    },
+
+    "measureType": {
+      "name":"string",
+      "position":"integer",
+      "value":"integer"
+    },
+
+  },
+
+
+
+  "difficulty": {name:string, value:integer position:integer},
+  "priority": {name:string, value:integer position:integer}
+    "equipEmptyingTo": {idNode:string name:string position:integer idTankArea:string, idEquip:string},
+    "equipFillingFrom": {idNode:string name:string position:integer idTankArea:string, idEquip:string},
+    "equipData": { },
+    "equipCaract": { },
+
+
+
+
+},
+sequelize init
+sequelize model:create --name user --attributes "username:string email:string password:string position:integer currency:string currencyEuro:string isAdmin:boolean isManager:boolean isOperator:boolean isVisitor:boolean isActif:boolean idFactory:string"
+sequelize model:create --name factory --attributes "idNode:string name:string name1:string position:integer address:string langue:string isCartography:boolean isTraceability:boolean isOptimisation:boolean"
+sequelize model:create --name computer --attributes "idNode:string name:string name1:string position:integer isServerMain:boolean isServerLocal:boolean isComputerLocal:boolean isComputerCarto:boolean idFactory:string",
+sequelize model:create --name area --attributes "idNode:string name:string name1:string position:integer menu:string idFactory:string ",
+sequelize model:create --name tankArea --attributes "idNode:string name:string name1:string position:integer idArea:string"
+sequelize model:create --name tankAreaDefEmptying --attributes "idNode:string, position:integer, name:string, name1:string, dataComment:string, dataType:string, options:string"
+sequelize model:create --name tankAreaDefFilling --attributes "idNode:string position:integer name:string name1:string, dataComment:string, dataType:string, options:string "
+sequelize model:create --name tank --attributes "idNode:string,name:string,name1:string,position:integer,idTankArea:string,idTankDef:string"
+sequelize model:create --name equip --attributes "idNode:string, name:string, name1:string, position:integer, menu:string, idPlc:string, idEquipDef:string"
+sequelize model:create --name digital --attributes "name:string, name1:string, tag:string, address:string, position:integer, idEquip:string, idTank:string, indexCreation:integer"
+sequelize model:create --name analog --attributes "name:string, name1:string, tag:string, address:string, type:string, position:integer, idEquip:string, idTank:string, indexCreation:integer"
+sequelize model:create --name product --attributes "name:string, position:integer, totalSolid:float, price:float, idFactory:string"
+sequelize model:create --name measure --attributes "name:string, position:integer, type:integer, comment:string, losses:float, ts:float, measure1:float, measure2:float, measure3:float, ts1:float, ts2:float, ts3:float, idProduct:string, idFonction:string"
+sequelize model:create --name project --attributes "position:integer, name:string, type:integer, comment:string, idOwner:integer, priority:integer, difficulty:integer, idArea:string, materialPrice:float"
+sequelize model:create --name dataProject --attributes "comment:string, position:integer, creationDate:date, dueDate:date, status:integer, idProject:integer"
+sequelize model:create --name fonction --attributes "name:string, position:integer, idType:integer, idAreaSource:string, idAreaDest:string, freqCheck:integer, freqDelay:integer, maxLosse:integer, haveToBeCheck:boolean, haveBeenCheck:boolean, modeAutoCheckActif:boolean, picture1:string, picture2:string, idProjectLink:integer, projectPosition:integer, projectPercentRecovery:float, idFactory:string, idArea:string, idPlc:string, idEquip:string, idEquipIndex:integer"
+
+sequelize model:create --name server --attributes "idNode:string, position:integer name:string serverType:string",
+sequelize model:create --name plc --attributes "idNode:string, position:integer name:string name1:string brand:string connection:string slot:string rack:string ip:string idServer:string idArea:string"
+sequelize model:create --name measureType --attributes "name:string, position:integer, value:integer"
+
+  sequelize db:migrate

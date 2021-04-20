@@ -1,0 +1,7 @@
+client/node_modules
+server/node_modules
+server/config/.env
+server/config/config.json
+/server/config/.env
+/server/config/config.json
+/installation.txt
