@@ -2,9 +2,9 @@
     <el-dropdown trigger="click" class="international" @command="handleSetLanguage">
         <button ><img :src= selectedFlag /></button>
         <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item :disabled="language==='en'" command="en">English</el-dropdown-item>
-            <el-dropdown-item :disabled="language==='fr'" command="fr">Francais</el-dropdown-item>
-            <el-dropdown-item :disabled="language==='es'" command="es">Español</el-dropdown-item>
+            <el-dropdown-item :disabled="language==='en'" command="en">{{ $t('navigation.langueEn') }}</el-dropdown-item>
+            <el-dropdown-item :disabled="language==='fr'" command="fr">{{ $t('navigation.langueFr') }}</el-dropdown-item>
+            <el-dropdown-item :disabled="language==='es'" command="es">{{ $t('navigation.langueEs') }}</el-dropdown-item>
         </el-dropdown-menu>
     </el-dropdown>
 </template>
@@ -19,11 +19,6 @@
 
     export default class extends Vue {
         private selectedFlag = ''
-        //private languages = [
-        //    { name: 'English', languageCode: 'en', path: require('@/assets/flags/image/en.png') },
-        //    { name: 'French', languageCode: 'fr', path: require('@/assets/flags/image/fr.png') },
-        //    { name: 'Spanish', languageCode: 'es', path: require('@/assets/flags/image/es.png') },
-        //]
         selectedLanguageFlag(locale: string) {
             switch (locale) {
                 case 'en': return require('../../assets/flags/image/en.png')
@@ -39,7 +34,6 @@
             return AppModule.language
         }
         private handleSetLanguage(lang: string) {
-            console.log("****************************************************")
             this.selectedFlag = this.selectedLanguageFlag(lang)
             this.$i18n.locale = lang
             AppModule.SetLanguage(lang)
