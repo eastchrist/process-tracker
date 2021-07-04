@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseTankAreaDefEmptyingData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultTankAreaDefEmptyingQuery = {
     page: 1,
@@ -29,35 +31,35 @@ export const defaultTankAreaDefEmptyingExcelHeater = ['id', 'idNode', 'name', 'n
 
 
 export const getDBTankAreaDefEmptyings = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/tankAreaDefEmptyings/all',
+        url: '/tankAreaDefEmptyings/all',
         method: 'get',
         params
     })
 
 export const updateDBTankAreaDefEmptyings = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefEmptyings/all`,
+        url: `/tankAreaDefEmptyings/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBTankAreaDefEmptying = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefEmptyings/tankAreaDefEmptying/${id}`,
+        url: `/tankAreaDefEmptyings/tankAreaDefEmptying/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBTankAreaDefEmptying = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefEmptyings/tankAreaDefEmptying/${id}`,
+        url: `/tankAreaDefEmptyings/tankAreaDefEmptying/${id}`,
         method: 'delete',
         withCredentials: true,
     })
