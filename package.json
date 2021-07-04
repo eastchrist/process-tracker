@@ -4,8 +4,8 @@
   "description": "Description",
   "main": "server/server.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
-    "start": "node server/index.js",
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js",
     "run": "SET Node_ENV=production& node server/server.js",
     "seqInit": "sudo sequelize init",
     "prodStart": "sudo pm2 start server/server.js",
