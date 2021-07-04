@@ -1,379 +1,865 @@
+import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
 
+export interface AIUserState {
+  token: string
+  username: string
+  email: string
+  idFactory: string
+  factoryName: string
+  roles: string[]
+}
 
+//interfaces pour tables UI et table normal
+export interface ITableDataUiDesignFont {
+  "family": string,
+  "color": string,
+  "size": string
+}
+export interface ITableDataUiDesignColumn {
+  "textAlign": string,
+  "width": string,
+  "padding": 5,
+  "font": ITableDataUiDesignFont
+}
+
+//Tables Normal
+export interface ITableDataFactoryMain {
+  title: {
+    title: string
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  },
+  subTitle: {
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  },
+  textHeader: string[]
+  textColumn: string[]
+  columnsBordure: {
+    length: number,
+    color: string
+  },
+  columns: any,
+  fonctionFirstAnnual: {
+    losses: number | string
+    price: number | string
+    priceEuro: number | string
+  }
+  fonctionCurrentAnnual: {
+    losses: number | string
+    price: number | string
+    priceEuro: number | string
+  }
+  fonctionSavingAnnual: {
+    losses: number | string
+    price: number | string
+    priceEuro: number | string
+  }
+  fonctionProjectRecoveryRequestAnnual: {
+    losses: number | string
+    price: number | string
+    priceEuro: number | string
+  }
+}
+export interface ITableDataFactoryInfo {
+  title: {
+      title: string
+  }
+  textColumn: string[]
+
+  fonctionNb: number | string
+  fonctionInitAnnualPrice: number | string
+  fonctionCurrentAnnualPrice: number | string
+  fonctionProjectRecoveryRequestAnnual: number | string
+  fonctionProjectRecoveryRealAnnual: number | string
+
+  fonctionDone: number | string
+  fonctionNotDone: number | string
+  fonctionInAlarm: number | string
+  fonctionNotLink: number | string
+  fonctionNotLinkInitialLosse: number | string
+}
+export interface ITableDataLevelDifficultys {
+    veryHard: {
+      number: number | string
+      projectFunctionLinkedFirstAnnualLosses: number | string
+      projectFunctionLinkedFirstAnnualPrice: number | string
+      projectFunctionLinkedCurrentAnnualLosses: number | string
+      projectFunctionLinkedCurrentAnnualPrice: number | string
+      projectFunctionLinkedRecoveryAnnualLosses: number | string
+      projectFunctionLinkedRecoveryAnnualPrice: number | string
+    }
+    hard: {
+      number: number | string
+      projectFunctionLinkedFirstAnnualLosses: number | string
+      projectFunctionLinkedFirstAnnualPrice: number | string
+      projectFunctionLinkedCurrentAnnualLosses: number | string
+      projectFunctionLinkedCurrentAnnualPrice: number | string
+      projectFunctionLinkedRecoveryAnnualLosses: number | string
+      projectFunctionLinkedRecoveryAnnualPrice: number | string
+    }
+    difficile: {
+      number: number | string
+      projectFunctionLinkedFirstAnnualLosses: number | string
+      projectFunctionLinkedFirstAnnualPrice: number | string
+      projectFunctionLinkedCurrentAnnualLosses: number | string
+      projectFunctionLinkedCurrentAnnualPrice: number | string
+      projectFunctionLinkedRecoveryAnnualLosses: number | string
+      projectFunctionLinkedRecoveryAnnualPrice: number | string
+    }
+    normal: {
+      number: number | string
+      projectFunctionLinkedFirstAnnualLosses: number | string
+      projectFunctionLinkedFirstAnnualPrice: number | string
+      projectFunctionLinkedCurrentAnnualLosses: number | string
+      projectFunctionLinkedCurrentAnnualPrice: number | string
+      projectFunctionLinkedRecoveryAnnualLosses: number | string
+      projectFunctionLinkedRecoveryAnnualPrice: number | string
+    }
+    easy: {
+      number: number | string
+      projectFunctionLinkedFirstAnnualLosses: number | string
+      projectFunctionLinkedFirstAnnualPrice: number | string
+      projectFunctionLinkedCurrentAnnualLosses: number | string
+      projectFunctionLinkedCurrentAnnualPrice: number | string
+      projectFunctionLinkedRecoveryAnnualLosses: number | string
+      projectFunctionLinkedRecoveryAnnualPrice: number | string
+    }
+}
+export interface IPriorityDifficulty {
+  veryHigh: ITableDataLevelDifficultys
+  high: ITableDataLevelDifficultys
+  normal: ITableDataLevelDifficultys
+  low: ITableDataLevelDifficultys
+  veryLow: ITableDataLevelDifficultys
+}
+export interface ITableProjectPriorityDifficulty {
+  title: {
+    title: string
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  }
+  subTitle: {
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  },
+  textHeader: string[]
+  textHeaderSub: string[]
+  textColumn: string[]
+  columnsBordure: {
+    length: number,
+    color: string
+  },
+  columns: any,
+  veryHigh: ITableDataLevelDifficultys
+  high: ITableDataLevelDifficultys
+  normal: ITableDataLevelDifficultys
+  low: ITableDataLevelDifficultys
+  veryLow: ITableDataLevelDifficultys
+}
+export interface IFonctionByAreas {
+  area: string
+  name: string
+}
+export interface ITableDataFonctionByAreas {
+  title: {
+    title: string
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  }
+  subTitle: {
+    "background-color": string
+    "textAlign": string
+    "padding": string,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  },
+  textHeader: string[]
+  data: []
+}
+//TODO Tables UI
+export interface ITableDataUiDesign {
+  title: {
+    "background-color": string
+    "textAlign": string
+    "padding": number,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  }
+  subTitle: {
+    "background-color": string
+    "textAlign": string
+    "padding": number,
+    "font": {
+      "family": string,
+      "color": string,
+      "size": string
+    },
+    "bordure": {
+      length: number,
+      color: string
+    },
+  },
+  columnsBordure: {
+    length: number,
+    color: string
+  },
+  columns: Object[ { ITableDataUiDesignColumn } ],
+}
+
+export interface oneSerie {
+  Value: number[]
+  itemStyle: { }
+}
+
+export interface IBarChart {
+  dimensions: {
+    width: string,
+    height: string,
+  },
+  title: {
+    title: string
+    show: boolean
+    textStyle: any
+    left: string,
+    top: string,
+    titleSub: {
+      title: string
+      textStyle: any
+    }
+  },
+  legend: {
+    show: boolean
+    orient: string,
+    top: string,
+    left: string | undefined,
+    right: string,
+    align: string,
+    textStyle: {
+      fontSize: number,
+      fontWeight: string,
+      fontFamily: string,
+      fontStyle: string,
+    }
+  },
+  grid: {
+    left: string
+    right: string
+    bottom: string
+    width: string
+    height: string
+  }
+  serieLabelShow: boolean
+  yAxisSplitNumber: number
+  xAxisRotation: number
+  serieStack: string // 'Total'= On Top
+  xAxisText: string[]
+  serieName: string[]
+  series: oneSerie[ ]
+}
+export interface IMixedChart {
+  dimensions: {
+    width: string,
+    height: string,
+  },
+  title: {
+    title: string
+    show: boolean
+    textStyle: any
+    left: string,
+    top: string,
+    titleSub: {
+      title: string
+      textStyle: any
+    }
+  }
+  legend: {
+    show: boolean
+    orient: string,
+    top: string,
+    left: string | undefined,
+    right: string,
+    align: string,
+    textStyle: {
+      fontSize: number,
+      fontWeight: string,
+      fontFamily: string,
+      fontStyle: string,
+    }
+  },
+  grid: {
+    left: string
+    right: string
+    bottom: string
+    width: string
+    height: string
+  }
+  serieLabelShow: boolean
+  yAxisSplitNumber: number
+  xAxisRotation: number
+  serieStack: string // 'Total'= On Top
+  xAxisText: string[]
+  serieName: string[]
+  series: oneSerie[ ]
+}
+export interface IPieChart {
+  dimensions: {
+    width: string,
+    height: string,
+  },
+  title: {
+    title: string
+    show: boolean
+    textStyle: any
+    left: string,
+    top: string,
+    titleSub: {
+      title: string
+      textStyle: any
+    }
+  },
+  legend: {
+    show: boolean
+    orient: string,
+    top: string,
+    left: string | undefined,
+    right: string,
+    align: string,
+    textStyle: {
+      fontSize: number,
+      fontWeight: string,
+      fontFamily: string,
+      fontStyle: string,
+    }
+  },
+  tooltip: {
+    trigger: string,
+    backgroundColor: string,
+    textStyle: {
+      color: string,
+    },
+    borderWidth: number ,
+    formatter: string,
+  },
+  series: {
+    radius: any,
+    center: any,
+    legendHoverLink: boolean,
+    avoidLabelOverlap: boolean,
+    stillShowZeroSum: boolean,
+    animationEasing: string,
+    animationDuration: number
+    label: {
+      show: boolean,
+      position: string,
+      fontWeight: string,
+      fontFamily: string,
+      fontSize: number,
+      overflow: string,
+    },
+  },
+  serie1Name: string[]
+  serie1Value: number[]
+  serie1Color: string[]
+}
+
+export interface IDataBaseTraceabilityData {
+  firstAnnualLosses: number
+  firstAnnualPrice: number
+  currentAnnualLosses: number
+  currentAnnualPrice: number
+  areas: []
+}
 export interface IDataBaseUserData {
   id: number
-  username: string;
-  email: string;
-  position: number;
-  idFactory: string;
-  isAdmin: boolean;
-  isManager: boolean;
-  isOperator: boolean;
-  isVisitor: boolean;
-  isActif: boolean;
+  username: string
+  email: string
+  position: number
+  idFactory: string
+  isAdmin: boolean
+  isManager: boolean
+  isOperator: boolean
+  isVisitor: boolean
+  isActif: boolean
   //token: string;
   //roles: string[];
 }
 export interface IDataBaseFactoryData {
-  id: string;
-  idNode: string;
-  name: string;
-  name1: string;
-  langue: string;
-  address: string;
-  currency: string;
-  currencyEuro: string;
-  position: number;
-  isCartography: boolean;
-  isOptimisation: boolean;
-  isTraceability: boolean;
+  id: string
+  idNode: string
+  name: string
+  name1: string
+  langue: string
+  address: string
+  logoClient: string
+  logoContractor: string
+  currency: string
+  currencyEuro: string
+  position: number
+  isCartography: boolean
+  isOptimisation: boolean
+  isTraceability: boolean
 }
 export interface IDataBaseComputerData {
-  id: string;
-  idNode: string;
-  name: string;
-  name1: string;
-  position: number;
-  isServerMain: boolean;
-  isServerLocal: boolean;
-  isComputerLocal: boolean;
-  isComputerCarto: boolean;
-  idFactory: string;
+  id: string
+  idNode: string
+  name: string
+  name1: string
+  position: number
+  isServerMain: boolean
+  isServerLocal: boolean
+  isComputerLocal: boolean
+  isComputerCarto: boolean
+  idFactory: string
 }
 export interface IDataBaseAreaData {
-  id: string;
-  idNode: string;
-  name: string;
-  name1: string;
-  position: number;
-  menu: string;
-  idFactory: string;
+  id: string
+  idNode: string
+  name: string
+  name1: string
+  position: number
+  menu: string
+  idFactory: string
 }
-
 export interface IDataBaseTankAreaData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  name1: string;
-  idArea: string;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  name1: string
+  idArea: string
 }
 export interface IDataBaseTankAreaDefEmptyingData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  name1: string;
-  dataComment: string;
-  dataType: string;
-  options: any;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  name1: string
+  dataComment: string
+  dataType: string
+  options: any
 }
 export interface IDataBaseTankAreaDefFillingData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  name1: string;
-  dataComment: string;
-  dataType: string;
-  options: any;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  name1: string
+  dataComment: string
+  dataType: string
+  options: any
 }
 export interface IDataBaseServerData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  serverType: string;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  serverType: string
 }
 export interface IDataBasePlcData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  name1: string;
-  brand: string;
-  connection: string;
-  slot: string;
-  rack: string;
-  ip: string;
-  idServer: string;
-  idArea: string;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  name1: string
+  brand: string
+  connection: string
+  slot: string
+  rack: string
+  ip: string
+  idServer: string
+  idArea: string
 }
 export interface IDataBaseEquipData {
-  id: string;
-  idNode: string;
-  position: number;
-  name: string;
-  name1: string;
-  menu: string;
-  idPlc: string;
-  idEquipDef: string;
+  id: string
+  idNode: string
+  position: number
+  name: string
+  name1: string
+  menu: string
+  idPlc: string
+  idEquipDef: string
 }
 export interface IDataBaseTankData {
-  id: string;
-  idNode: string;
-  name: string;
-  name1: string;
-  position: number;
-  idTankArea: string;
-  idTankDef: string;
+  id: string
+  idNode: string
+  name: string
+  name1: string
+  position: number
+  idTankArea: string
+  idTankDef: string
 }
 export interface IDataBaseDigitalData {
-  id: string | null;
-  name: string;
-  name1: string;
-  tag: string;
-  address: string | null;
-  position: number;
-  idEquip: string;
-  idTank: string;
-  indexCreation: number;
+  id: string | null
+  name: string
+  name1: string
+  tag: string
+  address: string | null
+  position: number
+  idEquip: string
+  idTank: string
+  indexCreation: number
 }
 export interface IDataBaseAnalogData {
-  id: string | null;
-  name: string;
-  name1: string;
-  tag: string;
-  address: string | null;
-  type: string;
-  position: number;
-  idEquip: string;
-  idTank: string;
-  indexCreation: number;
+  id: string | null
+  name: string
+  name1: string
+  tag: string
+  address: string | null
+  type: string
+  position: number
+  idEquip: string
+  idTank: string
+  indexCreation: number
+}
+export interface IDataBaseFonctionMeasureData {
+  lastCheckDate: Date
+  haveBeenCheck: boolean
+  haveToBeValidated: boolean
+  alarmLosses: boolean
+  Losses: number
+  LossesPrice: number
+  LossesAnnualLosses: number
+  LossesAnnualPrice: number
+  idEquip: string | null
+  idEquipIndex: number | null
 }
 export interface IDataBaseFonctionData {
-  id: number;
-  position: number;
-  name: string;
-  idType: number;
-  idAreaSource: string;
-  idAreaDest: string;
-  freqCheck: number;
-  freqDelay: number;
-  maxLosse: number;
-  haveToBeCheck: boolean;
-  haveBeenCheck: boolean;
-  modeAutoCheckActif: boolean;
-  picture1: string | null;
-  picture2: string | null;
-  idProjectLink: number | null;
-  projectPosition: number | null;
-  projectPercentRecovery: number | null;
-  idFactory: string | null;
-  idArea: string | null;
-  idPlc: string | null;
-  idEquip: string | null;
-  idEquipIndex: number | null;
+  id: string
+  position: number
+  name: string
+  idType: number
+  idAreaSource: string
+  idAreaDest: string
+
+  lastCheckDate: Date | null
+  firstLosses: number | null
+  firstLossesPrice: number | null
+  currentLosses: number | null
+  currentLossesPrice: number | null
+
+  freqCheck: number
+  freqDelay: number
+  nbLosse: number
+  maxLosse: number
+
+  alarmLosses: boolean | undefined
+  haveToBeCheck: boolean //Force by the manager
+  haveToBeCheckActif: boolean  //Feed back for force manager or Date
+
+  haveBeenCheck: boolean
+  haveToBeValidated: boolean | undefined // validated by the manager
+  modeAutoCheckActif: boolean
+  enabled: boolean
+
+  method: string
+  picture1: string | null
+  picture2: string | null
+  idProjectLink: number | null
+  idProjectLinkSelected: boolean | null
+  projectPercentRecovery: number | string | null //number | null
+  idEquip: string | null
+  idEquipIndex: number | null
+  measureType: IDataBaseMeasureTypeData | undefined
+  tankAreaDefEmptying: IDataBaseTankAreaDefEmptyingData | undefined
+  tankAreaDefFilling: IDataBaseTankAreaDefFillingData | undefined
 }
 export interface IDataBaseMeasureData {
-  id: string;
-  position: number;
-  name: string;
-  comment: string;
-  type: string;
-  losses: number;
-  ts: number;
-  measure1: number;
-  ts1: number;
-  measure2: number;
-  ts2: number;
-  measure3: number;
-  ts3: number;
-  idProduct: string;
-  idFonction: string;
+  id: number
+  position: number
+  comment: string
+  idType: number
+  idTankSource: string
+  idTankDest: string
+  idProduct: string
+  losses: number | string
+  ts: number | string
+  measure1: number | string
+  ts1: number | string
+  measure2: number | string
+  ts2: number | string
+  measure3: number | string
+  ts3: number | string
+  idFonction: string | null
 }
-export interface IDataBaseDataProjectData {
-  id: number;
-  position: number;
-  comment: string;
-  creationDate: date;
-  dueDate: date;
-  idProject: number;
-  status: number;
+export interface IDataBaseProjectActionData {
+  id: number
+  position: number
+  comment: string
+  creationDate: date
+  dueDate: date
+  idStatus: number | string | undefined  //Copy and past from project
+  idProject: number
 }
 export interface IDataBaseProjectData {
-  id: number;
-  position: number;
-  name: string;
-  comment: string;
-  type: string;
-  idOwner: string;
-  priority: number;
-  difficulty: number;
-  idArea: string;
-  materialPrice: number;
+  id: number
+  position: number | undefined
+  name: string | undefined
+  comment: string | undefined
+  idType: number | string | undefined
+  idStatus: number | string | undefined
+  priority: number | undefined
+  difficulty: number | undefined
+  idArea: string | undefined
+  payback: number | string | undefined
+  hoursPrice: number | string | undefined
+  materialPrice: number | string | undefined
+  electricalPrice: number | string | undefined
+  lastCreationDate: date
+  lastDueDate: date
+}
+export interface IDataBaseProjectTypeData {
+  id: string
+  position: number
+  name: string
+  value: number
+}
+export interface IDataBaseProjectStatusData {
+  id: string
+  position: number
+  name: string
+  value: number
 }
 export interface IDataBaseProductData {
-  id: string;
-  name: string;
-  totalSolid: number;
-  price: number;
-  position: number;
-  idFactory: string;
+  id: number
+  name: string
+  totalSolid: number
+  price: number
+  position: number
+  idFactory: string
 }
 export interface IDataBaseMeasureTypeData {
-  id: string;
-  position: number;
-  name: string;
-  value: number;
+  id: string
+  position: number
+  name: string
+  value: number
 }
 
 export interface INodeFactoryData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  langue: string;
-  address: string;
-  currency: string;
-  currencyEuro: string;
-  position: number;
-  menuCartography: boolean;
-  menuOptimisation: boolean;
-  menuTraceability: boolean;
+  id: string
+  type: string
+  name: string
+  name1: string
+  langue: string
+  address: string
+  logoClient: string
+  logoContractor: string
+  currency: string
+  currencyEuro: string
+  position: number
+  menuCartography: boolean
+  menuOptimisation: boolean
+  menuTraceability: boolean
 }
 export interface INodeComputerData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  ServerMain: boolean;
-  ServerLocal: boolean;
-  ComputerLocal: boolean;
-  ComputerCarto: boolean;
-  idFactory: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  ServerMain: boolean
+  ServerLocal: boolean
+  ComputerLocal: boolean
+  ComputerCarto: boolean
+  idFactory: string
 }
 export interface INodeAreaData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  comment: number;
-  menu: string;
-  idFactory: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  comment: number
+  menu: string
+  idFactory: string
 }
 export interface INodeTankAreaData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  idArea: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  idArea: string
 }
 export interface INodeTankAreaDefEmptyingData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  dataComment: string;
-  dataType: string;
-  options: any;
+  id: string
+  type: string
+  name: string
+  name1: string
+  dataComment: string
+  dataType: string
+  options: any
 }
 export interface INodeTankAreaDefFillingData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  dataComment: string;
-  dataType: string;
-  options: any;
+  id: string
+  type: string
+  name: string
+  name1: string
+  dataComment: string
+  dataType: string
+  options: any
 }
 export interface INodeServerData {
-  id: string;
-  type: string;
-  name: string;
-  ServerType: string;
+  id: string
+  type: string
+  name: string
+  ServerType: string
 }
 export interface INodePlcData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  plcBrand: string;
-  plcConnection: string;
-  plcSlot: string;
-  plcRack: string;
-  plcIp: string;
-  idServer: string;
-  idArea: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  plcBrand: string
+  plcConnection: string
+  plcSlot: string
+  plcRack: string
+  plcIp: string
+  idServer: string
+  idArea: string
+}
+export interface INodeEmptyingToTank { label: string }
+export interface INodeFillingFromTank { label: string }
+export interface INodeEmptyingToEquip { label: string }
+export interface INodeFillingFromEquip { label: string }
+export interface INodeEquipCaract {
+  label: string
+  valeur: string
+  type: string
+  unit: string
 }
 export interface INodeEquipData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  menu: string;
-  idPlc: string;
-  idEquipDef: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  menu: string
+  idPlc: string
+  idEquipDef: string
   options: {
-    EquipCaract: [{
-        label: string,
-        valeur: string,
-        type: string,
-        unit: string }],
-    FillingFromTank: [{
-        label: string }],
-    FillingFromEquip: [{
-        label: string }],
-    EmptyingToTank: [{
-        label: string }],
-    EmptyingToEquip: [{
-        label: string }]
-  };
+    EquipCaract: INodeEquipCaract[]
+    FillingFromTank: INodeFillingFromTank[]
+    FillingFromEquip: INodeFillingFromEquip[]
+    EmptyingToTank: INodeEmptyingToTank[]
+    EmptyingToEquip: INodeEmptyingFromEquip[]
+  }
 }
 export interface INodeTankData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  idTankArea: string;
-  idTankDef: string;
+  id: string
+  type: string
+  name: string
+  name1: string
+  idTankArea: string
+  idTankDef: string
 }
 export interface INodeTankDefData {
-  id: string | null;
-  type: string;
-  name: string;
-  name1: string;
-  idTankDefDigital: string;
-  idTankDefAnalog: string;
-  idTankDefGAlarms: string;
+  id: string | null
+  type: string
+  name: string
+  name1: string
+  idTankDefDigital: string
+  idTankDefAnalog: string
+  idTankDefGAlarms: string
 }
 export interface INodeEquipDefData {
-  id: string | null;
-  idType: number;
-  name: string;
-  name1: string;
-  idEquipDefDigital: string;
-  idEquipDefAnalog: string;
-  idEquipDefGAlarms: string;
-  idEquipDefCarto: string;
-  idEquipDefEventList: string;
+  id: string | null
+  idType: number
+  name: string
+  name1: string
+  idEquipDefDigital: string
+  idEquipDefAnalog: string
+  idEquipDefGAlarms: string
+  idEquipDefCarto: string
+  idEquipDefEventList: string
 }
 export interface INodeDefDigitalData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  options: any;
+  id: string
+  type: string
+  name: string
+  name1: string
+  options: any
 
 }
 export interface INodeDefAnalogData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  options: any;
+  id: string
+  type: string
+  name: string
+  name1: string
+  options: any
 }
 export interface INodeDefCartoData {
-  id: string;
-  type: string;
-  name: string;
-  name1: string;
-  options: any;
+  id: string
+  type: string
+  name: string
+  name1: string
+  options: any
 }
 
 export interface ITreeElementsFactory {
-  label: string;
-  children: any;
+  label: string
+  children: any
 }
 
 
