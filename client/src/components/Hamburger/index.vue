@@ -1,6 +1,6 @@
 <template>
   <div :class="[{'is-active': isActive}]" @click="toggleClick">
-    <v-app-bar-nav-icon name="hamburger" width="20" height="20"></v-app-bar-nav-icon>
+      <PersoIcons name="hamburger" width="20" height="20"/>
   </div>
 </template>
 
