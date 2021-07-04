@@ -26,7 +26,7 @@ const projectTypeRoutes   = require('./routes/projectType.routes');
 const projectStatusRoutes   = require('./routes/projectStatus.routes');
 const traceabilityRoutes   = require('./routes/traceability.routes');
 
-require("dotenv").config( {path: "./config/.env"})
+require("dotenv").config( { path: ".env"})
 
 const {checkUser, requireAuth} = require('./middleware/auth.middleware');
 

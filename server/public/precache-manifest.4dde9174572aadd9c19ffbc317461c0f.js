@@ -104,20 +104,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "css/chunk-vendors.dc65e09b.css"
   },
   {
-    "revision": "975d2e296a71043c883b",
-    "url": "css/dashboard.060aac5d.css"
+    "revision": "4e8cdcaa61aacdcec5b1",
+    "url": "css/dashboard.ea9a0d2c.css"
   },
   {
-    "revision": "f6076c0ef34d88ce028e",
+    "revision": "f979a02c5f1b5783b61a",
     "url": "css/index.dd9ab9a8.css"
   },
   {
-    "revision": "aa5679307d3d8775c06c",
-    "url": "css/login.77c137d6.css"
+    "revision": "faed6a0d20e84568dc24",
+    "url": "css/login.ffcf9e17.css"
   },
   {
-    "revision": "a2475ff7bcfc9c012088",
-    "url": "css/register.bfd57484.css"
+    "revision": "e1842aeff28a1bf22510",
+    "url": "css/register.9c7864c7.css"
   },
   {
     "revision": "b1fc4f9dde1bbb3fb887185863811053",
@@ -200,7 +200,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/site.webmanifest"
   },
   {
-    "revision": "708da1a4680e2637edd19ba5bfd041f6",
+    "revision": "2dee19bbf343939e6fe65c4647f6f599",
     "url": "index.html"
   },
   {
@@ -332,24 +332,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/chunk-vendors.65dcd3e3.js"
   },
   {
-    "revision": "975d2e296a71043c883b",
-    "url": "js/dashboard.edd1bc8e.js"
+    "revision": "4e8cdcaa61aacdcec5b1",
+    "url": "js/dashboard.39230149.js"
   },
   {
-    "revision": "f6076c0ef34d88ce028e",
-    "url": "js/index.7bce8a3b.js"
+    "revision": "f979a02c5f1b5783b61a",
+    "url": "js/index.9bbe3426.js"
   },
   {
-    "revision": "aa5679307d3d8775c06c",
-    "url": "js/login.b0f15404.js"
+    "revision": "faed6a0d20e84568dc24",
+    "url": "js/login.d1c3a87c.js"
   },
   {
     "revision": "0b187eb0e33ec0396dc5",
     "url": "js/redirect.f6fad841.js"
   },
   {
-    "revision": "a2475ff7bcfc9c012088",
-    "url": "js/register.4ce7c199.js"
+    "revision": "e1842aeff28a1bf22510",
+    "url": "js/register.6ef34113.js"
   },
   {
     "revision": "5b1b3f3d78e7eca45f642ed55c1d5cf9",

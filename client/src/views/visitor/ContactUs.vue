@@ -45,7 +45,7 @@
                         <div class="form-floating">
                             <el-form-item prop="username">
                                 <span class="svg-container"><PersoIcons name="user" width='1em' height='1em'/></span>
-                                <el-input ref="username" v-model="tempData.username" :placeholder="$t('views.contactUs.placeholders.placeholder1')" name="username" type="text"/>
+                                <el-input ref="username" v-model="tempData.username" :placeholder="$t('views.contactUs.placeholders.placeholder1')" name="username" type="text" tabindex="1" autocomplete="on"/>
                             </el-form-item>
                         </div>
                     </div><!-- End Input Name -->
@@ -53,7 +53,7 @@
                         <div class="form-floating">
                             <el-form-item prop="email">
                                 <span class="svg-container"><PersoIcons name="email" width='1em' height='1em' /></span>
-                                <el-input ref="email" v-model="tempData.email" :placeholder="$t('views.contactUs.placeholders.placeholder2')" name="email" type="text"/>
+                                <el-input ref="email" v-model="tempData.email" :placeholder="$t('views.contactUs.placeholders.placeholder2')" name="email" type="text" tabindex="2" autocomplete="on"/>
                             </el-form-item>
                         </div>
                     </div><!-- End Input Email -->
@@ -61,14 +61,14 @@
                         <div class="form-floating mb-4">
                             <el-form-item prop="subject">
                                 <span class="svg-container"><PersoIcons name="edit" width='1em' height='1em' /></span>
-                                <el-input ref="subject" v-model="tempData.subject" :placeholder="$t('views.contactUs.placeholders.placeholder3')" name="subject" type="text"/>
+                                <el-input ref="subject" v-model="tempData.subject" :placeholder="$t('views.contactUs.placeholders.placeholder3')" name="subject" type="text" tabindex="3" autocomplete="on"/>
                             </el-form-item>
                         </div>
                     </div><!-- End Input Subject -->
                     <div class="col-12">
                         <div class="form-floating mb-3">
                             <el-form-item prop="message">
-                                <el-input ref="message" v-model="tempData.message" :placeholder="$t('views.contactUs.placeholders.placeholder4')" name="message" type="textarea"/>
+                                <el-input ref="message" v-model="tempData.message" :placeholder="$t('views.contactUs.placeholders.placeholder4')" name="message" type="textarea" tabindex="4" autocomplete="on"/>
                             </el-form-item>
                         </div>
                     </div><!-- End Textarea Message -->

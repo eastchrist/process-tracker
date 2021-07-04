@@ -2,13 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Description",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-	"dev": "nodemon server.js",
-    "start": "nodemon server.js",
-    "run": "node server.js",
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "run": "SET Node_ENV=production& node server/server.js",
     "seqInit": "sudo sequelize init",
-    "prodStart": "sudo pm2 start server.js",
+    "prodStart": "sudo pm2 start server/server.js",
     "prodStop": "sudo pm2 stop 0"
   },
   "keywords": [],

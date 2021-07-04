@@ -11,7 +11,7 @@
                         <div class="form-floating">
                             <el-form-item prop="username">
                                 <span class="svg-container"><PersoIcons name="user" width='1em' height='1em'/></span>
-                                <el-input ref="username" v-model="tempData.username" :placeholder="$t('views.login.placeholders.placeholder1')" name="username" type="text"/>
+                                <el-input ref="username" v-model="tempData.username" :placeholder="$t('views.login.placeholders.placeholder1')" name="username" type="text" tabindex="1" autocomplete="on"/>
                             </el-form-item>
                         </div>
                     </div><!-- End Input Name -->
@@ -20,7 +20,7 @@
                             <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
                                 <el-form-item prop="password">
                                     <span class="svg-container"><PersoIcons name="password" width='1em' height='1em'/></span>
-                                    <el-input :key="passwordType" ref="password" v-model="tempData.password" :type="passwordType" :placeholder="$t('views.login.placeholders.placeholder2')" name="password" @blur="capsTooltip = false" @keyup.native="checkCapslock" @keyup.enter.native="handleSubmit"/>
+                                    <el-input :key="passwordType" ref="password" v-model="tempData.password" :type="passwordType" :placeholder="$t('views.login.placeholders.placeholder2')" name="password" @blur="capsTooltip = false" @keyup.native="checkCapslock" @keyup.enter.native="handleSubmit" tabindex="2" autocomplete="on"/>
                                     <span class="show-pwd" @click="showPwd"><PersoIcons :name="passwordType === 'password' ? 'eye-off' : 'eye-on'" width='1em' height='1em'/></span>
                                 </el-form-item>
                             </el-tooltip>
