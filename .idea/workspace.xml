@@ -2,28 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd0450-c7f7-4e5c-a025-b2cc6248b072" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/process-tracker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/api/users.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/dashboard/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/process-trackerV2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/About.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tests/unit/example.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/tests/unit/example.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/aide/DataBase.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/aide/DataBase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/aide/backUp/models/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/area.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/area.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/dataProject.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/projectAction.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/digital.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/digital.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/equip.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/equip.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/factory.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/factory.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/fonction.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/fonction.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/measure.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/measure.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/measureType.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/measureType.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/plc.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/plc.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/project.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/project.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/tank.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/tank.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/tankArea.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/tankArea.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/tankAreaDefEmptying.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/tankAreaDefEmptying.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/tankAreaDefFilling.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/tankAreaDefFilling.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20210324145626-create-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20210324145626-create-factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20210331113835-create-fonction.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20210331113835-create-fonction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20210331143617-create-measure.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20210331143617-create-measure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20210331155336-create-project.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20210331155336-create-project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/fonction.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/fonction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/measure.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/measure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/dataProject.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/projectAction.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/fonction.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/fonction.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/measure.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/measure.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/project.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/project.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/JsonParse.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/JsonParse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/checkNull.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/checkNull.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +58,33 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="ts.external.directory.path" value="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\public" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Charts" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\cartography\MainFunct\components" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\cartography\MainFunct" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Tables\Operator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\visitor" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\register" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\login" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\layout\components\PageFooter" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,8 +98,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Client run">
-    <configuration name="Client run" type="js.build_tools.npm">
+  <component name="RunManager" selected="npm.buildedClientRun">
+    <configuration name="Compile Client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Compile Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Dev Client Dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
@@ -71,19 +129,43 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Server run" type="js.build_tools.npm">
+    <configuration name="Dev Server Dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="run" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Server Run" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="buildedClientRun" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="buildedRun" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.Client run" />
-      <item itemvalue="npm.Server run" />
+      <item itemvalue="npm.Dev Client Dev" />
+      <item itemvalue="npm.Dev Server Dev" />
+      <item itemvalue="npm.buildedClientRun" />
+      <item itemvalue="npm.Run Server Run" />
+      <item itemvalue="npm.Compile Client" />
+      <item itemvalue="npm.Compile Server" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -96,7 +178,131 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618955511941</updated>
-      <workItem from="1618955513075" duration="1778000" />
+      <workItem from="1618955513075" duration="4742000" />
+      <workItem from="1618995318306" duration="33575000" />
+      <workItem from="1619091971381" duration="18139000" />
+      <workItem from="1619180160884" duration="23772000" />
+      <workItem from="1619267988641" duration="23526000" />
+      <workItem from="1619355465210" duration="27515000" />
+      <workItem from="1619417424118" duration="8164000" />
+      <workItem from="1619451641336" duration="23706000" />
+      <workItem from="1619510466975" duration="7163000" />
+      <workItem from="1619529962209" duration="9638000" />
+      <workItem from="1619548382133" duration="1506000" />
+      <workItem from="1619606606711" duration="30541000" />
+      <workItem from="1619701813957" duration="26850000" />
+      <workItem from="1619783079346" duration="22075000" />
+      <workItem from="1619870778077" duration="7496000" />
+      <workItem from="1619958592249" duration="11385000" />
+      <workItem from="1620050147902" duration="18424000" />
+      <workItem from="1620132568245" duration="21806000" />
+      <workItem from="1620212975689" duration="26167000" />
+      <workItem from="1620249353765" duration="2382000" />
+      <workItem from="1620261219783" duration="3215000" />
+      <workItem from="1620300998108" duration="21217000" />
+      <workItem from="1620387057242" duration="31505000" />
+      <workItem from="1620474595061" duration="15359000" />
+      <workItem from="1620562819148" duration="16186000" />
+      <workItem from="1620647603341" duration="12761000" />
+      <workItem from="1620680556818" duration="7921000" />
+      <workItem from="1620735395891" duration="787000" />
+      <workItem from="1620736334865" duration="8552000" />
+      <workItem from="1620808413231" duration="5673000" />
+      <workItem from="1620822979214" duration="12824000" />
+      <workItem from="1620879942647" duration="6426000" />
+      <workItem from="1620891123993" duration="2774000" />
+      <workItem from="1620908564143" duration="23809000" />
+      <workItem from="1620991280928" duration="16251000" />
+      <workItem from="1621025967264" duration="561000" />
+      <workItem from="1621026551854" duration="9789000" />
+      <workItem from="1621076330989" duration="32473000" />
+      <workItem from="1621148750584" duration="7854000" />
+      <workItem from="1621168450884" duration="19815000" />
+      <workItem from="1621253590132" duration="24897000" />
+      <workItem from="1621319308176" duration="7060000" />
+      <workItem from="1621343066281" duration="25006000" />
+      <workItem from="1621412216271" duration="6145000" />
+      <workItem from="1621425403160" duration="23663000" />
+      <workItem from="1621514106296" duration="29487000" />
+      <workItem from="1621596930268" duration="15246000" />
+      <workItem from="1621671521791" duration="13849000" />
+      <workItem from="1621689963925" duration="11955000" />
+      <workItem from="1621772414934" duration="17236000" />
+      <workItem from="1621853964951" duration="31781000" />
+      <workItem from="1621942458514" duration="17874000" />
+      <workItem from="1622026760491" duration="28038000" />
+      <workItem from="1622115242413" duration="30970000" />
+      <workItem from="1622201728801" duration="19927000" />
+      <workItem from="1622228004776" duration="6469000" />
+      <workItem from="1622278709788" duration="13067000" />
+      <workItem from="1622299188268" duration="18383000" />
+      <workItem from="1622378150967" duration="28877000" />
+      <workItem from="1622460893773" duration="36701000" />
+      <workItem from="1622547336802" duration="20846000" />
+      <workItem from="1622633728737" duration="34362000" />
+      <workItem from="1622720160146" duration="19533000" />
+      <workItem from="1622745560358" duration="17026000" />
+      <workItem from="1622806518379" duration="34330000" />
+      <workItem from="1622896304330" duration="325000" />
+      <workItem from="1622896826056" duration="19969000" />
+      <workItem from="1622981573417" duration="31065000" />
+      <workItem from="1623065814846" duration="920000" />
+      <workItem from="1623067585892" duration="43974000" />
+      <workItem from="1623112795880" duration="5148000" />
+      <workItem from="1623118781590" duration="6498000" />
+      <workItem from="1623145654340" duration="36752000" />
+      <workItem from="1623238609469" duration="30261000" />
+      <workItem from="1623324874853" duration="21783000" />
+      <workItem from="1623349066271" duration="10673000" />
+      <workItem from="1623411213791" duration="33828000" />
+      <workItem from="1623501090898" duration="17552000" />
+      <workItem from="1623522968490" duration="5217000" />
+      <workItem from="1623589287841" duration="20986000" />
+      <workItem from="1623612760530" duration="1162000" />
+      <workItem from="1623670598539" duration="29235000" />
+      <workItem from="1623706759585" duration="5542000" />
+      <workItem from="1623756960368" duration="10741000" />
+      <workItem from="1623771484908" duration="2324000" />
+      <workItem from="1623843247356" duration="754000" />
+      <workItem from="1623844338052" duration="180000" />
+      <workItem from="1623844773467" duration="471000" />
+      <workItem from="1623848543048" duration="13516000" />
+      <workItem from="1623865292996" duration="16062000" />
+      <workItem from="1623928807031" duration="33910000" />
+      <workItem from="1624016169422" duration="36606000" />
+      <workItem from="1624107485716" duration="14904000" />
+      <workItem from="1624186703144" duration="146000" />
+      <workItem from="1624195496890" duration="1787000" />
+      <workItem from="1624197344729" duration="1787000" />
+      <workItem from="1624199180401" duration="1783000" />
+      <workItem from="1624201127732" duration="1295000" />
+      <workItem from="1624269560179" duration="38191000" />
+      <workItem from="1624355919227" duration="13264000" />
+      <workItem from="1624448500502" duration="13380000" />
+      <workItem from="1624547129014" duration="16106000" />
+      <workItem from="1624620870629" duration="30425000" />
+      <workItem from="1624710095435" duration="18647000" />
+      <workItem from="1624778709187" duration="12470000" />
+      <workItem from="1624797927872" duration="20548000" />
+      <workItem from="1624880082875" duration="31590000" />
+      <workItem from="1624956836576" duration="15216000" />
+      <workItem from="1624972463560" duration="93000" />
+      <workItem from="1624973624740" duration="17541000" />
+      <workItem from="1625052214257" duration="2059000" />
+      <workItem from="1625058352116" duration="1354000" />
+      <workItem from="1625060480956" duration="21000" />
+      <workItem from="1625072741479" duration="2241000" />
+      <workItem from="1625076399551" duration="1989000" />
+      <workItem from="1625079664066" duration="17000" />
+      <workItem from="1625157786979" duration="9197000" />
+      <workItem from="1625171366381" duration="18000" />
+      <workItem from="1625174658337" duration="912000" />
+      <workItem from="1625177996716" duration="6000" />
+      <workItem from="1625211256462" duration="43000" />
+      <workItem from="1625267120907" duration="2398000" />
+      <workItem from="1625317333325" duration="1606000" />
+      <workItem from="1625355453037" duration="42000" />
+      <workItem from="1625358011343" duration="563000" />
     </task>
     <servers />
   </component>
@@ -108,10 +314,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="js.build_tools.npm">
+        <watch expression="userFound" />
+        <watch expression="userFound.factory.name1" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
