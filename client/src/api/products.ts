@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseProductData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultProductQuery = {
     page: 1,
@@ -16,7 +18,7 @@ export const defaultProductRules = {
     idFactory: [{ required: true, message: i18n.t('tables.product.rules.rule6'), trigger: 'blur' }]
 }
 export const defaultProductData: IDataBaseProductData = {
-    id: "",
+    id: 0,
     name: "",
     totalSolid: 0,
     price: 0,
@@ -27,7 +29,7 @@ export const defaultProductData: IDataBaseProductData = {
 export const defaultProductExcelHeater = ['id', 'position', 'name', 'totalSolid', 'price', 'idFactory']
 
 export const getDBProducts = (params: any) =>
-    request({
+    requestSql({
         headers: { },
         url: 'http://localhost:5000/products/all',
         method: 'get',
@@ -35,36 +37,36 @@ export const getDBProducts = (params: any) =>
     })
 
 export const updateDBProducts = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/products/all`,
+        url: `/products/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const addDBProduct = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/products/product`,
+        url: `/products/product`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBProduct = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/products/product/${id}`,
+        url: `/products/product/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBProduct = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/products/product/${id}`,
+        url: `/products/product/${id}`,
         method: 'delete',
         withCredentials: true,
     })
