@@ -1,6 +1,13 @@
 <template>
   <div :class="{'hidden': hidden}" class="pagination-container">
-    <el-pagination :background="background" :current-page.sync="currentPage" :page-size.sync="pageSize" :layout="layout" :page-sizes="pageSizes" :total="total" v-bind="$attrs" @size-change="handleSizeChange" @current-change="handleCurrentChange"/>
+    <el-pagination :background="background"
+                   :current-page.sync="currentPage"
+                   :page-size.sync="pageSize"
+                   :layout="layout"
+                   :page-sizes="pageSizes"
+                   :total="total" v-bind="$attrs"
+                   @size-change="handleSizeChange"
+                   @current-change="handleCurrentChange"/>
   </div>
 </template>
 
@@ -22,22 +29,27 @@ export default class extends Vue {
   @Prop({ default: false }) private hidden!: boolean
 
   get currentPage() {
+    console.log("Get_currentPage")
     return this.page
   }
 
   set currentPage(value) {
+    console.log("Set_currentPage")
     this.$emit('update:page', value)
   }
 
   get pageSize() {
+    console.log("Get_pageSize")
     return this.limit
   }
 
   set pageSize(value) {
+    console.log("Set_pageSize")
     this.$emit('update:limit', value)
   }
 
   handleSizeChange(value: number) {
+    console.log("handleSizeChange")
     this.$emit('pagination', { page: this.currentPage, limit: value })
     if (this.autoScroll) {
       scrollTo(0, 800)
@@ -45,6 +57,7 @@ export default class extends Vue {
   }
 
   handleCurrentChange(value: number) {
+    console.log("handleCurrentChange")
     this.$emit('pagination', { page: value, limit: this.pageSize })
     if (this.autoScroll) {
       scrollTo(0, 800)
