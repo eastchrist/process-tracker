@@ -1,11 +1,22 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseFactoryData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
 
-export const defaultFactoryQuery = {
+
+
+export interface AIFactoryQuery {
+    page: number
+    limit: number
+    name: string | undefined
+    id: string | undefined
+}
+
+export const defaultFactoryQuery: AIFactoryQuery = {
     page: 1,
     limit: 10,
-    name: undefined
+    name: undefined,
+    id: undefined,
 }
 export const defaultFactoryRules = {
     position: [{ required: true, message: i18n.t('tables.factory.rules.rule3'), trigger: 'blur' }],
@@ -13,11 +24,15 @@ export const defaultFactoryRules = {
     name1: [{ required: true, message: i18n.t('tables.factory.rules.rule5'), trigger: 'blur' }],
     langue: [{ required: true, message: i18n.t('tables.factory.rules.rule6'), trigger: 'blur' }],
     address: [{ required: true, message: i18n.t('tables.factory.rules.rule7'), trigger: 'blur' }],
-    currency: [{ required: true, message: i18n.t('tables.factory.rules.rule8'), trigger: 'blur' }],
-    currencyEuro: [{ required: true, message: i18n.t('tables.factory.rules.rule9'), trigger: 'blur' }],
-    isCartography: [{ required: true, message: i18n.t('tables.factory.rules.rule10'), trigger: 'blur' }],
-    isOptimisation: [{ required: true, message: i18n.t('tables.factory.rules.rule11'), trigger: 'blur' }],
-    isTraceability: [{ required: true, message: i18n.t('tables.factory.rules.rule12'), trigger: 'blur' }],
+
+    logoClient: [{ required: true, message: i18n.t('tables.factory.rules.rule8'), trigger: 'blur' }],
+    logoContractor: [{ required: true, message: i18n.t('tables.factory.rules.rule9'), trigger: 'blur' }],
+
+    currency: [{ required: true, message: i18n.t('tables.factory.rules.rule10'), trigger: 'blur' }],
+    currencyEuro: [{ required: true, message: i18n.t('tables.factory.rules.rule11'), trigger: 'blur' }],
+    isCartography: [{ required: true, message: i18n.t('tables.factory.rules.rule12'), trigger: 'blur' }],
+    isOptimisation: [{ required: true, message: i18n.t('tables.factory.rules.rule13'), trigger: 'blur' }],
+    isTraceability: [{ required: true, message: i18n.t('tables.factory.rules.rule14'), trigger: 'blur' }],
 }
 export const defaultFactoryData: IDataBaseFactoryData = {
     id: "",
@@ -26,6 +41,8 @@ export const defaultFactoryData: IDataBaseFactoryData = {
     name1: "",
     langue: "",
     address: "",
+    logoClient: "",
+    logoContractor: "",
     currency: "",
     currencyEuro: "",
     position: 0,
@@ -33,39 +50,39 @@ export const defaultFactoryData: IDataBaseFactoryData = {
     isOptimisation: false,
     isTraceability: false,
 }
-export const defaultFactoryExcelHeater = ['id', 'idNode', 'name', 'name1', 'langue','position', 'address', 'currency', 'currencyEuro', 'isCartography', 'isOptimisation', 'isTraceability']
+export const defaultFactoryExcelHeater = ['id', 'idNode', 'name', 'name1', 'langue','position', 'address', 'logoClient', 'logoContractor', 'currency', 'currencyEuro', 'isCartography', 'isOptimisation', 'isTraceability']
 
 
 export const getDBFactorys = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/factorys/all',
+        url: '/factorys/all',
         method: 'get',
         params
     })
 
 export const updateDBFactorys = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/factorys/all`,
+        url: `/factorys/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBFactory = (id: string, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/factorys/factory/${id}`,
+        url: `/factorys/factory/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBFactory = (id: string, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/factorys/factory/${id}`,
+        url: `/factorys/factory/${id}`,
         method: 'delete',
         withCredentials: true,
     })
