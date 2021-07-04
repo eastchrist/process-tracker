@@ -1,5 +1,5 @@
 <template>
-    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" :before-close="beforeClose">
+    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" @open="beforeOpen" :before-close="beforeClose">
         <el-form ref="dataForm" :rules="rules" :model="tempData" label-position="left" label-width="200px" style="width: 400px; margin-left:50px;">
             <!-- v-if="textMap[dialogStatus]!=='Create'" -->
             <el-form-item :label="$t('tables.equip.edit.champs4')" prop="name">
@@ -11,18 +11,14 @@
             <el-form-item :label="$t('tables.equip.edit.champs6')" prop="menu">
                 <el-input v-model="tempData.menu" />
             </el-form-item>
-
-            <el-form-item :label="$t('tables.plc.edit.champs7')" prop="idPlc">
+            <el-form-item :label="$t('tables.equip.edit.champs7')" prop="idPlc">
                 <el-select v-model="tempData.idPlc" class="filter-item" placeholder="Please select">
-                    <el-option v-for="item in Type2Options" :key="item.id" :label="item.name" :value="item.id"/>
+                    <el-option v-for="item in TypeOptionPlc" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
             </el-form-item>
-
             <el-form-item :label="$t('tables.equip.edit.champs8')" prop="idEquipDef">
                 <el-input v-model="tempData.idEquipDef" />
             </el-form-item>
-
-
         </el-form>
         <div slot="footer" class="dialog-footer">
             <el-button @click="handleCancel">{{ $t('tables.generique.button.button5') }}</el-button>
@@ -48,8 +44,12 @@
         @Prop({ default: { } }) private dialogStatus!: string
         @Prop({ default: false }) private dialogFormVisible!: boolean
         @Prop({ default: { } }) private Type1Options!: any
-        @Prop({ default: { } }) private Type2Options!: any
+        @Prop({ default: { } }) private TypeOptionPlc!: any
         @Prop({ default: { } }) private tempData!: any
+
+        beforeOpen() {
+            console.log("beforeOpen")
+        }
 
         beforeClose( ) {
             this.$emit('EditFormCancel')
