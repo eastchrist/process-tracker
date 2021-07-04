@@ -1,5 +1,5 @@
 <template>
-    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" :before-close="beforeClose">
+    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" @open="beforeOpen" :before-close="beforeClose">
         <el-form ref="dataForm" :rules="rules" :model="tempData" label-position="left" label-width="200px" style="width: 400px; margin-left:50px;">
             <!-- v-if="textMap[dialogStatus]!=='Create'" -->
             <el-form-item :label="$t('tables.factory.edit.champs4')" prop="name">
@@ -18,23 +18,31 @@
             <el-form-item :label="$t('tables.factory.edit.champs7')" prop="address">
                 <el-input v-model="tempData.address" />
             </el-form-item>
-            <el-form-item :label="$t('tables.factory.edit.champs8')" prop="currency">
+
+            <el-form-item :label="$t('tables.factory.edit.champs8')" prop="logoClient">
+                <el-input v-model="tempData.logoClient" />
+            </el-form-item>
+            <el-form-item :label="$t('tables.factory.edit.champs9')" prop="logoContractor">
+                <el-input v-model="tempData.logoContractor" />
+            </el-form-item>
+
+            <el-form-item :label="$t('tables.factory.edit.champs10')" prop="currency">
                 <el-input v-model="tempData.currency" />
             </el-form-item>
-            <el-form-item :label="$t('tables.factory.edit.champs9')" prop="currencyEuro">
+            <el-form-item :label="$t('tables.factory.edit.champs11')" prop="currencyEuro">
                 <el-input v-model="tempData.currencyEuro" />
             </el-form-item>
-            <el-form-item :label="$t('tables.factory.edit.champs10')" prop="isCartography">
+            <el-form-item :label="$t('tables.factory.edit.champs12')" prop="isCartography">
                 <el-select v-model="tempData.isCartography" class="filter-item" placeholder="Please select">
                     <el-option v-for="item in Type1Options" :key="item.key" :label="item.displayName" :value="item.key"/>
                 </el-select>
             </el-form-item>
-            <el-form-item :label="$t('tables.factory.edit.champs11')" prop="isOptimisation">
+            <el-form-item :label="$t('tables.factory.edit.champs13')" prop="isOptimisation">
                 <el-select v-model="tempData.isOptimisation" class="filter-item" placeholder="Please select">
                     <el-option v-for="item in Type1Options" :key="item.key" :label="item.displayName" :value="item.key"/>
                 </el-select>
             </el-form-item>
-            <el-form-item :label="$t('tables.factory.edit.champs12')" prop="isTraceability">
+            <el-form-item :label="$t('tables.factory.edit.champs14')" prop="isTraceability">
                 <el-select v-model="tempData.isTraceability" class="filter-item" placeholder="Please select">
                     <el-option v-for="item in Type1Options" :key="item.key" :label="item.displayName" :value="item.key"/>
                 </el-select>
@@ -67,6 +75,10 @@
         @Prop({ default: { } }) private Type1Options!: any
         @Prop({ default: { } }) private Type2Options!: any
         @Prop({ default: { } }) private tempData!: any
+
+        beforeOpen() {
+            console.log("beforeOpen")
+        }
 
         beforeClose( ) {
             this.$emit('EditFormCancel')
