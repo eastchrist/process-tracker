@@ -1,8 +1,17 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseAreaData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
 
-export const defaultAreaQuery = {
+
+export interface AIAreaQuery {
+    page: number
+    limit: number
+    name: string | undefined
+    idFactory: string | undefined
+}
+
+export const defaultAreaQuery: AIAreaQuery  = {
     page: 1,
     limit: 10,
     name: undefined,
@@ -28,35 +37,35 @@ export const defaultAreaData: IDataBaseAreaData = {
 export const defaultAreaExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'menu', 'idFactory']
 
 export const getDBAreas = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/areas/all',
+        url: '/areas/all',
         method: 'get',
         params
     })
 
 export const updateDBAreas = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/areas/all`,
+        url: `/areas/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBArea = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/areas/area/${id}`,
+        url: `/areas/area/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBArea = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/areas/area/${id}`,
+        url: `/areas/area/${id}`,
         method: 'delete',
         withCredentials: true,
     })
