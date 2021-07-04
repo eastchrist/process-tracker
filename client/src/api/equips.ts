@@ -1,12 +1,25 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseEquipData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
 
-export const defaultEquipQuery = {
+
+export interface AIEquipQuery {
+    page: number
+    limit: number
+    name: string | undefined
+    idFactory: string | undefined
+    idArea: string | undefined
+    idPlc: string | undefined
+    idEquip: string | undefined
+}
+
+export const defaultEquipQuery: AIEquipQuery = {
     page: 1,
     limit: 10,
     name: undefined,
     idFactory: undefined,
+    idArea: undefined,
     idPlc: undefined,
     idEquip: undefined
 }
@@ -32,7 +45,7 @@ export const defaultEquipData: IDataBaseEquipData = {
 export const defaultEquipExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'menu', 'idPlc', 'idEquipDef']
 
 export const getDBEquips = (params: any) =>
-    request({
+    requestSql({
         headers: { },
         url: 'http://localhost:5000/equips/all',
         method: 'get',
@@ -40,27 +53,27 @@ export const getDBEquips = (params: any) =>
     })
 
 export const updateDBEquips = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/equips/all`,
+        url: `/equips/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBEquip = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/equips/equip/${id}`,
+        url: `/equips/equip/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBEquip = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/equips/equip/${id}`,
+        url: `/equips/equip/${id}`,
         method: 'delete',
         withCredentials: true,
     })
