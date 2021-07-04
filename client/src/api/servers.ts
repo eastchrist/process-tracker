@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseServerData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultServerQuery = {
     page: 1,
@@ -23,35 +25,35 @@ export const defaultServerData: IDataBaseServerData = {
 export const defaultServerExcelHeater = ['id', 'idNode', 'position', 'name', 'serverType']
 
 export const getDBServers = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/servers/all',
+        url: '/servers/all',
         method: 'get',
         params
     })
 
 export const updateDBServers = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/servers/all`,
+        url: `/servers/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBServer = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/servers/server/${id}`,
+        url: `/servers/server/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBServer = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/servers/server/${id}`,
+        url: `/servers/server/${id}`,
         method: 'delete',
         withCredentials: true,
     })
