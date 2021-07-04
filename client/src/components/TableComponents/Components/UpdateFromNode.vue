@@ -14,14 +14,20 @@
     export default class extends Vue {
         @Prop({ default: '' }) private className!: string
         @Prop({ default: '' }) private TableName!: string
-        @Prop({ default: [] }) private orderCreation!: any
+
+        //private errorList = [ 'Erreur1', '\n', 'Erreur2\n', 'Erreur3\n']
+        private errorList = ""
 
         private async handleUpdatingListFromNode() {
             const TableName = this.$props.TableName
             const { data } = await getAllNodes ()
-            const updatedList = await updateDataBaseFromNodes( data, this.orderCreation, TableName)
-            const updatedListData = updatedList
-            this.$emit('UpdateFromNode', updatedList)
+            const updatedList: { errorList: string, updatedList: {} } = await updateDataBaseFromNodes( data, TableName)
+            if (updatedList.errorList !=="") {
+                this.errorList = updatedList.errorList
+                this.$emit('UpdateFromNodeError', this.errorList)
+            } else {
+                this.$emit('UpdateFromNode', updatedList)
+            }
         }
     }
 
