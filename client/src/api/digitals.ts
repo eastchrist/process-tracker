@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseDigitalData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultDigitalQuery = {
     page: 1,
@@ -32,35 +34,35 @@ export const defaultDigitalData: IDataBaseDigitalData = {
 export const defaultDigitalExcelHeater = ['id', 'position', 'name', 'name1', 'tag', 'address', 'idEquip', 'idTank', 'indexCreation']
 
 export const getDBDigitals = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/digitals/all',
+        url: '/digitals/all',
         method: 'get',
         params
     })
 
 export const updateDBDigitals = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/digitals/all`,
+        url: `/digitals/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBDigital = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/digitals/digital/${id}`,
+        url: `/digitals/digital/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBDigital = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/digitals/digital/${id}`,
+        url: `/digitals/digital/${id}`,
         method: 'delete',
         withCredentials: true,
     })
