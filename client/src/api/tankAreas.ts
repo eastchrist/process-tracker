@@ -1,6 +1,9 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseTankAreaData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
+
 
 export const defaultTankAreaQuery = {
     page: 1,
@@ -27,35 +30,35 @@ export const defaultTankAreaExcelHeater = ['id', 'idNode', 'name', 'name1', 'pos
 
 
 export const getDBTankAreas = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/tankareas/all',
+        url: '/tankareas/all',
         method: 'get',
         params
     })
 
 export const updateDBTankAreas = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankareas/all`,
+        url: `/tankareas/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBTankArea = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankareas/tankarea/${id}`,
+        url: `/tankareas/tankarea/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBTankArea = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankareas/tankarea/${id}`,
+        url: `/tankareas/tankarea/${id}`,
         method: 'delete',
         withCredentials: true,
     })
