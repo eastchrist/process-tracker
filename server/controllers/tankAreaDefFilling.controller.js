@@ -61,14 +61,17 @@ module.exports = {
         var whereTankAreaDefFilling = { name: { [Op.like]: `%${name}%` } }
         if (name) { whereAll.push(whereTankAreaDefFilling)}
 
+        const tanks = await models.tank.findAll( {})
+
         models.tankAreaDefFilling.findAndCountAll( {
             order: [['position', 'ASC' ]],
             where: whereAll,
             offset: offset,
-            limit: limit
+            limit: limit,
+            //include: [{ model: models.tank, as: 'tank' }]
         })
         .then(data => {
-            const option = JsonParse.options(data)
+            const option = JsonParse.options(data, tanks)
             const outlet = checkNull.area(data)
             const Resdata = {
                  code: 20000,
@@ -88,15 +91,18 @@ module.exports = {
         const datas = await FunctionUpdateTankAreaDefFillings( modifs )
         models.tankAreaDefFilling.findAndCountAll()
         .then(data => {
-            const option = JsonParse.options(data)
             const Resdata = {
                code: 20000,
                data: data,
             }
-            console.log(Resdata)
             res.status(200).json(Resdata);
         })
-
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving tutorials."
+            });
+        });
     },
     updateTankAreaDefFilling: async function (req, res) {
         const {id} = req.params

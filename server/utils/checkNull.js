@@ -43,7 +43,7 @@ module.exports = {
     tankAreaDefEmptying: function(modifs) {
         for(let i = 0; i <  modifs.rows.length; i++){
             if (modifs.rows[i].dataValues.tankAreaDefEmptying === null) {
-                modifs.rows[i].dataValues.tankAreaDefEmptying = { name: "??????????",name1: "??????????"}
+                modifs.rows[i].dataValues.tankAreaDefEmptying = { name: "",name1: ""}
             }
         }
         return modifs
@@ -51,7 +51,7 @@ module.exports = {
     tankAreaDefFilling: function(modifs) {
         for(let i = 0; i <  modifs.rows.length; i++){
             if (modifs.rows[i].dataValues.tankAreaDefFilling === null) {
-                modifs.rows[i].dataValues.tankAreaDefFilling = { name: "??????????",name1: "??????????"}
+                modifs.rows[i].dataValues.tankAreaDefFilling = { name: "",name1: ""}
             }
         }
         return modifs

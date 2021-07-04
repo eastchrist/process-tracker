@@ -1,5 +1,5 @@
 // Imports
-const bcrypt    = require('bcrypt');
+const bcrypt    = require('bcryptjs');
 const models    = require('../models');
 const asyncLib  = require('async');
 const jwt = require('jsonwebtoken');
@@ -31,7 +31,7 @@ module.exports = {
             };
             return res.status(200).json(errors);
         }
-        if (reqUser.username.length >= 13 || reqUser.username.length <= 4) {
+        if (reqUser.username.length >= 20 || reqUser.username.length <= 4) {
             errors = {
                 'code': 50007,
                 'message': 'wrong username'
@@ -133,7 +133,10 @@ module.exports = {
         }
         asyncLib.waterfall([
             function(done) {
-                models.user.findOne({ where: { username: username } })
+                models.user.findOne({
+                    where: { username: username },
+                    include: [{ model: models.factory, as: 'factory' }]
+                })
                 .then(function(userFound) {
                     done(null, userFound);
                 })
@@ -191,10 +194,21 @@ module.exports = {
                         accessToken = "admin"
                     }
                 } else {
-                    roles.push("visitor")
-                    accessToken = "visitor"
+                    errors = {
+                        'code': 50019,
+                        'message': 'user not actif'
+                    };
+                    res.status(200).json(errors);
                 }
-                var user = {id: userFound.id, username: userFound.username, email: userFound.email, idFactory: userFound.idFactory, accessToken: accessToken, roles: roles  }
+                var user = {
+                    id: userFound.id,
+                    username: userFound.username,
+                    email: userFound.email,
+                    idFactory: userFound.idFactory,
+                    factoryName: userFound.factory.name1,
+                    accessToken: accessToken,
+                    roles: roles
+                }
                 const token = createToken(user);
                 let userNew = Object.assign( user, { Token: token })
                 res.status(200).json( userNew )

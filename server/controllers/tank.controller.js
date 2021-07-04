@@ -37,6 +37,8 @@ var FunctionUpdateTanks = async function ( modifs ) {
 module.exports = {
     getAllTanks: async function(req, res) {
         let name = req.query.name
+        let factory = req.query.idFactory
+        let area = req.query.idArea
         let tankArea = req.query.idTankArea
         let tankDef = req.query.idTankDef
         let page = req.query.page
@@ -45,6 +47,10 @@ module.exports = {
         limit = limit * 1;
 
         var whereAll = [  ]
+        var whereFactory = []
+        var whereArea = []
+
+        //Filter on the main table
         var whereTankArea = { idTankArea: { [Op.like]: `%${tankArea}%` }}
         var whereTankDef = { idTankDef: { [Op.like]: `%${tankDef}%` }}
         var whereTank = { name: { [Op.like]: `%${name}%` } }
@@ -52,12 +58,29 @@ module.exports = {
         if (tankDef) { whereAll.push(whereTankDef)}
         if (name) { whereAll.push(whereTank)}
 
+        //Filter inside include table
+        if (factory) { whereFactory.push( { idFactory: { [Op.like]: `%${factory}%` }} )}
+        if (area) { whereArea.push( { idArea: { [Op.like]: `%${area}%` }} )}
+
         models.tank.findAndCountAll( {
             order: [['position', 'ASC' ]],
             where: whereAll,
             offset: offset,
             limit: limit,
-            include: [{ model: models.tankArea, as: 'tankArea' }]
+            include: [{
+                model: models.tankArea,
+                as: 'tankArea',
+                where: whereArea,
+                include: [{
+                    model: models.area,
+                    as: 'area',
+                    where: whereFactory,
+                    include: [{
+                        model: models.factory,
+                        as: 'factory'
+                    }]
+                }]
+            }]
         })
         .then(data => {
             let outlet = checkNull.tankArea(data)

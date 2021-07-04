@@ -2,14 +2,14 @@ import { VuexModule, Module, Mutation, Action, getModule } from 'vuex-module-dec
 import store from '@/store'
 
 interface AIErrorLog {
-  err: Error;
-  vm: any;
-  info: string;
-  url: string;
+  err: Error
+  vm: any
+  info: string
+  url: string
 }
 
 export interface AIErrorLogState {
-  logs: AIErrorLog[];
+  logs: AIErrorLog[]
 }
 
 @Module({ dynamic: true, store, name: 'errorLog' })

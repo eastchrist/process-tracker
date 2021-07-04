@@ -9,13 +9,13 @@ export enum DeviceType {
 }
 
 export interface AIAppState {
-  device: DeviceType;
+  device: DeviceType
   sidebar: {
-    opened: boolean;
-    withoutAnimation: boolean;
-  };
-  language: string;
-  size: string;
+    opened: boolean
+    withoutAnimation: boolean
+  }
+  language: string
+  size: string
 }
 
 @Module({ dynamic: true, store, name: 'app' })

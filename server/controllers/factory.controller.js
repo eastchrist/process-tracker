@@ -18,6 +18,8 @@ var FunctionUpdateFactorys = async function ( modifs ) {
                         name: modif.name,
                         name1: modif.name1,
                         langue: modif.langue,
+                        logoClient: modif.logoClient,
+                        logoContractor: modif.logoContractor,
                         address: modif.address,
                         currency: modif.currency,
                         currencyEuro: modif.currencyEuro,
@@ -40,6 +42,7 @@ var FunctionUpdateFactorys = async function ( modifs ) {
 module.exports = {
     getAllFactorys: async function(req, res) {
         let name = req.query.name
+        let id = req.query.id
         let page = req.query.page
         let limit = req.query.limit
         const offset = ( page - 1) * limit;
@@ -47,7 +50,9 @@ module.exports = {
 
         var whereAll = [  ]
         var whereFactory = { name: { [Op.like]: `%${name}%` } }
+        var whereId = { id: { [Op.like]: `%${id}%` } }
         if (name) { whereAll.push(whereFactory)}
+        if (id) { whereAll.push(whereId)}
 
         models.factory.findAndCountAll( {
             order: [['position', 'ASC' ]],

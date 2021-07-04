@@ -80,7 +80,7 @@ export const constantRoutes: RouteConfig[] = [
         name: 'Entreprise',
         meta: {
           title: 'Entreprise',
-          icon: 'dashboard',
+          icon: 'bx-bxs-factory',
           roles: ['visitor'] ,
         }
       }
@@ -102,7 +102,7 @@ export const constantRoutes: RouteConfig[] = [
         name: 'Methodology',
         meta: {
           title: 'Methodology',
-          icon: 'dashboard',
+          icon: 'fa-solid:cogs',
         }
       }
     ]
@@ -123,7 +123,7 @@ export const constantRoutes: RouteConfig[] = [
         name: 'ContactUs',
         meta: {
           title: 'ContactUs',
-          icon: 'dashboard',
+          icon: 'guide',
         }
       }
     ]

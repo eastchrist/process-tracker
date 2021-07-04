@@ -40,24 +40,54 @@ var FunctionUpdateEquips = async function ( modifs ) {
 module.exports = {
     getAllEquips: async function(req, res) {
         let name = req.query.name
+        let factory = req.query.idFactory
+        let area = req.query.idArea
         let plc = req.query.idPlc
         let page = req.query.page
         let limit = req.query.limit
         const offset = ( page - 1) * limit;
         limit = limit * 1;
 
-        var whereAll = [  ]
+        var whereAll = []
+        var whereFactory = []
+        var whereArea = []
+
         var wherePlc = { idPlc: { [Op.like]: `%${plc}%` }}
         var whereEquip = { name: { [Op.like]: `%${name}%` } }
+
+        //Filter on the main table
         if (plc) { whereAll.push(wherePlc)}
         if (name) { whereAll.push(whereEquip)}
+
+        //Filter inside include table
+        if (factory) { whereFactory.push( { idFactory: { [Op.like]: `%${factory}%` }} )}
+        if (area) { whereArea.push( { idArea: { [Op.like]: `%${area}%` }} )}
+
 
         models.equip.findAndCountAll( {
             order: [['position', 'ASC' ]],
             where: whereAll,
             offset: offset,
             limit: limit,
-            include: [{ model: models.plc, as: 'plc' }]
+            include: [
+                {
+                    model: models.plc,
+                    as: 'plc',
+                    where: whereArea,
+                    include: [
+                        {
+                        model: models.area,
+                        as: 'area',
+                        where: whereFactory,
+                        include: [
+                            {
+                                model: models.factory,
+                                as: 'factory'
+                            }
+                        ]
+                    }]
+                }
+            ]
         })
         .then(data => {
             let outlet = checkNull.plc(data)
@@ -79,12 +109,10 @@ module.exports = {
         const datas = await FunctionUpdateEquips( modifs )
         models.equip.findAndCountAll()
         .then(data => {
-            console.log("End findAndCountAll")
             const Resdata = {
                code: 20000,
                data: data,
             }
-            console.log(Resdata)
             res.status(200).json(Resdata);
         })
 

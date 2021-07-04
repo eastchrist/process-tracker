@@ -19,6 +19,12 @@ module.exports = {
       langue: {
         type: Sequelize.STRING
       },
+      logoClient: {
+        type: Sequelize.STRING
+      },
+      logoContractor: {
+        type: Sequelize.STRING
+      },
       currency: {
         type: Sequelize.STRING
       },

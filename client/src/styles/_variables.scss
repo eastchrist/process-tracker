@@ -10,25 +10,140 @@ $tiffany: #4AB7BD;
 $yellow:#FEC171;
 $panGreen: #30B08F;
 
-// Sidebar
-$sideBarWidth: 210px;
-$subMenuBg:#1f2d3d;
-$subMenuHover:#001528;
-$subMenuActiveText:#f4f4f5;
-$menuBg:#304156;
-$menuText:#bfcbd9;
-$menuActiveText:#409EFF; // Also see settings.sidebarTextTheme
+// Navbar
+$navbarBackgroundColor: #34a9f9;
+$navbarHeight: 100px;
+$navbarItemColor: blue;
+$navbarTextColor: #fff;
 
-// Login page
-$lightGray: #eee;
-$darkGray:#889aa4;
-$loginBg: #2d3a4b;
-$loginCursorColor: #fff;
+// Footer
+$footerHeight: 200px;
+$footerBackgroundColor: #34a9f9;
+$footerTopBackgroundColor: #3082f9;
+$footerBorderColor:#18d26e;
+$footerColorMain: #eee;
+$footerColorParagh: #fff;
+$footerLinkOverColor: #18d26e;
+$footerLinkIconColor: #ddd;
+
+// TagView
+$tagviewBackgroundColor: #4e8bf9;
+$tagviewHeight: 34px;
+
+// Sidebar
+$sideBarWidth: 250px;
+$menuBg: #34a9f9;
+$subMenuBg: #368df9;
+$subMenuHover: #3843f9;
+$subMenuActiveText: #001528;
+$menuText:#bfcbd9;
+$menuActiveText: #507dff; // Also see settings.sidebarTextTheme
+//Menu selected color see element-variables
+
+//Logo
+$logoBackground: #34a9f9;
+
+// Login,Register and ContactUs pages
+$communBackgroundColor: #eee;
+//$communBackgroundColor: #7541ee;
+$communPageTitleColor: #999;
+//$communPageTitleColor: #ee437c;
+$communPageIconColor: #18d26e;
+//$communPageIconColor: #ee437c;
+$communPageLinkColor: #000;
+//$communPageLinkColor: #ee437c;
+
+$communHeaderBorderColor: #000;
+$communHeaderBorderLength: 1px;
+$communHeaderBorderRadius: 5px;
+
+$communInfoBorderColor: #000;
+$communInfoBorderLength: 1px;
+$communInfoBorderRadius: 5px;
+
+$communFormBorderColor: #000;
+$communFormBorderLength: 1px;
+$communFormBorderRadius: 5px;
+
+$communPageSvgColor: #889aa4;
+//$communPageSvgColor: #ee437c;
+
+//$communFormItemBackgroundColor:rgba(255, 78, 129, 0.1);
+$communFormItemBackgroundColor: rgba(72, 255, 104, 0.1);
+
+
+
+//$communFormItemBorderColor: rgba(255, 26, 58, 0.1);
+$communFormItemBorderColor: rgba(48, 155, 255, 0.1);
+
+
+//$loginInputColor: #001528;
+//$loginCursorColor: #fff;
+//$lightGray: #eee;
+//$loginBg: #fff;
+
+
+
+//vues Admin
+$adminContainerBgColor: #ffffff;
+$adminWrapperBgColor: #ffffff;
+$adminFilterBgColor: #ffffff;
+$adminExtraBgColor: #ffffff;
+$adminTableBgColor: #ffffff;
+$adminPaginationBgColor: #ffffff;
+$adminTreeviewBgColor: #ffffff;
+
+//tables
+$tableTitleColor: #ffffff;
+$tableTitleBgColor: #34a9f9;
+$tableTitleFontFamily: "Arial";
+$tableTitleFontFamilySize: 20;
+$tableTitleBordureLength: 1;
+$tableTitleBordureColor: black;
+
+$tableSubTitleColor: #ffffff;
+$tableSubTitleBgColor: #34a9f9;
+$tableSubTitleFontFamily: "Arial";
+$tableSubTitleFontFamilySize: 15;
+$tableSubTitleBordureLength: 1;
+$tableSubTitleBordureColor: black;
+
+$tableColumnColor: #ffffff;
+$tableColumnBgColor: #2b2f3a;
+$tableColumnFontFamily: "Arial";
+$tableColumnFontFamilySize: 12;
+$tableColumnBordureLength: 1;
+$tableColumnBordureColor: black;
 
 // The :export directive is the magic sauce for webpack
 // https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
-//:export {
-//  menuBg: $menuBg;
-//  menuText: $menuText;
-//  menuActiveText: $menuActiveText;
-//}
+:export {
+  menuBg: $menuBg;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+
+  tableTitleColor: $tableTitleColor;
+  tableTitleBgColor: $tableTitleBgColor;
+  tableTitleFontFamily: $tableTitleFontFamily;
+  tableTitleFontFamilySize: $tableTitleFontFamilySize;
+  tableTitleBordureLength: $tableTitleBordureLength;
+  tableTitleBordureColor: $tableTitleBordureColor;
+
+  tableSubTitleColor: $tableSubTitleColor;
+  tableSubTitleBgColor: $tableSubTitleBgColor;
+  tableSubTitleFontFamily: $tableSubTitleFontFamily;
+  tableSubTitleFontFamilySize: $tableSubTitleFontFamilySize;
+  tableSubTitleBordureLength: $tableSubTitleBordureLength;
+  tableSubTitleBordureColor: $tableSubTitleBordureColor;
+
+  tableColumnColor: $tableColumnColor;
+  tableColumnBgColor: $tableColumnBgColor;
+  tableColumnFontFamily: $tableColumnFontFamily;
+  tableColumnFontFamilySize: $tableColumnFontFamilySize;
+  tableColumnBordureLength: $tableColumnBordureLength;
+  tableColumnBordureColor: $tableColumnBordureColor;
+
+
+
+
+}

@@ -53,7 +53,10 @@ module.exports = {
             where: whereAll,
             offset: offset,
             limit: limit,
-            include: [{ model: models.area, as: 'area' }]
+            include: [{
+                model: models.area,
+                as: 'area'
+            }]
         })
         .then(data => {
             const outlet = checkNull.area(data)

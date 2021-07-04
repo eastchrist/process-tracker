@@ -14,14 +14,14 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      type: {
+      idType: {
+        type: Sequelize.INTEGER
+      },
+      idStatus: {
         type: Sequelize.INTEGER
       },
       comment: {
         type: Sequelize.STRING
-      },
-      idOwner: {
-        type: Sequelize.INTEGER
       },
       priority: {
         type: Sequelize.INTEGER
@@ -32,8 +32,20 @@ module.exports = {
       idArea: {
         type: Sequelize.STRING
       },
+      hoursPrice: {
+        type: Sequelize.FLOAT
+      },
       materialPrice: {
         type: Sequelize.FLOAT
+      },
+      electricalPrice: {
+        type: Sequelize.FLOAT
+      },
+      lastCreationDate: {
+        type: Sequelize.DATE
+      },
+      lastDueDate: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,

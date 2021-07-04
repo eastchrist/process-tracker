@@ -5,6 +5,8 @@ const Op = models.Sequelize.Op;
 const checkNull = require("../utils/checkNull");
 const JsonParse = require("../utils/JsonParse");
 
+
+
 var FunctionUpdateTankAreaDefEmptyings = async function ( modifs ) {
     for ( var modif of modifs) {
         const max = await models.tankAreaDefEmptying.max('position')
@@ -62,6 +64,8 @@ module.exports = {
         var whereTankAreaDefEmptying = { name: { [Op.like]: `%${name}%` } }
         if (name) { whereAll.push(whereTankAreaDefEmptying)}
 
+        const tanks = await models.tank.findAll( {})
+
         models.tankAreaDefEmptying.findAndCountAll( {
             order: [['position', 'ASC' ]],
             where: whereAll,
@@ -69,7 +73,7 @@ module.exports = {
             limit: limit
         })
         .then(data => {
-            const option = JsonParse.options(data)
+            const option = JsonParse.options(data, tanks)
             const outlet = checkNull.area(data)
             const Resdata = {
                  code: 20000,
@@ -89,12 +93,10 @@ module.exports = {
         const datas = await FunctionUpdateTankAreaDefEmptyings( modifs )
         models.tankAreaDefEmptying.findAndCountAll()
         .then(data => {
-            console.log("End findAndCountAll")
             const Resdata = {
                code: 20000,
                data: data,
             }
-            console.log(Resdata)
             res.status(200).json(Resdata);
         })
         .catch(err => {

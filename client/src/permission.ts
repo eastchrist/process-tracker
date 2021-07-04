@@ -11,7 +11,6 @@ import settings from './settings'
 NProgress.configure({ showSpinner: false })
 
 const whiteList = ['/dashboard',
-  '/guide',
   '/Entreprise/Entreprise',
   '/Methodology/Methodology',
   '/ContactUs/ContactUs',
@@ -21,6 +20,7 @@ const whiteList = ['/dashboard',
   '/auth-redirect' ]
 
 const getPageTitle = (key: string) => {
+  //CCA Title
   const hasKey = i18n.te(`route.${key}`)
   if (hasKey) {
     const pageName = i18n.t(`route.${key}`)
@@ -33,6 +33,7 @@ router.beforeEach(async(to: Route, _: Route, next: any) => {
   // Start progress bar
   NProgress.start()
   // Determine whether the user has logged in
+  const UserModuleTemp = UserModule.token
   if (UserModule.token) {
     if (to.path === '/login') {
       // If is logged in, redirect to the home page
@@ -63,7 +64,8 @@ router.beforeEach(async(to: Route, _: Route, next: any) => {
         next()
       }
     }
-  } else {
+  }
+  else {
     // Has no token
     if (whiteList.indexOf(to.path) !== -1) {
       PermissionModule.GenerateRoutes(['visitor'])
@@ -81,7 +83,7 @@ router.afterEach((to: Route) => {
   // Finish progress bar
   // hack: https://github.com/PanJiaChen/vue-element-admin/pull/2939
   NProgress.done()
-
   // set page title
+  //CCA Title
   document.title = getPageTitle(to.meta.title)
 })

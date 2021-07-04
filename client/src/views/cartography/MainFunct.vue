@@ -1,75 +1,65 @@
 <template>
-    <div class="MainFunction">
-        <div class="wrapper">
-            <div>
-                Lorem ipsum dolor sit.
-            </div>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam libero excepturi cupiditate quasi sit. Iure totam a magni, veritatis, voluptatem voluptates tempora praesentium et nisi eligendi. A saepe eaque aliquam, earum nihil quia? Nemo delectus possimus, explicabo repudiandae recusandae. Mollitia!
-            </div>
-            <div class="nested">
-                <div>Lorem</div>
-                <div>Lorem</div>
-                <div>Loresacsasm</div>
-                <div>Lorem</div>
-                <div>Lorem</div>
-                <div>Lorem</div>
-                <div>Lorem</div>
-                <div>Lorem</div>
-                <div>Lorem</div>
-            </div>
-            <div>
-                Lorem ipsum dolor sit.
-            </div>
-            <div>
-                Lorem ipsum dolor sit.
-            </div>
-            <div>
-                Lorem ipsum dolor sit.
-            </div>
-            <div>
-                Lorem ipsum dolor sit.
-            </div>
-        </div>
+    <div class="factoryMainFonction-container">
+        <main-funct-overview :idFactory=UserCurrent.idFactory :isAdmin=isAdmin :isManagerEdit=isManagerEdit :isManager=isManager :isOperator=isOperator></main-funct-overview>
     </div>
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
+    import { Component, Vue, Watch } from 'vue-property-decorator'
+    import { UserModule } from '@/store/modules/user'
+    import mainFunctOverview from '@/views/cartography/MainFunct/index.vue'
+
+    import { AIUserState } from '@/api/types'
+    import { defaultUser } from '@/api/users'
+    const UserCurrent: AIUserState = defaultUser
 
     @Component({
+        name: 'factoryMainFonction',
         components: {
+            mainFunctOverview
         },
     })
-    export default class MainFunction extends Vue {}
+    export default class extends Vue {
+        @Watch('this.UserCurrent', { deep: true })
+        private onChartDataChange(value: AIUserState) {
+            console.log("User_onChartDataChange")
+            this.updateUser()
+        }
+
+        private UserCurrent = UserCurrent
+        private isAdmin = false
+        private isManager = false
+        private isManagerEdit = false
+        private isOperator = false
+
+        private updateUser() {
+            if ((UserModule.username !== '') && (UserModule.username !== null)) {
+                this.UserCurrent = {
+                    token: UserModule.token,
+                    username: UserModule.username,
+                    email: UserModule.email,
+                    idFactory: UserModule.idFactory,
+                    factoryName: UserModule.factoryName,
+                    roles: UserModule.roles,
+                }
+                this.isManagerEdit = false
+                if (this.UserCurrent.roles.includes('admin')) { this.isAdmin = true }
+                if (this.UserCurrent.roles.includes('manager')) { this.isManager = true }
+                if (this.UserCurrent.roles.includes('operator')) { this.isOperator = true }
+            }
+            else { this.UserCurrent = {
+                token: '',
+                username: '',
+                email: '',
+                idFactory: '',
+                factoryName: '',
+                roles: [],
+            } }
+        }
+        created() {
+            this.updateUser()
+        }
+    }
 </script>
 
-<style lang="scss" scoped>
-    .wrapper{
-        display:grid;
-        /* grid-template-columns:1fr 1fr 1fr;*/
-        grid-template-columns:repeat(3, 1fr);
-        grid-gap:1em;
-        /* grid-auto-rows:100px; */
-        grid-auto-rows: minmax(100px, auto);
-    }
-    .nested{
-        display:grid;
-        grid-template-columns:repeat(3, 1fr);
-        grid-auto-rows: 70px;
-        grid-gap:1em;
-    }
 
-    .wrapper > div{
-        background:#eee;
-        padding:1em;
-    }
-    .wrapper > div:nth-child(odd){
-        background:#ddd;
-    }
-
-    .nested > div{
-        border:#333 1px solid;
-        padding:1em;
-    }
-</style>

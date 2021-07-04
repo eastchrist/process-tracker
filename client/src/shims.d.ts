@@ -7,8 +7,8 @@ declare module 'element-ui/lib/locale/lang/*' {
   export const elementLocale: any
 }
 
-//declare module '*.gif' {
-//  export const gif: any
-//}
+declare module '*.gif' {
+  export const gif: any
+}
 
 

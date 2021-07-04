@@ -95,6 +95,7 @@ module.exports = {
                 user: {
                             username: decode.userFound.username,
                             email: decode.userFound.email,
+                            factoryName: decode.userFound.factoryName,
                             idFactory: decode.userFound.idFactory,
                             accessToken: decode.userFound.accessToken,
                             roles: decode.userFound.roles,

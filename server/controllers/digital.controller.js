@@ -3,7 +3,6 @@ const models = require('../models');
 const Op = models.Sequelize.Op;
 
 var FunctionUpdateDigitals = async function ( modifs ) {
-    console.log("TOTO")
     for ( var modif of modifs) {
         const max = await models.digital.max('position')
         let nextValue = 0

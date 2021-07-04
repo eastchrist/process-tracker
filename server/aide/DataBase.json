@@ -1,4 +1,37 @@
 
+sudo npm audit fix
+sudo npm node server.js
+sudo node server.js
+nodemon server.js
+
+sudo npm i fsevents@latest -f --save-optional
+sudo npm install --save async
+sudo npm install --save bcryptjs
+sudo npm install --save body-parser
+sudo npm install --save cookie-parser
+sudo npm install --save cors
+sudo npm install --save dotenv
+sudo npm install --save express
+sudo npm install --save jsonwebtoken
+sudo npm install --save mysql2
+sudo npm install --save nodemon
+sudo npm install --save sequelize
+sudo npm install --save-dev sequelize-cli
+
+sequelize init
+sequelize db:create
+
+{
+  "fonctionTracab": {
+    "initialAnnualLossesQty": "float",
+    "initialAnnualLossesPrice": "float",
+    "initialAnnualLossesEuro": "float",
+    "currentAnnualLossesQty": "float",
+    "currentAnnualLossesPrice": "float",
+    "currentAnnualLossesEuro": "float",
+    "areas":
+  }
+}
 
 {
   "create": {
@@ -20,6 +53,8 @@
       "name":"string",
       "name1":"string",
       "langue":"string",
+      "logoClient":"string",
+      "logoContractor":"string",
       "address":"string",
       "currency":"string",
       "currencyEuro":"string",
@@ -154,29 +189,40 @@
     "fonction": {
       "name":"string",
       "position":"integer",
+      "firstLosses":"float",
+      "firstLossesPrice":"float",
+
+      "currentLosses":"float",
+      "currentLossesPrice":"float",
+
+      "lastCheckDate": "datetime",
+      "checkBeforeDate": "datetime",
       "idType":"integer",
       "idAreaSource":"string",
       "idAreaDest":"string",
       "freqCheck":"integer",
       "freqDelay":"integer",
+      "nbLosse":"integer",
       "maxLosse":"integer",
+
       "haveToBeCheck":"boolean",
       "haveBeenCheck":"boolean",
+      "haveToBeValidated":"boolean",
       "modeAutoCheckActif":"boolean",
+
+      "enabled":"boolean",
+
+      "method":"string",
       "picture1":"string",
       "picture2":"string",
       "idProjectLink":"integer",
-      "projectPosition":"integer",
+      "idProjectLinkSelected":"boolean",
       "projectPercentRecovery":"float",
-      "idFactory":"string",
-      "idArea":"string",
-      "idPlc":"string",
       "idEquip":"string",
       "idEquipIndex":"integer"
     },
     "measure": {
-      "name":"string",
-      "type":"integer",
+      "idType":"integer",
       "position":"integer",
       "comment":"string",
       "losses":"float",
@@ -188,52 +234,62 @@
       "ts2":"float",
       "ts3":"float",
       "idProduct":"string",
-      "idFonction":"string"
+      "idFonction":"string",
+      "idTankSource":"string",
+      "idTankDest":"string"
     },
     "project": {
       "position": "integer",
       "name": "string",
-      "type": "integer",
+      "idType":"integer",
+      "idStatus":"integer",
       "comment": "string",
-      "idOwner": "integer",
       "priority": "integer",
       "difficulty": "integer",
       "idArea": "string",
-      "materialPrice":"float"
+      "hoursPrice":"float",
+      "materialPrice":"float",
+      "electricalPrice":"float",
+      "lastCreationDate": "date",
+      "lastDueDate": "date"
     },
-    "dataProject": {
+    "projectAction": {
       "comment": "string",
       "position": "integer",
       "creationDate": "date",
       "dueDate": "date",
-      "status": "integer",
       "idProject": "integer"
     },
-
     "measureType": {
       "name":"string",
       "position":"integer",
       "value":"integer"
     },
-
+    "projectType": {
+      "name":"string",
+      "position":"integer",
+      "value":"integer"
+    },
+    "projectStatus": {
+      "name":"string",
+      "position":"integer",
+      "value":"integer"
+    }
   },
 
 
 
-  "difficulty": {name:string, value:integer position:integer},
-  "priority": {name:string, value:integer position:integer}
-    "equipEmptyingTo": {idNode:string name:string position:integer idTankArea:string, idEquip:string},
-    "equipFillingFrom": {idNode:string name:string position:integer idTankArea:string, idEquip:string},
-    "equipData": { },
-    "equipCaract": { },
+
 
 
 
 
 },
 sequelize init
+sequelize db:create
+
 sequelize model:create --name user --attributes "username:string email:string password:string position:integer currency:string currencyEuro:string isAdmin:boolean isManager:boolean isOperator:boolean isVisitor:boolean isActif:boolean idFactory:string"
-sequelize model:create --name factory --attributes "idNode:string name:string name1:string position:integer address:string langue:string isCartography:boolean isTraceability:boolean isOptimisation:boolean"
+sequelize model:create --name factory --attributes "idNode:string name:string name1:string position:integer address:string langue:string logoClient:string logoContractor:string isCartography:boolean isTraceability:boolean isOptimisation:boolean"
 sequelize model:create --name computer --attributes "idNode:string name:string name1:string position:integer isServerMain:boolean isServerLocal:boolean isComputerLocal:boolean isComputerCarto:boolean idFactory:string",
 sequelize model:create --name area --attributes "idNode:string name:string name1:string position:integer menu:string idFactory:string ",
 sequelize model:create --name tankArea --attributes "idNode:string name:string name1:string position:integer idArea:string"
@@ -244,13 +300,16 @@ sequelize model:create --name equip --attributes "idNode:string, name:string, na
 sequelize model:create --name digital --attributes "name:string, name1:string, tag:string, address:string, position:integer, idEquip:string, idTank:string, indexCreation:integer"
 sequelize model:create --name analog --attributes "name:string, name1:string, tag:string, address:string, type:string, position:integer, idEquip:string, idTank:string, indexCreation:integer"
 sequelize model:create --name product --attributes "name:string, position:integer, totalSolid:float, price:float, idFactory:string"
-sequelize model:create --name measure --attributes "name:string, position:integer, type:integer, comment:string, losses:float, ts:float, measure1:float, measure2:float, measure3:float, ts1:float, ts2:float, ts3:float, idProduct:string, idFonction:string"
-sequelize model:create --name project --attributes "position:integer, name:string, type:integer, comment:string, idOwner:integer, priority:integer, difficulty:integer, idArea:string, materialPrice:float"
-sequelize model:create --name dataProject --attributes "comment:string, position:integer, creationDate:date, dueDate:date, status:integer, idProject:integer"
-sequelize model:create --name fonction --attributes "name:string, position:integer, idType:integer, idAreaSource:string, idAreaDest:string, freqCheck:integer, freqDelay:integer, maxLosse:integer, haveToBeCheck:boolean, haveBeenCheck:boolean, modeAutoCheckActif:boolean, picture1:string, picture2:string, idProjectLink:integer, projectPosition:integer, projectPercentRecovery:float, idFactory:string, idArea:string, idPlc:string, idEquip:string, idEquipIndex:integer"
+sequelize model:create --name measure --attributes "position:integer, idType:integer, comment:string, losses:float, ts:float, measure1:float, measure2:float, measure3:float, ts1:float, ts2:float, ts3:float, idProduct:string, idFonction:string, idTankSource:string, idTankDest:string"
 
+sequelize model:create --name project --attributes "position:integer, name:string, idType:integer, idStatus:integer, comment:string, priority:integer, difficulty:integer, idArea:string, hoursPrice:float, materialPrice:float, electricalPrice:float, lastCreationDate:date, lastDueDate:date"
+sequelize model:create --name projectAction --attributes "comment:string, position:integer, creationDate:date, dueDate:date, idProject:integer"
+
+sequelize model:create --name fonction --attributes "name:string, position:integer, idType:integer, lastCheckDate: datetime, checkBeforeDate: datetime, firstLosses:float, firstLossesPrice:float, currentLosses:float, currentLossesPrice:float, idAreaSource:string, idAreaDest:string, freqCheck:integer, freqDelay:integer, nbLosse:integer, maxLosse:integer, haveToBeCheck:boolean, haveBeenCheck:boolean, haveToBeValidated:boolean, modeAutoCheckActif:boolean, enabled:boolean, method:string, picture1:string, picture2:string, idProjectLink:integer, idProjectLinkSelected:boolean, projectPercentRecovery:float, idEquip:string, idEquipIndex:integer"
 sequelize model:create --name server --attributes "idNode:string, position:integer name:string serverType:string",
 sequelize model:create --name plc --attributes "idNode:string, position:integer name:string name1:string brand:string connection:string slot:string rack:string ip:string idServer:string idArea:string"
 sequelize model:create --name measureType --attributes "name:string, position:integer, value:integer"
+sequelize model:create --name projectType --attributes "name:string, position:integer, value:integer"
+sequelize model:create --name projectStatus --attributes "name:string, position:integer, value:integer"
 
   sequelize db:migrate

@@ -1,37 +1,58 @@
 <template>
-    <div class="login-container">
-        <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
-            <div class="title-container">
-                <h3 class="title">{{ $t('register.title') }}</h3>
+    <section id="sectionMain" class="section-bg wow fadeInUp">
+        <div class="container">
+            <div class="section-header">
+                <img src="@/assets/logoEntreprise/ProcessControl.png" alt="">
+                <h3>{{ $t('views.register.title') }}</h3>
             </div>
-            <el-form-item prop="username">
-                <span class="svg-container"><svg-icon name="user" /></span>
-                <el-input ref="username" v-model="loginForm.username" :placeholder="$t('register.username')" name="username" type="text" tabindex="1" autocomplete="on"/>
-            </el-form-item>
+            <div class="form">
+                <el-form class="submitForm col" ref="submitForm" :rules="rules" :model="tempData">
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <el-form-item prop="username">
+                                <span class="svg-container"><PersoIcons name="user" width='1em' height='1em' /></span>
+                                <el-input ref="username" v-model="tempData.username" :placeholder="$t('views.login.placeholders.placeholder1')" name="username" type="text"/>
+                            </el-form-item>
+                        </div>
+                    </div><!-- End Input Name -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <el-form-item prop="email">
+                                <span class="svg-container"><PersoIcons name="email" width='1em' height='1em' /></span>
+                                <el-input ref="email" v-model="tempData.email" :placeholder="$t('views.register.placeholders.placeholder2')" name="email" type="text"/>
+                            </el-form-item>
+                        </div>
+                    </div><!-- End Input Email -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
+                                <el-form-item prop="password">
+                                    <span class="svg-container"><PersoIcons name="password" width='1em' height='1em' /></span>
+                                    <el-input :key="passwordType" ref="password" v-model="tempData.password" :type="passwordType" :placeholder="$t('views.register.placeholders.placeholder3')" name="password" @keyup.native="checkCapslock" @blur="capsTooltip = false" @keyup.enter.native="handleSubmit"/>
+                                    <span class="show-pwd" @click="showPwd"><PersoIcons :name="passwordType === 'password' ? 'eye-off' : 'eye-on'" width='1em' height='1em' /></span>
+                                </el-form-item>
+                            </el-tooltip>
+                        </div>
+                    </div><!-- End Input Password -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
+                                <el-form-item prop="confPassword">
+                                    <span class="svg-container"><PersoIcons name="password" width='1em' height='1em' /></span>
+                                    <el-input :key="confPasswordType" ref="confPassword" v-model="tempData.confPassword" :type="confPasswordType" :placeholder="$t('views.register.placeholders.placeholder4')" name="Confpassword" tabindex="2" autocomplete="on" @keyup.native="checkCapslock" @blur="capsTooltip = false" @keyup.enter.native="handleSubmit"/>
+                                    <span class="show-pwd" @click="showConfPwd"><PersoIcons :name="confPasswordType === 'password' ? 'eye-off' : 'eye-on'" width='1em' height='1em' /></span>
+                                </el-form-item>
+                            </el-tooltip>
+                        </div>
+                    </div><!-- End Input ConfPassword -->
 
-            <el-form-item prop="email">
-                <span class="svg-container"><svg-icon name="email" /></span>
-                <el-input ref="email" v-model="loginForm.email" :placeholder="$t('register.email')" name="email" type="text" tabindex="1" autocomplete="on"/>
-            </el-form-item>
-
-            <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-                <el-form-item prop="password">
-                    <span class="svg-container"><svg-icon name="password" /></span>
-                    <el-input :key="passwordType" ref="password" v-model="loginForm.password" :type="passwordType" :placeholder="$t('register.password')" name="password" tabindex="2" autocomplete="on" @keyup.native="checkCapslock" @blur="capsTooltip = false" @keyup.enter.native="handleLogin"/>
-                    <span class="show-pwd" @click="showPwd"><svg-icon :name="passwordType === 'password' ? 'eye-off' : 'eye-on'" /></span>
-                </el-form-item>
-            </el-tooltip>
-            <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-                <el-form-item prop="Confpassword">
-                    <span class="svg-container"><svg-icon name="password" /></span>
-                    <el-input :key="ConfpasswordType" ref="Confpassword" v-model="loginForm.Confpassword" :type="ConfpasswordType" :placeholder="$t('register.Confpassword')" name="Confpassword" tabindex="2" autocomplete="on" @keyup.native="checkCapslock" @blur="capsTooltip = false" @keyup.enter.native="handleLogin"/>
-                    <span class="show-pwd" @click="showConfPwd"><svg-icon :name="ConfpasswordType === 'password' ? 'eye-off' : 'eye-on'" /></span>
-                </el-form-item>
-            </el-tooltip>
-
-            <el-button :loading="loading" type="primary" style="width:100%; margin-bottom:30px;" @click.native.prevent="handleLogin">{{ $t('register.register') }}</el-button>
-        </el-form>
-    </div>
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <el-button type="primary" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300"  @click.native.prevent="handleSubmit">{{ $t('views.register.bouton') }}</el-button>
+                    </div>
+                </el-form>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script lang="ts">
@@ -41,6 +62,7 @@
     import { Form as ElForm, Input } from 'element-ui'
     import { UserModule } from '@/store/modules/user'
     import { ElNotificationOptions } from 'element-ui/types/notification';
+    import { defaultRegisterData, defaultRegisterRules } from '@/api/contactUs'
 
     @Component({
         name: 'Register',
@@ -48,50 +70,11 @@
         },
     })
     export default class extends Vue {
-        private validateUsername = (rule: any, value: string, callback: Function) => {
-            if (value.length < 3) {
-                callback(new Error( `${this.$t(`message.40001`)}` ))
-            } else {
-                callback()
-            }
-        }
-        private validateEmail = (rule: any, value: string, callback: Function) => {
-            if (value.length < 5) {
-                callback(new Error( `${this.$t(`message.40002`)}` ))
-            } else {
-                callback()
-            }
-        }
-        private validatePassword = (rule: any, value: string, callback: Function) => {
-            if (value.length < 5) {
-                callback(new Error( `${this.$t(`message.40003`)}` ))
-            } else {
-                callback()
-            }
-        }
-        private validateConfPassword = (rule: any, value: string, callback: Function) => {
-            if (value.length < 5) {
-                callback(new Error( `${this.$t(`message.40004`)}` ))
-            } else {
-                callback()
-            }
-        }
-
-        private loginForm = {
-            username: '',
-            email: '',
-            password: '',
-            Confpassword: ''
-        }
-        private loginRules = {
-            username: [{ validator: this.validateUsername, trigger: 'blur' }],
-            email: [{ validator: this.validateEmail, trigger: 'blur' }],
-            password: [{ validator: this.validatePassword, trigger: 'blur' }],
-            Confpassword: [{ validator: this.validateConfPassword, trigger: 'blur' }],
-        }
+        private rules = defaultRegisterRules
+        private tempData = defaultRegisterData
 
         private passwordType = 'password'
-        private ConfpasswordType = 'password'
+        private confPasswordType = 'password'
         private loading = false
         private capsTooltip = false
         private redirect?: string
@@ -108,14 +91,11 @@
         }
 
         mounted() {
-            if (this.loginForm.username === '') {
-                (this.$refs.username as Input).focus()
-            } else if (this.loginForm.email === '') {
-                (this.$refs.email as Input).focus()
-            } else if (this.loginForm.password === '') {
-                (this.$refs.password as Input).focus()
-            } else if (this.loginForm.Confpassword === '') {
-                (this.$refs.Confpassword as Input).focus()
+            this.tempData = {
+                username: "",
+                email: "",
+                password: "",
+                confPassword: "",
             }
         }
         private checkCapslock(e: KeyboardEvent) {
@@ -133,29 +113,28 @@
             })
         }
         private showConfPwd() {
-            if (this.ConfpasswordType === 'password') {
-                this.ConfpasswordType = ''
+            if (this.confPasswordType === 'password') {
+                this.confPasswordType = ''
             } else {
-                this.ConfpasswordType = 'password'
+                this.confPasswordType = 'password'
             }
             this.$nextTick(() => {
-                (this.$refs.Confpassword as Input).focus()
+                (this.$refs.confPassword as Input).focus()
             })
         }
-        private handleLogin() {
-            (this.$refs.loginForm as ElForm).validate(async(valid: boolean) => {
+        private handleSubmit() {
+            (this.$refs.submitForm as ElForm).validate(async(valid: boolean) => {
                 if (valid) {
                     this.loading = true
-                    const { data } = await UserModule.Register(this.loginForm)
+                    const { data } = await UserModule.Register(this.tempData)
                     if (data.code) {
-                        //TODO
-                        //const message  = this.$t('message.'+ data.code + "")
-                        //this.$notify({
-                       //     title: this.$t('message.titleError') + "",
-                       //     message: message,
-                       //     type: 'error',
-                       //     duration: 2000
-                       // })
+                        const message: any  = this.$t('message.'+ data.code + "")
+                        this.$notify({
+                            title: this.$t('message.titleError') + "",
+                            message: message,
+                            type: 'error',
+                            duration: 2000
+                        })
                         this.$router.push({
                             path: this.redirect || '/',
                             query: this.otherQuery
@@ -164,7 +143,7 @@
                     else {
                         this.$notify({
                             title: "",
-                            message: this.$t('tables.generique.notify.notify2.message') + "",
+                            message: this.$t('notify.notify2.message') + "",
                             type: 'success',
                             duration: 2000
                         })
@@ -173,15 +152,6 @@
                             query: this.otherQuery
                         })
                     }
-                    //console.log(this.otherQuery)
-                    //this.$router.push({
-                    //    path: this.redirect || '/',
-                    //    query: this.otherQuery
-                    //})
-                    //    .catch(err => {
-                    //    console.warn(err)
-                    //})
-                    // Just to simulate the time of the request
                 } else {
                     return false
                 }
@@ -198,117 +168,157 @@
     }
 </script>
 
-<style lang="scss">
-    // References: https://www.zhangxinxu.com/wordpress/2018/01/css-caret-color-first-line/
-    @supports (-webkit-mask: none) and (not (cater-color: #fff)) {
-        .login-container .el-input {
-            input { color: #fff; }
-            input::first-line { color: #eee; }
-        }
-    }
-    .login-container {
-        .el-input {
-            display: inline-block;
-            height: 47px;
-            width: 85%;
-
-            input {
-                height: 47px;
-                background: transparent;
-                border: 0px;
-                border-radius: 0px;
-                padding: 12px 5px 12px 15px;
-                color: #eee;
-                caret-color: #fff;
-                -webkit-appearance: none;
-
-                &:-webkit-autofill {
-                    box-shadow: 0 0 0px 1000px #2d3a4b inset !important;
-                    -webkit-text-fill-color: #fff !important;
-                }
-            }
-        }
-
-        .el-form-item {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            color: #454545;
-        }
-    }
-</style>
 <style lang="scss" scoped>
-    .login-container {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        background-color: #2d3a4b;
+    #sectionMain {
+        padding: 30px 0;
+        background: $communBackgroundColor;
+    }
+    #sectionMain .section-header {
+        border: $communHeaderBorderLength solid $communHeaderBorderColor;
+        border-radius: $communHeaderBorderRadius;
+        padding: 0px 60px 20px 60px;
+        margin-bottom: 20px;
+    }
+    #sectionMain .section-header h3 {
+        font-size: 32px;
+        color: $communPageTitleColor;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    #sectionMain .section-header h3::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: #ddd;
+        bottom: 1px;
+        left: calc(50% - 60px);
+    }
+    #sectionMain .section-header h3::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: $communPageIconColor;
+        bottom: 0;
+        left: calc(50% - 20px);
+    }
+    #sectionMain .section-header p {
+        text-align: center;
+        padding-bottom: 50px;
+        color: #333;
+    }
 
-        .login-form {
-            position: relative;
-            width: 520px;
-            max-width: 100%;
-            padding: 160px 35px 0;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .tips {
-            font-size: 14px;
-            color: #fff;
-            margin-bottom: 10px;
+    #sectionMain .sectionMain-info {
+        border: $communInfoBorderLength solid $communInfoBorderColor;
+        border-radius: $communInfoBorderRadius;
+        padding: 0px 60px 0px 60px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #sectionMain .sectionMain-info i {
+        font-size: 48px;
+        display: inline-block;
+        margin-bottom: 10px;
+        color: $communPageIconColor;
+    }
+    #sectionMain .sectionMain-info address, #sectionMain .sectionMain-info p {
+        margin-bottom: 0;
+        color: $communPageLinkColor;
+    }
+    #sectionMain .sectionMain-info h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $communPageTitleColor;
+    }
+    #sectionMain .sectionMain-info a {
+        color: $communPageLinkColor;
+    }
+    #sectionMain .sectionMain-info a:hover {
+        color: #18d26e;
+    }
+    #sectionMain .sectionMain-address, #sectionMain .sectionMain-phone, #sectionMain .sectionMain-email {
+        margin-bottom: 20px;
+    }
 
-            span {
-                &:first-of-type {
-                    margin-right: 16px;
-                }
-            }
+    @media (min-width: 768px) {
+        #sectionMain .sectionMain-address, #sectionMain .sectionMain-phone, #sectionMain .sectionMain-email {
+            padding: 20px 0;
         }
-        .svg-container {
-            padding: 6px 5px 6px 15px;
-            color: #889aa4;
-            vertical-align: middle;
-            width: 30px;
-            display: inline-block;
+    }
+    @media (min-width: 768px) {
+        #sectionMain .sectionMain-phone {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
         }
-        .title-container {
-            position: relative;
+    }
 
-            .title {
-                font-size: 26px;
-                color: #eee;
-                margin: 0px auto 40px auto;
-                text-align: center;
-                font-weight: bold;
-            }
+    #sectionMain .form {
+        border: $communFormBorderLength solid $communFormBorderColor;
+        border-radius: $communFormBorderRadius;
+        padding: 40px 20px 40px 20px;
+    }
+    #sectionMain .form #sendmessage.show, #sectionMain .form #errormessage.show, #sectionMain .form .show {
+        display: block;
+    }
+    .el-input {
+        //background: #454545;
+        display: inline-block;
+        padding: 3px 0px 0px 10px;
+        width: 85%;
+        input {
+            height: 47px;
+            //background-color: #454545;
+            //background: #454545;
+            background: transparent;
+            border: 0px;
+            border-radius: 0px;
+            padding: 12px 5px 12px 15px;
+            //color: #454545;
+            //caret-color: $loginCursorColor;
+            -webkit-appearance: none;
 
-            .set-language {
-                color: #fff;
-                position: absolute;
-                top: 3px;
-                font-size: 18px;
-                right: 0px;
-                cursor: pointer;
-            }
-        }
-        .show-pwd {
-            position: absolute;
-            right: 10px;
-            top: 7px;
-            font-size: 16px;
-            color: #889aa4;
-            cursor: pointer;
-            user-select: none;
-        }
-        .thirdparty-button {
-            position: absolute;
-            right: 0;
-            bottom: 6px;
-        }
 
-        @media only screen and (max-width: 470px) {
-            .thirdparty-button {
-                display: none;
-            }
         }
+    }
+    .svg-container {
+        padding: 0px 0px 5px 10px;
+        color: $communPageSvgColor;
+        vertical-align: middle;
+        width: 30px;
+        display: inline-block;
+    }
+    .show-pwd {
+        padding: 0px 0px 5px 20px;
+        color: $communPageSvgColor;
+        vertical-align: middle;
+        width: 30px;
+        display: inline-block;
+    }
+    .el-form-item {
+        margin-bottom: 30px;
+        border: 1px solid $communFormItemBorderColor;
+        background: $communFormItemBackgroundColor;
+        border-radius: 5px;
+        color: #454545;
+    }
+
+    #sectionMain .form el-button[type="submit"] {
+        background: $communPageIconColor;
+        border: 0;
+        padding: 10px 30px;
+        color: #fff;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    #sectionMain .form el-button[type="submit"]:hover {
+        background: #13a456;
     }
 </style>

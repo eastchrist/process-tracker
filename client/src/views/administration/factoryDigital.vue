@@ -1,6 +1,5 @@
 <template>
     <div class="factoryDigital-container">
-        <h2>{{ $t('screen.factoryDigital') }}</h2>
         <TableAdminDigital></TableAdminDigital>
     </div>
 </template>
@@ -8,7 +7,7 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
 
-    import TableAdminDigital from '@/components/Tables/TableAdminDigital.vue'
+    import TableAdminDigital from '@/components/Tables/Admin/TableAdminDigital.vue'
 
     @Component({
         name: 'factoryDigital',

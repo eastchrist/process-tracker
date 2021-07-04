@@ -42,6 +42,7 @@ var FunctionUpdatePlcs = async function ( modifs ) {
 module.exports = {
     getAllPlcs: async function(req, res) {
         let name = req.query.name
+        let factory = req.query.idFactory
         let area = req.query.idArea
         let server = req.query.idServer
         let page = req.query.page
@@ -49,20 +50,43 @@ module.exports = {
         const offset = ( page - 1) * limit;
         limit = limit * 1;
 
-        var whereAll = [  ]
+        var whereAll = []
+        var whereFactory = []
+
         var whereArea = { idArea: { [Op.like]: `%${area}%` }}
         var whereServer = { idServer: { [Op.like]: `%${server}%` }}
         var wherePlc = { name: { [Op.like]: `%${name}%` } }
+
+        //Filter on the main table
         if (area) { whereAll.push(whereArea)}
         if (server) { whereAll.push(whereServer)}
         if (name) { whereAll.push(wherePlc)}
+
+        //Filter inside include table
+        if (factory) { whereFactory.push( { idFactory: { [Op.like]: `%${factory}%` }} )}
 
         models.plc.findAndCountAll( {
             order: [['position', 'ASC' ]],
             where: whereAll,
             offset: offset,
             limit: limit,
-            include: [{ model: models.area, as: 'area' },{ model: models.server, as: 'server' }]
+            include: [
+                {
+                    model: models.area,
+                    as: 'area',
+                    where: whereFactory,
+                    include: [
+                        {
+                            model: models.factory,
+                            as: 'factory'
+                        }
+                    ]
+                },
+                {
+                    model: models.server,
+                    as: 'server'
+                }
+            ]
         })
         .then(data => {
             let outlet = checkNull.area(data)

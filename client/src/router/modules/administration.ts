@@ -22,6 +22,15 @@ const administrationsRouter: RouteConfig = {
       }
     },
     {
+      path: 'factorySystem',
+      component: () => import('@/views/administration/factorySystem.vue'),
+      name: 'factorySystem',
+      meta: {
+        title: 'factorySystem',
+        roles: ['admin']
+      }
+    },
+    {
       path: 'factoryFactory',
       component: () => import('@/views/administration/factoryFactory.vue'),
       name: 'factoryFactory',
@@ -40,20 +49,30 @@ const administrationsRouter: RouteConfig = {
       }
     },
     {
-      path: 'factoryTankAreaFillingFrom',
-      component: () => import('@/views/administration/factoryTankAreaFillingFrom.vue'),
-      name: 'factoryTankAreaFillingFrom',
-      meta: {
-        title: 'factoryTankAreaFillingFrom',
-        roles: ['admin']
-      }
-    },
-    {
       path: 'factoryTankArea',
       component: () => import('@/views/administration/factoryTankArea.vue'),
       name: 'factoryTankArea',
       meta: {
         title: 'factoryTankArea',
+        roles: ['admin']
+      }
+    },
+    {
+      path: 'factoryTank',
+      component: () => import('@/views/administration/factoryTank.vue'),
+      name: 'factoryTank',
+      meta: {
+        title: 'factoryTank',
+        roles: ['admin']
+      }
+    },
+
+    {
+      path: 'factoryTankAreaFillingFrom',
+      component: () => import('@/views/administration/factoryTankAreaFillingFrom.vue'),
+      name: 'factoryTankAreaFillingFrom',
+      meta: {
+        title: 'factoryTankAreaFillingFrom',
         roles: ['admin']
       }
     },
@@ -66,15 +85,7 @@ const administrationsRouter: RouteConfig = {
         roles: ['admin']
       }
     },
-    {
-      path: 'factorySystem',
-      component: () => import('@/views/administration/factorySystem.vue'),
-      name: 'factorySystem',
-      meta: {
-        title: 'factorySystem',
-        roles: ['admin']
-      }
-    },
+
     {
       path: 'factoryPlc',
       component: () => import('@/views/administration/factoryPlc.vue'),
@@ -99,15 +110,6 @@ const administrationsRouter: RouteConfig = {
       name: 'factoryEquip',
       meta: {
         title: 'factoryEquip',
-        roles: ['admin']
-      }
-    },
-    {
-      path: 'factoryTank',
-      component: () => import('@/views/administration/factoryTank.vue'),
-      name: 'factoryTank',
-      meta: {
-        title: 'factoryTank',
         roles: ['admin']
       }
     },
@@ -159,11 +161,11 @@ const administrationsRouter: RouteConfig = {
       }
     },
     {
-      path: 'factoryCartoDataProject',
-      component: () => import('@/views/administration/factoryCartoDataProject.vue'),
-      name: 'factoryCartoDataProject',
+      path: 'factoryCartoProjectAction',
+      component: () => import('@/views/administration/factoryCartoProjectAction.vue'),
+      name: 'factoryCartoProjectAction',
       meta: {
-        title: 'factoryCartoDataProject',
+        title: 'factoryCartoProjectAction',
         roles: ['admin']
       }
     },

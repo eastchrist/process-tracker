@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      //this.belongsTo(models.fonction, { foreignKey: 'idFonction'})
     }
   };
   measure.init({
-    name: DataTypes.STRING,
-    type: DataTypes.INTEGER,
+    idType: DataTypes.INTEGER,
     position: DataTypes.INTEGER,
     comment: DataTypes.STRING,
     losses: DataTypes.FLOAT,
@@ -27,7 +27,9 @@ module.exports = (sequelize, DataTypes) => {
     ts2: DataTypes.FLOAT,
     ts3: DataTypes.FLOAT,
     idProduct: DataTypes.STRING,
-    idFonction: DataTypes.STRING
+    idFonction: DataTypes.STRING,
+    idTankSource: DataTypes.STRING,
+    idTankDest: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'measure',

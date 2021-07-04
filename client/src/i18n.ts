@@ -6,11 +6,13 @@ import { getLanguage } from '@/utils/cookies'
 
 Vue.use(VueI18n)
 import enLocale from './locales/en';
-import frLocale from './locales/fr'
+import frLocale from './locales/fr';
+import esLocale from './locales/es';
 
-//TODO CCA
 import elementEnLocale from 'element-ui/lib/locale/lang/en'
 import elementFrLocale from 'element-ui/lib/locale/lang/fr'
+import elementEsLocale from 'element-ui/lib/locale/lang/es'
+
 const messages = {
   en: {
     ...elementEnLocale,
@@ -19,6 +21,10 @@ const messages = {
   fr: {
     ...elementFrLocale,
     ...frLocale
+  },
+  es: {
+    ...elementEsLocale,
+    ...esLocale
   }
 }
 

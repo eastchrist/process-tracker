@@ -2,9 +2,9 @@ import { saveAs } from 'file-saver'
 import XLSX, { WorkBook, WorkSheet } from 'xlsx'
 
 interface AICell {
-  v: Date | number | boolean | string;
-  t: string;
-  z: string;
+  v: Date | number | boolean | string
+  t: string
+  z: string
 }
 
 class Workbook implements WorkBook {

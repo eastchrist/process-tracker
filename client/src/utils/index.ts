@@ -1,8 +1,14 @@
+
+import moment from 'moment';
+
+export const formatDate = (value: string) => {
+  if (value) {
+    return moment(String(value)).format('DD/MM/YYYY')
+  }
+}
+
 // Parse the time to string
-export const parseTime = (
-  time?: object | string | number | null,
-  cFormat?: string
-): string | null => {
+export const parseTime = ( time?: object | string | number | null, cFormat?: string): string | null => {
   if (time === undefined || !time) {
     return null
   }
@@ -47,8 +53,7 @@ export const parseTime = (
 }
 
 // Format and filter json data using filterKeys array
-export const formatJson = (filterKeys: any, jsonData: any) =>
-  jsonData.map((data: any) => filterKeys.map((key: string) => {
+export const formatJson = (filterKeys: any, jsonData: any) => jsonData.map((data: any) => filterKeys.map((key: string) => {
     if (key === 'timestamp') {
       return parseTime(data[key])
     } else {

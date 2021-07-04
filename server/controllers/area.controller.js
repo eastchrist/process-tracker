@@ -53,9 +53,10 @@ module.exports = {
             where: whereAll,
             offset: offset,
             limit: limit,
-            include: [
-                { model: models.factory, as: 'factory' },
-            ]
+            include: [{
+                model: models.factory,
+                as: 'factory'
+            }]
         })
         .then(data => {
             const outlet = checkNull.factory(data)

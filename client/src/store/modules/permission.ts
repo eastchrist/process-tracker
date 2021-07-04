@@ -26,8 +26,8 @@ export const filterAsyncRoutes = (routes: RouteConfig[], roles: string[]) => {
 }
 
 export interface AIPermissionState {
-  routes: RouteConfig[];
-  dynamicRoutes: RouteConfig[];
+  routes: RouteConfig[]
+  dynamicRoutes: RouteConfig[]
 }
 
 @Module({ dynamic: true, store, name: 'permission' })

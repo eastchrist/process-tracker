@@ -9,44 +9,18 @@ const cartographysRouter: RouteConfig = {
   meta: {
     title: 'cartography',
     icon: 'chart',
-    roles: ['admin', 'manager', 'operator'],
-    alwaysShow: true
+    roles: [ 'admin','manager', 'operator']
   },
   children: [
     {
-      path: 'OperatorFunctAll',
-      component: () => import('@/views/cartography/OperatorFunctAll.vue'),
-      name: 'OperatorFunctAll',
+      path: 'OperatorMeasure',
+      component: () => import('@/views/cartography/OperatorMeasure.vue'),
+      name: '/cartography/OperatorMeasure',
+      props: true,
       meta: {
-        title: 'OperatorFunctAll',
-        roles: ['admin', 'manager', 'operator']
-      }
-    },
-    {
-      path: 'OperatorFunctTodo',
-      component: () => import('@/views/cartography/OperatorFunctTodo.vue'),
-      name: 'OperatorFunctTodo',
-      meta: {
-        title: 'OperatorFunctTodo',
-        roles: ['admin', 'manager', 'operator']
-      }
-    },
-    {
-      path: 'MainProject',
-      component: () => import('@/views/cartography/MainProject.vue'),
-      name: 'MainProject',
-      meta: {
-        title: 'MainProject',
-        roles: ['admin', 'manager', 'operator']
-      }
-    },
-    {
-      path: 'projectManager',
-      component: () => import('@/views/cartography/ManagerProject.vue'),
-      name: 'projectManager',
-      meta: {
-        title: 'projectManager',
-        roles: ['admin', 'manager', 'operator']
+        hidden: true,
+        title: 'OperatorMeasure',
+        roles: [ 'admin', 'manager', 'operator']
       }
     },
     {
@@ -55,18 +29,50 @@ const cartographysRouter: RouteConfig = {
       name: 'MainFunct',
       meta: {
         title: 'MainFunct',
-        roles: ['admin', 'manager', 'operator']
+        roles: [ 'admin','manager', 'operator'],
+        icon: 'icon',
       }
     },
     {
-      path: 'ManagerFunct',
-      component: () => import('@/views/cartography/ManagerFunct.vue'),
-      name: 'ManagerFunct',
+      path: 'ManagerFunctEdit',
+      component: () => import('@/views/cartography/ManagerFunctEdit.vue'),
+      name: 'ManagerFunctEdit',
       meta: {
-        title: 'ManagerFunct',
-        roles: ['admin', 'manager', 'operator']
+        title: 'ManagerFunctEdit',
+        roles: [ 'admin','manager' ],
+        icon: 'edit',
       }
-    }
+    },
+    {
+      path: 'ManagerProject',
+      component: () => import('@/views/cartography/ManagerProject.vue'),
+      name: 'ManagerProject',
+      meta: {
+        title: 'ManagerProject',
+        roles: [ 'admin','manager' ],
+        icon: 'ion-documents-outline',
+      }
+    },
+    {
+      path: 'ManagerFunctAll',
+      component: () => import('@/views/cartography/ManagerFunctAll.vue'),
+      name: 'ManagerFunctAll',
+      meta: {
+        title: 'ManagerFunctAll',
+        roles: [ 'admin','manager' ],
+        icon: 'education',
+      }
+    },
+    {
+      path: 'OperatorFunctAll',
+      component: () => import('@/views/cartography/OperatorFunctAll.vue'),
+      name: 'OperatorFunctAll',
+      meta: {
+        title: 'OperatorFunctAll',
+        roles: [ 'admin','operator'],
+        icon: 'education',
+      }
+    },
   ]
 }
 

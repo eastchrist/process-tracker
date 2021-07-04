@@ -4,18 +4,37 @@ module.exports = {
     await queryInterface.createTable('fonctions', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      name: {
         type: Sequelize.STRING
       },
       position: {
         type: Sequelize.INTEGER
       },
+      name: {
+        type: Sequelize.STRING
+      },
       idType: {
         type: Sequelize.INTEGER
+      },
+
+      lastCheckDate: {
+        type: Sequelize.DATE
+      },
+      checkBeforeDate: {
+        type: Sequelize.DATE
+      },
+
+      firstLosses: {
+        type: Sequelize.FLOAT
+      },
+      firstLossesPrice: {
+        type: Sequelize.FLOAT
+      },
+      currentLosses: {
+        type: Sequelize.FLOAT
+      },
+      currentLossesPrice: {
+        type: Sequelize.FLOAT
       },
       idAreaSource: {
         type: Sequelize.STRING
@@ -23,23 +42,20 @@ module.exports = {
       idAreaDest: {
         type: Sequelize.STRING
       },
-      freqCheck: {
-        type: Sequelize.INTEGER
-      },
-      freqDelay: {
-        type: Sequelize.INTEGER
-      },
-      maxLosse: {
-        type: Sequelize.INTEGER
-      },
-      haveToBeCheck: {
-        type: Sequelize.BOOLEAN
-      },
-      haveBeenCheck: {
-        type: Sequelize.BOOLEAN
-      },
-      modeAutoCheckActif: {
-        type: Sequelize.BOOLEAN
+      freqCheck: { type: Sequelize.INTEGER },
+      freqDelay: { type: Sequelize.INTEGER },
+      nbLosse: { type: Sequelize.INTEGER },
+      maxLosse: { type: Sequelize.INTEGER },
+
+      haveToBeCheck: { type: Sequelize.BOOLEAN },
+      haveBeenCheck: { type: Sequelize.BOOLEAN },
+      haveToBeValidated: { type: Sequelize.BOOLEAN },
+
+      modeAutoCheckActif: { type: Sequelize.BOOLEAN },
+      enabled: { type: Sequelize.BOOLEAN },
+
+      method: {
+        type: Sequelize.STRING
       },
       picture1: {
         type: Sequelize.STRING
@@ -50,20 +66,11 @@ module.exports = {
       idProjectLink: {
         type: Sequelize.INTEGER
       },
-      projectPosition: {
+      idProjectLinkSelected: {
         type: Sequelize.INTEGER
       },
       projectPercentRecovery: {
         type: Sequelize.FLOAT
-      },
-      idFactory: {
-        type: Sequelize.STRING
-      },
-      idArea: {
-        type: Sequelize.STRING
-      },
-      idPlc: {
-        type: Sequelize.STRING
       },
       idEquip: {
         type: Sequelize.STRING

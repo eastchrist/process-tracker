@@ -1,13 +1,12 @@
 <template>
     <div class="factoryFactory-container">
-        <h2>{{ $t('screen.factoryFactory') }}</h2>
         <TableAdminFactory></TableAdminFactory>
     </div>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator'
-    import TableAdminFactory from '@/components/Tables/TableAdminFactory.vue'
+    import TableAdminFactory from '@/components/Tables/Admin/TableAdminFactory.vue'
 
     @Component({
         name: 'factoryFactory',

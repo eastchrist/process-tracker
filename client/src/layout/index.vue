@@ -4,11 +4,11 @@
         <sidebar class="sidebar-container" />
         <div :class="{hasTagsView: showTagsView}" class="main-container">
               <div :class="{'fixed-header': fixedHeader}">
-                <navbar />
-                <tags-view v-if="showTagsView" />
+                    <navbar></navbar>
+                    <tags-view v-if="showTagsView" ></tags-view>
               </div>
-              <app-main />
-              <page-footer />
+              <app-main></app-main>
+              <page-footer></page-footer>
         </div>
     </div>
 </template>
@@ -60,110 +60,99 @@ export default class extends mixins(ResizeMixin) {
 </script>
 
 <style lang="scss" scoped>
-.app-wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+    .app-wrapper {
+        @include clearfix;
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 
+    .drawer-bg {
+        background: #000;
+        opacity: 0.3;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        z-index: 999;
+    }
 
-}
+    .main-container {
+        min-height: 100%;
+        transition: margin-left .28s;
+        margin-left: $sideBarWidth;
+        position: relative;
+    }
 
-.drawer-bg {
-  background: #000;
-  opacity: 0.3;
-  width: 100%;
-  top: 0;
-  height: 100%;
-  position: absolute;
-  z-index: 999;
-}
-
-.main-container {
-  min-height: 100%;
-  transition: margin-left .28s;
-  //CCA margin-left: $sideBarWidth;
-  margin-left: 210px;
-  position: relative;
-}
-
-.sidebar-container {
-  transition: width 0.28s;
-  //CCA width: $sideBarWidth !important;
-  width: 210px !important;
-  height: 100%;
-  position: fixed;
-  font-size: 0px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1001;
-  overflow: hidden;
-}
-
-.fixed-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9;
-  //CCA width: calc(100% - #{$sideBarWidth});
-  width: calc(100% - #{210px});
-  transition: width 0.28s;
-}
-
-.hideSidebar {
-  .main-container {
-    margin-left: 54px;
-  }
-
-  .sidebar-container {
-    width: 54px !important;
-  }
-
-  .fixed-header {
-    width: calc(100% - 54px)
-  }
-}
-
-/* for mobile response 适配移动端 */
-.mobile {
-  .main-container {
-    margin-left: 0px;
-  }
-
-  .sidebar-container {
-    transition: transform .28s;
-    //CCA width: $sideBarWidth !important;
-    width: 210px !important;
-  }
-
-  &.openSidebar {
-    position: fixed;
-    top: 0;
-  }
-
-  &.hideSidebar {
     .sidebar-container {
-      pointer-events: none;
-      transition-duration: 0.3s;
-      //CCA transform: translate3d(-$sideBarWidth, 0, 0);
-      transform: translate3d(-210px, 0, 0);
+        transition: width 0.28s;
+        width: $sideBarWidth !important;
+        height: 100%;
+        position: fixed;
+        font-size: 0px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1001;
+        overflow: hidden;
     }
-  }
 
-  .fixed-header {
-    width: 100%;
-  }
-}
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        width: calc(100% - #{$sideBarWidth});
+        transition: width 0.28s;
+    }
 
-.withoutAnimation {
-  .main-container,
-  .sidebar-container {
-    transition: none;
-  }
-}
+    .hideSidebar {
+        .main-container {
+            margin-left: 54px;
+        }
+
+        .sidebar-container {
+            width: 54px !important;
+        }
+
+        .fixed-header {
+            width: calc(100% - 54px)
+        }
+    }
+
+    /* for mobile */
+    .mobile {
+        .main-container {
+            margin-left: 0px;
+        }
+
+        .sidebar-container {
+            transition: transform .28s;
+            width: $sideBarWidth !important;
+        }
+
+        &.openSidebar {
+            position: fixed;
+            top: 0;
+        }
+
+        &.hideSidebar {
+            .sidebar-container {
+                pointer-events: none;
+                transition-duration: 0.3s;
+                transform: translate3d(-$sideBarWidth, 0, 0);
+            }
+        }
+
+        .fixed-header {
+            width: 100%;
+        }
+    }
+
+    .withoutAnimation {
+        .main-container,
+        .sidebar-container {
+            transition: none;
+        }
+    }
 </style>

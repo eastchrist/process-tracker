@@ -33,8 +33,6 @@ var FunctionUpdateMeasureTypes = async function ( modifs ) {
                 { where: { id: modif.id } } )
         }
     }
-    console.log("TOTO")
-
 }
 
 module.exports = {

@@ -1,6 +1,5 @@
 <template>
     <div class="factoryPlc-container">
-        <h2>{{ $t('screen.factoryPlc') }}</h2>
         <TableAdminServer></TableAdminServer>
         <TableAdminPlc></TableAdminPlc>
     </div>
@@ -8,8 +7,8 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import TableAdminServer from '@/components/Tables/TableAdminServer.vue'
-    import TableAdminPlc from '@/components/Tables/TableAdminPlc.vue'
+    import TableAdminServer from '@/components/Tables/Admin/TableAdminServer.vue'
+    import TableAdminPlc from '@/components/Tables/Admin/TableAdminPlc.vue'
 
     @Component({
         name: 'factoryPlc',

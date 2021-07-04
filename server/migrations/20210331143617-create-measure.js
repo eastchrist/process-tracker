@@ -8,13 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
       position: {
         type: Sequelize.INTEGER
       },
-      type: {
+      idType: {
         type: Sequelize.INTEGER
       },
       comment: {
@@ -48,6 +45,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       idFonction: {
+        type: Sequelize.STRING
+      },
+      idTankSource: {
+        type: Sequelize.STRING
+      },
+      idTankDest: {
         type: Sequelize.STRING
       },
       createdAt: {

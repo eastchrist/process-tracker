@@ -3,12 +3,12 @@ import { Route } from 'vue-router'
 import store from '@/store'
 
 export interface AITagView extends Partial<Route> {
-  title?: string;
+  title?: string
 }
 
 export interface AITagsViewState {
-  visitedViews: AITagView[];
-  cachedViews: (string | undefined)[];
+  visitedViews: AITagView[]
+  cachedViews: (string | undefined)[]
 }
 
 @Module({ dynamic: true, store, name: 'tagsView' })

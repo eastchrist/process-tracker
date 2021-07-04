@@ -1,13 +1,12 @@
 <template>
     <div class="factoryUser-container">
-        <h2>{{ $t('screen.factoryUser') }}</h2>
         <TableAdminUser></TableAdminUser>
     </div>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import TableAdminUser from '@/components/Tables/TableAdminUser.vue'
+    import TableAdminUser from '@/components/Tables/Admin/TableAdminUser.vue'
 
     @Component({
         name: 'factoryUser',
