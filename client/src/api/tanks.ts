@@ -1,11 +1,15 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseTankData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultTankQuery = {
     page: 1,
     limit: 10,
     name: undefined,
+    idFactory: undefined,
+    idArea: undefined,
     idTankArea: undefined,
     idTankDef: undefined
 }
@@ -30,35 +34,35 @@ export const defaultTankExcelHeater = ['id', 'idNode', 'name', 'name1', 'positio
 
 
 export const getDBTanks = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/tanks/all',
+        url: '/tanks/all',
         method: 'get',
         params
     })
 
 export const updateDBTanks = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tanks/all`,
+        url: `/tanks/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBTank = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tanks/tank/${id}`,
+        url: `/tanks/tank/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBTank = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tanks/tank/${id}`,
+        url: `/tanks/tank/${id}`,
         method: 'delete',
         withCredentials: true,
     })
