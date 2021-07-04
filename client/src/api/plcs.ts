@@ -1,13 +1,25 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBasePlcData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
 
-export const defaultPlcQuery = {
+
+export interface AIPlcQuery {
+    page: number
+    limit: number
+    name: string | undefined
+    idServer: string | undefined
+    idArea: string | undefined
+    idFactory: string | undefined
+}
+
+export const defaultPlcQuery: AIPlcQuery = {
     page: 1,
     limit: 10,
     name: undefined,
     idServer: undefined,
-    idArea: undefined
+    idArea: undefined,
+    idFactory: undefined,
 }
 export const defaultPlcRules = {
     position: [{ required: true, message: i18n.t('tables.plc.rules.rule3'), trigger: 'blur' }],
@@ -40,35 +52,35 @@ export const defaultPlcExcelHeater = ['id', 'idNode', 'position', 'name', 'name1
 
 
 export const getDBPlcs = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/plcs/all',
+        url: '/plcs/all',
         method: 'get',
         params
     })
 
 export const updateDBPlcs = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/plcs/all`,
+        url: `/plcs/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBPlc = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/plcs/plc/${id}`,
+        url: `/plcs/plc/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBPlc = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/plcs/plc/${id}`,
+        url: `/plcs/plc/${id}`,
         method: 'delete',
         withCredentials: true,
     })
