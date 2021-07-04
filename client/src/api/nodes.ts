@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import requestNode from '@/utils/requestNode'
 //import { INodesFactory } from './types'
 
 //export const defaultNodesFactory: INodesFactory = {
@@ -15,9 +15,9 @@ import request from '@/utils/request'
 //}
 
 export const getAllNodes = () =>
-    request({
+    requestNode({
         headers: { },
-        url: 'http://localhost:3000/admin/nodes/flows',
+        url: '/admin/nodes/flows',
         method: 'get'
     })
 
