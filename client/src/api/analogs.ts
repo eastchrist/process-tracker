@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseAnalogData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultAnalogQuery = {
     page: 1,
@@ -34,35 +36,35 @@ export const defaultAnalogData: IDataBaseAnalogData = {
 export const defaultAnalogExcelHeater = ['id', 'position', 'name', 'name1', 'tag', 'address', 'type', 'idEquip', 'idTank', 'indexCreation']
 
 export const getDBAnalogs = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/analogs/all',
+        url: '/analogs/all',
         method: 'get',
         params
     })
 
 export const updateDBAnalogs = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/analogs/all`,
+        url: `/analogs/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBAnalog = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/analogs/analog/${id}`,
+        url: `/analogs/analog/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBAnalog = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/analogs/analog/${id}`,
+        url: `/analogs/analog/${id}`,
         method: 'delete',
         withCredentials: true,
     })
