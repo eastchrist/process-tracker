@@ -1,5 +1,5 @@
 <template>
-    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" :before-close="beforeClose">
+    <el-dialog :class="className" :title="title" :visible.sync="dialogFormVisible" @open="beforeOpen" :before-close="beforeClose">
         <el-form ref="dataForm" :rules="rules" :model="tempData" label-position="left" label-width="200px" style="width: 400px; margin-left:50px;">
             <!-- v-if="textMap[dialogStatus]!=='Create'" -->
             <el-form-item :label="$t('tables.plc.edit.champs4')" prop="name">
@@ -11,12 +11,12 @@
 
             <el-form-item :label="$t('tables.plc.edit.champs6')" prop="idArea">
                 <el-select v-model="tempData.idServer" class="filter-item" placeholder="Please select">
-                    <el-option v-for="item in Type3Options" :key="item.id" :label="item.name" :value="item.id"/>
+                    <el-option v-for="item in TypeOptionServer" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
             </el-form-item>
             <el-form-item :label="$t('tables.plc.edit.champs7')" prop="idArea">
                 <el-select v-model="tempData.idArea" class="filter-item" placeholder="Please select">
-                    <el-option v-for="item in Type2Options" :key="item.id" :label="item.name" :value="item.id"/>
+                    <el-option v-for="item in TypeOptionArea" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
             </el-form-item>
             <el-form-item :label="$t('tables.plc.edit.champs8')" prop="brand">
@@ -62,9 +62,13 @@
         @Prop({ default: { } }) private dialogStatus!: string
         @Prop({ default: false }) private dialogFormVisible!: boolean
         @Prop({ default: { } }) private Type1Options!: any
-        @Prop({ default: { } }) private Type2Options!: any
-        @Prop({ default: { } }) private Type3Options!: any
+        @Prop({ default: { } }) private TypeOptionArea!: any
+        @Prop({ default: { } }) private TypeOptionServer!: any
         @Prop({ default: { } }) private tempData!: any
+
+        beforeOpen() {
+            console.log("beforeOpen")
+        }
 
         beforeClose( ) {
             this.$emit('EditFormCancel')
