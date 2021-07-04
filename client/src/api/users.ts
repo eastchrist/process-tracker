@@ -1,6 +1,9 @@
-import request from '@/utils/request'
-import { IDataBaseUserData } from './types'
+import requestSql from '@/utils/requestSql'
+//import { IDataBaseUserData, IUtilisateur } from './types'
+import { IDataBaseUserData, AIUserState } from './types'
 import i18n from '@/i18n' // Internationalization
+import variables from '@/styles/_variables.scss'
+
 
 export const defaultUserQuery = {
     page: 1,
@@ -32,28 +35,39 @@ export const defaultUserData: IDataBaseUserData = {
     //token: '',
     //roles: []
 }
+
+//export const defaultUser: IUtilisateur = null
+export const defaultUser: AIUserState = {
+    token: '',
+    username: '',
+    email: '',
+    idFactory: '',
+    factoryName: '',
+    roles: []
+}
+
 export const defaultUserExcelHeater = ['id', 'username', 'email', 'password', 'position', 'isAdmin', 'isManager', 'isOperator', 'isVisitor', 'isActif', 'idFactory']
 
 export const getDBUsers = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/users/all',
+        url: '/users/all',
         method: 'get',
         params
     })
 
 
 export const updateDBUsers = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/users/all`,
+        url: `/users/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 //export const getDBUserInfo = ( data: any) =>
-//    request({
+//    requestSql({
 //        headers: { },
 //        url: 'http://localhost:5000/users/info',
 //        method: 'post',
@@ -62,26 +76,26 @@ export const updateDBUsers = (data: any) =>
 //    })
 
 export const getDBUserInfoWithToken = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/users/user/info',
+        url: '/users/user/info',
         method: 'post',
         withCredentials: true,
         data
     })
 
 export const updateDBUser = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/users/user/${id}`,
+        url: `/users/user/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 export const deleteDBUser = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/users/user/${id}`,
+        url: `/users/user/${id}`,
         method: 'delete',
         withCredentials: true,
     })
@@ -89,22 +103,22 @@ export const deleteDBUser = (id: number, data: any) =>
 
 
 export const login = (data: any) =>
-    request({
-        url: 'http://localhost:5000/users/login',
+    requestSql({
+        url: '/users/login',
         method: 'post',
         withCredentials: true,
         data
     })
 
 export const logout = () =>
-    request({
+    requestSql({
         url: '/users/logout',
         method: 'post'
     })
 
 export const register = (data: any) =>
-    request({
-        url: 'http://localhost:5000/users/register',
+    requestSql({
+        url: '/users/register',
         method: 'post',
         withCredentials: true,
         data
