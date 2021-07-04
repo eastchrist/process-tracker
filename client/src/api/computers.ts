@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseComputerData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultComputerQuery = {
     page: 1,
@@ -33,35 +35,35 @@ export const defaultComputerData: IDataBaseComputerData = {
 export const defaultComputerExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'isServerMain', 'isServerLocal', 'isComputerLocal', 'isComputerCarto', 'idFactory']
 
 export const getDBComputers = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/computers/all',
+        url: '/computers/all',
         method: 'get',
         params
     })
 
 export const updateDBComputers = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/computers/all`,
+        url: `/computers/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBComputer = (id: string, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/computers/computer/${id}`,
+        url: `/computers/computer/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBComputer = (id: string, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/computers/computer/${id}`,
+        url: `/computers/computer/${id}`,
         method: 'delete',
         withCredentials: true,
     })
