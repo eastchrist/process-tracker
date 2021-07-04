@@ -1,6 +1,8 @@
-import request from '@/utils/request'
+import requestSql from '@/utils/requestSql'
 import { IDataBaseTankAreaDefFillingData } from './types'
 import i18n from "@/i18n";
+import variables from "@/styles/_variables.scss";
+
 
 export const defaultTankAreaDefFillingQuery = {
     page: 1,
@@ -29,35 +31,35 @@ export const defaultTankAreaDefFillingExcelHeater = ['id', 'idNode', 'name', 'na
 
 
 export const getDBTankAreaDefFillings = (params: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: 'http://localhost:5000/tankAreaDefFillings/all',
+        url: '/tankAreaDefFillings/all',
         method: 'get',
         params
     })
 
 export const updateDBTankAreaDefFillings = (data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefFillings/all`,
+        url: `/tankAreaDefFillings/all`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const updateDBTankAreaDefFilling = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefFillings/tankAreaDefFilling/${id}`,
+        url: `/tankAreaDefFillings/tankAreaDefFilling/${id}`,
         method: 'put',
         withCredentials: true,
         data
     })
 
 export const deleteDBTankAreaDefFilling = (id: number, data: any) =>
-    request({
+    requestSql({
         headers: { },
-        url: `http://localhost:5000/tankAreaDefFillings/tankAreaDefFilling/${id}`,
+        url: `/tankAreaDefFillings/tankAreaDefFilling/${id}`,
         method: 'delete',
         withCredentials: true,
     })
