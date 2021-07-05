@@ -52,4 +52,10 @@
         text-align: center;
         padding: 8px;
     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 30px;
+        background: red;
+    }
 </style>

@@ -2112,6 +2112,7 @@ export default {
         '50017': 'invalid password',
         '50018': 'cannot log on user',
         '50019': 'user not actif',
+        '50020': 'No factory connected to this user',
 
         'Have Been Deleted in Node': ' : Have Been Deleted in Node',
         'No PLC linked': ' : No PLC linked',

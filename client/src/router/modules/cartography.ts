@@ -9,7 +9,7 @@ const cartographysRouter: RouteConfig = {
   meta: {
     title: 'cartography',
     icon: 'chart',
-    roles: [ 'admin','manager', 'operator']
+    roles: [ 'manager', 'operator']
   },
   children: [
     {
@@ -20,7 +20,7 @@ const cartographysRouter: RouteConfig = {
       meta: {
         hidden: true,
         title: 'OperatorMeasure',
-        roles: [ 'admin', 'manager', 'operator']
+        roles: [ 'manager', 'operator']
       }
     },
     {
@@ -29,7 +29,7 @@ const cartographysRouter: RouteConfig = {
       name: 'MainFunct',
       meta: {
         title: 'MainFunct',
-        roles: [ 'admin','manager', 'operator'],
+        roles: ['manager', 'operator'],
         icon: 'icon',
       }
     },
@@ -39,7 +39,7 @@ const cartographysRouter: RouteConfig = {
       name: 'ManagerFunctEdit',
       meta: {
         title: 'ManagerFunctEdit',
-        roles: [ 'admin','manager' ],
+        roles: [ 'manager' ],
         icon: 'edit',
       }
     },
@@ -49,7 +49,7 @@ const cartographysRouter: RouteConfig = {
       name: 'ManagerProject',
       meta: {
         title: 'ManagerProject',
-        roles: [ 'admin','manager' ],
+        roles: [ 'manager' ],
         icon: 'ion-documents-outline',
       }
     },
@@ -59,7 +59,7 @@ const cartographysRouter: RouteConfig = {
       name: 'ManagerFunctAll',
       meta: {
         title: 'ManagerFunctAll',
-        roles: [ 'admin','manager' ],
+        roles: [ 'manager' ],
         icon: 'education',
       }
     },
@@ -69,7 +69,7 @@ const cartographysRouter: RouteConfig = {
       name: 'OperatorFunctAll',
       meta: {
         title: 'OperatorFunctAll',
-        roles: [ 'admin','operator'],
+        roles: [ 'operator'],
         icon: 'education',
       }
     },

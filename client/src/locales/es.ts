@@ -2112,6 +2112,7 @@ export default {
         '50017': 'código incorrecto',
         '50018': 'incapaz de conectarse con el usuario',
         '50019': 'Usuario no activo',
+        '50020': 'No hay fábrica conectada a este usuario',
 
         'Have Been Deleted in Node': ' : ha sido eliminado en Node',
         'No PLC linked': ' : No PLC relacionados',

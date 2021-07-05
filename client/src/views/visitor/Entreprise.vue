@@ -67,7 +67,19 @@
         background: $communBackgroundColor;
 
     }
-    #sectionMain .h2 {
+    h2 {
         padding: 60px 60px 60px 60px;
+        background: blue;
+    }
+    p {
+        margin: 0;
+        padding: 10px;
+        background: green;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        background: red;
     }
 </style>

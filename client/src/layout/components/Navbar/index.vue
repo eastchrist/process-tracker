@@ -1,6 +1,8 @@
 <template>
-    <div class="navbar">
+    <!-- <div class="navbar"> -->
+    <v-toolbar class="navbar" dark prominent src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
         <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggle-click="toggleSideBar"/>
+        <v-spacer></v-spacer>
         <div class="right-menu">
             <template v-if="device==='1'">
                 <span v-if="UserCurrent.username" class="right-menu-item-texte">{{ $t('navigation.wellcome') }} {{ UserCurrent.username }} {{ $t('navigation.to') }} {{ UserCurrent.factoryName }}  &nbsp;</span>
@@ -35,7 +37,8 @@
                 <lang-selection class="right-menu-item hover-effect" />
             </template>
         </div>
-    </div>
+    </v-toolbar>
+    <!-- </div> -->
 </template>
 
 <script lang="ts">

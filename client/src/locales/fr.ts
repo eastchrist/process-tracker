@@ -2109,6 +2109,7 @@ export default {
         '50017': 'Mot de passe incorrect',
         '50018': 'Impossible de se connecter à l’utilisateur',
         '50019': 'Utilisateur non actif',
+        '50020': 'Aucune usine connectée à cet utilisateur',
 
         'Have Been Deleted in Node': ' : a été supprimés dans Node',
         'No PLC linked': ' : Pas PLC lié',
