@@ -8,8 +8,10 @@
     "start": "node server/server.js",
     "run": "SET Node_ENV=production& node server/server.js",
     "seqInit": "sudo sequelize init",
-    "prodStart": "sudo pm2 start server/server.js",
-    "prodStop": "sudo pm2 stop 0"
+    "startProcess": "sudo pm2 start server/server.js",
+    "startNode": "sudo pm2 start serverNode/app.js",
+    "stopProcess": "sudo pm2 stop 0",
+    "stopNode": "sudo pm2 stop 0"
   },
   "keywords": [],
   "author": "",
