@@ -2,94 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd0450-c7f7-4e5c-a025-b2cc6248b072" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/DataBase.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/aide/DataBase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210324145626-create-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210324151953-create-user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210326221548-create-computer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210326221943-create-area.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210326222437-create-tank-area.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210326223041-create-server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/migrations/20210326223657-create-plc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/area.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/computer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/plc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/tankarea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/aide/backUp/models/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/fonction.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/fonction.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/tank.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/tank.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/401.1649e185.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/404.77f74792.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-0052b390.5ac19c7a.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-10ec11a3.94699d3f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-17df9ab7.7ecdead0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-1c1e090d.06a75295.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-1db29c9c.06a75295.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-1e53eff6.1be61256.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-25ccb5d0.17954ec7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-33782bbf.c0b35871.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-40d0d8e2.b0571f71.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-458a88f3.11d51e78.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-52182ed2.39b57a53.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-567a0e68.0225fa27.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-5a744b18.0c083d90.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-6093b41d.4bedf82a.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-6145e6f4.06a75295.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-6ab6304c.3e812d46.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-a0b16818.83825d21.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-a2586d64.7b9e53da.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-b336b9aa.4c4682d6.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-b979da78.06a75295.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-ecec2c04.2235c891.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-ef2205c2.a9bd8b27.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-ff2f5b08.4c3f193d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/dashboard.1efa0249.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/index.7b2341c4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/login.ffcf9e17.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/register.9c7864c7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-0052b390.bac5239e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-10ec11a3.353e3a35.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-17df9ab7.cba1cf62.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-1c1e090d.fa1e22cf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-1db29c9c.01c1a2d6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-1e53eff6.ff42ea2b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-25ccb5d0.54a46d25.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-2d0b6b45.3146c3c1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-2d22cc84.c0450d1d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-33782bbf.4f097b54.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-3f6c5ee2.18ec28e4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-40d0d8e2.aa353ea4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-458a88f3.d58d4a08.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-52182ed2.b5b08c8b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-567a0e68.510e5819.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-5a744b18.14453864.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-6093b41d.602e9f3d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-6145e6f4.fff05917.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-6ab6304c.1a86f873.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a0b16818.2b74ef5f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a2586d64.0b9b82c2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a82a1b16.3da88070.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-b336b9aa.44b501f5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-b979da78.5dc7ccac.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-ecec2c04.7d03a07d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-ef2205c2.b01fa588.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-ff2f5b08.43604065.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/dashboard.50e9b489.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/index.ea798674.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/login.d1c3a87c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/register.6ef34113.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/precache-manifest.f6d1e990b44eadb311fddc34fc678470.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -368,7 +281,7 @@
       <workItem from="1626142880653" duration="678000" />
       <workItem from="1626171111738" duration="24263000" />
       <workItem from="1626198315496" duration="13534000" />
-      <workItem from="1626291884542" duration="589000" />
+      <workItem from="1626291884542" duration="1184000" />
     </task>
     <servers />
   </component>
