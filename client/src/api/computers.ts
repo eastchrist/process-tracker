@@ -32,7 +32,7 @@ export const defaultComputerData: IDataBaseComputerData = {
     isComputerCarto: false,
     idFactory: "",
 }
-export const defaultComputerExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'isServerMain', 'isServerLocal', 'isComputerLocal', 'isComputerCarto', 'idFactory']
+export const defaultComputerExcelHeader = ['id', 'idNode', 'name', 'name1', 'position', 'isServerMain', 'isServerLocal', 'isComputerLocal', 'isComputerCarto', 'idFactory']
 
 export const getDBComputers = (params: any) =>
     requestSql({

@@ -50,16 +50,14 @@ export default class extends mixins(ResizeMixin) {
             this.chart.setOption( {
                 title: {
                     show: chartData.title.show,
-                    text: chartData.title.title,
-                    subtext: chartData.title.titleSub.title,
+                    text: chartData.title.text,
+                    subtext: chartData.title.titleSub.text,
                     left: chartData.title.left,
                     top: chartData.title.top,
                     textStyle: chartData.title.textStyle,
                     subtextStyle: chartData.title.titleSub.textStyle,
                 },
-                tooltip: {
-                    trigger: 'axis'
-                },
+                tooltip: chartData.tooltip,
                 legend: {
                     show: chartData.legend.show,
                     orient: chartData.legend.orient,
@@ -75,7 +73,11 @@ export default class extends mixins(ResizeMixin) {
                         if (chartData.series[indexSerie].Value.length == 0) {
                             return name ;
                         } else {
-                            const valeur = chartData.series[indexSerie].Value.reduce((a, b) => a + b)
+                            const valeur = chartData.series[indexSerie].Value.reduce(
+                                function(accumulateur, valeurCourante, index, array){
+                                    return accumulateur + valeurCourante;
+                                }
+                            );
                             return '(' + valeur + ') ' + name ;
                         }
                     }
@@ -88,8 +90,8 @@ export default class extends mixins(ResizeMixin) {
                         restore: {show: false},
                         saveAsImage: {show: true}
                     },
-                    right: "6%",
-                    bottom: "1%"
+                    right: chartData.toolbox.right,
+                    bottom: chartData.toolbox.bottom,
                 },
                 grid: {
                     //top: 10,

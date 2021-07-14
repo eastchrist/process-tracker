@@ -45,17 +45,18 @@ $logoBackground: #34a9f9;
 
 // Login,Register and ContactUs pages
 $communBackgroundColor: #eee;
-//$communBackgroundColor: #7541ee;
-$communPageTitleColor: #999;
-//$communPageTitleColor: #ee437c;
+$communPageBodyColor: rgba(72, 255, 104, 0.1);
+$communPageTitleColor: #99314c;
 $communPageIconColor: #18d26e;
-//$communPageIconColor: #ee437c;
 $communPageLinkColor: #000;
-//$communPageLinkColor: #ee437c;
+
+$communBodyBorderColor: #000;
+$communBodyBorderLength: 1px;
+$communBodyBorderRadius: 10px;
 
 $communHeaderBorderColor: #000;
 $communHeaderBorderLength: 1px;
-$communHeaderBorderRadius: 5px;
+$communHeaderBorderRadius: 10px;
 
 $communInfoBorderColor: #000;
 $communInfoBorderLength: 1px;
@@ -66,14 +67,8 @@ $communFormBorderLength: 1px;
 $communFormBorderRadius: 5px;
 
 $communPageSvgColor: #889aa4;
-//$communPageSvgColor: #ee437c;
 
-//$communFormItemBackgroundColor:rgba(255, 78, 129, 0.1);
 $communFormItemBackgroundColor: rgba(72, 255, 104, 0.1);
-
-
-
-//$communFormItemBorderColor: rgba(255, 26, 58, 0.1);
 $communFormItemBorderColor: rgba(48, 155, 255, 0.1);
 
 
@@ -93,16 +88,20 @@ $adminTableBgColor: #ffffff;
 $adminPaginationBgColor: #ffffff;
 $adminTreeviewBgColor: #ffffff;
 
+//Vues Visitor
+$visitorTitleColor: #ffffff;
+$visitorTitleBgColor: rgba(72, 255, 104, 0.1);
+
 //tables
 $tableTitleColor: #ffffff;
-$tableTitleBgColor: #34a9f9;
+$tableTitleBgColor: rgba(0, 162, 255, 0.609);
 $tableTitleFontFamily: "Arial";
 $tableTitleFontFamilySize: 20;
-$tableTitleBordureLength: 1;
+$tableTitleBordureLength: 2;
 $tableTitleBordureColor: black;
 
 $tableSubTitleColor: #ffffff;
-$tableSubTitleBgColor: #34a9f9;
+$tableSubTitleBgColor: rgba(0, 162, 255, 0.609);
 $tableSubTitleFontFamily: "Arial";
 $tableSubTitleFontFamilySize: 15;
 $tableSubTitleBordureLength: 1;

@@ -33,7 +33,7 @@ export const defaultAnalogData: IDataBaseAnalogData = {
     indexCreation: 0,
 }
 
-export const defaultAnalogExcelHeater = ['id', 'position', 'name', 'name1', 'tag', 'address', 'type', 'idEquip', 'idTank', 'indexCreation']
+export const defaultAnalogExcelHeader = ['id', 'position', 'name', 'name1', 'tag', 'address', 'type', 'idEquip', 'idTank', 'indexCreation']
 
 export const getDBAnalogs = (params: any) =>
     requestSql({

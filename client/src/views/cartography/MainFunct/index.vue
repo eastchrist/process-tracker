@@ -1,5 +1,5 @@
 <template>
-    <div class="table-container">
+    <div class="table-overview-fonction">
         <div class="wrapper">
             <div class="hea01">Header 1 Main Information</div>
             <div class="tab01">
@@ -27,6 +27,15 @@
             <div class="bar04">
                 <bar-chart :chart-data="BarChartMeasurePointInAlarmByAreas"></bar-chart>
             </div>
+            <div class="tab08">
+                <carto-fonction-list :tableData=TableDataFonctionToCheckByAreas :currency=factoryInfo.currency></carto-fonction-list>
+            </div>
+            <div class="tab07">
+                <carto-fonction-list :tableData=TableDataFonctionNeverDoneByAreas :currency=factoryInfo.currency></carto-fonction-list>
+            </div>
+            <div class="tab05">
+                <carto-fonction-list :tableData=TableDataFonctionAlarmByAreas :currency=factoryInfo.currency></carto-fonction-list>
+            </div>
 
             <div class="hea04">Header 4 Global Overview Projects</div>
             <div class="pie02">
@@ -44,27 +53,13 @@
                 <carto-project-priority-difficulty :tableData=TableDataFactoryProjectRunningPriorityDifficulty :currency=factoryInfo.currency></carto-project-priority-difficulty>
             </div>
 
-
-            <div class="pie03">
-                <pie-chart :chart-data="PieChartProjectAllTypeNumberByFactory"></pie-chart>
-            </div>
-            <div class="pie05">
-                <pie-chart :chart-data="PieChartProjectRunningTypeNumberByFactory"></pie-chart>
+            <div class="hea07">Header 7 Function never checked and have to be checked</div>
+            <div class="hea08">Header 8 Function not linked and in alarm</div>
+            <div class="tab06">
+                <carto-fonction-list :tableData=TableDataFonctionNotLinkedByAreas :currency=factoryInfo.currency></carto-fonction-list>
             </div>
 
-            <div class="pie04">
-                <pie-chart :chart-data="PieChartProjectAllInitialLossesByFactory"></pie-chart>
-            </div>
-            <div class="pie06">
-                <pie-chart :chart-data="PieChartProjectRunningInitialLossesByFactory"></pie-chart>
-            </div>
 
-            <div class="pie07">
-                <pie-chart :chart-data="PieChartProjectRunningCurrentLossesByFactory"></pie-chart>
-            </div>
-            <div class="bar05">
-                <bar-chart :chart-data="BarChartFonctionNotLinkedByAreas"></bar-chart>
-            </div>
 
             <div class="hea06">Header 6 Project Overview info</div>
             <div class="mix01">
@@ -74,27 +69,30 @@
                 <mixed-chart  :chart-data="MixedChartFactoryProjectRunningNumberPrice"></mixed-chart>
             </div>
 
-            <div class="hea07">Header 7 Function never checked and have to be checked</div>
-            <div class="tab05">
-                <carto-fonction-list :tableData=TableDataFonctionAlarmByAreas :currency=factoryInfo.currency></carto-fonction-list>
+            <div class="pie03">
+                <pie-chart :chart-data="PieChartProjectAllTypeNumberByFactory"></pie-chart>
             </div>
-            <div class="tab06">
-                <carto-fonction-list :tableData=TableDataFonctionNotLinkedByAreas :currency=factoryInfo.currency></carto-fonction-list>
+            <div class="pie05">
+                <pie-chart :chart-data="PieChartProjectRunningTypeNumberByFactory"></pie-chart>
+            </div>
+            <div class="pie04">
+                <pie-chart :chart-data="PieChartProjectAllInitialLossesByFactory"></pie-chart>
+            </div>
+            <div class="pie06">
+                <pie-chart :chart-data="PieChartProjectRunningInitialLossesByFactory"></pie-chart>
+            </div>
+            <div class="pie07">
+                <pie-chart :chart-data="PieChartProjectRunningCurrentLossesByFactory"></pie-chart>
+            </div>
+            <div class="bar05">
+                <bar-chart :chart-data="BarChartFonctionNotLinkedByAreas"></bar-chart>
             </div>
 
-            <div class="hea08">Header 8 Function not linked and in alarm</div>
-            <div class="tab07">
-                <carto-fonction-list :tableData=TableDataFonctionNeverDoneByAreas :currency=factoryInfo.currency></carto-fonction-list>
-            </div>
-            <div class="tab08">
-                <carto-fonction-list :tableData=TableDataFonctionToCheckByAreas :currency=factoryInfo.currency></carto-fonction-list>
-            </div>
+
 
         </div>
     </div>
 </template>
-
-
 <script lang="ts">
     import { Component, Prop, Vue } from 'vue-property-decorator'
     import 'echarts/theme/macarons.js' // Theme used in BarChart, LineChart, PieChart and RadarChart
@@ -121,12 +119,13 @@
 
     } from '@/utils/traceability'
 
+    import CartoMainTableTest from '@/components/Tables/Carto/CartoMainTableTest.vue'
     import CartoMainTable from '@/components/Tables/Carto/CartoMainTable.vue'
     import CartoMainInfoTable from '@/components/Tables/Carto/CartoMainInfoTable.vue'
     import CartoProjectPriorityDifficulty from '@/components/Tables/Carto/CartoProjectPriorityDifficulty.vue'
     import CartoFonctionList from '@/components/Tables/Carto/CartoFonctionList.vue'
 
-    import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataFonctionByAreas } from '@/api/types'
+    import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
 
     import {    defaultBarChartInitialCurrentLossesQtyByAreas, defaultBarChartInitialCurrentLossesPriceByAreas, defaultBarChartMeasurePointStatusByAreas,
                 defaultBarChartMeasurePointInAlarmByAreas, defaultBarChartFonctionNotLinkedByAreas, defaultBarChartProjectStatusByAreas } from '@/configDesign/defaulDesignBarChart'
@@ -143,10 +142,10 @@
 
     import {    defaultFonctionAlarmByAreas, defaultFonctionNotLinkedByAreas, defaultFonctionNeverDoneByAreas, defaultFonctionToCheckByAreas} from '@/configDesign/defaulDesignTableUi'
 
-    const TableDataFonctionAlarmByAreas: ITableDataFonctionByAreas = defaultFonctionAlarmByAreas
-    const TableDataFonctionNotLinkedByAreas: ITableDataFonctionByAreas = defaultFonctionNotLinkedByAreas
-    const TableDataFonctionNeverDoneByAreas: ITableDataFonctionByAreas = defaultFonctionNeverDoneByAreas
-    const TableDataFonctionToCheckByAreas: ITableDataFonctionByAreas = defaultFonctionToCheckByAreas
+    const TableDataFonctionAlarmByAreas: ITableDataUiDesignedWithData = defaultFonctionAlarmByAreas
+    const TableDataFonctionNotLinkedByAreas: ITableDataUiDesignedWithData = defaultFonctionNotLinkedByAreas
+    const TableDataFonctionNeverDoneByAreas: ITableDataUiDesignedWithData = defaultFonctionNeverDoneByAreas
+    const TableDataFonctionToCheckByAreas: ITableDataUiDesignedWithData = defaultFonctionToCheckByAreas
 
     const BarChartInitialCurrentLossesQtyByAreas: IBarChart = defaultBarChartInitialCurrentLossesQtyByAreas
     const BarChartInitialCurrentLossesPriceByAreas: IBarChart = defaultBarChartInitialCurrentLossesPriceByAreas
@@ -168,6 +167,7 @@
 
     @Component({
         components: {
+            CartoMainTableTest,
             CartoMainTable,
             CartoMainInfoTable,
             CartoProjectPriorityDifficulty,
@@ -271,306 +271,460 @@
         }
     }
 </script>
-
-
 <style lang="scss" scoped>
-    .table-container {
-        background: $adminContainerBgColor;
-        padding:2px;
-        margin-bottom: 20px;
-    }
-    .wrapper{
-        height: 100%;
-        display:grid;
-        grid-gap: 3px;
-        grid-template-columns:repeat(12, minmax(100px, 1fr));
-        grid-template-rows: repeat(30, minmax(100px, 0.2fr));
-        //grid-template-rows: 0.2fr 0.2fr 0.2fr 1.5fr 0.2fr;
-        grid-template-areas:
-
-                "hea01 hea01 hea01 hea01 hea01 hea01 hea01 hea01 hea01 hea01 hea01 hea01 "
-                ".     .     .     tab01 tab01 tab01 tab01 tab01 tab01 .     .     .     "
-                ".     .     .     tab01 tab01 tab01 tab01 tab01 tab01 .     .     .     "
-                ".     .     .     tab01 tab01 tab01 tab01 tab01 tab01 .     .     .     "
-
-
-
-                "hea02 hea02 hea02 hea02 hea02 hea02 hea02 hea02 hea02 hea02 hea02 hea02 "
-                ".     .     .     tab02 tab02 tab02 tab02 tab02 tab02 .     .     .     "
-                ".     .     .     tab02 tab02 tab02 tab02 tab02 tab02 .     .     .     "
-                "bar01 bar01 bar01 bar01 bar01 bar01 bar02 bar02 bar02 bar02 bar02 bar02 "
-                "bar01 bar01 bar01 bar01 bar01 bar01 bar02 bar02 bar02 bar02 bar02 bar02 "
-                "bar01 bar01 bar01 bar01 bar01 bar01 bar02 bar02 bar02 bar02 bar02 bar02 "
-
-
-                "hea03 hea03 hea03 hea03 hea03 hea03 hea03 hea03 hea03 hea03 hea03 hea03 "
-                ".     .     .     .     bar03 bar03 bar03 bar03 bar04 bar04 bar04 bar04 "
-                "pie01 pie01 pie01 pie01 bar03 bar03 bar03 bar03 bar04 bar04 bar04 bar04 "
-                "pie01 pie01 pie01 pie01 bar03 bar03 bar03 bar03 bar04 bar04 bar04 bar04 "
-                "pie01 pie01 pie01 pie01 bar03 bar03 bar03 bar03 bar04 bar04 bar04 bar04 "
-                ".     .     .     .     bar03 bar03 bar03 bar03 bar04 bar04 bar04 bar04 "
-
-
-
-
-                "hea04 hea04 hea04 hea04 hea04 hea04 hea04 hea04 hea04 hea04 hea04 hea04 "
-                "pie02 pie02 pie02 pie02 .     bar06 bar06 bar06 bar06 bar06 bar06 bar06"
-                ".     .     .     .     .     bar06 bar06 bar06 bar06 bar06 bar06 bar06"
-
-
-
-
-                "hea05 hea05 hea05 hea05 hea05 hea05 hea05 hea05 hea05 hea05 hea05 hea05 "
-                "tab03 tab03 tab03 tab03 tab03 tab03 tab03 tab03 tab03 tab03 tab03 tab03 "
-                "tab04 tab04 tab04 tab04 tab04 tab04 tab04 tab04 tab04 tab04 tab04 tab04 "
-                ".     pie03 pie03 pie03 pie03 .     pie05 pie05 pie05 pie05 .     .     "
-                "pie04 pie04 pie04 pie04 pie06 pie06 pie06 pie06 pie07 pie07 pie07 pie07"
-                "bar05 bar05 bar05 bar05 bar05 bar05 . . . . . . "
-
-                "hea06 hea06 hea06 hea06 hea06 hea06 hea06 hea06 hea06 hea06 hea06 hea06 "
-                "mix01 mix01 mix01 mix01 mix01 mix01 mix02 mix02 mix02 mix02 mix02 mix02 "
-
-                "hea07 hea07 hea07 hea07 hea07 hea07 hea07 hea07 hea07 hea07 hea07 hea07 "
-                "tab08 tab08 tab08 tab08 tab08 tab08 tab08 tab08 tab08 tab08 tab08 tab08 "
-                "tab07 tab07 tab07 tab07 tab07 tab07 tab07 tab07 tab07 tab07 tab07 tab07 "
-
-                "hea08 hea08 hea08 hea08 hea08 hea08 hea08 hea08 hea08 hea08 hea08 hea08 "
-                "tab06 tab06 tab06 tab06 tab06 tab06 tab06 tab06 tab06 tab06 tab06 tab06 "
-                "tab05 tab05 tab05 tab05 tab05 tab05 tab05 tab05 tab05 tab05 tab05 tab05 "
-
-    }
-    .hea01 {
-        grid-area: hea01;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea02 {
-        grid-area: hea02;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea03 {
-        grid-area: hea03;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea04 {
-        grid-area: hea04;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea05 {
-        grid-area: hea05;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea06 {
-        grid-area: hea06;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea07 {
-        grid-area: hea07;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .hea08 {
-        grid-area: hea08;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-
-
-    .tab01 {
-        //grid-column: span 12;
-        grid-area: tab01;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab02 {
-        //grid-column: span 12;
-        grid-area: tab02;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab03 {
-        //grid-column: span 12;
-        grid-area: tab03;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab04 {
-        //grid-column: span 12;
-        grid-area: tab04;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab05 {
-        //grid-column: span 12;
-        grid-area: tab05;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab06 {
-        //grid-column: span 12;
-        grid-area: tab06;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab07 {
-        //grid-column: span 12;
-        grid-area: tab07;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .tab08 {
-        //grid-column: span 12;
-        grid-area: tab08;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-
-    .pie01 {
-        grid-area: pie01;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie02 {
-        grid-area: pie02;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie03 {
-        grid-area: pie03;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie04 {
-        grid-area: pie04;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie05 {
-        grid-area: pie05;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie06 {
-        grid-area: pie06;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie07 {
-        grid-area: pie07;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie08 {
-        grid-area: pie08;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .pie09 {
-        grid-area: pie09;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-
-    .bar01 {
-        grid-area: bar01;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .bar02 {
-        grid-area: bar02;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .bar03 {
-        grid-area: bar03;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .bar04 {
-        grid-area: bar04;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .bar05 {
-        grid-area: bar05;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .bar06 {
-        grid-area: bar06;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-
-    .mix01 {
-        grid-area: mix01;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-    .mix02 {
-        grid-area: mix02;
-        background:#eee;
-        padding:1em;
-        border:#333 1px solid;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .table-container {
-            background: $adminContainerBgColor;
-            padding:2px;
-            margin-bottom: 20px;
-        }
+    .table-overview-fonction {
         .wrapper{
             display:grid;
-            height: 100vh;
-            grid-gap: 0.2rem;
-            grid-template-columns:1fr;
-            grid-template-rows: 0.2fr 0.2fr 0.2fr 1.5fr 0.2fr;
+            grid-gap: 3px;
+            grid-template-columns:repeat(12, minmax(100px, 1fr));
+            //grid-template-rows: repeat(30, minmax(100px, 0.2fr));
+            grid-template-rows: repeat(60, 100px);
+            //grid-template-rows: 0.2fr 0.2fr 0.2fr 1.5fr 0.2fr;
             grid-template-areas:
-                    "header header header "
-                    "filter filter filter "
-                    "extra  extra  extra  "
-                    "treev  treev  treev  "
-                    "table  table  table  "
-                    "pages  pages  pages  ";
+                    "hea01   hea01   hea01   hea01   hea01   hea01   hea01   hea01   hea01   hea01   hea01   hea01"
+                    "tab01   tab01   tab01   tab01   tab01   .       tab02   tab02   tab02   tab02   tab02   tab02"
+                    "tab01   tab01   tab01   tab01   tab01   .       tab02   tab02   tab02   tab02   tab02   tab02"
+                    "tab01   tab01   tab01   tab01   tab01   .       tab02   tab02   tab02   tab02   tab02   tab02"
+                    "tab01   tab01   tab01   tab01   tab01   .       .       .       .       .       .       ."
+
+                    "hea02   hea02   hea02   hea02   hea02   hea02   hea02   hea02   hea02   hea02   hea02   hea02 "
+                    "bar01   bar01   bar01   bar01   bar01   .       bar02   bar02   bar02   bar02   bar02   bar02"
+                    "bar01   bar01   bar01   bar01   bar01   .       bar02   bar02   bar02   bar02   bar02   bar02"
+                    "bar01   bar01   bar01   bar01   bar01   .       bar02   bar02   bar02   bar02   bar02   bar02"
+
+                    "hea03   hea03   hea03   hea03   hea03   hea03   hea03   hea03   hea03   hea03   hea03   hea03 "
+                    "pie01   pie01   pie01   .       .       tab08   tab08   tab08   tab08   tab08   tab08   tab08"
+                    "pie01   pie01   pie01   .       .       tab08   tab08   tab08   tab08   tab08   tab08   tab08"
+                    ".       .       .       .       .       .       .       .       .       .       .       .    "
+                    "bar03   bar03   bar03   bar03   .       tab07   tab07   tab07   tab07   tab07   tab07   tab07"
+                    "bar03   bar03   bar03   bar03   .       tab07   tab07   tab07   tab07   tab07   tab07   tab07"
+                    "bar03   bar03   bar03   bar03   .       tab07   tab07   tab07   tab07   tab07   tab07   tab07"
+                    ".       .       .       .       .       .       .       .       .       .       .       .    "
+                    "bar04   bar04   bar04   bar04   .       tab05   tab05   tab05   tab05   tab05   tab05   tab05"
+                    "bar04   bar04   bar04   bar04   .       tab05   tab05   tab05   tab05   tab05   tab05   tab05"
+                    "bar04   bar04   bar04   bar04   .       tab05   tab05   tab05   tab05   tab05   tab05   tab05"
+                    ".       .       .       .       .       .       .       .       .       .       .       .    "
+
+                    ".       .       .       .       .       .       .       .       .       .       .       .    "
+
+                    "hea04   hea04   hea04   hea04   hea04   hea04   hea04   hea04   hea04   hea04   hea04   hea04"
+                    "pie02   pie02   pie02   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06"
+                    "pie02   pie02   pie02   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06"
+                    ".       .       .       bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06"
+                    ".       .       .       bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06   bar06"
+
+                    "hea05   hea05   hea05   hea05   hea05   hea05   hea05   hea05   hea05   hea05   hea05   hea05"
+                    "pie03   pie03   pie03   pie03   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+                    "pie03   pie03   pie03   pie03   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+                    "pie03   pie03   pie03   pie03   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+                    "pie04   pie04   pie04   pie04   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+                    "pie04   pie04   pie04   pie04   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+                    "pie04   pie04   pie04   pie04   .       tab03   tab03   tab03   tab03   tab03   tab03   tab03"
+
+                    "pie05   pie05   pie05   pie05   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+                    "pie05   pie05   pie05   pie05   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+                    "pie05   pie05   pie05   pie05   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+                    "pie06   pie06   pie06   pie06   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+                    "pie06   pie06   pie06   pie06   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+                    "pie06   pie06   pie06   pie06   .       tab04   tab04   tab04   tab04   tab04   tab04   tab04"
+
+                    "bar05   bar05   bar05   bar05   bar05   bar05   tab06   tab06   tab06   tab06   tab06   tab06"
+                    "bar05   bar05   bar05   bar05   bar05   bar05   tab06   tab06   tab06   tab06   tab06   tab06"
+                    "bar05   bar05   bar05   bar05   bar05   bar05   tab06   tab06   tab06   tab06   tab06   tab06"
+                    "pie07   pie07   pie07   pie07   pie07   pie07   .       .       .       .       .       .    "
+                    "pie07   pie07   pie07   pie07   pie07   pie07   .       .       .       .       .       .    "
+                    "pie07   pie07   pie07   pie07   pie07   pie07   .       .       .       .       .       .    "
+
+                    "hea07   hea07   hea07   hea07   hea07   hea07   hea07   hea07   hea07   hea07   hea07   hea07 "
+                    ".       .       .       .       .       hea08   hea08   hea08   hea08   hea08   hea08   hea08 "
+
+                    "hea06   hea06   hea06   hea06   hea06   hea06   hea06   hea06   hea06   hea06   hea06   hea06 "
+                    "mix01   mix01   mix01   mix01   mix01   mix01   mix02   mix02   mix02   mix02   mix02   mix02"
+                    "mix01   mix01   mix01   mix01   mix01   mix01   mix02   mix02   mix02   mix02   mix02   mix02"
+                    "mix01   mix01   mix01   mix01   mix01   mix01   mix02   mix02   mix02   mix02   mix02   mix02"
+                    "mix01   mix01   mix01   mix01   mix01   mix01   mix02   mix02   mix02   mix02   mix02   mix02"
+
+
+
+        ;
+
+
+
+            .hea01 {
+                grid-area: hea01;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea02 {
+                grid-area: hea02;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea03 {
+                grid-area: hea03;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea04 {
+                grid-area: hea04;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea05 {
+                grid-area: hea05;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea06 {
+                grid-area: hea06;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea07 {
+                grid-area: hea07;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+            .hea08 {
+                grid-area: hea08;
+                background: $adminFilterBgColor;
+                padding:1em;
+                border:#333 2px solid;
+            }
+
+            .tab01 {
+                //grid-column: span 12;
+                grid-area: tab01;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab01A {
+                //grid-column: span 12;
+                grid-area: tab01A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab01B {
+                //grid-column: span 12;
+                grid-area: tab01B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab02 {
+                //grid-column: span 12;
+                grid-area: tab02;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab02A {
+                //grid-column: span 12;
+                grid-area: tab02A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab02B {
+                //grid-column: span 12;
+                grid-area: tab02B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab03 {
+                //grid-column: span 12;
+                grid-area: tab03;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab03A {
+                //grid-column: span 12;
+                grid-area: tab03A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab03B {
+                //grid-column: span 12;
+                grid-area: tab03B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab04 {
+                //grid-column: span 12;
+                grid-area: tab04;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab04A {
+                //grid-column: span 12;
+                grid-area: tab04A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab04B {
+                //grid-column: span 12;
+                grid-area: tab04B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab05 {
+                //grid-column: span 12;
+                grid-area: tab05;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab05A {
+                //grid-column: span 12;
+                grid-area: tab05A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab05B {
+                //grid-column: span 12;
+                grid-area: tab05B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab06 {
+                //grid-column: span 12;
+                grid-area: tab06;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab06A {
+                //grid-column: span 12;
+                grid-area: tab06A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab06B {
+                //grid-column: span 12;
+                grid-area: tab06B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab07 {
+                //grid-column: span 12;
+                grid-area: tab07;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab07A {
+                //grid-column: span 12;
+                grid-area: tab07A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab07B {
+                //grid-column: span 12;
+                grid-area: tab07B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .tab08 {
+                //grid-column: span 12;
+                grid-area: tab08;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab08A {
+                //grid-column: span 12;
+                grid-area: tab08A;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .tab08B {
+                //grid-column: span 12;
+                grid-area: tab08B;
+                background:#eee;
+                //width: 100%;
+                //height: 100%;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+
+            .pie01 {
+                grid-area: pie01;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie02 {
+                grid-area: pie02;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie03 {
+                grid-area: pie03;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie04 {
+                grid-area: pie04;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie05 {
+                grid-area: pie05;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie06 {
+                grid-area: pie06;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie07 {
+                grid-area: pie07;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie08 {
+                grid-area: pie08;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .pie09 {
+                grid-area: pie09;
+                background:#eee;
+                //padding:1em;
+                //border:#333 1px solid;
+            }
+            .bar01 {
+                grid-area: bar01;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .bar02 {
+                grid-area: bar02;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .bar03 {
+                grid-area: bar03;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .bar04 {
+                grid-area: bar04;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .bar05 {
+                grid-area: bar05;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .bar06 {
+                grid-area: bar06;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .mix01 {
+                grid-area: mix01;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
+            .mix02 {
+                grid-area: mix02;
+                background:#eee;
+                padding:1em;
+                border:#333 1px solid;
+            }
         }
     }
-
 </style>

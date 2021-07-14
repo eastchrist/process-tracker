@@ -6,30 +6,28 @@
     import { Component, Prop, Vue } from 'vue-property-decorator'
     import { exportJson2Excel } from '@/utils/excel'
     import { formatJson } from '@/utils'
-    import { getDBAnalogs, defaultAnalogExcelHeater} from '@/api/analogs'
-    import { getDBAreas, defaultAreaExcelHeater} from '@/api/areas'
-    import { getDBComputers, defaultComputerExcelHeater} from '@/api/computers'
-    import { getDBProjectActions, defaultProjectActionExcelHeater} from '@/api/projectActions'
-    import { getDBDigitals, defaultDigitalExcelHeater} from '@/api/digitals'
-    import { getDBEquips, defaultEquipExcelHeater} from '@/api/equips'
-    import { getDBFactorys, defaultFactoryExcelHeater} from '@/api/factorys'
-    import { getDBFonctions, defaultFonctionExcelHeater} from '@/api/fonctions'
-    import { getDBMeasures, defaultMeasureExcelHeater} from '@/api/measures'
-    import { getDBMeasureTypes, defaultMeasureTypeExcelHeater} from '@/api/measureTypes'
+    import { getDBAnalogs, defaultAnalogExcelHeader} from '@/api/analogs'
+    import { getDBAreas, defaultAreaExcelHeader} from '@/api/areas'
+    import { getDBComputers, defaultComputerExcelHeader} from '@/api/computers'
+    import { getDBProjectActions, defaultProjectActionExcelHeader} from '@/api/projectActions'
+    import { getDBDigitals, defaultDigitalExcelHeader} from '@/api/digitals'
+    import { getDBEquips, defaultEquipExcelHeader} from '@/api/equips'
+    import { getDBFactorys, defaultFactoryExcelHeader} from '@/api/factorys'
+    import { getDBFonctions, defaultFonctionExcelHeader} from '@/api/fonctions'
+    import { getDBMeasures, defaultMeasureExcelHeader} from '@/api/measures'
+    import { getDBMeasureTypes, defaultMeasureTypeExcelHeader} from '@/api/measureTypes'
 
-    import { getDBPlcs, defaultPlcExcelHeater} from '@/api/plcs'
-    import { getDBProducts, defaultProductExcelHeater} from '@/api/products'
-    import { getDBProjects, defaultProjectExcelHeater} from '@/api/projects'
-    import { getDBProjectTypes, defaultProjectTypeExcelHeater} from '@/api/projectTypes'
-    import { getDBProjectStatus, defaultProjectStatusExcelHeater} from '@/api/projectStatus'
-    import { getDBServers, defaultServerExcelHeater} from '@/api/servers'
-    import { getDBTankAreaDefEmptyings, defaultTankAreaDefEmptyingExcelHeater} from '@/api/tankAreaDefEmptyings'
-    import { getDBTankAreaDefFillings, defaultTankAreaDefFillingExcelHeater} from '@/api/tankAreaDefFillings'
-    import { getDBTankAreas, defaultTankAreaExcelHeater} from '@/api/tankAreas'
-    import { getDBTanks, defaultTankExcelHeater} from '@/api/tanks'
-    import { getDBUsers, defaultUserExcelHeater} from '@/api/users'
-
-
+    import { getDBPlcs, defaultPlcExcelHeader} from '@/api/plcs'
+    import { getDBProducts, defaultProductExcelHeader} from '@/api/products'
+    import { getDBProjects, defaultProjectExcelHeader} from '@/api/projects'
+    import { getDBProjectTypes, defaultProjectTypeExcelHeader} from '@/api/projectTypes'
+    import { getDBProjectStatus, defaultProjectStatusExcelHeader} from '@/api/projectStatus'
+    import { getDBServers, defaultServerExcelHeader} from '@/api/servers'
+    import { getDBTankAreaDefEmptyings, defaultTankAreaDefEmptyingExcelHeader} from '@/api/tankAreaDefEmptyings'
+    import { getDBTankAreaDefFillings, defaultTankAreaDefFillingExcelHeader} from '@/api/tankAreaDefFillings'
+    import { getDBTankAreas, defaultTankAreaExcelHeader} from '@/api/tankAreas'
+    import { getDBTanks, defaultTankExcelHeader} from '@/api/tanks'
+    import { getDBUsers, defaultUserExcelHeader} from '@/api/users'
 
     @Component({
         name: 'ExportToExcel',
@@ -39,8 +37,6 @@
     export default class extends Vue {
         @Prop({ default: '' }) private className!: string
         @Prop({ default: 'Factory' }) private TableName!: string
-        //@Prop({ default: '' }) private TableList!: string
-        //@Prop({ default: defaultEmptyExcelHeater }) private defaultExcelHeater!: []
 
         private downloadLoading = false
 
@@ -48,115 +44,115 @@
             this.downloadLoading = true
             const TableName = this.$props.TableName
             let list = []
-            let defaultExcelHeater: any = []
+            let defaultExcelHeader: any = []
             if (TableName === 'Analog') {
                 const { data } = await getDBAnalogs( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultAnalogExcelHeater
+                defaultExcelHeader = defaultAnalogExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Area') {
                 const { data } = await getDBAreas( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultAreaExcelHeater
+                defaultExcelHeader = defaultAreaExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Computer') {
                 const { data } = await getDBComputers( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultComputerExcelHeater
+                defaultExcelHeader = defaultComputerExcelHeader
                 list = data.rows
             }
             else if (TableName === 'ProjectAction') {
                 const { data } = await getDBProjectActions( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultProjectActionExcelHeater
+                defaultExcelHeader = defaultProjectActionExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Digital') {
                 const { data } = await getDBDigitals( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultDigitalExcelHeater
+                defaultExcelHeader = defaultDigitalExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Equip') {
                 const { data } = await getDBEquips( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultEquipExcelHeater
+                defaultExcelHeader = defaultEquipExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Factory') {
                 const { data } = await getDBFactorys( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultEquipExcelHeater
+                defaultExcelHeader = defaultFactoryExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Fonction') {
                 const { data } = await getDBFonctions( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultFonctionExcelHeater
+                defaultExcelHeader = defaultFonctionExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Measure') {
                 const { data } = await getDBMeasures( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultMeasureExcelHeater
+                defaultExcelHeader = defaultMeasureExcelHeader
                 list = data.rows
             }
             else if (TableName === 'MeasureType') {
                 const { data } = await getDBMeasureTypes( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultMeasureTypeExcelHeater
+                defaultExcelHeader = defaultMeasureTypeExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Plc') {
                 const { data } = await getDBPlcs( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultPlcExcelHeater
+                defaultExcelHeader = defaultPlcExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Product') {
                 const { data } = await getDBProducts( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultProductExcelHeater
+                defaultExcelHeader = defaultProductExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Project') {
                 const { data } = await getDBProjects( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultProjectExcelHeater
+                defaultExcelHeader = defaultProjectExcelHeader
                 list = data.rows
             }
             else if (TableName === 'ProjectType') {
                 const { data } = await getDBProjectTypes( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultProjectTypeExcelHeater
+                defaultExcelHeader = defaultProjectTypeExcelHeader
                 list = data.rows
             }
             else if (TableName === 'ProjectStatus') {
                 const { data } = await getDBProjectStatus( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultProjectStatusExcelHeater
+                defaultExcelHeader = defaultProjectStatusExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Server') {
                 const { data } = await getDBServers( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultServerExcelHeater
+                defaultExcelHeader = defaultServerExcelHeader
                 list = data.rows
             }
             else if (TableName === 'TankAreaDefEmptying') {
                 const { data } = await getDBTankAreaDefEmptyings( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultTankAreaDefEmptyingExcelHeater
+                defaultExcelHeader = defaultTankAreaDefEmptyingExcelHeader
                 list = data.rows
             }
             else if (TableName === 'TankAreaDefFilling') {
                 const { data } = await getDBTankAreaDefFillings( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultTankAreaDefFillingExcelHeater
+                defaultExcelHeader = defaultTankAreaDefFillingExcelHeader
                 list = data.rows
             }
             else if (TableName === 'TankArea') {
                 const { data } = await getDBTankAreas( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultTankAreaExcelHeater
+                defaultExcelHeader = defaultTankAreaExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Tank') {
                 const { data } = await getDBTanks( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultTankExcelHeater
+                defaultExcelHeader = defaultTankExcelHeader
                 list = data.rows
             }
             else if (TableName === 'Password') {
                 const { data } = await getDBUsers( { page: 1, limit: 10000, name: undefined } )
-                defaultExcelHeater = defaultUserExcelHeater
+                defaultExcelHeader = defaultUserExcelHeader
                 list = data.rows
             }
 
-            const data = formatJson(defaultExcelHeater, list)
-            exportJson2Excel(defaultExcelHeater, data, TableName)
+            const data = formatJson(defaultExcelHeader, list)
+            exportJson2Excel(defaultExcelHeader, data, TableName)
             this.downloadLoading = false
         }
     }

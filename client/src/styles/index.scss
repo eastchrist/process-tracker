@@ -1,4 +1,4 @@
-
+@import './main.scss';
 @import './transition.scss';
 //@import './svgicon.scss';
 
@@ -96,15 +96,15 @@ aside {
   }
 }
 
-.filter-container {
-  padding-bottom: 10px;
+//.filter-container {
+  //padding-bottom: 10px;
 
-  .filter-item {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 10px;
-  }
-}
+  //.filter-item {
+  //  display: inline-block;
+  //  vertical-align: middle;
+  //  margin-bottom: 10px;
+  //}
+//}
 
 .link-type,
 .link-type:focus {

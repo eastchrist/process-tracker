@@ -9,7 +9,7 @@ export const defaultMixedChartFactoryProjectAllNumberPrice: IMixedChart = {
     },
     title: {
         show: true,
-        title: 'Mix01 ' + i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.title`) + '',
+        text: 'Mix01 ' + i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -20,7 +20,7 @@ export const defaultMixedChartFactoryProjectAllNumberPrice: IMixedChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.titleSub`) + '',
+            text: i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -37,12 +37,37 @@ export const defaultMixedChartFactoryProjectAllNumberPrice: IMixedChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -112,7 +137,7 @@ export const defaultMixedChartFactoryProjectRunningNumberPrice: IMixedChart = {
     },
     title: {
         show: true,
-        title: 'Mix02 ' + i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.title`) + '',
+        text: 'Mix02 ' + i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -123,7 +148,7 @@ export const defaultMixedChartFactoryProjectRunningNumberPrice: IMixedChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.titleSub`) + '',
+            text: i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -140,12 +165,37 @@ export const defaultMixedChartFactoryProjectRunningNumberPrice: IMixedChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',

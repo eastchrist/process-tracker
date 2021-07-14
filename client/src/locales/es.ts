@@ -10,9 +10,15 @@ export default {
                         titre4: '',
                     },
                     texte: {
-                        texte01: 'Process & Control 2iA es una empresa de investigación y\n' + 'servicios especializada en el desarrollo e\n' + 'implementación de proyectos industriales.\n' + 'A una estrecha comunicación con sus expectativas permite\n' + 'a Process & Control 2iA movilizar rápidamente\n' + 'a un equipo de profesionales en diferentes\n' + 'sectores industriales como : ',
-                        texte02: 'Fases principales de ingeniería, diseño,\n' + 'puesta en marcha, puesta en marcha, puesta\n' + 'en servicio y formación, Process & Control\n' + '2iA opera para misiones en todo el mundo.\n' + 'Nuestra política se basa en la mejora continua de la calidad y eficiencia de\n' + 'su herramienta de producción.',
-                        texte03: 'El alcance de la experiencia va desde los estudios preliminares, el desarrollo, la puesta en servicio hasta la asistencia técnica y el mantenimiento.\n' + 'Process & Control 2iA interviene en cada etapa\n' + 'del proyecto proporcionando recursos\n' + 'calificados: gerentes de proyecto, supervisores de puesta\n' + 'en servicio, ingenieros de PLC y mucho más ...',
+                        texte01: 'Process & Control 2iA',
+                        texte02: ' es una empresa de investigación y\n' + 'servicios especializada en el desarrollo e\n' + 'implementación de proyectos industriales.\n' + 'A una estrecha comunicación con sus expectativas permite\n' + 'a ',
+                        texte03: ' movilizar rápidamente\n' + 'a un equipo de profesionales en diferentes\n' + 'sectores industriales como : ',
+
+                        texte05: 'Fases principales de ingeniería, diseño,\n' + 'puesta en marcha, puesta en marcha, puesta\n' + 'en servicio y formación, ',
+                        texte06: ' opera para misiones en todo el mundo.\n' + 'Nuestra política se basa en la mejora continua de la calidad y eficiencia de\n' + 'su herramienta de producción.',
+
+                        texte08: 'El alcance de la experiencia va desde los estudios preliminares, el desarrollo, la puesta en servicio hasta la asistencia técnica y el mantenimiento.\n',
+                        texte09: ' interviene en cada etapa\n' + 'del proyecto proporcionando recursos\n' + 'calificados: gerentes de proyecto, supervisores de puesta\n' + 'en servicio, ingenieros de PLC y mucho más ...',
                     },
                     list: {
                         list01: {
@@ -77,7 +83,7 @@ export default {
                         list02: {
                             item01: 'Recomendación sobre programación\n' + '  de PLC.',
                             item02: 'Recomendación sobre la mejora de\n' + '  procesos para líquidos y polvos.',
-                            item03: 'Capacitación en PLC y SCADA proporcionada por\n' + 'Process & Control 2iA.',
+                            item03: 'Capacitación en PLC y SCADA proporcionada por ',
                             item04: 'Capacitar a los operadores en buenas prácticas\n' + '  de producción.',
                             item05: 'Implementación de la documentación relacionada con\n' + ' su herramienta de producción (procedimiento\n' + ' operativo estándar).',
                             item06: '',

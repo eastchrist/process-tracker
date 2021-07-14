@@ -27,7 +27,7 @@ export const defaultTankAreaDefEmptyingData: IDataBaseTankAreaDefEmptyingData = 
     options: "",
 }
 
-export const defaultTankAreaDefEmptyingExcelHeater = ['id', 'idNode', 'name', 'name1']
+export const defaultTankAreaDefEmptyingExcelHeader = ['id', 'idNode', 'name', 'name1']
 
 
 export const getDBTankAreaDefEmptyings = (params: any) =>

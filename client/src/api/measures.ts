@@ -53,7 +53,7 @@ export const defaultMeasureData: IDataBaseMeasureData = {
     idFonction: ""
 }
 
-export const defaultMeasureExcelHeater = ['id', 'position', 'idType', 'losses', 'ts', 'measure1', 'measure2', 'measure3', 'ts1', 'ts2', 'ts3', 'idProduct', 'idFonction', 'comment']
+export const defaultMeasureExcelHeader = ['id', 'position', 'idType', 'losses', 'ts', 'measure1', 'measure2', 'measure3', 'ts1', 'ts2', 'ts3', 'idProduct', 'idFonction', 'comment']
 
 export const getDBMeasures = (params: any) =>
     requestSql({

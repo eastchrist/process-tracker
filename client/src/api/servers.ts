@@ -22,7 +22,7 @@ export const defaultServerData: IDataBaseServerData = {
     serverType: "",
 }
 
-export const defaultServerExcelHeater = ['id', 'idNode', 'position', 'name', 'serverType']
+export const defaultServerExcelHeader = ['id', 'idNode', 'position', 'name', 'serverType']
 
 export const getDBServers = (params: any) =>
     requestSql({

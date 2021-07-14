@@ -59,7 +59,7 @@ export const defaultProjectData: IDataBaseProjectData = {
     lastCreationDate: "",
     lastDueDate: "",
 }
-export const defaultProjectExcelHeater = ['id', 'position', 'name', 'type', 'comment', 'idOwner', 'priority', 'difficulty', 'idArea', 'hoursPrice', 'materialPrice', 'electricalPrice']
+export const defaultProjectExcelHeader = ['id', 'position', 'name', 'type', 'comment', 'idOwner', 'priority', 'difficulty', 'idArea', 'hoursPrice', 'materialPrice', 'electricalPrice']
 export const getDBProjects = (params: any) =>
     requestSql({
         headers: { },

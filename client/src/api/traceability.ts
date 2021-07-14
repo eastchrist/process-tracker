@@ -3,7 +3,7 @@ import { IDataBaseTraceabilityData, IBarChart, IMixedChart, IPieChart,
     ITableDataFactoryInfo,
     ITableProjectPriorityDifficulty,
     IPriorityDifficulty,
-    ITableDataFonctionByAreas,
+    ITableDataUiDesignedWithData,
     //ITableDataFonctionAlarmByAreas, ITableDataFonctionNotLinkedByAreas, ITableDataFonctionNeverDoneByAreas, ITableDataFonctionToCheckByAreas
 } from './types'
 

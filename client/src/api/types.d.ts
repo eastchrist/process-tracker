@@ -23,44 +23,73 @@ export interface ITableDataUiDesignColumn {
   "font": ITableDataUiDesignFont
 }
 
+//
+interface IFont_TableData {
+  "family": string,
+  "color": string,
+  "size": string
+}
+interface IBordure_TableData {
+  length: number,
+  color: string
+}
+interface IDesign_TableData {
+  "background-color": string
+  "textAlign": string
+  "padding": string,
+  width: string,
+  "font": IFont_TableData,
+}
+interface ITitle_TableData {
+  text: string
+  height: string
+  "background-color": string
+  "textAlign": string
+  "padding": string,
+  "font": IFont_TableData,
+  "bordure": IBordure_TableData,
+}
+interface IHeader_TableData {
+  text: string[]
+  height: string
+  "background-color": string
+  "textAlign": string
+  "padding": string,
+  "font": IFont_TableData,
+  "bordure": IBordure_TableData,
+}
+interface IHeaderSub_TableData {
+  text: string[]
+  height: string
+  "background-color": string
+  "textAlign": string
+  "padding": string,
+  "font": IFont_TableData,
+  "bordure": IBordure_TableData,
+}
+
+interface IColumns_TableData {
+  text: string[],
+  height: string
+  design: IDesign_TableData[]
+  "bordure": IBordure_TableData,
+}
+interface IColumns_TableDataWithData {
+  height: string
+  enabled: boolean[],
+  design: IDesign_TableData[]
+  "bordure": IBordure_TableData,
+}
+interface IColumns_TableDataWithoutData {
+  height: string
+  design: IDesign_TableData[]
+  "bordure": IBordure_TableData,
+}
 //Tables Normal
 export interface ITableDataFactoryMain {
-  title: {
-    title: string
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  },
-  subTitle: {
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  },
-  textHeader: string[]
-  textColumn: string[]
-  columnsBordure: {
-    length: number,
-    color: string
-  },
-  columns: any,
+  title: ITitle_TableData
+  header: IHeader_TableData
+  columns: IColumns_TableData,
   fonctionFirstAnnual: {
     losses: number | string
     price: number | string
@@ -83,10 +112,9 @@ export interface ITableDataFactoryMain {
   }
 }
 export interface ITableDataFactoryInfo {
-  title: {
-      title: string
-  }
-  textColumn: string[]
+  title: ITitle_TableData
+  header: IHeader_TableData
+  columns: IColumns_TableData,
 
   fonctionNb: number | string
   fonctionInitAnnualPrice: number | string
@@ -155,43 +183,11 @@ export interface IPriorityDifficulty {
   veryLow: ITableDataLevelDifficultys
 }
 export interface ITableProjectPriorityDifficulty {
-  title: {
-    title: string
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  }
-  subTitle: {
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  },
-  textHeader: string[]
-  textHeaderSub: string[]
-  textColumn: string[]
-  columnsBordure: {
-    length: number,
-    color: string
-  },
-  columns: any,
+  title: ITitle_TableData
+  header: IHeader_TableData
+  headerSub: IHeaderSub_TableData
+  columns: IColumns_TableData,
+
   veryHigh: ITableDataLevelDifficultys
   high: ITableDataLevelDifficultys
   normal: ITableDataLevelDifficultys
@@ -202,79 +198,70 @@ export interface IFonctionByAreas {
   area: string
   name: string
 }
-export interface ITableDataFonctionByAreas {
-  title: {
-    title: string
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  }
-  subTitle: {
-    "background-color": string
-    "textAlign": string
-    "padding": string,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  },
-  textHeader: string[]
+export interface ITableDataUiDesignedWithData {
+  title: ITitle_TableData
+  header: IHeader_TableData
+  columns: IColumns_TableDataWithData,
   data: []
 }
-//TODO Tables UI
-export interface ITableDataUiDesign {
-  title: {
-    "background-color": string
-    "textAlign": string
-    "padding": number,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  }
-  subTitle: {
-    "background-color": string
-    "textAlign": string
-    "padding": number,
-    "font": {
-      "family": string,
-      "color": string,
-      "size": string
-    },
-    "bordure": {
-      length: number,
-      color: string
-    },
-  },
-  columnsBordure: {
-    length: number,
-    color: string
-  },
-  columns: Object[ { ITableDataUiDesignColumn } ],
+export interface ITableDataUiDesignedWithoutData {
+  title: ITitle_TableData
+  header: IHeader_TableData
+  columns: IColumns_TableDataWithoutData,
+}
+export interface ITableDataFonctionByAreasOld {
+  title: ITitle_TableData
+  header: IHeader_TableData
+  columns: IColumns_TableData,
+  //data: []
 }
 
-export interface oneSerie {
+export interface IChart_oneSerie {
   Value: number[]
   itemStyle: { }
+}
+export interface IChart_TextStyle {
+  fontSize: number,
+  color: string,
+  fontWeight: string,
+  fontFamily: string,
+  fontStyle: string
+}
+export interface IChart_Title {
+  text: string
+  show: boolean
+  textStyle: IChart_TextStyle
+  left: string,
+  top: string,
+  titleSub: {
+      text: string
+      textStyle: IChart_TextStyle
+  }
+}
+export interface IChart_Legend {
+  show: boolean
+  orient: string,
+  top: string,
+  left: string | undefined,
+  right: string,
+  align: string,
+  itemGap: number,
+  itemWidth: number,
+  itemHeight: number,
+  textStyle: IChart_TextStyle
+}
+export interface IChart_Tooltip {
+  trigger: string,
+  backgroundColor: string,
+  textStyle: IChart_TextStyle,
+  borderWidth: number ,
+  borderColor: string | undefined,
+  formatter: string | undefined,
+  axisPointer: {} | undefined,
+}
+export interface IChart_Toolbox {
+  right: string,
+  bottom: string,
 }
 
 export interface IBarChart {
@@ -282,31 +269,10 @@ export interface IBarChart {
     width: string,
     height: string,
   },
-  title: {
-    title: string
-    show: boolean
-    textStyle: any
-    left: string,
-    top: string,
-    titleSub: {
-      title: string
-      textStyle: any
-    }
-  },
-  legend: {
-    show: boolean
-    orient: string,
-    top: string,
-    left: string | undefined,
-    right: string,
-    align: string,
-    textStyle: {
-      fontSize: number,
-      fontWeight: string,
-      fontFamily: string,
-      fontStyle: string,
-    }
-  },
+  title: IChart_Title,
+  legend: IChart_Legend,
+  tooltip: IChart_Tooltip,
+  toolbox: IChart_Toolbox,
   grid: {
     left: string
     right: string
@@ -320,38 +286,17 @@ export interface IBarChart {
   serieStack: string // 'Total'= On Top
   xAxisText: string[]
   serieName: string[]
-  series: oneSerie[ ]
+  series: IChart_oneSerie[]
 }
 export interface IMixedChart {
   dimensions: {
     width: string,
     height: string,
   },
-  title: {
-    title: string
-    show: boolean
-    textStyle: any
-    left: string,
-    top: string,
-    titleSub: {
-      title: string
-      textStyle: any
-    }
-  }
-  legend: {
-    show: boolean
-    orient: string,
-    top: string,
-    left: string | undefined,
-    right: string,
-    align: string,
-    textStyle: {
-      fontSize: number,
-      fontWeight: string,
-      fontFamily: string,
-      fontStyle: string,
-    }
-  },
+  title: IChart_Title,
+  legend: IChart_Legend,
+  tooltip: IChart_Tooltip,
+  toolbox: IChart_Toolbox,
   grid: {
     left: string
     right: string
@@ -365,47 +310,17 @@ export interface IMixedChart {
   serieStack: string // 'Total'= On Top
   xAxisText: string[]
   serieName: string[]
-  series: oneSerie[ ]
+  series: IChart_oneSerie[ ]
 }
 export interface IPieChart {
   dimensions: {
     width: string,
     height: string,
   },
-  title: {
-    title: string
-    show: boolean
-    textStyle: any
-    left: string,
-    top: string,
-    titleSub: {
-      title: string
-      textStyle: any
-    }
-  },
-  legend: {
-    show: boolean
-    orient: string,
-    top: string,
-    left: string | undefined,
-    right: string,
-    align: string,
-    textStyle: {
-      fontSize: number,
-      fontWeight: string,
-      fontFamily: string,
-      fontStyle: string,
-    }
-  },
-  tooltip: {
-    trigger: string,
-    backgroundColor: string,
-    textStyle: {
-      color: string,
-    },
-    borderWidth: number ,
-    formatter: string,
-  },
+  title: IChart_Title,
+  legend: IChart_Legend,
+  tooltip: IChart_Tooltip,
+  toolbox: IChart_Toolbox,
   series: {
     radius: any,
     center: any,
@@ -417,9 +332,10 @@ export interface IPieChart {
     label: {
       show: boolean,
       position: string,
-      fontWeight: string,
-      fontFamily: string,
-      fontSize: number,
+      textStyle: IChart_TextStyle
+      //fontWeight: string,
+      //fontFamily: string,
+      //fontSize: number,
       overflow: string,
     },
   },

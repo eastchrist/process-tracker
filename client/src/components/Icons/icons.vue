@@ -1,20 +1,20 @@
 <template>
-    <svg v-if="name === 'ion-ios-location-outline'" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+    <svg v-if="name === 'ion-ios-location-outline'" v-on="$listeners" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
         <path d="M256 48c34.19 0 66.334 13.314 90.51 37.49S384 141.81 384 176c0 42.92-24.092 107.127-69.67 185.68-22.279 38.396-44.771 71.634-58.332 90.931-13.518-19.232-35.912-52.327-58.161-90.645C152.149 283.281 128 218.976 128 176c0-34.19 13.314-66.334 37.49-90.51S221.81 48 256 48m0-16c-79.529 0-144 64.471-144 144 0 112 144 304 144 304s144-192 144-304c0-79.529-64.471-144-144-144z" _fill="#626262"/>
         <path d="M256 112c-35.3 0-64 28.7-64 64s28.7 64 64 64 64-28.7 64-64-28.7-64-64-64zm0 110.9c-25.9 0-46.9-21-46.9-46.9s21-46.9 46.9-46.9 46.9 21 46.9 46.9-21 46.9-46.9 46.9z" _fill="#626262"/>
     </svg>
-    <svg v-else-if="name === 'ion-ios-telephone-outline'" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+    <svg v-else-if="name === 'ion-ios-telephone-outline'" v-on="$listeners" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
         <path d="M415.9 335.5c-14.6-15-56.1-43.1-83.3-43.1-6.3 0-11.8 1.4-16.3 4.3-13.3 8.5-23.9 15.1-29 15.1-2.8 0-5.8-2.5-12.4-8.2l-1.1-1c-18.3-15.9-22.2-20-29.3-27.4l-1.8-1.9c-1.3-1.3-2.4-2.5-3.5-3.6-6.2-6.4-10.7-11-26.6-29l-.7-.8c-7.6-8.6-12.6-14.2-12.9-18.3-.3-4 3.2-10.5 12.1-22.6 10.8-14.6 11.2-32.6 1.3-53.5-7.9-16.5-20.8-32.3-32.2-46.2l-1-1.2c-9.8-12-21.2-18-33.9-18-14.1 0-25.8 7.6-32 11.6-.5.3-1 .7-1.5 1-13.9 8.8-24 20.9-27.8 33.2-5.7 18.5-9.5 42.5 17.8 92.4 23.6 43.2 45 72.2 79 107.1 32 32.8 46.2 43.4 78 66.4 35.4 25.6 69.4 40.3 93.2 40.3 22.1 0 39.5 0 64.3-29.9 26-31.4 15.2-50.6-.4-66.7zm-11.5 55.9c-20 24.2-31.5 24.2-52.3 24.2-20.3 0-51.8-14-84.2-37.3-31-22.4-44.8-32.7-75.9-64.6-32.9-33.7-53.6-61.8-76.4-103.5-24.1-44.1-21.4-63.4-16.5-79.3 2.6-8.5 10.4-17.6 21-24.2.5-.3 1-.7 1.6-1 5.3-3.4 14.1-9.1 23.7-9.1 8 0 15.1 4 21.9 12.3l1 1.2c25.5 31.2 45.4 58.8 30.4 79.2-10.6 14.3-16.2 24-15.3 34 .8 9.7 7.3 17 17.1 28l.7.8c16.1 18.2 20.7 23 27.1 29.5 1.1 1.1 2.2 2.3 3.5 3.6l1.8 1.9c7.4 7.7 11.5 11.9 30.3 28.4l1.1 1c8 7 13.9 12.1 22.5 12.1 8.9 0 18.7-5.6 37.3-17.5 1.9-1.2 4.6-1.9 8-1.9 21.7 0 59.1 24.8 72.2 38.3 12 12.2 18 21.4-.6 43.9z"
               _fill="#626262"/>
     </svg>
-    <svg v-else-if="name === 'ion-ios-email-outline'" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+    <svg v-else-if="name === 'ion-ios-email-outline'" v-on="$listeners" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
         <path d="M460.6 147.3L353 256.9c-.8.8-.8 2 0 2.8l75.3 80.2c5.1 5.1 5.1 13.3 0 18.4-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8l-75-79.9c-.8-.8-2.1-.8-2.9 0L313.7 297c-15.3 15.5-35.6 24.1-57.4 24.2-22.1.1-43.1-9.2-58.6-24.9l-17.6-17.9c-.8-.8-2.1-.8-2.9 0l-75 79.9c-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8c-5.1-5.1-5.1-13.3 0-18.4l75.3-80.2c.7-.8.7-2 0-2.8L51.4 147.3c-1.3-1.3-3.4-.4-3.4 1.4V368c0 17.6 14.4 32 32 32h352c17.6 0 32-14.4 32-32V148.7c0-1.8-2.2-2.6-3.4-1.4z"
               _fill="#626262"/>
         <path d="M256 295.1c14.8 0 28.7-5.8 39.1-16.4L452 119c-5.5-4.4-12.3-7-19.8-7H79.9c-7.5 0-14.4 2.6-19.8 7L217 278.7c10.3 10.5 24.2 16.4 39 16.4z"
               _fill="#626262"/>
     </svg>
-    <svg v-else-if="name === 'ion-documents-outline'" fill="none" stroke="currentColor"
+    <svg v-else-if="name === 'ion-documents-outline'" v-on="$listeners" fill="none" stroke="currentColor"
          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="vertical-align: -0.125em;-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
         <path d="M336 264.13V436c0 24.3-19.05 44-42.95 44H107c-23.95 0-43-19.7-43-44V172a44.26 44.26 0 0 1 44-44h94.12a24.55 24.55 0 0 1 17.49 7.36l109.15 111a25.4 25.4 0 0 1 7.24 17.77z"
@@ -26,31 +26,31 @@
               fill="none" _stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
     </svg>
 
-    <svg v-else-if="name === 'ant-design:login-outlined'" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg v-else-if="name === 'ant-design:login-outlined'" v-on="$listeners" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          focusable="false" :width="width" :height="height" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><defs/>
         <path d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7c-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8c7-8.5 14.5-16.7 22.4-24.5c32.6-32.5 70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8c47.9 0 94.3
         9.3 137.9 27.8c42.2 17.8 80.1 43.4 112.7 75.9c32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8c-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1
         520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5c-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1
         430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z" _fill="#626262"/></svg>
-    <svg v-else-if="name === 'ant-design:logout-outlined'" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg v-else-if="name === 'ant-design:logout-outlined'" v-on="$listeners" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          aria-hidden="true" focusable="false" :width="width" :height="height" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
         <path d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8c-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 0 1-112.7 75.9A352.8 352.8 0 0 1 512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 0 1-112.7-75.9a353.28
         353.28 0 0 1-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8c47.9 0 94.3 9.3 137.9 27.8c42.2 17.8 80.1 43.4 112.7
         75.9c7.9 7.9 15.3 16.1 22.4 24.5c3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82C271.7 82.6 79.6 277.1 82 516.4C84.4 751.9 276.2 942 512.4 942c152.1 0
         285.7-78.8 362.3-197.7c3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6z" _fill="#626262"/></svg>
-    <svg v-else-if="name === 'ic-baseline-app-registration'" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg v-else-if="name === 'ic-baseline-app-registration'" v-on="$listeners" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          aria-hidden="true" focusable="false" :width="width" :height="height"  style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
         <path d="M10 4h4v4h-4zM4 16h4v4H4zm0-6h4v4H4zm0-6h4v4H4zm10 8.42V10h-4v4h2.42zm6.88-1.13l-1.17-1.17a.41.41 0 0 0-.58 0l-.88.88L20 12.75l.88-.88a.41.41 0 0 0 0-.58zM11 18.25V20h1.75l6.67-6.67l-1.75-1.75zM16 4h4v4h-4z"
               _fill="#626262"/></svg>
 
-    <svg v-else-if="name === 'bx-bxs-factory'" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg v-else-if="name === 'bx-bxs-factory'" v-on="$listeners" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M17 10V6l-5 4V6l-5 4V4H2v16h20V6l-5 4zm-8 7H7v-3h2v3zm5 0h-2v-3h2v3zm5 0h-2v-3h2v3z" _fill="#626262"/></svg>
 
-    <svg v-else-if="name === 'fa-solid:cogs'" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg v-else-if="name === 'fa-solid:cogs'" v-on="$listeners" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
          preserveAspectRatio="xMidYMid meet" viewBox="0 0 1200 1200"><path d="M910.143 91.119l-16.916 81.053a196.327 196.327 0 0 0-49.691 14.743l-58.229-58.825l-66.309 53.661l45.354 69.303c-10.104
          13.862-18.357 29.104-24.623 45.503l-82.85-.374l-8.906 84.87l81.055 16.914c2.723 17.329 7.746 33.897 14.742 49.545l-58.824 58.376l53.66 66.31l69.303-45.43a195.996 195.996 0 0 0
@@ -67,63 +67,63 @@
          33.229c-9.746-7.396-20.498-13.449-32.031-18.036l.299-60.546l-59.651-6.51zm9.879 144.144c1.873.009 3.783.092 5.688.301c30.473 3.331 52.521 31.745 49.32 63.465c-3.201 31.719-30.449 54.748-60.922
          51.416s-52.596-31.746-49.395-63.466c3.001-29.738 27.19-51.818 55.309-51.716z" _fill="#626262"/></svg>
 
-    <svg v-else-if="name === 'education'" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'education'" v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M88.9 119.6c-7.3 0-19.5 2.5-21.4 8.2v.1c-4.2.2-5.2 0-7 0-2-5.7-14.1-8.2-21.4-8.2H0V0h42.5C51.7 0 59.6 5.5 64 13.6 68.4 5.5 76.3 0 85.5 0H128v119.6H88.9zM60.4 24.8c0-9.7-9-16.5-17.7-16.5H7v103.1h32c7-.1 18.2.1 21.3 6.2v-4.7-88.1zM121 8.2H85.3c-8.8 0-17.7 6.9-17.7 16.5V117.4c3.1-6 14.2-6.2 21.3-6h32V8.1z"/>
     </svg>
-    <svg v-else-if="name === 'dashboard'" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 100" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'dashboard'" v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 100" xmlns="http://www.w3.org/2000/svg">
         <path d="M27.4 63.6c0-2.5-.9-4.6-2.6-6.4a8.8 8.8 0 0 0-6.5-2.6c-2.5 0-4.7.8-6.5 2.6a8.7 8.7 0 0 0-2.7 6.4c0 2.5 1 4.7 2.7 6.5 1.8 1.7 4 2.6 6.5 2.6s4.7-.9 6.5-2.6c1.7-1.8 2.6-4 2.6-6.5zm13.7-31.8c0-2.5-.9-4.6-2.6-6.4a8.8 8.8 0 0 0-6.5-2.6c-2.5 0-4.7.8-6.5 2.6a8.7 8.7 0 0 0-2.6 6.4c0 2.5.9 4.7 2.6 6.5 1.8 1.7 4 2.6 6.5 2.6s4.7-.9 6.5-2.6c1.7-1.8 2.6-4 2.6-6.5zM71.7 66L79 38.9c.3-1.3.1-2.4-.5-3.5a4.5 4.5 0 0 0-8.3 1.2l-7.2 27.1a13.6 13.6 0 1 0 8 25.4 13 13 0 0 0 6.4-8.4A13.5 13.5 0 0 0 71.7 66zm47.2-2.4c0-2.5-1-4.6-2.7-6.4a8.8 8.8 0 0 0-6.5-2.6c-2.5 0-4.7.8-6.5 2.6a8.7 8.7 0 0 0-2.6 6.4c0 2.5.9 4.7 2.7 6.5 1.7 1.7 3.9 2.6 6.4 2.6 2.5 0 4.7-.9 6.5-2.6 1.8-1.8 2.7-4 2.7-6.5zM73 18.2c0-2.5-.8-4.6-2.6-6.4A8.8 8.8 0 0 0 64 9c-2.5 0-4.7 1-6.5 2.7a8.7 8.7 0 0 0-2.6 6.4c0 2.5.9 4.7 2.6 6.4 1.8 1.8 4 2.7 6.5 2.7s4.7-.9 6.5-2.7c1.7-1.7 2.6-3.9 2.6-6.4zm32 13.6c0-2.5-.8-4.6-2.6-6.4a8.8 8.8 0 0 0-6.5-2.6c-2.5 0-4.7.8-6.5 2.6a8.7 8.7 0 0 0-2.6 6.4c0 2.5.8 4.7 2.6 6.5 1.8 1.7 4 2.6 6.5 2.6s4.7-.9 6.5-2.6c1.7-1.8 2.6-4 2.6-6.5zM128 63.6c0 12.4-3.4 23.8-10 34.3-1 1.4-2.3 2-4 2H14c-1.7 0-3-.6-4-2a62.2 62.2 0 0 1-5-59 63.9 63.9 0 0 1 123 24.7z"/>
     </svg>
-    <svg v-else-if="name === 'lock' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'lock' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M119.9 49.7h-8V39.5C111.9 17.7 90.4.1 64 .1 37.5 0 16.1 17.7 16.1 39.5v10.2h-8c-4.4 0-8 3-8 6.6v65c0 3.7 3.6 6.7 8 6.7H120c4.4 0 8-3 8-6.6V56.3c0-3.7-3.6-6.6-8-6.6zm-24 0H32.1V39.5C32 25 46.4 13.2 64 13.2c17.6 0 32 11.8 32 26.3v10.2z"/>
     </svg>
-    <svg v-else-if="name === 'guide' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'guide' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.5 70.1l36.2 16.2 70-65.5-61.5 70.6 46.5 18.8c1 .4 2.4-.2 2.8-1.4L128 0 1.3 66c-1.1.6-1.5 2-1 3.1.3.5.7 1 1.2 1.1zM46.2 128l18-20.7-18-7.9V128z"/>
     </svg>
-    <svg v-else-if="name === 'icon' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'icon' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M115.1 0a13 13 0 0 1 5 1c1.5.6 2.9 1.5 4 2.7a13.1 13.1 0 0 1 2.8 4c.7 1.6 1 3.3 1 5.2v102.3c0 3.6-1.2 6.7-3.5 9.1a12 12 0 0 1-9 3.6H13c-3.9 0-7-1.2-9.4-3.7a13.2 13.2 0 0 1-3.5-9.5v-102c0-3.4 1.1-6.3 3.4-8.9A12 12 0 0 1 12.8.1h102.3zM81.4 109c1.8 0 3-.4 3.8-1.2.8-.8 1.2-1.9 1.2-3.3 0-1.2-.4-2.3-1.2-3.2-.8-.8-2-1.3-3.8-1.3h-8.8l.1-.8V27h9c1.8 0 3-.4 3.7-1.3.6-.9 1-2 1-3.2a5 5 0 0 0-1-3.2c-.7-.9-2-1.3-3.7-1.3H46.3c-1.8 0-3 .4-3.7 1.3-.6.9-1 2-1 3.2a5 5 0 0 0 1 3.2c.7.9 2 1.3 3.7 1.3h8.1v72.5l.2.4h-8c-1.8 0-3 .5-3.8 1.3-.8 1-1.2 2-1.2 3.2 0 1.4.4 2.5 1.2 3.3.8.8 2 1.2 3.8 1.2h34.8z"/>
     </svg>
-    <svg v-else-if="name === 'chart' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'chart' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 54.9h36.6V128H0V54.9zm91.4-27.5H128V128H91.4V27.4zM45.7 0h36.6v128H45.7V0z"/>
     </svg>
-    <svg v-else-if="name === 'edit' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'edit' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M106.1 67.2a4.8 4.8 0 0 0-4.8 4.8v46.4H9.6V26.7h50.1a4.8 4.8 0 1 0 0-9.6H9.6A9.6 9.6 0 0 0 0 26.7v91.7c0 5.3 4.3 9.6 9.6 9.6h91.7c5.3 0 9.6-4.3 9.6-9.6V72.5 72c0-2.7-2.1-4.8-4.8-4.8z"/>
         <path d="M125.2 13.4L114.6 2.8a9.6 9.6 0 0 0-13.6 0l-53 53a4.3 4.3 0 0 0-.9 1.3L33.8 88.5a4.2 4.2 0 0 0 1 4.7c1 1.2 2.8 1.7 4.6 1l31.4-13.4c.5-.2 1-.5 1.4-.9l53-53a9.6 9.6 0 0 0 0-13.5zm-59 59l-18.4 7.8 7.7-18.4 37.2-37.1 10.6 10.5L66 72.4zm52.1-52.2l-8.2 8.2L99.5 18l8.3-8.3L118.4 20z"/>
     </svg>
-    <svg v-else-if="name === 'user' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'user' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M63.4 65c20.7 0 37.4-14.3 37.4-32 0-17.6-16.7-32-37.4-32-20.6 0-37.3 14.4-37.3 32 0 17.7 16.7 32 37.3 32zm17.2 10.7H49.4C22.8 75.7 1.2 94 1.2 116.9v2.7c0 9.3 21.6 9.3 48.2 9.3h31.2c26.6 0 48.2-.3 48.2-9.3v-2.7c0-22.8-21.6-41.2-48.2-41.2z" stroke="#979797"/>
     </svg>
-    <svg v-else-if="name === 'email' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'email' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 96" xmlns="http://www.w3.org/2000/svg">
         <path d="M64.1 57l56-56a12.5 12.5 0 0 0-4.6-1h-103C10.9 0 9.4.3 8 .8L64 57z"/>
         <path d="M64.1 68.3L1.8 6A12.4 12.4 0 0 0 0 12.5v71C0 90.4 5.6 96 12.5 96h103c6.9 0 12.5-5.6 12.5-12.5v-71a12.5 12.5 0 0 0-1.7-6.3L64 68.2z"/>
     </svg>
-    <svg v-else-if="name === 'password' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'password' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M108.8 44.3H89.6V39c0-9-3.3-24.2-25.6-24.2-23.1 0-25.6 16.9-25.6 24.2v5.3H19.2V39C19.2 15.3 36.8 0 64 0c27.2 0 44.8 15.3 44.8 39v5.3zm-32 39.4c0-5.5-5.8-9.9-12.8-9.9-7 0-12.8 4.4-12.8 9.9 0 3.7 2.6 6.8 6.4 8.5v11.2c0 2.7 2.9 5 6.4 5 3.5 0 6.4-2.3 6.4-5V92.2c3.8-1.7 6.4-4.8 6.4-8.5zM128 64v49.2c0 8.2-8.6 14.8-19.2 14.8H19.2C8.7 128 0 121.4 0 113.2V64c0-8.2 8.6-14.8 19.2-14.8h89.6c10.6 0 19.2 6.6 19.2 14.8z"/>
     </svg>
-    <svg v-else-if="name === 'bug' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'bug' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M127.9 73.1a5 5 0 0 1-1.5 3.7c-1 1-2.2 1.6-3.6 1.6h-18c0 9.3-1.7 17.1-5.3 23.6l16.6 17a5 5 0 0 1 1.6 3.7 5 5 0 0 1-1.6 3.7c-1 1-2.1 1.5-3.6 1.5-1.4 0-2.6-.5-3.5-1.5l-15.9-16a15.5 15.5 0 0 1-1.2 1l-3.3 2.3a50.1 50.1 0 0 1-5.2 3 36.4 36.4 0 0 1-14.3 3.4v-73H59v73a32.2 32.2 0 0 1-15-3.8 66.8 66.8 0 0 1-5.3-3.2c-1.6-1-2.8-2-3.5-2.6l-1.2-1.2-14.6 17a5.1 5.1 0 0 1-7.3.4c-1-1-1.5-2.3-1.6-3.7 0-1.4.3-2.7 1.2-3.8l16.2-18.5C24.7 94.5 23 87 23 78.4H5.2c-1.3 0-2.5-.6-3.6-1.6S.1 74.5.1 73.1a5 5 0 0 1 1.5-3.6c1-1 2.3-1.6 3.6-1.6h18V44L9.2 30a5 5 0 0 1-1.5-3.7 5 5 0 0 1 1.5-3.7c1-1 2.2-1.6 3.6-1.6s2.6.6 3.6 1.6l13.8 14.1h67.4l13.8-14.1a4.9 4.9 0 0 1 7.2 0 5 5 0 0 1 1.5 3.7 5 5 0 0 1-1.5 3.6L104.9 44v24h17.9c1.4 0 2.6.5 3.6 1.6a5 5 0 0 1 1.5 3.6zm-38.3-47H38.4C38.4 19 41 12.9 46 7.8 51 2.7 57 .1 64 .1c7 0 13.1 2.5 18 7.6 5 5 7.6 11.2 7.6 18.5z"/>
     </svg>
-    <svg v-else-if="name === 'hamburger' " fill="currentColor" :width="width" :height="height" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'hamburger' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
         <path d="M408 442h480a8 8 0 0 0 8-8v-56a8 8 0 0 0-8-8H408a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8zm-8 204a8 8 0 0 0 8 8h480a8 8 0 0 0 8-8v-56a8 8 0 0 0-8-8H408a8 8 0 0 0-8 8v56zm504-486H120a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h784a8 8 0 0 0 8-8v-56a8 8 0 0 0-8-8zm0 632H120a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h784a8 8 0 0 0 8-8v-56a8 8 0 0 0-8-8zM142.4 642.1L298.7 519a8.8 8.8 0 0 0 0-13.9L142.4 381.9a8.9 8.9 0 0 0-14.4 6.9v246.3a8.9 8.9 0 0 0 14.4 7z"/>
     </svg>
-    <svg v-else-if="name === 'drag' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'drag' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M73.1 29H64h29.7L64 0 34.4 29h20.5v27.1H27.2v18H55v27.1H73V74.1h27.4V56H73.1v-27zM64 128l27.5-26.8H36.6l27.3 26.7zM0 65l27.2 27V38.2L0 65zm100.5-26.8V92L128 65l-27.5-26.8z"/>
     </svg>
-    <svg v-else-if="name === 'star' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'star' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M70.7 4.3l14 29.7c1 2.3 3.1 3.9 5.6 4.3l31.3 4.7c6.1 1 8.5 8.8 4.1 13.3l-22.7 23a8 8 0 0 0-2 7l5.3 32.6c1 6.3-5.4 11.2-10.8 8.2l-28-15.4a7.1 7.1 0 0 0-7 0l-28 15.4c-5.4 3-11.8-1.9-10.8-8.2l5.4-32.6a8 8 0 0 0-2.2-7l-22.6-23C-2.1 51.8.3 44 6.3 43l31.4-4.7c2.4-.4 4.5-2 5.6-4.3l14-29.7a7.3 7.3 0 0 1 13.4 0z"/>
     </svg>
-    <svg v-else-if="name === 'back-top' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'back-top' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="m85.516107,108.161393a6.772961,6.930523 0 0 1 -6.752639,6.895873l-40.685116,0a6.745865,6.902803 0 0 1 -6.752639,-6.902803l0,-48.548377l-20.352708,0c-7.450248,0 -9.211217,-4.387025 -3.914762,-9.813634l46.584345,-47.668182a6.793261,6.951313 0 0 1 9.56342,0l46.584345,47.682042c5.296455,5.405819 3.54226,9.806704 -3.92831,9.806704l-20.345934,0l0,48.541447l0,0.00693z"/>
     </svg>
-    <svg v-else-if="name === 'fullscreen' " fill="currentColor" @click=click() :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'fullscreen' " v-on="$listeners" fill="currentColor" @click=click() :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M38.5 52L52 38.5 28.4 14.8 43.2 0H0v43.1l14.8-14.8L38.5 52zm74.7 47.7L89.5 76 76 89.5l23.6 23.7L84.8 128H128V84.9l-14.8 14.8zM89.5 52l23.7-23.6L128 43.2V0H84.9l14.8 14.8L76 38.5 89.5 52zm-51 24L14.8 99.7 0 84.7V128h43.1l-14.8-14.8L52 89.5 38.5 76z"/>
     </svg>
-    <svg v-else-if="name === 'exit-fullscreen' " fill="currentColor" @click=click() :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'exit-fullscreen' " v-on="$listeners" fill="currentColor" @click=click() :width="width" :height="height" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <path d="M49.2 41.3l-.1-35.2c0-2.7-2.3-4.4-5-4.4h-3.7a4.8 4.8 0 0 0-4.8 5l.2 19.2L11.6 2a6.7 6.7 0 0 0-9.5 0 6.8 6.8 0 0 0 0 9.5l24 23.7H7.6A5.5 5.5 0 0 0 2 40.5V44c0 2.7 2.3 5 5 5l35-.2h2.6a4.6 4.6 0 0 0 3.4-1.3c1-.9 1.2-2.1 1.2-3.5l-.3-2.4.2-.2zm52.5 51.2h18.4c2.7 0 5.2-1.6 5.6-4.8v-3.5c0-2.7-2.3-5-5-5l-34.6.2H86l-2.5-.1a4.6 4.6 0 0 0-3.4 1.4c-1 .8-1.2 2-1.2 3.4l.3 2.5-.2.1.1 34.7c0 2.7 2.3 4.4 5 4.4h3.5c2.7 0 4.9-2.3 4.8-5l-.2-18.8 24.2 24a6.7 6.7 0 0 0 9.5 0 6.7 6.7 0 0 0 0-9.5l-24.2-24zM48.1 80.7a4.6 4.6 0 0 0-3.4-1.4h-2.5-.1l-35-.1c-2.7 0-5 2.3-5 5v3.5c.4 3.2 2.9 4.8 5.6 4.8h18.5l-24.1 24a6.8 6.8 0 0 0 0 9.5 6.7 6.7 0 0 0 9.5 0l24.2-23.8-.2 18.9c0 2.7 2 5 4.8 5H44c2.8 0 5-1.7 5-4.4l.2-35-.2-.1.3-2.5c0-1.3-.3-2.6-1.2-3.4zm32-33.3a4.6 4.6 0 0 0 3.4 1.4H86l.1-.1 35.1.2c2.7 0 5-2.3 5-5v-3.5c-.4-3.2-3-5-5.6-5H102l23.9-23.8a6.7 6.7 0 0 0 0-9.5 6.7 6.7 0 0 0-9.5 0L92.3 26l.1-19.4c0-2.7-2-5-4.8-5h-3.4c-2.8 0-5 1.7-5 4.4L79 41.3l.2.2-.3 2.4c0 1.4.3 2.6 1.2 3.5z"/>
     </svg>
-    <svg v-else-if="name === 'eye-off' " fill="currentColor" :width="width" :height="height" viewBox="0 0 128 64" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name === 'eye-off' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 128 64" xmlns="http://www.w3.org/2000/svg">
         <path d="M127 8c1.4-2.2 1-5.2-.8-6.9-2.1-1.7-4.8-1.2-6.4 1-.3.3-25.6 32.4-55.8 32.4C34.8 34.5 8.3 2 8 1.9a4.4 4.4 0 0 0-6.3-.5 5.2 5.2 0 0 0-.5 6.8c.5.8 6 7.4 14.6 14.8L4.2 36a5 5 0 0 0 .2 6.8c.5 1 1.6 1.5 2.7 1.5s2.3-.5 3.2-1.5l12.6-14a87 87 0 0 0 20.8 11.6l-4.8 17.4c-.7 2.7.7 5.4 3.2 6.1h1.4c2 0 3.8-1.4 4.3-3.7l4.8-17.4a58.3 58.3 0 0 0 22.8 0L80.2 60a4.7 4.7 0 0 0 4.4 3.7c.4 0 .9 0 1.1-.3 2.5-.7 4-3.4 3.2-6.1l-4.8-17.2A87 87 0 0 0 105 28.6l12.3 13.7c1 1 2.1 1.5 3.2 1.5s2.3-.5 3.2-1.5c1.9-2 1.9-4.9.3-6.8l-11.7-13C121.6 15 127.1 8 127.1 8z"/>
     </svg>
-    <svg v-else-if="name === 'eye-on' " fill="currentColor" :width="width" :height="height" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" >
+    <svg v-else-if="name === 'eye-on' " v-on="$listeners" fill="currentColor" :width="width" :height="height" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" >
         <path d="M512 128q69.7 0 135.5 21.2t115.5 55 93.5 74.8 73.7 82 51.6 74.8 32.2 54.9l10 21.3-6.3 13.5q-4 8.5-18.8 34.7t-31.7 51.6-44.3 60-56.9 64.4-69.5 60.1-82.3 51.5-94.9 34.7T512 896q-69.7 0-135.5-21.2T261 820t-93.5-74.3-73.7-81.5-51.6-74.5-32.2-55l-10-21 6.3-13.5q4-8.5 18.8-34.8t31.7-51.8 44.3-60.4 56.9-64.6 69.5-60.4 82.3-51.8 94.9-34.8T512 128zm0 85.3q-46.7 0-91.6 12.4t-81.2 31.8-70.7 47.1-59.6 54.5-48.9 57.7-37.6 52.8-26.4 44q12.4 21.7 26.4 43.5t37.6 52.4 48.9 57 59.6 53.8 70.7 46.7 81.2 31.5 91.6 12.2 91.6-12.4 81.2-31.6 70.7-46.9 59.6-54.2 48.9-57.3 37.6-52.7T928 512q-12.4-21.7-26.4-43.6T864 415.7 815 358.4t-59.6-54.2-70.7-46.9-81.2-31.6-91.6-12.4zm0 128q70.7 0 120.7 50t50 120.7-50 120.7-120.7 50-120.7-50-50-120.7 50-120.7 120.7-50zm0 85.4q-35.3 0-60.3 25t-25 60.3 25 60.3 60.3 25 60.3-25 25-60.3-25-60.3-60.3-25z"/>
     </svg>
 </template>

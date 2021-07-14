@@ -1,110 +1,105 @@
 <template>
     <div class="table-container">
         <div class="wrapper">
-            <div class="filter">
-                <el-input v-model="listQuery.name" :placeholder="$t('tables.fonction.placeholder.placeholder1')" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"/>
-
-                <el-select v-if="isAdmin === true" v-model="listQuery.idFactory" :placeholder="$t('tables.fonction.placeholder.placeholder4')" clearable class="filter-item" style="width: 200px">
+            <div class="filt_1">
+                <el-input v-model="listQuery.name" :placeholder="$t('tables.fonction.placeholder.placeholder1')" class="filter-item" @keyup.enter.native="handleFilter"/>
+                <el-select v-if="isAdmin === true" v-model="listQuery.idFactory" :placeholder="$t('tables.fonction.placeholder.placeholder4')" clearable class="filter-item" >
                     <el-option v-for="item in TypeOptionsFactorys" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
 
                 <!-- idArea depend of the level Admin=name Manager=name1 -->
-                <el-select v-if="isAdmin === true" v-model="listQuery.idArea" :placeholder="$t('tables.fonction.placeholder.placeholder5')" clearable class="filter-item" style="width: 200px" @change="optionAreachange">
+                <el-select v-if="isAdmin === true" v-model="listQuery.idArea" :placeholder="$t('tables.fonction.placeholder.placeholder5')" clearable class="filter-item" @change="optionAreachange">
                     <el-option v-for="item in TypeOptionsAreas" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
-                <el-select v-if="isAdmin !== true" v-model="listQuery.idArea" :placeholder="$t('tables.fonction.placeholder.placeholder5')" clearable class="filter-item" style="width: 200px" @change="optionAreachange">
+                <el-select v-if="isAdmin !== true" v-model="listQuery.idArea" :placeholder="$t('tables.fonction.placeholder.placeholder5')" clearable class="filter-item" @change="optionAreachange">
                     <el-option v-for="item in TypeOptionsAreas" :key="item.id" :label="item.name1" :value="item.id"/>
                 </el-select>
 
                 <!-- idPlc depend of the level Admin=name Manager=name1 -->
-                <el-select v-if="isAdmin === true" v-model="listQuery.idPlc" :placeholder="$t('tables.fonction.placeholder.placeholder6')" clearable class="filter-item" style="width: 200px" @change="optionPlcchange">
+                <el-select v-if="isAdmin === true" v-model="listQuery.idPlc" :placeholder="$t('tables.fonction.placeholder.placeholder6')" clearable class="filter-item" @change="optionPlcchange">
                     <el-option v-for="item in TypeOptionsPlcs" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
-                <el-select v-if="isAdmin !== true" v-model="listQuery.idPlc" :placeholder="$t('tables.fonction.placeholder.placeholder6')" clearable class="filter-item" style="width: 200px" @change="optionPlcchange">
+                <el-select v-if="isAdmin !== true" v-model="listQuery.idPlc" :placeholder="$t('tables.fonction.placeholder.placeholder6')" clearable class="filter-item" @change="optionPlcchange">
                     <el-option v-for="item in TypeOptionsPlcs" :key="item.id" :label="item.name1" :value="item.id"/>
                 </el-select>
-
+            </div>
+            <div class="filt_2">
                 <!-- idEquip depend of the level Admin=name Manager=name1 -->
-                <el-select v-if="isAdmin === true" v-model="listQuery.idEquip" :placeholder="$t('tables.fonction.placeholder.placeholder7')" clearable class="filter-item" style="width: 200px" @change="optionEquipchange">
+                <el-select v-if="isAdmin === true" v-model="listQuery.idEquip" :placeholder="$t('tables.fonction.placeholder.placeholder7')" clearable class="filter-item" @change="optionEquipchange">
                     <el-option v-for="item in TypeOptionsEquips" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
-                <el-select v-if="isAdmin !== true" v-model="listQuery.idEquip" :placeholder="$t('tables.fonction.placeholder.placeholder7')" clearable class="filter-item" style="width: 200px" @change="optionEquipchange">
+                <el-select v-if="isAdmin !== true" v-model="listQuery.idEquip" :placeholder="$t('tables.fonction.placeholder.placeholder7')" clearable class="filter-item" @change="optionEquipchange">
                     <el-option v-for="item in TypeOptionsEquips" :key="item.id" :label="item.name1" :value="item.id"/>
                 </el-select>
 
                 <!-- Type measurement, nb Lost -->
-                <el-select v-model="listQuery.idType" :placeholder="$t('tables.fonction.placeholder.placeholder2')" clearable class="filter-item" style="width: 200px" @change="optionTypechange">
+                <el-select v-model="listQuery.idType" :placeholder="$t('tables.fonction.placeholder.placeholder2')" clearable class="filter-item" @change="optionTypechange">
                     <el-option v-for="item in TypeOptionsMeasureTypes" :key="item.value" :label="item.name" :value="item.value"/>
                 </el-select>
-
-                <el-select v-model="listQuery.NbLost" :placeholder="$t('tables.fonction.placeholder.placeholder3')" clearable class="filter-item" style="width: 200px">
+                <el-select v-model="listQuery.NbLost" :placeholder="$t('tables.fonction.placeholder.placeholder3')" clearable class="filter-item" >
                     <el-option v-for="item in TypeOptionsNbLost" :key="item.value" :label="item.name" :value="item.value"/>
                 </el-select>
 
-            </div>
-            <div class="checkbox">
-                <!-- checkbox alarmLosses, haveToBeCheckActif, haveBeenCheck -->
-                <el-checkbox v-model="listQuery.alarmLosses" class="filter-item" style="margin-left:15px;" >{{ $t('tables.fonction.checkbox.checkbox1') }}</el-checkbox>
-                <el-checkbox v-model="listQuery.haveToBeCheckActif" class="filter-item" style="margin-left:15px;" >{{ $t('tables.fonction.checkbox.checkbox2') }}</el-checkbox>
-                <el-checkbox v-model="listQuery.haveBeenCheck" class="filter-item" style="margin-left:15px;" >{{ $t('tables.fonction.checkbox.checkbox3') }}</el-checkbox>
-
-                <!-- checkbox initialhaveNotBeenDone, currenthaveNotBeenDone -->
-                <el-checkbox v-model="listQuery.initialhaveNotBeenDone" class="filter-item" style="margin-left:15px;" >{{ $t('tables.fonction.checkbox.checkbox4') }}</el-checkbox>
-                <el-checkbox v-model="listQuery.currenthaveNotBeenDone" class="filter-item" style="margin-left:15px;" >{{ $t('tables.fonction.checkbox.checkbox5') }}</el-checkbox>
             </div>
             <div class="bouton">
                 <!-- Button search -->
                 <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">{{ $t('tables.generique.button.button1') }}</el-button>
                 <!-- Button Add Only for Admin -->
-                <el-button v-if="isAdmin === true" class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">{{ $t('tables.generique.button.button2') }}</el-button>
+                <el-button v-if="isAdmin === true" class="filter-item" type="primary" icon="el-icon-edit" @click="handleCreate">{{ $t('tables.generique.button.button2') }}</el-button>
             </div>
+            <div class="checkbox">
+                <!-- checkbox alarmLosses, haveToBeCheckActif, haveBeenCheck -->
+                <el-checkbox v-model="listQuery.alarmLosses" class="filter-item" >{{ $t('tables.fonction.checkbox.checkbox1') }}</el-checkbox>
+                <el-checkbox v-model="listQuery.haveToBeCheckActif" class="filter-item" >{{ $t('tables.fonction.checkbox.checkbox2') }}</el-checkbox>
+                <el-checkbox v-model="listQuery.haveBeenCheck" class="filter-item" >{{ $t('tables.fonction.checkbox.checkbox3') }}</el-checkbox>
+
+                <!-- checkbox initialhaveNotBeenDone, currenthaveNotBeenDone -->
+                <el-checkbox v-model="listQuery.initialhaveNotBeenDone" class="filter-item" >{{ $t('tables.fonction.checkbox.checkbox4') }}</el-checkbox>
+                <el-checkbox v-model="listQuery.currenthaveNotBeenDone" class="filter-item" >{{ $t('tables.fonction.checkbox.checkbox5') }}</el-checkbox>
+            </div>
+
 
             <div v-if="isAdmin === true" class="extra">
                 <ExportToExcel class="ExportToExcel" className="ExportToExcel" TableName="Fonction" ></ExportToExcel>
-                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Fonction" :TableList=list :defaultExcelHeater="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
+                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Fonction" :TableList=list :defaultExcelHeader="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
                 <UpdateFromNode class="UpdateFromNode" className="UpdateFromNode" TableName="Fonction" @UpdateFromNode="getList" @UpdateFromNodeError="handleUpdateFromNodeError"></UpdateFromNode>
             </div>
             <div class="table">
                 <!--  <el-table  -->
-                <!-- Design Table    -->
-                <el-table
-                        ref="draggableTable" row-key="position" :key="tableKey"
-                        stripe v-loading="listLoading" :data="list"
-                        border fit highlight-current-row @sort-change="sortChange"
-                        style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">
+                <el-table ref="draggableTable" row-key="position" :key="tableKey" stripe v-loading="listLoading" :data="list" border fit highlight-current-row @sort-change="sortChange" style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">
                     <!-- titre table -->
                     <el-table-column :label="$t('tables.fonction.title')">
                         <!-- DragDrop -->
-                        <el-table-column v-if="isAdmin === true" label="Drag" :min-width="designTable.columns[0].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[0]" :min-width="designTable.columns.design[0].width">
                             <PersoIcons class="draggable-handler" name="drag" width="20" height="20"/>
                         </el-table-column>
                         <!-- Alarm -->
-                        <el-table-column v-if="isManager === true" :label="$t('tables.fonction.champs.champs23')" :min-width="designTable.columns[1].width">
+                        <el-table-column v-if="isManager === true" :label="designTable.header.text[1]" :min-width="designTable.columns.design[1].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-if="row.alarmLosses === true" color="red" name="bug" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!-- toCheck -->
-                        <el-table-column v-if="isManager === true" :label="$t('tables.fonction.champs.champs24')" :min-width="designTable.columns[2].width">
+                        <el-table-column v-if="isManager === true" :label="designTable.header.text[2]" :min-width="designTable.columns.design[2].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-if="row.haveToBeCheckActif!==true"  name="chart" @click="handleModifyValidationStatus(row, true, 'haveToBeCheck')" color="white" width='1em' height='1em'/>
                                 <PersoIcons v-if="row.haveToBeCheckActif!==false" name="chart" @click="handleModifyValidationStatus(row, false, 'haveToBeCheck')" color="green" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!-- HaveBeenChecked -->
-                        <el-table-column v-if="isManager === true" :label="$t('tables.fonction.champs.champs25')" :min-width="designTable.columns[3].width">
+                        <el-table-column v-if="isManager === true" :label="designTable.header.text[3]" :min-width="designTable.columns.design[3].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-if="row.haveBeenCheck===true" color="blue" name="back-top" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!-- HaveToBeValidate -->
-                        <el-table-column v-if="isManager === true" :label="$t('tables.fonction.champs.champs26')" :min-width="designTable.columns[4].width">
+                        <el-table-column v-if="isManager === true" :label="designTable.header.text[4]" :min-width="designTable.columns.design[4].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-if="row.haveToBeValidated===true" name="edit" color="blue" @click="handleModifyValidationStatus(row, false, 'haveToBeValidated')" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!--  SUB TABLE measurement overview-->
-                        <el-table-column v-if="((isAdmin !== true) && (isManagerEdit !== true))" :label="$t('tables.fonction.champs.champs35')" type="expand" :min-width="designTable.columns[5].width" >
+                        <el-table-column v-if="((isAdmin !== true) && (isManagerEdit !== true))" :label="designTable.header.text[5]" type="expand" :min-width="designTable.columns.design[5].width" >
                             <template v-slot="{row}"  >
                                 <!--  <el-table  -->
                                 <!-- Design Table style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">   -->
@@ -140,123 +135,123 @@
                             </template>
                         </el-table-column>
                         <!-- Function Name Link operator Fill Data measure -->
-                        <el-table-column v-if="((isManager === true) || (isOperator === true))" :label="$t('tables.fonction.champs.champs22')" :min-width="designTable.columns[6].width" >
+                        <el-table-column v-if="((isManager === true) || (isOperator === true))" :label="designTable.header.text[6]" :min-width="designTable.columns.design[6].width" >
                             <template slot-scope="{row}">
                                 <span class="link-type" @click="handleLinkNewMeasure(row)">{{ row.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- Function Name Link Update Data form-->
-                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="$t('tables.fonction.champs.champs3')" :min-width="designTable.columns[7].width" >
+                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="designTable.header.text[7]" :min-width="designTable.columns.design[7].width" >
                             <template slot-scope="{row}">
                                 <span class="link-type" @click="handleUpdate(row)">{{ row.name }}</span>
                             </template>
                         </el-table-column>
                         <!--  idType -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs4')" :min-width="designTable.columns[8].width">
+                        <el-table-column :label="designTable.header.text[8]" :min-width="designTable.columns.design[8].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.measureType.name }}</span>
                             </template>
                         </el-table-column>
                         <!--  lastCheckDate -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs37')" :min-width="designTable.columns[9].width">
+                        <el-table-column :label="designTable.header.text[9]" :min-width="designTable.columns.design[9].width">
                             <template slot-scope="{row}">
                                 <span >{{ formatedDate(row.lastCheckDate) }}</span>
                             </template>
                         </el-table-column>
                         <!-- LostUnitaire -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs27')" :min-width="designTable.columns[10].width">
+                        <el-table-column :label="designTable.header.text[10]" :min-width="designTable.columns.design[10].width">
                             <template slot-scope="{row}">
                                 <span v-if="row.currentLosses !== null" >{{ row.currentLosses }}</span>
                                 <span v-if="row.currentLosses === null">{{ row.firstLosses }}</span>
                             </template>
                         </el-table-column>
                         <!-- LostUnitairePrice -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs28')" :min-width="designTable.columns[11].width">
+                        <el-table-column :label="designTable.header.text[11]" :min-width="designTable.columns.design[11].width">
                             <template slot-scope="{row}">
                                 <span v-if="row.currentLossesPrice !== null" >{{ row.currentLossesPrice }}</span>
                                 <span v-if="row.currentLossesPrice === null" >{{ row.firstLossesPrice }}</span>
                             </template>
                         </el-table-column>
                         <!-- LostYear -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs29')" :min-width="designTable.columns[12].width">
+                        <el-table-column :label="designTable.header.text[12]" :min-width="designTable.columns.design[12].width">
                             <template slot-scope="{row}">
                                 <span v-if="row.currentAnnualLosses !== ''" >{{ row.currentAnnualLosses }}</span>
                                 <span v-if="row.currentAnnualLosses === ''" >{{ row.firstAnnualLosses }}</span>
                             </template>
                         </el-table-column>
                         <!-- LostPriceYear -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs30')" :min-width="designTable.columns[13].width">
+                        <el-table-column :label="designTable.header.text[13]" :min-width="designTable.columns.design[13].width">
                             <template slot-scope="{row}">
                                 <span v-if="row.currentAnnualPrice !== ''" >{{ row.currentAnnualPrice }}</span>
                                 <span v-if="row.currentAnnualPrice === ''" >{{ row.firstAnnualPrice }}</span>
                             </template>
                         </el-table-column>
                         <!-- Areas Source Destination -->
-                        <el-table-column :label="$t('tables.fonction.champs.champs5')" :min-width="designTable.columns[14].width">
+                        <el-table-column :label="designTable.header.text[14]" :min-width="designTable.columns.design[14].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.tankAreaDefEmptying.name1 }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.fonction.champs.champs6')" :min-width="designTable.columns[15].width">
+                        <el-table-column :label="designTable.header.text[15]" :min-width="designTable.columns.design[15].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.tankAreaDefFilling.name1 }}</span>
                             </template>
                         </el-table-column>
                         <!-- Losses -->
-                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true) || (isManager === true))" :label="$t('tables.fonction.champs.champs34')" :min-width="designTable.columns[16].width">
+                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true) || (isManager === true))" :label="designTable.header.text[16]" :min-width="designTable.columns.design[16].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.nbLosse }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="$t('tables.fonction.champs.champs7')" :min-width="designTable.columns[17].width">
+                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="designTable.header.text[17]" :min-width="designTable.columns.design[17].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.freqCheck }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="$t('tables.fonction.champs.champs8')" :min-width="designTable.columns[18].width">
+                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="designTable.header.text[18]" :min-width="designTable.columns.design[18].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.freqDelay }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="$t('tables.fonction.champs.champs9')" :min-width="designTable.columns[19].width">
+                        <el-table-column v-if="((isAdmin === true) || (isManagerEdit === true))" :label="designTable.header.text[19]" :min-width="designTable.columns.design[19].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.maxLosse }}</span>
                             </template>
                         </el-table-column>
                         <!-- FACTORY AREA PLC EQUIP -->
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs15')" :min-width="designTable.columns[20].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[20]" :min-width="designTable.columns.design[20].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.equip.plc.area.factory.name }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs16')" :min-width="designTable.columns[21].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[21]" :min-width="designTable.columns.design[21].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.equip.plc.area.name }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs17')" :min-width="designTable.columns[22].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[22]" :min-width="designTable.columns.design[22].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.equip.plc.name }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs18')" :min-width="designTable.columns[23].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[23]" :min-width="designTable.columns.design[23].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.equip.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- Picture -->
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs10')" :min-width="designTable.columns[24].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[24]" :min-width="designTable.columns.design[24].width">
                             <template slot-scope="{row}">
                                 <el-button size="mini" @click="handleUploadPicture(row, 'picture1')">{{ $t('tables.generique.button.button12') }}</el-button>
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs11')" :min-width="designTable.columns[25].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[25]" :min-width="designTable.columns.design[25].width">
                             <template slot-scope="{row}">
                                 <el-button size="mini" @click="handleUploadPicture(row, 'picture2')">{{ $t('tables.generique.button.button12') }}</el-button>
                             </template>
                         </el-table-column>
                         <!-- Action -->
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs20')" :min-width="designTable.columns[26].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[26]" :min-width="designTable.columns.design[26].width">
                             <template slot-scope="{row}">
                                 <el-button v-if="row.haveToBeCheckActif!==true" size="mini" type="danger" @click="handleModifyValidationStatus(row, true, 'haveToBeCheck')">{{ $t('tables.fonction.button.button1') }}</el-button>
                                 <el-button v-if="row.haveToBeCheckActif!==false" size="mini" type="success" @click="handleModifyValidationStatus(row, false, 'haveToBeCheck')">{{ $t('tables.fonction.button.button1') }}</el-button>
@@ -272,7 +267,7 @@
 
                             </template>
                         </el-table-column>
-                        <el-table-column v-if="isAdmin === true" :label="$t('tables.fonction.champs.champs21')" :min-width="designTable.columns[27].width">
+                        <el-table-column v-if="isAdmin === true" :label="designTable.header.text[27]" :min-width="designTable.columns.design[27].width">
                             <template slot-scope="{row, $index}">
                                 <el-button type="primary" size="mini" @click="handleUpdate(row)">{{ $t('tables.generique.button.button7') }}</el-button>
                                 <el-button type="danger" size="mini" @click="handleDelete(row, $index)">{{ $t('tables.generique.button.button8') }}</el-button>
@@ -304,11 +299,8 @@
     import { Component, Prop, Vue } from 'vue-property-decorator'
     import { cloneDeep } from 'lodash'
     import { formatDate } from '@/utils';
-
     import Sortable from 'sortablejs'
-    //import { TagsViewModule, AITagView } from '@/store/modules/tags-view'
-
-    import { getDBFonctions, updateDBFonctions, updateDBFonction, deleteDBFonction, defaultFonctionData, defaultFonctionRules, AIFonctionQuery, defaultFonctionQuery, defaultFonctionExcelHeater} from '@/api/fonctions'
+    import { getDBFonctions, updateDBFonctions, updateDBFonction, deleteDBFonction, defaultFonctionData, defaultFonctionRules, AIFonctionQuery, defaultFonctionQuery, defaultFonctionExcelHeader} from '@/api/fonctions'
     import { getDBFactorys, AIFactoryQuery, defaultFactoryQuery} from '@/api/factorys'
     import { getDBAreas, AIAreaQuery, defaultAreaQuery } from '@/api/areas'
     import { getDBPlcs, AIPlcQuery, defaultPlcQuery} from '@/api/plcs'
@@ -316,7 +308,7 @@
     import { getDBMeasureTypes, defaultMeasureTypeQuery} from "@/api/measureTypes";
 
 
-    import { IDataBaseFonctionData } from '@/api/types'
+    import {IDataBaseFonctionData} from '@/api/types'
 
     import Pagination from '@/components/Pagination/index.vue'
     import UpdateFromNode from '@/components/TableComponents/Components/UpdateFromNode.vue'
@@ -326,7 +318,8 @@
     import FormUpdateNodeError from "@/components/TableComponents/FormUpdateNodeError/FormUpdateNodeError.vue";
 
     import { defaultFonctionDesignTable } from '@/configDesign/defaulDesignTableUi'
-    import { getDesignElementUiHeaderStyle, getDesignElementUiCellsStyle  } from '@/utils/tables'
+    import { ITableDataUiDesignedWithoutData } from '@/api/types'
+    import { getDesignElementUiHeaderStyleSansData, getDesignElementUiCellsStyleSansData  } from '@/utils/tables'
 
     const Type1Options = [
         { key: true, displayName: 'True' },
@@ -357,15 +350,15 @@
         @Prop({ default: false }) private isManagerEdit!: boolean
         @Prop({ default: false }) private isOperator!: boolean
 
-        private designTable = defaultFonctionDesignTable
+        private designTable: ITableDataUiDesignedWithoutData = defaultFonctionDesignTable
 
         private tableKey = 0
         private subTableKey = 0
 
         private list: IDataBaseFonctionData[] = []
         private total = 0
-        private oldList: number[] = []
-        private newList: number[] = []
+        private oldRows: number[] = []
+        private newRows: number[] = []
 
         private listLoading = true
 
@@ -380,7 +373,7 @@
         private listQueryPlcidMem: string | undefined = ''
         private listQueryEquipidMem: string | undefined = ''
 
-        private listExcel = defaultFonctionExcelHeater
+        private listExcel = defaultFonctionExcelHeader
 
         private Type1Options = Type1Options
         private TypeOptionsMeasureTypes = []
@@ -411,11 +404,11 @@
 
         //Apply Style to Table Header and SubHeader
         private getDesignElementUiHeaderStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
         //Apply Style to Table Rows
         private getDesignElementUiCellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number } ) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
 
         async created() {
@@ -502,13 +495,13 @@
             const { data } = await getDBFonctions(this.listQuery)
             this.list = data.rows
             this.total = data.count
-            this.oldList = this.list.map((v) => v.position)
+            this.oldRows = this.list.map((v) => v.position)
             this.TypeOptionsNbLost = this.list.reduce((acc: { [key: number]: {} }, {nbLosse}) => {
                 acc[nbLosse] = { item: nbLosse.toString(), value:  nbLosse.toString(), name: nbLosse.toString(), }
                 return acc
             }, {}) as { [key: number]: number }
 
-            this.newList = this.oldList.slice()
+            this.newRows = this.oldRows.slice()
             this.$nextTick(() => {
                 this.setSort()
             })
@@ -899,88 +892,19 @@
     }
 </style>
 <style lang="scss" scoped>
-    .table-container {
-        background: $adminContainerBgColor;
-        padding:2px;
-        margin-bottom: 20px;
-    }
     .wrapper{
-        height: 100%;
         display:grid;
         grid-gap: 3px;
         grid-template-columns:repeat(12, minmax(100px, 1fr));
 
         grid-template-areas:
-                "filter filter filter filter filter filter filter filter filter filter bout   bout  "
-                "checkb checkb checkb checkb checkb checkb checkb checkb .      .      .      .     "
-                "extra  extra  extra  extra  extra  extra  extra  extra  extra  .      .      .     "
-                "table  table  table  table  table  table  table  table  table  table  table  table "
-                "pages  pages  pages  pages  pages  pages  pages  pages  pages  .      .      .     ";
-        background: $adminWrapperBgColor;
-        padding:1em;
-        border:#333 2px solid;
+                "filt_1 filt_1 filt_1 filt_1 filt_1 filt_1 filt_1 bout   bout   bout   bout    bout  "
+                "filt_2 filt_2 filt_2 filt_2 filt_2 filt_2 filt_2 bout   bout   bout   bout    bout  "
+                "checkb checkb checkb checkb checkb checkb checkb checkb checkb checkb checkb  checkb"
+                "extra  extra  extra  extra  extra  extra  extra  extra  extra  extra  extra   extra"
+                "table  table  table  table  table  table  table  table  table  table  table   table"
+                "pages  pages  pages  pages  pages  pages  pages  pages  pages  pages  pages   pages";
     }
-    .filter {
-        grid-area: filter;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .filter-item.el-input {
-            margin-left: 0px;
-            width: 200px
-        }
-        .filter-item.el-select {
-            margin-left: 5px;
-            width: 200px
-        }
-        .filter-item.el-button {
-            margin-left: 5px;
-            width: 100px
-        }
-    }
-    .checkbox {
-        grid-area: checkb;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .bouton {
-        grid-area: bout;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .extra {
-        grid-area: extra;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .ExportToExcel {
-            margin-left: 0px;
-            width: 150px
-        }
-        .ImportFromExcel {
-            margin-left: 10px;
-            width: 200px
-        }
-        .UpdateFromNode {
-            margin-left: 10px;
-            width: 200px
-        }
-    }
-    .table {
-        grid-area: table;
-        background: $adminTableBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .pagination {
-        grid-area: pages;
-        background: $adminPaginationBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-
 
     @media only screen and (max-width: 768px) {
         .table-container {
@@ -994,7 +918,8 @@
             grid-gap: 0.2rem;
             grid-template-columns:1fr;
             grid-template-areas:
-                    "filter filter filter "
+                    "filt_1 filt_1 filt_1 "
+                    "filt_2 filt_2 filt_2 "
                     "extra  extra  extra  "
                     "table  table  table  "
                     "pages  pages  pages  ";

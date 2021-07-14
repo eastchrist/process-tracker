@@ -23,7 +23,7 @@ export const defaultProjectStatusData: IDataBaseProjectStatusData = {
     value: 0
 }
 
-export const defaultProjectStatusExcelHeater = ['id', 'position', 'name', 'value']
+export const defaultProjectStatusExcelHeader = ['id', 'position', 'name', 'value']
 
 export const getDBProjectStatus = (params: any) =>
     requestSql({

@@ -2,35 +2,35 @@
     <div class="table-container">
         <div class="wrapper">
             <div class="filter">
-                <el-input v-model="listQuery.name" :placeholder="$t('tables.project.placeholder.placeholder1')" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"/>
-                <el-select v-if="isAdmin === true" v-model="listQuery.idFactory" :placeholder="$t('tables.project.placeholder.placeholder2')" clearable class="filter-item" style="width: 200px">
+                <el-input v-model="listQuery.name" :placeholder="$t('tables.project.placeholder.placeholder1')" class="filter-item" @keyup.enter.native="handleFilter"/>
+                <el-select v-if="isAdmin === true" v-model="listQuery.idFactory" :placeholder="$t('tables.project.placeholder.placeholder2')" clearable class="filter-item" >
                     <el-option v-for="item in TypeOptionsFactorys" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
 
                 <!-- idArea -->
-                <el-select v-if="isAdmin === true" v-model="listQuery.idArea" :placeholder="$t('tables.project.placeholder.placeholder3')" clearable class="filter-item" style="width: 200px" @change="optionAreachange">
+                <el-select v-if="isAdmin === true" v-model="listQuery.idArea" :placeholder="$t('tables.project.placeholder.placeholder3')" clearable class="filter-item" @change="optionAreachange">
                     <el-option v-for="item in TypeOptionsAreas" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
-                <el-select v-if="isAdmin !== true" v-model="listQuery.idArea" :placeholder="$t('tables.project.placeholder.placeholder3')" clearable class="filter-item" style="width: 200px" @change="optionAreachange">
+                <el-select v-if="isAdmin !== true" v-model="listQuery.idArea" :placeholder="$t('tables.project.placeholder.placeholder3')" clearable class="filter-item" @change="optionAreachange">
                     <el-option v-for="item in TypeOptionsAreas" :key="item.id" :label="item.name1" :value="item.id"/>
                 </el-select>
 
                 <!-- idStatus -->
-                <el-select v-model="listQuery.idStatus" :placeholder="$t('tables.project.placeholder.placeholder4')" clearable class="filter-item" style="width: 200px" @change="optionStatuschange">
+                <el-select v-model="listQuery.idStatus" :placeholder="$t('tables.project.placeholder.placeholder4')" clearable class="filter-item" @change="optionStatuschange">
                     <el-option v-for="item in TypeOptionsProjectStatus" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
 
                 <!-- idType -->
-                <el-select v-model="listQuery.idType" :placeholder="$t('tables.project.placeholder.placeholder5')" clearable class="filter-item" style="width: 200px" @change="optionTypechange">
+                <el-select v-model="listQuery.idType" :placeholder="$t('tables.project.placeholder.placeholder5')" clearable class="filter-item" @change="optionTypechange">
                     <el-option v-for="item in TypeOptionsProjectTypes" :key="item.id" :label="item.name" :value="item.id"/>
                 </el-select>
 
                 <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">{{ $t('tables.generique.button.button1') }}</el-button>
-                <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleProjectCreate">{{ $t('tables.generique.button.button2') }}</el-button>
+                <el-button class="filter-item" type="primary" icon="el-icon-edit" @click="handleProjectCreate">{{ $t('tables.generique.button.button2') }}</el-button>
             </div>
             <div class="extra">
                 <ExportToExcel class="ExportToExcel" className="ExportToExcel" TableName="Project" ></ExportToExcel>
-                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Project" :TableList=list :defaultExcelHeater="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
+                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Project" :TableList=list :defaultExcelHeader="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
             </div>
             <div class="table" id="table">
                 <!--  <el-table  -->
@@ -39,38 +39,37 @@
                     <!-- titre table -->
                     <el-table-column :label="$t('tables.project.title')">
                         <!-- name -->
-                        <el-table-column :label="$t('tables.project.champs.champs3')" :min-width="designTable.columns[0].width">
+                        <el-table-column :label="designTable.header.text[0]" :min-width="designTable.columns.design[0].width">
                             <template slot-scope="{row}">
                                 <span class="link-type" @click="handleProjectActionCreate(row)">{{ row.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- comment -->
-                        <el-table-column :label="$t('tables.project.champs.champs15')" :min-width="designTable.columns[1].width">
+                        <el-table-column :label="designTable.header.text[1]" :min-width="designTable.columns.design[1].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.comment }}</span>
                             </template>
                         </el-table-column>
 
                         <!-- SUB TABLE show-summary :summary-method -->
-                        <!-- SUB TABLE Function overview creationDate,dueDate,comment-->
-                        <el-table-column :label="$t('tables.project.champs.champs4')" type="expand" :min-width="designTable.columns[2].width" >
+                        <el-table-column :label="designTable.header.text[2]" type="expand" :min-width="designTable.columns.design[2].width" >
                             <template v-slot="{row}">
                                 <!--  <el-table  TODO-->
                                 <!-- Design Table style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">   -->
                                 <el-table :data="row.projectAction" border fit highlight-current-row style="width: 30%;" :header-cell-style="getTableSub1RowClass" :cell-style="tableSub1CellsStyle">
                                     <!-- titre table SUB-->
-                                    <el-table-column :label="$t('tables.project.titleSub1')">
-                                        <el-table-column :label="$t('tables.project.subTableAction.champs3')" :min-width="designTableSub1.columns[0].width">
+                                    <el-table-column :label="designTableSub1.title.text">
+                                        <el-table-column :label="designTableSub1.header.text[0]" :min-width="designTableSub1.columns.design[0].width">
                                             <template v-slot="{row}"><span >{{ row.comment }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.project.subTableAction.champs1')" :min-width="designTableSub1.columns[1].width">
+                                        <el-table-column :label="designTableSub1.header.text[1]" :min-width="designTableSub1.columns.design[1].width">
                                             <template v-slot="{row}"><span >{{ formatedDate(row.creationDate) }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.project.subTableAction.champs2')" :min-width="designTableSub1.columns[2].width">
+                                        <el-table-column :label="designTableSub1.header.text[2]" :min-width="designTableSub1.columns.design[2].width">
                                             <template v-slot="{row}"><span >{{ formatedDate(row.dueDate) }}</span></template>
                                         </el-table-column>
                                         <!-- action -->
-                                        <el-table-column :label="$t('tables.project.champs.champs16')" :min-width="designTableSub1.columns[3].width">
+                                        <el-table-column :label="$t('tables.project.champs.champs16')" :min-width="designTableSub1.columns.design[3].width">
                                             <template slot-scope="{row}">
                                                 <el-button type="primary" size="mini" @click="handleProjectActionUpdate( row )">{{ $t('tables.generique.button.button7') }}</el-button>
                                             </template>
@@ -83,17 +82,17 @@
                                 <!-- Design Table style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">   -->
                                 <el-table :data="row.fonctionsLinked" border fit highlight-current-row style="width: 30%;" :header-cell-style="getTableSub2RowClass" :cell-style="tableSub2CellsStyle">
                                     <!-- titre table SUB-->
-                                    <el-table-column :label="$t('tables.project.titleSub2')">
-                                        <el-table-column :label="$t('tables.project.subTableFonction.champs1')" :min-width="designTableSub2.columns[0].width">
+                                    <el-table-column :label="designTableSub2.title.text">
+                                        <el-table-column :label="designTableSub2.header.text[0]" :min-width="designTableSub2.columns.design[0].width">
                                             <template v-slot="{row}"><span >{{ row.name }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.project.subTableFonction.champs2')" :min-width="designTableSub2.columns[1].width">
+                                        <el-table-column :label="designTableSub2.header.text[1]" :min-width="designTableSub2.columns.design[1].width">
                                             <template v-slot="{row}"><span >{{ row.firstLosses }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.project.subTableFonction.champs3')" :min-width="designTableSub2.columns[2].width">
+                                        <el-table-column :label="designTableSub2.header.text[2]" :min-width="designTableSub2.columns.design[2].width">
                                             <template v-slot="{row}"><span >{{ row.currentLosses }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.project.subTableFonction.champs4')" :min-width="designTableSub2.columns[3].width">
+                                        <el-table-column :label="designTableSub2.header.text[3]" :min-width="designTableSub2.columns.design[3].width">
                                             <template v-slot="{row}"><span >{{ row.projectPercentRecovery }}</span></template>
                                         </el-table-column>
                                     </el-table-column>
@@ -104,81 +103,81 @@
                         <!-- SUB TABLE Function overview -->
                         <!-- name,firstLosses,currentLosses,projectPercentRecovery -->
                         <!-- status -->
-                        <el-table-column :label="$t('tables.project.champs.champs5')" :min-width="designTable.columns[3].width">
+                        <el-table-column :label="designTable.header.text[3]" :min-width="designTable.columns.design[3].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.projectStatus.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- idType -->
-                        <el-table-column :label="$t('tables.project.champs.champs6')" :min-width="designTable.columns[4].width">
+                        <el-table-column :label="designTable.header.text[4]" :min-width="designTable.columns.design[4].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.projectType.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- lastCreationDate -->
-                        <el-table-column :label="$t('tables.project.champs.champs17')" :min-width="designTable.columns[5].width">
+                        <el-table-column :label="designTable.header.text[5]" :min-width="designTable.columns.design[5].width">
                             <template slot-scope="{row}">
                                 <span >{{ formatedDate(row.lastCreationDate) }}</span>
                             </template>
                         </el-table-column>
                         <!-- lastDueDate -->
-                        <el-table-column :label="$t('tables.project.champs.champs18')" :min-width="designTable.columns[6].width">
+                        <el-table-column :label="designTable.header.text[6]" :min-width="designTable.columns.design[6].width">
                             <template slot-scope="{row}">
                                 <span >{{ formatedDate(row.lastDueDate) }}</span>
                             </template>
                         </el-table-column>
                         <!-- priority -->
-                        <el-table-column :label="$t('tables.project.champs.champs7')" :min-width="designTable.columns[7].width">
+                        <el-table-column :label="designTable.header.text[7]" :min-width="designTable.columns.design[7].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-for="n in +row.priority" :key="n" name="star" class="meta-item__icon" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!-- difficulty -->
-                        <el-table-column :label="$t('tables.project.champs.champs8')" :min-width="designTable.columns[8].width">
+                        <el-table-column :label="designTable.header.text[8]" :min-width="designTable.columns.design[8].width">
                             <template slot-scope="{row}">
                                 <PersoIcons v-for="n in +row.difficulty" :key="n" name="star" class="meta-item__icon" width='1em' height='1em'/>
                             </template>
                         </el-table-column>
                         <!-- Factory -->
-                        <el-table-column :label="$t('tables.project.champs.champs9')" :min-width="designTable.columns[9].width">
+                        <el-table-column :label="designTable.header.text[9]" :min-width="designTable.columns.design[9].width">
                             <template slot-scope="{row}">
                                 <span v-if="isAdmin !== true">{{ row.area.factory.name1 }}</span>
                                 <span v-if="isAdmin === true">{{ row.area.factory.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- Area -->
-                        <el-table-column :label="$t('tables.project.champs.champs10')" :min-width="designTable.columns[10].width">
+                        <el-table-column :label="designTable.header.text[10]" :min-width="designTable.columns.design[10].width">
                             <template slot-scope="{row}">
                                 <span v-if="isAdmin !== true">{{ row.area.name1 }}</span>
                                 <span v-if="isAdmin === true">{{ row.area.name }}</span>
                             </template>
                         </el-table-column>
                         <!-- payBack -->
-                        <el-table-column :label="$t('tables.project.champs.champs11')" :min-width="designTable.columns[11].width">
+                        <el-table-column :label="designTable.header.text[11]" :min-width="designTable.columns.design[11].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.payback }}</span>
                             </template>
                         </el-table-column>
                         <!-- hourPrice -->
-                        <el-table-column :label="$t('tables.project.champs.champs12')" :min-width="designTable.columns[12].width">
+                        <el-table-column :label="designTable.header.text[12]" :min-width="designTable.columns.design[12].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.hoursPrice }}</span>
                             </template>
                         </el-table-column>
                         <!-- materialPrice -->
-                        <el-table-column :label="$t('tables.project.champs.champs13')" :min-width="designTable.columns[13].width">
+                        <el-table-column :label="designTable.header.text[13]" :min-width="designTable.columns.design[13].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.materialPrice }}</span>
                             </template>
                         </el-table-column>
                         <!-- electricalPrice -->
-                        <el-table-column :label="$t('tables.project.champs.champs14')" :min-width="designTable.columns[14].width">
+                        <el-table-column :label="designTable.header.text[14]" :min-width="designTable.columns.design[14].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.electricalPrice }}</span>
                             </template>
                         </el-table-column>
                         <!-- action -->
-                        <el-table-column :label="$t('tables.project.champs.champs16')" :min-width="designTable.columns[15].width">
+                        <el-table-column :label="designTable.header.text[15]" :min-width="designTable.columns.design[15].width">
                             <template slot-scope="{row, $index}">
                                 <el-button type="primary" size="mini" @click="handleProjectUpdate(row)">{{ $t('tables.generique.button.button7') }}</el-button>
                                 <el-button type="danger" size="mini" @click="handleProjectDelete(row, $index)">{{ $t('tables.generique.button.button8') }}</el-button>
@@ -219,7 +218,7 @@
     import { cloneDeep } from 'lodash'
     import { formatDate } from '@/utils';
 
-    import { getDBProjects, updateDBProjects, updateDBProject, deleteDBProject, updateDBProjectFonctions, deleteDBProjectFonctions, deleteDBProjectProjectActions, defaultProjectData, defaultProjectRules, AIProjectQuery, defaultProjectQuery, defaultProjectExcelHeater } from '@/api/projects'
+    import { getDBProjects, updateDBProjects, updateDBProject, deleteDBProject, updateDBProjectFonctions, deleteDBProjectFonctions, deleteDBProjectProjectActions, defaultProjectData, defaultProjectRules, AIProjectQuery, defaultProjectQuery, defaultProjectExcelHeader } from '@/api/projects'
     import { addDBProjectAction, updateDBProjectAction, defaultProjectActionData, defaultProjectActionRules } from '@/api/projectActions'
 
 
@@ -238,7 +237,8 @@
     import FormUpdateNodeError from "@/components/TableComponents/FormUpdateNodeError/FormUpdateNodeError.vue";
 
     import { defaultProjectDesignTable, defaultProjectDesignTableSub1, defaultProjectDesignTableSub2 } from '@/configDesign/defaulDesignTableUi'
-    import { getDesignElementUiHeaderStyle, getDesignElementUiCellsStyle  } from '@/utils/tables'
+    import { ITableDataUiDesignedWithoutData } from '@/api/types'
+    import { getDesignElementUiHeaderStyleSansData, getDesignElementUiCellsStyleSansData  } from '@/utils/tables'
 
     const textMap = {
         update: 'Edit',
@@ -263,9 +263,9 @@
         @Prop({ default: false }) private isManagerEdit!: boolean
         @Prop({ default: false }) private isOperator!: boolean
 
-        private designTable = defaultProjectDesignTable
-        private designTableSub1 = defaultProjectDesignTableSub1
-        private designTableSub2 = defaultProjectDesignTableSub2
+        private designTable: ITableDataUiDesignedWithoutData = defaultProjectDesignTable
+        private designTableSub1: ITableDataUiDesignedWithoutData = defaultProjectDesignTableSub1
+        private designTableSub2: ITableDataUiDesignedWithoutData = defaultProjectDesignTableSub2
 
         private tableKey = 0
         private subTableKey1 = 0
@@ -280,7 +280,7 @@
         private listQueryProjectType: AIProjectTypeQuery = defaultProjectTypeQuery
         private listQueryProjectStatus: AIProjectStatusQuery = defaultProjectStatusQuery
 
-        private listExcel = defaultProjectExcelHeater
+        private listExcel = defaultProjectExcelHeader
 
         private TypeOptionsFactorys = []
         private TypeOptionsAreas = []
@@ -309,29 +309,29 @@
 
         //Apply Style to Table Header and SubHeader
         private getDesignElementUiHeaderStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
         //Apply Style to Table Rows
         private getDesignElementUiCellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number } ) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
 
         //Apply Style to SubTable Header and SubHeader ProjectAction
         private getTableSub1RowClass( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTableSub1, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTableSub1, this.total)
         }
         //Apply Style to SubTable Rows ProjectAction
         private tableSub1CellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number } ) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTableSub1, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTableSub1, this.total)
         }
 
         //Apply Style to SubTable Header and SubHeader ProjectAction
         private getTableSub2RowClass( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTableSub2, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTableSub2, this.total)
         }
         //Apply Style to SubTable Rows ProjectAction
         private tableSub2CellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number } ) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTableSub2, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTableSub2, this.total)
         }
 
 
@@ -721,13 +721,7 @@
 
 
 <style lang="scss" scoped>
-    .table-container {
-        background: $adminContainerBgColor;
-        padding:2px;
-        margin-bottom: 20px;
-    }
     .wrapper{
-        height: 100%;
         display:grid;
         grid-gap: 3px;
         grid-template-columns:repeat(12, minmax(100px, 1fr));
@@ -737,58 +731,6 @@
                 "extra  extra  extra  extra  extra  extra  extra  extra  extra  extra  extra  extra "
                 "table  table  table  table  table  table  table  table  table  table  table  table "
                 "pages  pages  pages  pages  pages  pages  pages  pages  pages  .      .      .     ";
-        background: $adminWrapperBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .filter {
-        grid-area: filter;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .filter-item.el-input {
-            margin-left: 0px;
-            width: 200px
-        }
-        .filter-item.el-select {
-            margin-left: 5px;
-            width: 200px
-        }
-        .filter-item.el-button {
-            margin-left: 5px;
-            width: 100px
-        }
-    }
-    .extra {
-        grid-area: extra;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .ExportToExcel {
-            margin-left: 0px;
-            width: 150px
-        }
-        .ImportFromExcel {
-            margin-left: 10px;
-            width: 200px
-        }
-        .UpdateFromNode {
-            margin-left: 10px;
-            width: 200px
-        }
-    }
-    .table {
-        grid-area: table;
-        background: $adminTableBgColor;
-        padding:1em;
-        border:#333 2px solid;
-
-    }
-    .pagination {
-        grid-area: pages;
-        background: $adminPaginationBgColor;
-        padding:1em;
-        border:#333 2px solid;
     }
 
     @media only screen and (max-width: 768px) {

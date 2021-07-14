@@ -26,7 +26,7 @@ export const defaultTankAreaData: IDataBaseTankAreaData = {
     idArea: "",
 }
 
-export const defaultTankAreaExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'idArea']
+export const defaultTankAreaExcelHeader = ['id', 'idNode', 'name', 'name1', 'position', 'idArea']
 
 
 export const getDBTankAreas = (params: any) =>

@@ -26,7 +26,7 @@ export const defaultProductData: IDataBaseProductData = {
     idFactory: "",
 }
 
-export const defaultProductExcelHeater = ['id', 'position', 'name', 'totalSolid', 'price', 'idFactory']
+export const defaultProductExcelHeader = ['id', 'position', 'name', 'totalSolid', 'price', 'idFactory']
 
 export const getDBProducts = (params: any) =>
     requestSql({

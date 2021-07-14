@@ -23,7 +23,7 @@ export const defaultProjectTypeData: IDataBaseProjectTypeData = {
     value: 0
 }
 
-export const defaultProjectTypeExcelHeater = ['id', 'position', 'name', 'value']
+export const defaultProjectTypeExcelHeader = ['id', 'position', 'name', 'value']
 
 export const getDBProjectTypes = (params: any) =>
     requestSql({

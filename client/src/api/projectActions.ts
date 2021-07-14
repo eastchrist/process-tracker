@@ -36,7 +36,7 @@ export const defaultProjectActionData: IDataBaseProjectActionData = {
     idStatus: "",
     idProject: 0
 }
-export const defaultProjectActionExcelHeater = ['id', 'position', 'comment', 'creationDate', 'dueDate', 'status', 'idProject']
+export const defaultProjectActionExcelHeader = ['id', 'position', 'comment', 'creationDate', 'dueDate', 'status', 'idProject']
 
 export const getDBProjectActions = (params: any) =>
     requestSql({

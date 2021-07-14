@@ -30,7 +30,7 @@ export const defaultTankData: IDataBaseTankData = {
     idTankDef: "",
 }
 
-export const defaultTankExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'idTankArea', 'idTankDef']
+export const defaultTankExcelHeader = ['id', 'idNode', 'name', 'name1', 'position', 'idTankArea', 'idTankDef']
 
 
 export const getDBTanks = (params: any) =>

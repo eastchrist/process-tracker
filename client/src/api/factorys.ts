@@ -50,7 +50,7 @@ export const defaultFactoryData: IDataBaseFactoryData = {
     isOptimisation: false,
     isTraceability: false,
 }
-export const defaultFactoryExcelHeater = ['id', 'idNode', 'name', 'name1', 'langue','position', 'address', 'logoClient', 'logoContractor', 'currency', 'currencyEuro', 'isCartography', 'isOptimisation', 'isTraceability']
+export const defaultFactoryExcelHeader = ['id', 'idNode', 'name', 'name1', 'langue','position', 'address', 'logoClient', 'logoContractor', 'currency', 'currencyEuro', 'isCartography', 'isOptimisation', 'isTraceability']
 
 
 export const getDBFactorys = (params: any) =>

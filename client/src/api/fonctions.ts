@@ -142,7 +142,7 @@ export const defaultFonctionData: IDataBaseFonctionData = {
     tankAreaDefFilling: defaultTankAreaDefFillingData
 }
 
-export const defaultFonctionExcelHeater = ['id', 'name', 'position', 'lastCheckDate', 'idType', 'idAreaSource', 'idAreaDest',
+export const defaultFonctionExcelHeader = ['id', 'name', 'position', 'lastCheckDate', 'idType', 'idAreaSource', 'idAreaDest',
     'nbLosse', 'freqCheck', 'freqDelay', 'maxLosse', 'alarmLosses',
     'haveToBeCheck', 'haveBeenCheck', 'haveToBeValidated', 'modeAutoCheckActif','enabled',
     'firstLosses', 'firstLossesPrice',

@@ -3,6 +3,8 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const cookieParser = require('cookie-parser');
 
+require("dotenv").config( { path: ".env"})
+
 const userRoutes   = require('./routes/user.routes');
 const factoryRoutes   = require('./routes/factory.routes');
 const computerRoutes   = require('./routes/computer.routes');
@@ -26,7 +28,7 @@ const projectTypeRoutes   = require('./routes/projectType.routes');
 const projectStatusRoutes   = require('./routes/projectStatus.routes');
 const traceabilityRoutes   = require('./routes/traceability.routes');
 
-require("dotenv").config( { path: ".env"})
+
 
 const {checkUser, requireAuth} = require('./middleware/auth.middleware');
 

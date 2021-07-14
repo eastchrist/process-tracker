@@ -2,12 +2,12 @@
     <div class="table-container">
         <div class="wrapper">
             <div class="filter">
-                <el-input v-model="listQuery.name" :placeholder="$t('tables.tankAreaDefFilling.placeholder.placeholder1')" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"/>
+                <el-input v-model="listQuery.name" :placeholder="$t('tables.tankAreaDefFilling.placeholder.placeholder1')" class="filter-item" @keyup.enter.native="handleFilter"/>
                 <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">{{ $t('tables.generique.button.button1') }}</el-button>
             </div>
             <div class="extra">
                 <ExportToExcel class="ImportFromExcel" className="ExportToExcel" TableName="TankAreaDefFilling" ></ExportToExcel>
-                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="TankAreaDefFilling" :TableList=list :defaultExcelHeater="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
+                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="TankAreaDefFilling" :TableList=list :defaultExcelHeader="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
                 <UpdateFromNode class="UpdateFromNode" className="UpdateFromNode" TableName="TankAreaDefFilling" @UpdateFromNode="getList" @UpdateFromNodeError="handleUpdateFromNodeError"></UpdateFromNode>
             </div>
             <div class="table">
@@ -16,66 +16,66 @@
                 <el-table ref="draggableTable" row-key="position" :key="tableKey" stripe v-loading="listLoading" :data="list" border fit highlight-current-row @sort-change="sortChange" style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">
                     <!-- titre table -->
                     <el-table-column :label="$t('tables.tankAreaDefFilling.title')">
-                        <el-table-column align="center" label="Drag" width="80" :min-width="designTable.columns[0].width">
+                        <el-table-column align="center" :label="designTable.header.text[0]" :min-width="designTable.columns.design[0].width">
                             <PersoIcons class="draggable-handler" name="drag" width="20" height="20"/>
                         </el-table-column>
                         <!--  SUB TABLE -->
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs4')" type="expand" :min-width="designTable.columns[1].width">
+                        <el-table-column :label="designTable.header.text[1]" type="expand" :min-width="designTable.columns.design[1].width">
                             <template v-slot="{row}">
                                 <!--  <el-table-sub -->
                                 <!-- Design Table    -->
                                 <el-table :key="subTableKey" :data="row.options" border fit highlight-current-row style="width: 100%;" :header-cell-style="getTableSubRowClass" :cell-style="tableSubCellsStyle">
                                     <!-- titre table SUB-->
-                                    <el-table-column :label="$t('tables.tankAreaDefFilling.titleSub1')">
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs1')" :min-width="designTableSub.columns[0].width">
+                                    <el-table-column :label="designTableSub.title.text">
+                                        <el-table-column :label="designTableSub.header.text[0]" :min-width="designTableSub.columns.design[0].width">
                                             <template v-slot="{row}"><span >{{ row.number }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs2')" :min-width="designTableSub.columns[1].width">
+                                        <el-table-column :label="designTableSub.header.text[1]" :min-width="designTableSub.columns.design[1].width">
                                             <template v-slot="{row}"><span >{{ row.name }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs3')" :min-width="designTableSub.columns[2].width">
+                                        <el-table-column :label="designTableSub.header.text[2]" :min-width="designTableSub.columns.design[2].width">
                                             <template v-slot="{row}"><span >{{ row.name1 }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs4')" :min-width="designTableSub.columns[3].width">
+                                        <el-table-column :label="designTableSub.header.text[3]" :min-width="designTableSub.columns.design[3].width">
                                             <template v-slot="{row}"><span >{{ row.idTank }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs5')" :min-width="designTableSub.columns[4].width">
+                                        <el-table-column :label="designTableSub.header.text[4]" :min-width="designTableSub.columns.design[4].width">
                                             <template v-slot="{row}"><span >{{ row.inLine }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs6')" :min-width="designTableSub.columns[5].width">
+                                        <el-table-column :label="designTableSub.header.text[5]" :min-width="designTableSub.columns.design[5].width">
                                             <template v-slot="{row}"><span >{{ row.inColl }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs7')" :min-width="designTableSub.columns[6].width">
+                                        <el-table-column :label="designTableSub.header.text[6]" :min-width="designTableSub.columns.design[6].width">
                                             <template v-slot="{row}"><span >{{ row.volCollInlet }}</span></template>
                                         </el-table-column>
-                                        <el-table-column :label="$t('tables.tankAreaDefFilling.subTable.champs8')" :min-width="designTableSub.columns[7].width">
+                                        <el-table-column :label="designTableSub.header.text[7]" :min-width="designTableSub.columns.design[7].width">
                                             <template v-slot="{row}"><span >{{ row.volCollOutlet }}</span></template>
                                         </el-table-column>
                                     </el-table-column>
                                 </el-table>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs5')" :min-width="designTable.columns[2].width">
+                        <el-table-column :label="designTable.header.text[2]" :min-width="designTable.columns.design[2].width">
                             <template v-slot="{row}">
                                 <span class="link-type" @click="handleUpdate(row)">{{ row.name }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs6')" :min-width="designTable.columns[3].width">
+                        <el-table-column :label="designTable.header.text[3]" :min-width="designTable.columns.design[3].width">
                             <template v-slot="{row}">
                                 <span class="link-type" @click="handleUpdate(row)">{{ row.name1 }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs7')" :min-width="designTable.columns[4].width">
+                        <el-table-column :label="designTable.header.text[4]" :min-width="designTable.columns.design[4].width">
                             <template v-slot="{row}">
                                 <span >{{ row.dataComment }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs8')" :min-width="designTable.columns[5].width">
+                        <el-table-column :label="designTable.header.text[5]" :min-width="designTable.columns.design[5].width">
                             <template v-slot="{row}">
                                 <span >{{ row.dataType }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.tankAreaDefFilling.champs.champs9')" :min-width="designTable.columns[6].width">
+                        <el-table-column :label="designTable.header.text[6]" :min-width="designTable.columns.design[6].width">
                             <template v-slot="{row, $index}">
                                 <el-button type="primary" size="mini" @click="handleUpdate(row)">{{ $t('tables.generique.button.button7') }}</el-button>
                                 <el-button type="danger" size="mini" @click="handleDelete(row, $index)">{{ $t('tables.generique.button.button8') }}</el-button>
@@ -106,7 +106,7 @@
     import { cloneDeep } from 'lodash'
     import Sortable from 'sortablejs'
 
-    import { getDBTankAreaDefFillings, updateDBTankAreaDefFillings, updateDBTankAreaDefFilling, deleteDBTankAreaDefFilling, defaultTankAreaDefFillingData, defaultTankAreaDefFillingRules, defaultTankAreaDefFillingQuery, defaultTankAreaDefFillingExcelHeater} from '@/api/tankAreaDefFillings'
+    import { getDBTankAreaDefFillings, updateDBTankAreaDefFillings, updateDBTankAreaDefFilling, deleteDBTankAreaDefFilling, defaultTankAreaDefFillingData, defaultTankAreaDefFillingRules, defaultTankAreaDefFillingQuery, defaultTankAreaDefFillingExcelHeader} from '@/api/tankAreaDefFillings'
     import {getDBAreas} from "@/api/areas";
 
     import { IDataBaseTankAreaDefFillingData } from '@/api/types'
@@ -120,7 +120,8 @@
     import FormUpdateNodeError from "@/components/TableComponents/FormUpdateNodeError/FormUpdateNodeError.vue";
 
     import { defaultTankAreaDefFillingDesignTable, defaultTankAreaDefFillingDesignTableSub } from '@/configDesign/defaulDesignTableUi'
-    import { getDesignElementUiHeaderStyle, getDesignElementUiCellsStyle  } from '@/utils/tables'
+    import { ITableDataUiDesignedWithoutData } from '@/api/types'
+    import { getDesignElementUiHeaderStyleSansData, getDesignElementUiCellsStyleSansData  } from '@/utils/tables'
 
     const Type1Options = [
         { key: true, displayName: 'True' },
@@ -145,19 +146,19 @@
         }
     })
     export default class Dashboard extends Vue {
-        private designTable = defaultTankAreaDefFillingDesignTable
-        private designTableSub = defaultTankAreaDefFillingDesignTableSub
+        private designTable: ITableDataUiDesignedWithoutData = defaultTankAreaDefFillingDesignTable
+        private designTableSub: ITableDataUiDesignedWithoutData = defaultTankAreaDefFillingDesignTableSub
 
         private tableKey = 0
         private subTableKey = 0
         private list: IDataBaseTankAreaDefFillingData[] = []
         private total = 0
-        private oldList: number[] = []
-        private newList: number[] = []
+        private oldRows: number[] = []
+        private newRows: number[] = []
 
         private listLoading = true
         private listQuery = defaultTankAreaDefFillingQuery
-        private listExcel = defaultTankAreaDefFillingExcelHeater
+        private listExcel = defaultTankAreaDefFillingExcelHeader
 
         private Type1Options = Type1Options
         private Type2Options = []
@@ -176,20 +177,20 @@
 
         //Apply Style to Table Header and SubHeader
         private getDesignElementUiHeaderStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
         //Apply Style to Table Rows
         private getDesignElementUiCellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
 
         //Apply Style to SubTable Header and SubHeader
         private getTableSubRowClass( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTableSub, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTableSub, this.total)
         }
         //Apply Style to SubTable Rows
         private tableSubCellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTableSub, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTableSub, this.total)
         }
 
 
@@ -205,8 +206,8 @@
             const { data } = await getDBTankAreaDefFillings(this.listQuery)
             this.list = data.rows
             this.total = data.count
-            this.oldList = this.list.map((v) => v.position)
-            this.newList = this.oldList.slice()
+            this.oldRows = this.list.map((v) => v.position)
+            this.newRows = this.oldRows.slice()
             this.$nextTick(() => {
                 this.setSort()
             })
@@ -341,13 +342,7 @@
     }
 </style>
 <style lang="scss" scoped>
-    .table-container {
-        background: $adminContainerBgColor;
-        padding:2px;
-        margin-bottom: 20px;
-    }
     .wrapper{
-        height: 100%;
         display:grid;
         grid-gap: 3px;
         grid-template-columns:repeat(12, minmax(100px, 1fr));
@@ -357,68 +352,9 @@
                 "extra  extra  extra  extra  extra  extra  extra  extra  extra  .      .      .     "
                 "table  table  table  table  table  table  table  table  table  treev  treev  treev "
                 "pages  pages  pages  pages  pages  pages  pages  pages  pages  .      .      .     ";
-        background: $adminWrapperBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .filter {
-        grid-area: filter;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .filter-item.el-input {
-            margin-left: 0px;
-            width: 200px
-        }
-        .filter-item.el-select {
-            margin-left: 5px;
-            width: 200px
-        }
-        .filter-item.el-button {
-            margin-left: 5px;
-            width: 100px
-        }
-    }
-    .extra {
-        grid-area: extra;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .ExportToExcel {
-            margin-left: 0px;
-        }
-        .ImportFromExcel {
-            margin-left: 10px;
-        }
-        .UpdateFromNode {
-            margin-left: 10px;
-        }
-    }
-    .table {
-        grid-area: table;
-        background: $adminTableBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .pagination {
-        grid-area: pages;
-        background: $adminPaginationBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .treeview {
-        grid-area: treev;
-        background:$adminTreeviewBgColor;
-        padding:1em;
-        border:#333 1px solid;
     }
 
     @media only screen and (max-width: 768px) {
-        .table-container {
-            background: $adminContainerBgColor;
-            padding:2px;
-            margin-bottom: 20px;
-        }
         .wrapper{
             display:grid;
             height: 100vh;

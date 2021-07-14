@@ -3,11 +3,8 @@
 </template>
 
 <script lang="ts">
-  //import echarts, { EChartOption } from 'echarts'
-  //import echarts from 'echarts'
-  //import * as echarts from 'echarts/dist/echarts.js';
-  import * as echarts from 'echarts'
 
+  import * as echarts from 'echarts'
   import { Component, Prop, Watch } from 'vue-property-decorator'
   import { mixins } from 'vue-class-component'
   import ResizeMixin from '@/components/Charts/mixins/resize'
@@ -19,8 +16,6 @@
 export default class extends mixins(ResizeMixin) {
   @Prop({ required: true }) private chartData!: IPieChart
   @Prop({ default: 'chart' }) private className!: string
-  //@Prop({ default: '100%' }) private width!: string
-  //@Prop({ default: '300px' }) private height!: string
 
   @Watch('chartData', { deep: true })
   private onChartDataChange(value: IPieChart) {
@@ -70,8 +65,8 @@ export default class extends mixins(ResizeMixin) {
               {
                 title: {
                   show: chartData.title.show,
-                  text: chartData.title.title,
-                  subtext: chartData.title.titleSub.title,
+                  text: chartData.title.text,
+                  subtext: chartData.title.titleSub.text,
                   left: chartData.title.left,
                   top: chartData.title.top,
                   textStyle: chartData.title.textStyle,
@@ -88,11 +83,13 @@ export default class extends mixins(ResizeMixin) {
                   align: chartData.legend.align,
                   textStyle: chartData.legend.textStyle,
                   data: Serie1Data.legendData,
+                  itemGap: chartData.legend.itemGap,
+                  itemHeight: chartData.legend.itemHeight,
+                  itemWidth:  chartData.legend.itemWidth,
                   formatter: function(name: string) {
                     const valeur = chartData.serie1Value[chartData.serie1Name.indexOf(name)]
                     return '(' + valeur + ') ' + name ;
                   }
-                  //
                 },
                 toolbox: {
                   show: true,
@@ -102,8 +99,8 @@ export default class extends mixins(ResizeMixin) {
                     restore: {show: false},
                     saveAsImage: {show: true}
                   },
-                  right: "6%",
-                  bottom: "1%"
+                  right: chartData.toolbox.right,
+                  bottom: chartData.toolbox.bottom,
                 },
                 series: [
                   {

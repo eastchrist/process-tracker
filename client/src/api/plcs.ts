@@ -48,7 +48,7 @@ export const defaultPlcData: IDataBasePlcData = {
     idArea: ""
 }
 
-export const defaultPlcExcelHeater = ['id', 'idNode', 'position', 'name', 'name1', 'brand', 'connection', 'slot', 'rack', 'ip', 'idServer', 'idArea']
+export const defaultPlcExcelHeader = ['id', 'idNode', 'position', 'name', 'name1', 'brand', 'connection', 'slot', 'rack', 'ip', 'idServer', 'idArea']
 
 
 export const getDBPlcs = (params: any) =>

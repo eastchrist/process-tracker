@@ -9,7 +9,7 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar01 ' + i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.title`) + '',
+        text: 'Bar01 ' + i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -20,7 +20,7 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -37,12 +37,37 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -72,7 +97,7 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar02 ' + i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.title`) + '',
+        text: 'Bar02 ' + i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -83,7 +108,7 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -100,12 +125,37 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -135,7 +185,7 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar03 ' + i18n.t(`trend.BarChartMeasurePointStatusByAreas.title`) + '',
+        text: 'Bar03 ' + i18n.t(`trend.BarChartMeasurePointStatusByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -146,7 +196,7 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartMeasurePointStatusByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartMeasurePointStatusByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -163,12 +213,37 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -198,7 +273,7 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar04 ' + i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.title`) + '',
+        text: 'Bar04 ' + i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -209,7 +284,7 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -226,12 +301,37 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -261,7 +361,7 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar05 ' + i18n.t(`trend.BarChartFonctionNotLinkedByAreas.title`) + '',
+        text: 'Bar05 ' + i18n.t(`trend.BarChartFonctionNotLinkedByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -272,7 +372,7 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartFonctionNotLinkedByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartFonctionNotLinkedByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -289,12 +389,37 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',
@@ -324,7 +449,7 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
     },
     title: {
         show: true,
-        title: 'Bar06 ' + i18n.t(`trend.BarChartProjectStatusByAreas.title`) + '',
+        text: 'Bar06 ' + i18n.t(`trend.BarChartProjectStatusByAreas.title`) + '',
         textStyle: {
             fontSize: 14,
             color: 'green',
@@ -335,7 +460,7 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.BarChartProjectStatusByAreas.titleSub`) + '',
+            text: i18n.t(`trend.BarChartProjectStatusByAreas.titleSub`) + '',
             textStyle: {
                 fontSize: 14,
                 color: "blue",
@@ -352,12 +477,37 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
+            color: "black",
+            fontWeight: 'normal',
+            fontFamily: "Arial",
+            fontStyle: "normal"
+        }
+    },
+    tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(50,50,50,0)',
+        textStyle: {
+            fontSize: 10,
+            color: 'black',
             fontWeight: 'bold',
             fontFamily: "Arial",
             fontStyle: "italic"
+        },
+        borderWidth: 2 ,
+        borderColor: '#333',
+        formatter: undefined,
+        axisPointer: {
+            type: 'shadow'
         }
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     grid: {
         left: '3%',

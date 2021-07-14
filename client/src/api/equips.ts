@@ -42,7 +42,7 @@ export const defaultEquipData: IDataBaseEquipData = {
     idEquipDef: "",
 }
 
-export const defaultEquipExcelHeater = ['id', 'idNode', 'name', 'name1', 'position', 'menu', 'idPlc', 'idEquipDef']
+export const defaultEquipExcelHeader = ['id', 'idNode', 'name', 'name1', 'position', 'menu', 'idPlc', 'idEquipDef']
 
 export const getDBEquips = (params: any) =>
     requestSql({

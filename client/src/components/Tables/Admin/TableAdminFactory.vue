@@ -2,68 +2,64 @@
     <div class="table-container">
         <div class="wrapper">
             <div class="filter">
-                <el-input v-model="listQuery.name" :placeholder="$t('tables.factory.placeholder.placeholder1')" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"/>
+                <el-input v-model="listQuery.name" :placeholder="$t('tables.factory.placeholder.placeholder1')" class="filter-item" @keyup.enter.native="handleFilter"/>
                 <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">{{ $t('tables.generique.button.button1') }}</el-button>
             </div>
             <div class="extra">
                 <ExportToExcel class="ExportToExcel" className="ExportToExcel" TableName="Factory" ></ExportToExcel>
-                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Factory" :TableList=list :defaultExcelHeater="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
+                <ImportFromExcel class="ImportFromExcel" className="ImportFromExcel" TableName="Factory" :TableList=list :defaultExcelHeader="listExcel" :on-success="handleSuccess" :before-upload="beforeUpload"></ImportFromExcel>
                 <UpdateFromNode class="UpdateFromNode" className="UpdateFromNode" TableName="Factory" @UpdateFromNode="getList" @UpdateFromNodeError="handleUpdateFromNodeError"></UpdateFromNode>
             </div>
             <div class="table">
                 <!--  <el-table  -->
                 <!-- Design Table    -->
-                <el-table
-                        ref="draggableTable" row-key="position" :key="tableKey"
-                        stripe v-loading="listLoading" :data="list"
-                        border fit highlight-current-row @sort-change="sortChange"
-                        style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">
+                <el-table ref="draggableTable" row-key="position" :key="tableKey" stripe v-loading="listLoading" :data="list" border fit highlight-current-row @sort-change="sortChange" style="width: 100%;" :header-cell-style="getDesignElementUiHeaderStyle" :cell-style="getDesignElementUiCellsStyle">
                     <!-- titre table -->
-                    <el-table-column :label="$t('tables.factory.title')">
-                        <el-table-column label="Drag" :min-width="designTable.columns[0].width">
+                    <el-table-column :label="designTable.title.text">
+                        <el-table-column :label="designTable.header.text[0]" :min-width="designTable.columns.design[0].width">
                             <PersoIcons class="draggable-handler" name="drag" width="20" height="20"/>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs4')" :min-width="designTable.columns[1].width">
+                        <el-table-column :label="designTable.header.text[1]" :min-width="designTable.columns.design[1].width">
                             <template slot-scope="{row}">
                                 <span class="link-type" @click="handleUpdate(row)">{{ row.name }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs5')" :min-width="designTable.columns[2].width">
+                        <el-table-column :label="designTable.header.text[2]" :min-width="designTable.columns.design[2].width">
                             <template slot-scope="{row}">
                                 <span class="link-type" @click="handleUpdate(row)">{{ row.name1 }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs6')" :min-width="designTable.columns[3].width">
+                        <el-table-column :label="designTable.header.text[3]" :min-width="designTable.columns.design[3].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.langue | langueFilter }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs7')" :min-width="designTable.columns[4].width">
+                        <el-table-column :label="designTable.header.text[4]" :min-width="designTable.columns.design[4].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.address }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs8')" :min-width="designTable.columns[5].width">
+                        <el-table-column :label="designTable.header.text[5]" :min-width="designTable.columns.design[5].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.logoClient }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs9')" :min-width="designTable.columns[6].width">
+                        <el-table-column :label="designTable.header.text[6]" :min-width="designTable.columns.design[6].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.logoContractor }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs10')" :min-width="designTable.columns[7].width">
+                        <el-table-column :label="designTable.header.text[7]" :min-width="designTable.columns.design[7].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.currency }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs11')" :min-width="designTable.columns[8].width">
+                        <el-table-column :label="designTable.header.text[8]" :min-width="designTable.columns.design[8].width">
                             <template slot-scope="{row}">
                                 <span >{{ row.currencyEuro }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs12')" :min-width="designTable.columns[9].width">
+                        <el-table-column :label="designTable.header.text[9]" :min-width="designTable.columns.design[9].width">
                             <template slot-scope="{row}">
                                 <el-button v-if="row.isCartography!==true" size="mini" type="danger" @click="handleModifyValidationStatus(row, true, 'isCartography')">{{ $t('tables.factory.button.button1') }}</el-button>
                                 <el-button v-if="row.isCartography!==false" size="mini" type="success" @click="handleModifyValidationStatus(row, false, 'isCartography')">{{ $t('tables.factory.button.button1') }}</el-button>
@@ -76,7 +72,7 @@
 
                             </template>
                         </el-table-column>
-                        <el-table-column :label="$t('tables.factory.champs.champs13')" :min-width="designTable.columns[10].width">
+                        <el-table-column :label="designTable.header.text[10]" :min-width="designTable.columns.design[10].width">
                             <template slot-scope="{row, $index}">
                                 <el-button type="primary" size="mini" @click="handleUpdate(row)">{{ $t('tables.generique.button.button7') }}</el-button>
                                 <el-button type="danger" size="mini" @click="handleDelete(row, $index)">{{ $t('tables.generique.button.button8') }}</el-button>
@@ -108,7 +104,7 @@
     import { cloneDeep } from 'lodash'
     import Sortable from 'sortablejs'
 
-    import { getDBFactorys, updateDBFactorys, updateDBFactory, deleteDBFactory, defaultFactoryData, defaultFactoryRules, defaultFactoryQuery, defaultFactoryExcelHeater } from '@/api/factorys'
+    import { getDBFactorys, updateDBFactorys, updateDBFactory, deleteDBFactory, defaultFactoryData, defaultFactoryRules, defaultFactoryQuery, defaultFactoryExcelHeader } from '@/api/factorys'
     import { IDataBaseFactoryData } from '@/api/types'
 
     import Pagination from '@/components/Pagination/index.vue'
@@ -120,7 +116,8 @@
     import FormUpdateNodeError from "@/components/TableComponents/FormUpdateNodeError/FormUpdateNodeError.vue";
 
     import { defaultFactoryDesignTable } from '@/configDesign/defaulDesignTableUi'
-    import { getDesignElementUiHeaderStyle, getDesignElementUiCellsStyle  } from '@/utils/tables'
+    import { ITableDataUiDesignedWithoutData } from '@/api/types'
+    import { getDesignElementUiHeaderStyleSansData, getDesignElementUiCellsStyleSansData  } from '@/utils/tables'
 
     const Type1Options = [
         { key: true, displayName: 'True' },
@@ -160,17 +157,17 @@
         }
     })
     export default class Dashboard extends Vue {
-        private designTable = defaultFactoryDesignTable
+        private designTable: ITableDataUiDesignedWithoutData = defaultFactoryDesignTable
 
         private tableKey = 0
         private list: IDataBaseFactoryData[] = []
         private total = 0
-        private oldListIndex: number[] = []
-        private newListIndex: number[] = []
+        private oldRowsIndex: number[] = []
+        private newRowsIndex: number[] = []
 
         private listLoading = true
         private listQuery = defaultFactoryQuery
-        private listExcel = defaultFactoryExcelHeater
+        private listExcel = defaultFactoryExcelHeader
 
         private Type1Options = Type1Options
         private Type2Options = Type2Options
@@ -189,11 +186,11 @@
 
         //Apply Style to Table Header and SubHeader
         private getDesignElementUiHeaderStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiHeaderStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiHeaderStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
         //Apply Style to Table Rows
         private getDesignElementUiCellsStyle( { row, column, rowIndex, columnIndex }: { row: any, column: any, rowIndex: number, columnIndex: number }) {
-            return getDesignElementUiCellsStyle( rowIndex, columnIndex, this.designTable, this.total)
+            return getDesignElementUiCellsStyleSansData( rowIndex, columnIndex, this.designTable, this.total)
         }
 
         //beforeDestroy() {}
@@ -206,8 +203,8 @@
             const { data } = await getDBFactorys(this.listQuery)
             this.list = data.rows
             this.total = data.count
-            this.oldListIndex = this.list.map((v) => v.position)
-            this.newListIndex = this.oldListIndex.slice()
+            this.oldRowsIndex = this.list.map((v) => v.position)
+            this.newRowsIndex = this.oldRowsIndex.slice()
             this.$nextTick(() => {
                 this.setSort()
             })
@@ -373,13 +370,7 @@
     }
 </style>
 <style lang="scss" scoped>
-    .table-container {
-        background: $adminContainerBgColor;
-        padding:2px;
-        margin-bottom: 20px;
-    }
     .wrapper{
-        height: 100%;
         display:grid;
         grid-gap: 3px;
         grid-template-columns:repeat(12, minmax(100px, 1fr));
@@ -389,61 +380,8 @@
                 "extra  extra  extra  extra  extra  extra  extra  extra  extra  .      .      .     "
                 "table  table  table  table  table  table  table  table  table  treev  treev  treev "
                 "pages  pages  pages  pages  pages  pages  pages  pages  pages  .      .      .     ";
-        background: $adminWrapperBgColor;
-        padding:1em;
-        border:#333 2px solid;
     }
-    .filter {
-        grid-area: filter;
-        background: $adminFilterBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .filter-item.el-input {
-            margin-left: 0px;
-            width: 200px
-        }
-        .filter-item.el-select {
-            margin-left: 5px;
-            width: 200px
-        }
-        .filter-item.el-button {
-            margin-left: 5px;
-            width: 100px
-        }
-    }
-    .extra {
-        grid-area: extra;
-        background: $adminExtraBgColor;
-        padding:1em;
-        border:#333 2px solid;
-        .ExportToExcel {
-            margin-left: 0px;
-        }
-        .ImportFromExcel {
-            margin-left: 10px;
-        }
-        .UpdateFromNode {
-            margin-left: 10px;
-        }
-    }
-    .table {
-        grid-area: table;
-        background: $adminTableBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .pagination {
-        grid-area: pages;
-        background: $adminPaginationBgColor;
-        padding:1em;
-        border:#333 2px solid;
-    }
-    .treeview {
-        grid-area: treev;
-        background:$adminTreeviewBgColor;
-        padding:1em;
-        border:#333 1px solid;
-    }
+
     @media only screen and (max-width: 768px) {
         .table-container {
             background: $adminContainerBgColor;

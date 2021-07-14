@@ -10,9 +10,16 @@ export default {
                         titre4: '',
                     },
                     texte: {
-                        texte01: 'Process & Control 2iA est une société d’études et\n' + 'de services spécialisée dans le développement\n' + 'et la mise en œuvre de projets industriels. Une\n' + 'communication étroite avec vos attentes permet\n' + 'à Process & Control 2iA de mobiliser rapidement\n' + 'une équipe de professionnels dans différents\n' + 'secteurs industriels tels que : ',
-                        texte02: 'Menant des phases d’ingénierie, de conception,\n' + 'de démarrage, de montée en puissance, de mise\n' + 'en service et de formation, Process & Control\n' + '2iA intervient pour des missions dans le monde\n' + 'entier. Notre politique est basée sur l’amélioration continue de la qualité et de l’effi cacité de\n' + 'votre outil de production.',
-                        texte03: 'L’étendue de l’expertise va des études préliminaires, du développement, de la mise en service à l’assistance technique et à la maintenance.\n' + 'Process & Control 2iA intervient à chaque étape\n' + 'du projet en mettant à disposition des ressources\n' + 'qualifi ées: chefs de projet, superviseurs de mise\n' + 'en service, ingénieurs PLC, et bien plus encore…',
+                        texte01: 'Process & Control 2iA',
+                        texte02: ' est une société d’études et\n' + 'de services spécialisée dans le développement\n' + 'et la mise en œuvre de projets industriels. Une\n' + 'communication étroite avec vos attentes permet\n' + 'à ',
+                        texte03: ' de mobiliser rapidement\n' + 'une équipe de professionnels dans différents\n' + 'secteurs industriels tels que : ',
+
+                        texte05: 'Menant des phases d’ingénierie, de conception,\n' + 'de démarrage, de montée en puissance, de mise\n' + 'en service et de formation, ',
+                        texte06: ' intervient pour des missions dans le monde\n' + 'entier. Notre politique est basée sur l’amélioration continue de la qualité et de l’efficacité de\n' + 'votre outil de production.',
+
+                        texte08: 'L’étendue de l’expertise va des études préliminaires, du développement, de la mise en service à l’assistance technique et à la maintenance.\n',
+                        texte09: ' intervient à chaque étape\n' + 'du projet en mettant à disposition des ressources\n' + 'qualifiées: chefs de projet, superviseurs de mise\n' + 'en service, ingénieurs PLC, et bien plus encore…',
+
                     },
                     list: {
                         list01: {
@@ -64,7 +71,7 @@ export default {
                     },
                     list: {
                         list01: {
-                            item01: 'Création d’une cartographie des pertes\n' + ' de l’usine suivant ses diff érentes zones de\n' + ' production.',
+                            item01: 'Création d’une cartographie des pertes\n' + ' de l’usine suivant ses différentes zones de\n' + ' production.',
                             item02: 'Création éventuelle d’analyse fonctionnelle.',
                             item03: 'Validation de l’analyse fonctionnelle.',
                             item04: 'Mise en place d’un système de traçabilité\n' + ' ou ajout de données dans un système existant\n' + ' et adapté à vos besoins.',
@@ -77,7 +84,7 @@ export default {
                         list02: {
                             item01: 'Recommandation sur la programmation\n' + ' d’automates.',
                             item02: 'Recommandation sur l’amélioration des\n' + ' process des liquides, des poudres.',
-                            item03: 'Formation PLC et SCADA fournie par\n' + 'Process & Control 2iA.',
+                            item03: 'Formation PLC et SCADA fournie par ',
                             item04: 'Former les opérateurs aux bonnes pratiques\n' + ' de production',
                             item05: 'Mise en œuvre de la documentation liée à\n' + ' votre outil de production (procédure\n' + ' standard d’exploitation).',
                             item06: '',
@@ -588,8 +595,8 @@ export default {
             phoneNumber: 'Telephone',
             email: 'Email',
             rules: {
-                rule1: 'Name is required',
-                rule2: '???email is required',
+                rule1: 'Votre nom is required',
+                rule2: 'Un email is required',
                 rule3: '???subject is required',
                 rule4: '???message is required',
             },

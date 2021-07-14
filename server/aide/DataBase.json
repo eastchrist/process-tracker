@@ -1,4 +1,4 @@
-
+/*
 sudo npm audit fix
 sudo npm node server.js
 sudo node server.js
@@ -21,6 +21,7 @@ sudo npm install --save-dev sequelize-cli
 sequelize init
 sequelize db:create
 
+*/
 {
   "fonctionTracab": {
     "initialAnnualLossesQty": "float",

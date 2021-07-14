@@ -46,7 +46,7 @@ export const defaultUser: AIUserState = {
     roles: []
 }
 
-export const defaultUserExcelHeater = ['id', 'username', 'email', 'password', 'position', 'isAdmin', 'isManager', 'isOperator', 'isVisitor', 'isActif', 'idFactory']
+export const defaultUserExcelHeader = ['id', 'username', 'email', 'password', 'position', 'isAdmin', 'isManager', 'isOperator', 'isVisitor', 'isActif', 'idFactory']
 
 export const getDBUsers = (params: any) =>
     requestSql({

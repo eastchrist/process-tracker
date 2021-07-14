@@ -17,7 +17,7 @@ export const defaultMeasureTypeData: IDataBaseMeasureTypeData = {
     value: 0
 }
 
-export const defaultMeasureTypeExcelHeater = ['id', 'position', 'name', 'value']
+export const defaultMeasureTypeExcelHeader = ['id', 'position', 'name', 'value']
 
 export const getDBMeasureTypes = (params: any) =>
     requestSql({

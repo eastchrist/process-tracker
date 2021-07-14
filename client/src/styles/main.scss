@@ -1,0 +1,335 @@
+
+// Table Admin
+.table-container {
+  background: $adminContainerBgColor;
+  padding:2px;
+  margin-bottom: 20px;
+  .wrapper{
+    height: 100%;
+    background: $adminWrapperBgColor;
+    padding:1em;
+    border:#333 2px solid;
+    .filter, .filt_1, .filt_2 {
+      grid-area: filter;
+      background: $adminFilterBgColor;
+      padding:0.5em;
+      //padding-bottom: 10px;
+      border:#333 2px solid;
+      .filter-item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+      .el-button {
+        width: 130px;
+        margin-left: 5px;
+      }
+      .el-input {
+        margin-left: 5px;
+        width: 200px
+      }
+      .el-select {
+        margin-left: 5px;
+        width: 200px
+      }
+    }
+    .filter {
+      grid-area: filter;
+    }
+    .filt_1 {
+      grid-area: filt_1;
+    }
+    .filt_2 {
+      grid-area: filt_2;
+    }
+    .extra {
+      grid-area: extra;
+      background: $adminExtraBgColor;
+      padding:1em;
+      border:#333 2px solid;
+      .ExportToExcel {
+        margin-left: 0px;
+        width: 200px
+      }
+      .ImportFromExcel {
+        margin-left: 10px;
+        width: 200px
+      }
+      .UpdateFromNode {
+        margin-left: 10px;
+        width: 200px
+      }
+    }
+    .bouton {
+      grid-area: bout;
+      background: $adminExtraBgColor;
+      //padding:1em;
+      border:#333 2px solid;
+      //display: inline-block;
+      .filter-item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 50px;
+      }
+      .el-button {
+        //margin: 0px auto;
+        margin-left: 5px;
+      }
+    }
+    .checkbox {
+      grid-area: checkb;
+      background: $adminExtraBgColor;
+      padding:1em;
+      border:#333 2px solid;
+    }
+    .table {
+      grid-area: table;
+      background: $adminTableBgColor;
+      padding:1em;
+      border:#333 2px solid;
+    }
+    .pagination {
+      grid-area: pages;
+      background: $adminPaginationBgColor;
+      padding:1em;
+      border:#333 2px solid;
+    }
+    .treeview {
+      grid-area: treev;
+      background:$adminTreeviewBgColor;
+      padding:1em;
+      border:#333 2px solid;
+    }
+
+  }
+}
+
+// Table carto Normale
+.table-carto-normale {
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      //width: 100%;
+  }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 30px;
+        //background: red;
+    }
+}
+// Table carto function
+.table-carto-fonction {
+
+}
+
+// Table Cartographie Overview fonction
+.table-overview-fonction {
+
+}
+
+
+//Vue Entreprise et Methodologie
+.visitorMain {
+  padding: 60px 30px 60px 30px;
+  background: $communBackgroundColor;
+  //border:#333 2px solid;
+  h2 {
+    margin: 30px 0px 30px 0px;
+    padding: 10px 30px 10px 10px;
+    font-size: 30px;
+    line-height: 2.0;
+    color: $visitorTitleColor;
+    border:#333 2px solid;
+    background: $visitorTitleBgColor
+  }
+  p {
+    margin: 20px 0px 20px 0px;
+    padding: 10px 30px 10px 50px;
+    font-size: 20px;
+    line-height: 2.0;
+    //border: green 2px solid;
+    //background: green;
+  }
+  ul {
+    margin: 20px 0px 20px 0px;
+    padding: 10px 30px 10px 100px;
+    font-size: 18px;
+    line-height: 2.0;
+    //list-style-type: none;
+    //border: red 2px solid;
+    //background: red;
+  }
+}
+
+//Vue ContavtUs, Login, Register
+.dialogMain {
+  background: $communBackgroundColor;
+  border:red 2px solid;
+  .dialog-body {
+    border: $communBodyBorderLength solid $communBodyBorderColor;
+    border-radius: $communBodyBorderRadius;
+    background: $communPageBodyColor;
+    //height: 300px;
+    //width: 300px;
+    .dialog-header {
+        border: $communHeaderBorderLength solid $communHeaderBorderColor;
+        border-radius: $communHeaderBorderRadius;
+        padding: 25px 5px 25px 5px;
+        margin: 10px 15px 10px 15px;
+        h3 {
+          font-size: 32px;
+          color: $communPageTitleColor;
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 700;
+          position: relative;
+          padding-bottom: 15px;
+
+        }
+        h3::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 120px;
+          height: 1px;
+          background: #ddd;
+          bottom: 1px;
+          left: calc(50% - 60px);
+        }
+        h3::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 40px;
+          height: 3px;
+          background: $communPageIconColor;
+          bottom: 0;
+          left: calc(50% - 20px);
+        }
+        p {
+          text-align: center;
+          padding-bottom: 50px;
+          color: #333;
+        }
+    }
+    .dialog-info {
+      border: $communInfoBorderLength solid $communInfoBorderColor;
+      border-radius: $communInfoBorderRadius;
+      padding: 25px 5px 25px 5px;
+      margin: 10px 15px 10px 15px;
+      text-align: center;
+      i {
+        font-size: 48px;
+        display: inline-block;
+        margin-bottom: 10px;
+        color: $communPageIconColor;
+      }
+      address, p {
+        margin-bottom: 0;
+        color: $communPageLinkColor;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $communPageTitleColor;
+      }
+      a {
+        color: $communPageLinkColor;
+      }
+      a:hover {
+        color: #18d26e;
+      }
+    }
+    .dialog-address, .dialog-phone, .dialog-email {
+      margin-bottom: 20px;
+    }
+
+    .dialog-form {
+      border: $communFormBorderLength solid $communFormBorderColor;
+      border-radius: $communFormBorderRadius;
+      padding: 25px 5px 25px 5px;
+      margin: 10px 15px 10px 15px;
+    }
+    .dialog-form #sendmessage.show, .dialog-form #errormessage.show, .dialog-form .show {
+      display: block;
+    }
+
+    .el-input {
+      //background: #454545;
+      display: inline-block;
+      padding: 3px 0px 0px 10px;
+      width: 90%;
+      input {
+        height: 47px;
+        //background-color: #454545;
+        //background: #454545;
+        background: transparent;
+        border: 0px;
+        border-radius: 0px;
+        padding: 12px 5px 12px 15px;
+        //color: #454545;
+        //caret-color: $loginCursorColor;
+        -webkit-appearance: none;
+
+
+      }
+    }
+    .svg-container {
+      padding: 0px 0px 5px 10px;
+      color: $communPageSvgColor;
+      vertical-align: middle;
+      width: 30px;
+      display: inline-block;
+    }
+    .show-pwd {
+      padding: 0px 0px 5px 20px;
+      color: $communPageSvgColor;
+      vertical-align: middle;
+      width: 30px;
+      display: inline-block;
+    }
+    .el-form-item {
+      margin-bottom: 30px;
+      border: 1px solid $communFormItemBorderColor;
+      background: $communFormItemBackgroundColor;
+      border-radius: 5px;
+      color: #454545;
+    }
+
+    .form el-button[type="submit"] {
+      background: $communPageIconColor;
+      border: 0;
+      padding: 10px 30px;
+      color: #fff;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    .form el-button[type="submit"]:hover {
+      background: #13a456;
+    }
+  }
+}
+
+
+//@media (min-width: 768px) {
+//  #dialogMain .dialog-address, #dialogMain .dialog-phone, #dialogMain .dialog-email {
+//    padding: 20px 0;
+//  }
+//}
+//@media (min-width: 768px) {
+//  #dialogMain .dialog-phone {
+//    border-left: 1px solid #ddd;
+//    border-right: 1px solid #ddd;
+//  }
+//}
+
+
+

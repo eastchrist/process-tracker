@@ -3,9 +3,6 @@
 </template>
 
 <script lang="ts">
-      //import echarts, { EChartOption } from 'echarts'
-      //import echarts from 'echarts'
-      //import * as echarts from 'echarts/dist/echarts.js';
       import * as echarts from 'echarts'
 
       import { Component, Prop, Watch } from 'vue-property-decorator'
@@ -14,32 +11,12 @@
       import { IBarChart } from '@/api/types'
       const animationDuration = 3000
 
-//export interface AIBarChartData {
-//      title: string;
-//      titleSub: string;
-//      titleShow: boolean;
-//      legendShow: boolean;
-//      serieLabelShow: boolean;
-//      serieStack: string; // 'Total'= On Top
-//      xAxisRotation: number;
-//      yAxisSplitNumber: number;
-//      serieName: string[];
-//      xAxisText: string[];
-//      serie1Value: number[];
-//      serie2Value: number[];
-//      serie3Value: number[];
-//      expectedData: number[];
-//      actualData: number[];
-//}
-
 @Component({
       name: 'BarChart',
 })
 export default class extends mixins(ResizeMixin) {
       @Prop({ required: true }) private chartData!: IBarChart
       @Prop({ default: 'chart' }) private className!: string
-      //@Prop({ default: '100%' }) private width!: string
-      //@Prop({ default: '300px' }) private height!: string
 
       @Watch('chartData', { deep: true })
       private onChartDataChange(value: IBarChart) {
@@ -68,27 +45,20 @@ export default class extends mixins(ResizeMixin) {
             if (this.chart) {
                   this.chart.setOption(
                           {
-                              title: {
+                                title: {
                                     show: chartData.title.show,
-                                    text: chartData.title.title,
-                                    subtext: chartData.title.titleSub.title,
+                                    text: chartData.title.text,
+                                    subtext: chartData.title.titleSub.text,
                                     left: chartData.title.left,
                                     top: chartData.title.top,
                                     textStyle: chartData.title.textStyle,
                                     subtextStyle: chartData.title.titleSub.textStyle,
-
                               },
-                              tooltip: {
-                                    trigger: 'axis',
-                                    axisPointer: {
-                                          type: 'shadow'
-                                    }
-                              },
-                              legend: {
+                                tooltip: chartData.tooltip,
+                                legend: {
                                     show: chartData.legend.show,
                                     orient: chartData.legend.orient,
                                     left: chartData.legend.left,
-
                                     top: chartData.legend.top,
                                     right: chartData.legend.right,
                                     align: chartData.legend.align,
@@ -99,32 +69,35 @@ export default class extends mixins(ResizeMixin) {
                                           if (chartData.series[indexSerie].Value.length == 0) {
                                                 return name ;
                                           } else {
-                                                const valeur = chartData.series[indexSerie].Value.reduce((a, b) => a + b)
+                                                const valeur = chartData.series[indexSerie].Value.reduce(
+                                                        function(accumulateur, valeurCourante, index, array){
+                                                              return accumulateur + valeurCourante;
+                                                        }
+                                                );
                                                 return '(' + valeur + ') ' + name ;
                                           }
                                     }
                               },
-                              toolbox: {
-                                    show: true,
-                                    feature: {
+                                toolbox: {
+                                      show: true,
+                                      feature: {
                                           mark: {show: true},
                                           dataView: {show: true, readOnly: false},
                                           restore: {show: false},
                                           saveAsImage: {show: true}
                                     },
-                                    right: "6%",
-                                    bottom: "1%"
+                                      right: chartData.toolbox.right,
+                                      bottom: chartData.toolbox.bottom,
                               },
-                              grid: {
+                                grid: {
                                     left: chartData.grid.left,
                                     right: chartData.grid.right,
                                     bottom: chartData.grid.bottom,
                                     width: chartData.grid.width,
                                     height: chartData.grid.height,
                                     containLabel: true
-                              },
-                              xAxis: [
-                                    {
+                                },
+                                xAxis: [{
                                           type: 'category',
                                           data: chartData.xAxisText,
                                           axisLabel: {
@@ -133,11 +106,9 @@ export default class extends mixins(ResizeMixin) {
                                           },
                                           axisTick: {
                                                 alignWithLabel: true
-                                          },
-
-                                    }],
-                              yAxis: [
-                                    {
+                                          }
+                                }],
+                                yAxis: [{
                                           type: 'value',
                                           splitLine: { show: true },
                                           axisTick: { show: false },
@@ -147,10 +118,11 @@ export default class extends mixins(ResizeMixin) {
                                                 interval: 0,
                                                 formatter: '{value}',
                                           },
-                                          splitArea: { show: false }
-                                    }
-                                    ],
-                              series: [
+                                          splitArea: {
+                                                show: false
+                                          }
+                                }],
+                                series: [
                                     {
                                           name: chartData.serieName[0],
                                           type: 'bar',

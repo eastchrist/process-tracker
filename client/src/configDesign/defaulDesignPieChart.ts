@@ -5,13 +5,13 @@ import i18n from "@/i18n";
 export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
     dimensions: {
         width: '100%',
-        height: '300px',
+        height: '200px',
     },
     title: {
         show: true,
-        title: 'Pie01 ' + i18n.t(`trend.PieChartMeasurePointStatusByFactory.title`) + '',
+        text: 'Pie01 ' + i18n.t(`trend.PieChartMeasurePointStatusByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -20,11 +20,11 @@ export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartMeasurePointStatusByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartMeasurePointStatusByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
-                fontWeight: 'normal',
+                fontWeight: 'bold',
                 fontFamily: "Arial",
                 fontStyle: "italic"
             },
@@ -37,25 +37,39 @@ export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,  //Whether to enable highlighting chart when legend is being hovered
         avoidLabelOverlap: true, //Whether to enable the strategy to avoid labels overlap. Defaults to be enabled, which will move the label positions in the case of labels overlapping
         stillShowZeroSum: true, //Whether to show sector when all data are zero
@@ -64,9 +78,13 @@ export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 10,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -87,9 +105,9 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
     },
     title: {
         show: true,
-        title: 'Pie02 ' + i18n.t(`trend.PieChartProjectStatusByFactory.title`) + '',
+        text: 'Pie02 ' + i18n.t(`trend.PieChartProjectStatusByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -98,9 +116,9 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectStatusByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectStatusByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -115,25 +133,39 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['45%', '35%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -142,9 +174,13 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 13,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -165,9 +201,9 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
     },
     title: {
         show: true,
-        title: 'Pie03 ' + i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.title`) + '',
+        text: 'Pie03 ' + i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -176,9 +212,9 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -193,25 +229,39 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -220,9 +270,13 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 13,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -243,13 +297,13 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
 export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
-        title: 'Pie04 ' + i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.title`) + '',
+        text: 'Pie04 ' + i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -258,9 +312,9 @@ export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -275,25 +329,39 @@ export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -302,9 +370,13 @@ export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 13,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -329,9 +401,9 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
     },
     title: {
         show: true,
-        title: 'Pie05 ' + i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.title`) + '',
+        text: 'Pie05 ' + i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -340,9 +412,9 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -357,25 +429,39 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -384,9 +470,13 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 13,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -407,13 +497,13 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
 export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
-        title: 'Pie06 ' +i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.title`) + '',
+        text: 'Pie06 ' +i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -422,9 +512,9 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -439,25 +529,39 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -466,9 +570,13 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 10,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },
@@ -489,13 +597,13 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
 export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
-        title: 'Pie07 ' + i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.title`) + '',
+        text: 'Pie07 ' + i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 10,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -504,9 +612,9 @@ export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
         left: "0%",
         top: "0%",
         titleSub: {
-            title: i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.titleSub`) + '',
+            text: i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 10,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -521,25 +629,39 @@ export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
         left: undefined,
         right: "2%",
         align: 'left',
+        itemWidth: 20,
+        itemHeight: 10,
+        itemGap: 5,
         textStyle: {
             fontSize: 10,
-            fontWeight: 'bold',
+            color: "black",
+            fontWeight: 'normal',
             fontFamily: "Arial",
-            fontStyle: "italic"
+            fontStyle: "normal"
         }
     },
     tooltip: {
         trigger: 'item',
         backgroundColor: 'rgba(50,50,50,0)',
         textStyle: {
+            fontSize: 10,
             color: 'black',
+            fontWeight: 'bold',
+            fontFamily: "Arial",
+            fontStyle: "italic"
         },
         borderWidth: 2 ,
-        formatter: '{b} : {c} ({d}%)'
+        borderColor: undefined,
+        formatter: '{b} : {c} ({d}%)',
+        axisPointer: undefined
+    },
+    toolbox: {
+        right: "6%",
+        bottom: "1%"
     },
     series: {
-        radius: ["0%", "50%"],
-        center: ['40%', '60%'],
+        radius: ["0%", "40%"],
+        center: ['40%', '65%'],
         legendHoverLink: false,
         avoidLabelOverlap: true,
         stillShowZeroSum: true,
@@ -548,9 +670,13 @@ export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
         label: {
             show: true,
             position: 'outside',
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            fontSize: 13,
+            textStyle: {
+                fontSize: 10,
+                color: "blue",
+                fontWeight: "bold",
+                fontFamily: "Arial",
+                fontStyle: "normal"
+            },
             overflow: "break",
         },
     },

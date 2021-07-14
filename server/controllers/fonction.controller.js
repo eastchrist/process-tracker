@@ -8,8 +8,6 @@ const JsonParse = require("../utils/JsonParse");
 //const addChamps = require("../utils/addChamps");
 const WorkOnTables = require("../utils/WorkOnTables");
 
-//const { literal } = require('sequelize')
-
 module.exports = {
     getAllFonctions: async function(req, res) {
         //Filter on the main table

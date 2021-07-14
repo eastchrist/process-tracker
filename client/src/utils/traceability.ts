@@ -1,6 +1,6 @@
 import {IDataBaseFactoryData, IPriorityDifficulty} from '@/api/types'
 //import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataFonctionAlarmByAreas, ITableDataFonctionNotLinkedByAreas, ITableDataFonctionNeverDoneByAreas, ITableDataFonctionToCheckByAreas } from '@/api/types'
-import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataFonctionByAreas } from '@/api/types'
+import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
 
 import { defaultPriorityDifficulty } from '@/api/traceability'
 import i18n from "@/i18n";
@@ -50,7 +50,7 @@ const getPriorityDifficultyAndLossesInfoProject = (area: any, DifficultyInfoProj
                 // Difficulty veryHard
                 ObjectPriority = objectIndexPriority.veryHard
             }
-            //.toFixed(0)
+
             ObjectPriority.number = ObjectPriority.number + 1
             ObjectPriority.projectFunctionLinkedFirstAnnualLosses = ObjectPriority.projectFunctionLinkedFirstAnnualLosses + parseInt(projectFunctionLinkedFirstAnnualLosses)
             ObjectPriority.projectFunctionLinkedFirstAnnualPrice = ObjectPriority.projectFunctionLinkedFirstAnnualPrice + parseInt(projectFunctionLinkedFirstAnnualPrice)
@@ -199,8 +199,8 @@ const getAnnualInfoProjectRunningByType = (area: any) => {
 }
 
 const initBarchar = (barChart: IBarChart, currency: string) => {
-    barChart.title.title = barChart.title.title.replace("/*Currency/*", currency);
-    barChart.title.titleSub.title = barChart.title.titleSub.title.replace("/*Currency/*", currency);
+    barChart.title.text = barChart.title.text.replace("/*Currency/*", currency);
+    barChart.title.titleSub.text = barChart.title.titleSub.text.replace("/*Currency/*", currency);
     //Replace currency inside serieName
     for (let indexSerieName = 0; indexSerieName < barChart.serieName.length; indexSerieName++) {
         barChart.serieName[indexSerieName] = barChart.serieName[indexSerieName].replace("/*Currency/*", currency);
@@ -208,13 +208,13 @@ const initBarchar = (barChart: IBarChart, currency: string) => {
     return barChart
 }
 const initPiechar = (pieChart: IPieChart, currency: string) => {
-    pieChart.title.title = pieChart.title.title.replace("/*Currency/*", currency);
-    pieChart.title.titleSub.title = pieChart.title.titleSub.title.replace("/*Currency/*", currency);
+    pieChart.title.text = pieChart.title.text.replace("/*Currency/*", currency);
+    pieChart.title.titleSub.text = pieChart.title.titleSub.text.replace("/*Currency/*", currency);
     return pieChart
 }
 const initMixedChart = (mixedChart: IMixedChart, currency: string) => {
-    mixedChart.title.title = mixedChart.title.title.replace("/*Currency/*", currency);
-    mixedChart.title.titleSub.title = mixedChart.title.titleSub.title.replace("/*Currency/*", currency);
+    mixedChart.title.text = mixedChart.title.text.replace("/*Currency/*", currency);
+    mixedChart.title.titleSub.text = mixedChart.title.titleSub.text.replace("/*Currency/*", currency);
     //Replace currency inside serieName
     for (let indexSerieName = 0; indexSerieName < mixedChart.serieName.length; indexSerieName++) {
         mixedChart.serieName[indexSerieName] = mixedChart.serieName[indexSerieName].replace("/*Currency/*", currency);
@@ -222,10 +222,15 @@ const initMixedChart = (mixedChart: IMixedChart, currency: string) => {
     return mixedChart
 }
 const initTableData = (tableData: any, currency: string) => {
-    tableData.title.title = tableData.title.title.replace("/*Currency/*", currency);
-    if (tableData.textColumn) {
-        for (let indexTextColumn = 0; indexTextColumn < tableData.textColumn.length; indexTextColumn++) {
-            tableData.textColumn[indexTextColumn] = tableData.textColumn[indexTextColumn].replace("/*Currency/*", currency);
+    tableData.title.text = tableData.title.text.replace("/*Currency/*", currency);
+    if (tableData.header.text) {
+        for (let indexTextColumn = 0; indexTextColumn < tableData.header.text.length; indexTextColumn++) {
+            tableData.header.text[indexTextColumn] = tableData.header.text[indexTextColumn].replace("/*Currency/*", currency);
+        }
+    }
+    if (tableData.columns.text) {
+        for (let indexTextColumn = 0; indexTextColumn < tableData.columns.text.length; indexTextColumn++) {
+            tableData.columns.text[indexTextColumn] = tableData.columns.text[indexTextColumn].replace("/*Currency/*", currency);
         }
     }
     return tableData
@@ -233,7 +238,7 @@ const initTableData = (tableData: any, currency: string) => {
 
 // ******* Tables Data
 
-export const getFactoryTableDataFonctionNotLinkedAndNeverDoneAndToCheckAndInAlarmByAreas = (data: any, TableDataFonctionAlarmByAreas: ITableDataFonctionByAreas, TableDataFonctionNotLinkedByAreas: ITableDataFonctionByAreas, TableDataFonctionNeverDoneByAreas: ITableDataFonctionByAreas, TableDataFonctionToCheckByAreas: ITableDataFonctionByAreas, factoryInfo: IDataBaseFactoryData) => {
+export const getFactoryTableDataFonctionNotLinkedAndNeverDoneAndToCheckAndInAlarmByAreas = (data: any, TableDataFonctionAlarmByAreas: ITableDataUiDesignedWithData, TableDataFonctionNotLinkedByAreas: ITableDataUiDesignedWithData, TableDataFonctionNeverDoneByAreas: ITableDataUiDesignedWithData, TableDataFonctionToCheckByAreas: ITableDataUiDesignedWithData, factoryInfo: IDataBaseFactoryData) => {
     TableDataFonctionAlarmByAreas = initTableData( TableDataFonctionAlarmByAreas, factoryInfo.currency)
     TableDataFonctionNotLinkedByAreas = initTableData( TableDataFonctionNotLinkedByAreas, factoryInfo.currency)
     TableDataFonctionNeverDoneByAreas = initTableData( TableDataFonctionNeverDoneByAreas, factoryInfo.currency)
@@ -329,24 +334,24 @@ export const getFactoryTableDataFactoryMainAndMeasurePointStatusAndProjectStatus
     PieChartProjectAllTypeNumberByFactory = initPiechar( PieChartProjectAllTypeNumberByFactory, factoryInfo.currency)
     PieChartProjectAllInitialLossesByFactory = initPiechar( PieChartProjectAllInitialLossesByFactory, factoryInfo.currency)
 
-    tableDataFactoryMain.fonctionFirstAnnual.losses = (data.fonctionFirstAnnualLosses).toFixed(0)
-    tableDataFactoryMain.fonctionFirstAnnual.price = (data.fonctionFirstAnnualPrice).toFixed(0)
-    tableDataFactoryMain.fonctionFirstAnnual.priceEuro = (data.fonctionFirstAnnualPrice / parseFloat(factoryInfo.currencyEuro) ).toFixed(0)
-    tableDataFactoryMain.fonctionCurrentAnnual.losses = (data.fonctionCurrentAnnualLosses).toFixed(0)
-    tableDataFactoryMain.fonctionCurrentAnnual.price = (data.fonctionCurrentAnnualPrice).toFixed(0)
-    tableDataFactoryMain.fonctionCurrentAnnual.priceEuro = (data.fonctionCurrentAnnualPrice / parseFloat(factoryInfo.currencyEuro)).toFixed(0)
-    tableDataFactoryMain.fonctionSavingAnnual.losses = (data.fonctionFirstAnnualLosses - data.fonctionCurrentAnnualLosses).toFixed(0)
-    tableDataFactoryMain.fonctionSavingAnnual.price = (data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualPrice).toFixed(0)
-    tableDataFactoryMain.fonctionSavingAnnual.priceEuro = ((data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualPrice) / parseFloat(factoryInfo.currencyEuro) ).toFixed(0)
-    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.losses = data.fonctionProjectRecoveryRequestAnnualLosses.toFixed(0)
-    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.price = data.fonctionProjectRecoveryRequestAnnualPrice.toFixed(0)
-    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.priceEuro = (data.fonctionProjectRecoveryRequestAnnualPrice / parseFloat(factoryInfo.currencyEuro)).toFixed(0)
+    tableDataFactoryMain.fonctionFirstAnnual.losses = Math.round((data.fonctionFirstAnnualLosses))
+    tableDataFactoryMain.fonctionFirstAnnual.price = Math.round((data.fonctionFirstAnnualPrice))
+    tableDataFactoryMain.fonctionFirstAnnual.priceEuro = Math.round((data.fonctionFirstAnnualPrice / parseFloat(factoryInfo.currencyEuro) ))
+    tableDataFactoryMain.fonctionCurrentAnnual.losses = Math.round((data.fonctionCurrentAnnualLosses))
+    tableDataFactoryMain.fonctionCurrentAnnual.price = Math.round((data.fonctionCurrentAnnualPrice))
+    tableDataFactoryMain.fonctionCurrentAnnual.priceEuro = Math.round((data.fonctionCurrentAnnualPrice / parseFloat(factoryInfo.currencyEuro)))
+    tableDataFactoryMain.fonctionSavingAnnual.losses = Math.round((data.fonctionFirstAnnualLosses - data.fonctionCurrentAnnualLosses))
+    tableDataFactoryMain.fonctionSavingAnnual.price = Math.round((data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualPrice))
+    tableDataFactoryMain.fonctionSavingAnnual.priceEuro = Math.round(((data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualPrice) / parseFloat(factoryInfo.currencyEuro) ))
+    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.losses = Math.round(data.fonctionProjectRecoveryRequestAnnualLosses)
+    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.price = Math.round(data.fonctionProjectRecoveryRequestAnnualPrice)
+    tableDataFactoryMain.fonctionProjectRecoveryRequestAnnual.priceEuro = Math.round((data.fonctionProjectRecoveryRequestAnnualPrice / parseFloat(factoryInfo.currencyEuro)))
 
     tableDataFactoryInfo.fonctionNb = data.fonctionNb
-    tableDataFactoryInfo.fonctionInitAnnualPrice = data.fonctionFirstAnnualPrice.toFixed(0)
-    tableDataFactoryInfo.fonctionCurrentAnnualPrice = data.fonctionCurrentAnnualLosses.toFixed(0)
-    tableDataFactoryInfo.fonctionProjectRecoveryRequestAnnual = data.fonctionProjectRecoveryRequestAnnualPrice.toFixed(0)
-    tableDataFactoryInfo.fonctionProjectRecoveryRealAnnual = (data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualLosses).toFixed(0)
+    tableDataFactoryInfo.fonctionInitAnnualPrice = Math.round(data.fonctionFirstAnnualPrice)
+    tableDataFactoryInfo.fonctionCurrentAnnualPrice = Math.round(data.fonctionCurrentAnnualLosses)
+    tableDataFactoryInfo.fonctionProjectRecoveryRequestAnnual = Math.round(data.fonctionProjectRecoveryRequestAnnualPrice)
+    tableDataFactoryInfo.fonctionProjectRecoveryRealAnnual = Math.round((data.fonctionFirstAnnualPrice - data.fonctionCurrentAnnualLosses))
 
     tableDataFactoryInfo.fonctionDone = data.fonctionNb - data.fonctionNeverDoneNb
     tableDataFactoryInfo.fonctionNotDone = data.fonctionNeverDoneNb
@@ -442,17 +447,17 @@ export const getAreasInitialCurrentLossesQtyAndPrice = (data: any, BarChartIniti
     BarChartInitialCurrentLossesQtyByAreas = initBarchar( BarChartInitialCurrentLossesQtyByAreas, factoryInfo.currency)
     BarChartInitialCurrentLossesPriceByAreas = initBarchar( BarChartInitialCurrentLossesPriceByAreas, factoryInfo.currency)
     BarChartProjectStatusByAreas = initBarchar( BarChartProjectStatusByAreas, factoryInfo.currency)
-
     for (let indexArea = 0; indexArea < Object.values(data.areas).length; indexArea++) {
         //const areaByIndex = GetAreaByIndex( data.areas, indexArea)
         const areaByIndex: any = Object.values(data.areas)[indexArea]
+
         BarChartInitialCurrentLossesQtyByAreas.xAxisText.push( areaByIndex.name );
-        BarChartInitialCurrentLossesQtyByAreas.series[0].Value.push( areaByIndex.fonctionFirstAnnualLosses.toFixed(0) );
-        BarChartInitialCurrentLossesQtyByAreas.series[1].Value.push( areaByIndex.fonctionCurrentAnnualLosses.toFixed(0) );
+        BarChartInitialCurrentLossesQtyByAreas.series[0].Value.push( Math.round( areaByIndex.fonctionFirstAnnualLosses ) );
+        BarChartInitialCurrentLossesQtyByAreas.series[1].Value.push( Math.round( areaByIndex.fonctionCurrentAnnualLosses  ) );
 
         BarChartInitialCurrentLossesPriceByAreas.xAxisText.push( areaByIndex.name );
-        BarChartInitialCurrentLossesPriceByAreas.series[0].Value.push( areaByIndex.fonctionFirstAnnualPrice.toFixed(0) );
-        BarChartInitialCurrentLossesPriceByAreas.series[1].Value.push( areaByIndex.fonctionCurrentAnnualPrice.toFixed(0) );
+        BarChartInitialCurrentLossesPriceByAreas.series[0].Value.push( Math.round( areaByIndex.fonctionFirstAnnualPrice  ) );
+        BarChartInitialCurrentLossesPriceByAreas.series[1].Value.push( Math.round( areaByIndex.fonctionCurrentAnnualPrice  ) );
 
         BarChartProjectStatusByAreas.xAxisText.push( areaByIndex.name );
         const projectStandByNb = areaByIndex.projectStandByNb

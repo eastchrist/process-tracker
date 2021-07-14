@@ -31,7 +31,7 @@ export const defaultDigitalData: IDataBaseDigitalData = {
     indexCreation: 0,
 }
 
-export const defaultDigitalExcelHeater = ['id', 'position', 'name', 'name1', 'tag', 'address', 'idEquip', 'idTank', 'indexCreation']
+export const defaultDigitalExcelHeader = ['id', 'position', 'name', 'name1', 'tag', 'address', 'idEquip', 'idTank', 'indexCreation']
 
 export const getDBDigitals = (params: any) =>
     requestSql({

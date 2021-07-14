@@ -10,9 +10,15 @@ export default {
                         titre4: '',
                     },
                     texte: {
-                        texte01: 'Process & Control 2iA is a research and services\n' + 'company specialized in the development and\n' + 'implementation of industrial projects. Close\n' + 'communication with your expectations allows\n' + 'Process & Control 2iA to quickly mobilize a team\n' + 'of professionals in diff erent industrial sectors\n' + 'such as: ',
-                        texte02: 'Leading phases of engineering, design, start-up,\n' + 'ramp-up, commissioning and training, Process\n' + '& Control 2iA operates for missions all over the\n' + 'world. Our policy is based on the continuous\n' + 'improvement of the quality and effi ciency of\n' + 'your production tool. \n',
-                        texte03: 'Th e scope of expertise ranges from preliminary studies, development, commissioning to\n' + 'technical assistance and maintenance. Process\n' + '& Control 2iA is involved at each stage of the\n' + 'project by providing qualifi ed resources: project\n' + 'managers, commissioning supervisors, PLC\n' + 'engineers, and much more ...',
+                        texte01: 'Process & Control 2iA',
+                        texte02: ' is a research and services\n' + 'company specialized in the development and\n' + 'implementation of industrial projects. Close\n' + 'communication with your expectations allows\n',
+                        texte03: ' to quickly mobilize a team\n' + 'of professionals in different industrial sectors\n' + 'such as: ',
+
+                        texte05: 'Leading phases of engineering, design, start-up,\n' + 'ramp-up, commissioning and training, ',
+                        texte06: ' operates for missions all over the\n' + 'world. Our policy is based on the continuous\n' + 'improvement of the quality and efficiency of\n' + 'your production tool. \n',
+
+                        texte08: 'The scope of expertise ranges from preliminary studies, development, commissioning to\n' + 'technical assistance and maintenance. ',
+                        texte09: ' is involved at each stage of the\n' + 'project by providing qualified resources: project\n' + 'managers, commissioning supervisors, PLC\n' + 'engineers, and much more ...',
                     },
                     list: {
                         list01: {
@@ -77,7 +83,7 @@ export default {
                         list02: {
                             item01: 'Recommendation on PLC programming.',
                             item02: 'Recommendation on improving processes\n' + 'for liquids and powders.',
-                            item03: 'PLC and SCADA training provided by\n' + 'Process & Control 2iA.',
+                            item03: 'PLC and SCADA training provided by ',
                             item04: 'Training operators in good production\n' + 'practices.',
                             item05: 'Implementation of the documentation\n' + 'related to your production tool (standard\n' + 'operating procedure).',
                             item06: '',
