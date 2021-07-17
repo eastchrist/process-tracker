@@ -11,20 +11,20 @@
     import { Component, Prop, Watch } from 'vue-property-decorator'
     import { mixins } from 'vue-class-component'
     import ResizeMixin from '@/components/Charts/mixins/resize'
-    import { IMixedChart } from '@/api/types'
+    import { IBarAndMixeChart } from '@/api/types'
     const animationDuration = 3000
 
 @Component({
   name: 'MixedChart'
 })
 export default class extends mixins(ResizeMixin) {
-    @Prop({ required: true }) private chartData!: IMixedChart
+    @Prop({ required: true }) private chartData!: IBarAndMixeChart
     @Prop({ default: 'chart' }) private className!: string
     //@Prop({ default: '100%' }) private width!: string
     //@Prop({ default: '300px' }) private height!: string
 
     @Watch('chartData', { deep: true })
-    private onChartDataChange(value: IMixedChart) {
+    private onChartDataChange(value: IBarAndMixeChart) {
         this.setOptions(value)
     }
     mounted() {
@@ -45,7 +45,7 @@ export default class extends mixins(ResizeMixin) {
         this.setOptions(this.chartData)
     }
 
-    private setOptions( chartData: IMixedChart ) {
+    private setOptions( chartData: IBarAndMixeChart ) {
         if (this.chart) {
             this.chart.setOption( {
                 title: {
@@ -66,8 +66,13 @@ export default class extends mixins(ResizeMixin) {
                     top: chartData.legend.top,
                     right: chartData.legend.right,
                     align: chartData.legend.align,
+
                     textStyle: chartData.legend.textStyle,
                     data: chartData.serieName,
+
+                    itemGap: chartData.legend.itemGap,
+                    itemHeight: chartData.legend.itemHeight,
+                    itemWidth:  chartData.legend.itemWidth,
                     formatter: function(name: string) {
                         const indexSerie = chartData.serieName.indexOf(name)
                         if (chartData.series[indexSerie].Value.length == 0) {
@@ -94,12 +99,11 @@ export default class extends mixins(ResizeMixin) {
                     bottom: chartData.toolbox.bottom,
                 },
                 grid: {
-                    //top: 10,
-                    left: '3%',
-                    right: '0%',
-                    bottom: '10%',
-                    width: "70%",
-                    height: "70%",
+                    left: chartData.grid.left,
+                    right: chartData.grid.right,
+                    bottom: chartData.grid.bottom,
+                    width: chartData.grid.width,
+                    height: chartData.grid.height,
                     containLabel: true
                 },
                 xAxis: [{
@@ -144,41 +148,95 @@ export default class extends mixins(ResizeMixin) {
                 series: [
                     {
                         name: chartData.serieName[0],
-                        type: 'line',
-                        stack: 'total',
-                        symbolSize: 10,
-                        symbol: 'circle',
-                        yAxisIndex: 1,
+                        barGap: chartData.series[0].barGap,
+                        type: chartData.series[0].type,
+                        stack: chartData.series[0].serieStack,
+                        symbolSize: chartData.series[0].symbolSize,
+                        symbol: chartData.series[0].symbol,
+                        label: {
+                            show: chartData.serieLabelShow,
+                            fontSize: chartData.seriesLabels.fontSize,
+                            position: chartData.seriesLabels.position,
+                            rotate: chartData.series[0].label.rotate,
+                            fontStyle: chartData.seriesLabels.fontStyle,
+                            fontWeight: chartData.seriesLabels.fontWeight,
+                            fontFamily: chartData.seriesLabels.fontFamily,
+                            offset: chartData.series[0].label.offset,
+                            color: chartData.series[0].label.color,
+                        },
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        yAxisIndex: chartData.series[0].yAxisIndex,
                         data: chartData.series[0].Value,
                         itemStyle: chartData.series[0].itemStyle,
                     },
                     {
                         name: chartData.serieName[1],
-                        type: 'bar',
-                        stack: chartData.serieStack,
+                        barGap: chartData.series[1].barGap,
+                        type: chartData.series[1].type,
+                        stack: chartData.series[1].serieStack,
+                        symbolSize: chartData.series[1].symbolSize,
+                        symbol: chartData.series[1].symbol,
+                        label: {
+                            show: chartData.serieLabelShow,
+                            fontSize: chartData.seriesLabels.fontSize,
+                            position: chartData.seriesLabels.position,
+                            rotate: chartData.series[1].label.rotate,
+                            fontStyle: chartData.seriesLabels.fontStyle,
+                            fontWeight: chartData.seriesLabels.fontWeight,
+                            fontFamily: chartData.seriesLabels.fontFamily,
+                            offset: chartData.series[1].label.offset,
+                            color: chartData.series[1].label.color,
+                        },
                         barMaxWidth: 35,
-                        barGap: '10%',
-                        yAxisIndex: 0,
+                        yAxisIndex: chartData.series[1].yAxisIndex,
                         data: chartData.series[1].Value,
                         itemStyle: chartData.series[1].itemStyle,
                     },
                     {
                         name: chartData.serieName[2],
-                        type: 'bar',
-                        stack: chartData.serieStack,
+                        barGap: chartData.series[2].barGap,
+                        type: chartData.series[2].type,
+                        stack: chartData.series[2].serieStack,
+                        symbolSize: chartData.series[2].symbolSize,
+                        symbol: chartData.series[2].symbol,
+                        label: {
+                            show: chartData.serieLabelShow,
+                            fontSize: chartData.seriesLabels.fontSize,
+                            position: chartData.seriesLabels.position,
+                            rotate: chartData.series[2].label.rotate,
+                            fontStyle: chartData.seriesLabels.fontStyle,
+                            fontWeight: chartData.seriesLabels.fontWeight,
+                            fontFamily: chartData.seriesLabels.fontFamily,
+                            offset: chartData.series[2].label.offset,
+                            color: chartData.series[2].label.color,
+                        },
                         barMaxWidth: 35,
-                        barGap: '10%',
-                        yAxisIndex: 0,
+                        yAxisIndex: chartData.series[2].yAxisIndex,
                         data: chartData.series[2].Value,
                         itemStyle: chartData.series[2].itemStyle,
                     },
                     {
                         name: chartData.serieName[3],
-                        type: 'bar',
-                        stack: chartData.serieStack,
+                        barGap: chartData.series[3].barGap,
+                        type: chartData.series[3].type,
+                        stack: chartData.series[3].serieStack,
+                        symbolSize: chartData.series[3].symbolSize,
+                        symbol: chartData.series[3].symbol,
+                        label: {
+                            show: chartData.serieLabelShow,
+                            fontSize: chartData.seriesLabels.fontSize,
+                            position: chartData.seriesLabels.position,
+                            rotate: chartData.series[3].label.rotate,
+                            fontStyle: chartData.seriesLabels.fontStyle,
+                            fontWeight: chartData.seriesLabels.fontWeight,
+                            fontFamily: chartData.seriesLabels.fontFamily,
+                            offset: chartData.series[3].label.offset,
+                            color: chartData.series[3].label.color,
+                        },
                         barMaxWidth: 35,
-                        barGap: '10%',
-                        yAxisIndex: 0,
+                        yAxisIndex: chartData.series[3].yAxisIndex,
                         data: chartData.series[3].Value,
                         itemStyle: chartData.series[3].itemStyle,
                     },

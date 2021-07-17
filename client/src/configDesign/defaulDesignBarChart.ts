@@ -1,17 +1,17 @@
-import {IBarChart} from "@/api/types";
+import {IBarAndMixeChart} from "@/api/types";
 import i18n from "@/i18n";
 
 //Bar01 ' +
-export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
+export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar01 ' + i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -22,7 +22,7 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -66,8 +66,8 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -76,30 +76,84 @@ export const defaultBarChartInitialCurrentLossesQtyByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.serieName1`) + '', i18n.t(`trend.BarChartInitialCurrentLossesQtyByAreas.serieName2`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'blue',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [20, 10],
+                color: 'green',
+                rotate: 45,
+            }
+        }
     ],
 }
 
 //'Bar02 ' +
-export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
+export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar02 ' + i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -110,7 +164,7 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -154,8 +208,8 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -164,30 +218,84 @@ export const defaultBarChartInitialCurrentLossesPriceByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.serieName1`) + '', i18n.t(`trend.BarChartInitialCurrentLossesPriceByAreas.serieName2`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'blue',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'green',
+                rotate: 45,
+            }
+        }
     ],
 }
 
 //'Bar03 ' +
-export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
+export const defaultBarChartMeasurePointStatusByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar03 ' + i18n.t(`trend.BarChartMeasurePointStatusByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -198,7 +306,7 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartMeasurePointStatusByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -242,8 +350,8 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -252,30 +360,84 @@ export const defaultBarChartMeasurePointStatusByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: 'Total', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top" ,//['50%', '50%'],
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartMeasurePointStatusByAreas.serieName1`) + '', i18n.t(`trend.BarChartMeasurePointStatusByAreas.serieName2`) + '', i18n.t(`trend.BarChartMeasurePointStatusByAreas.serieName3`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: 'Total', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [10, 15],
+                color: 'blue',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: 'Total', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [10, -5],
+                color: 'red',
+                rotate: 45,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: 'Total', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [10, -25],
+                color: 'green',
+                rotate: 45,
+            }
+        }
     ],
 }
 
 //'Bar04 ' +
-export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
+export const defaultBarChartMeasurePointInAlarmByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar04 ' + i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -286,7 +448,7 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -330,8 +492,8 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -340,30 +502,84 @@ export const defaultBarChartMeasurePointInAlarmByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartMeasurePointInAlarmByAreas.serieName1`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [0, 0],
+                color: 'blue',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'green',
+                rotate: 0,
+            }
+        }
     ],
 }
 
 //'Bar05 ' +
-export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
+export const defaultBarChartFonctionNotLinkedByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar05 ' + i18n.t(`trend.BarChartFonctionNotLinkedByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -374,7 +590,7 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartFonctionNotLinkedByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -418,8 +634,8 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -428,30 +644,84 @@ export const defaultBarChartFonctionNotLinkedByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartFonctionNotLinkedByAreas.serieName1`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [0, 0],
+                color: 'blue',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: undefined,
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [20, 0],
+                color: 'green',
+                rotate: 0,
+            }
+        }
     ],
 }
 
 //'Bar06 ' +
-export const defaultBarChartProjectStatusByAreas: IBarChart = {
+export const defaultBarChartProjectStatusByAreas: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
-        height: '100%',
+        height: '300px',
     },
     title: {
         show: true,
         text: 'Bar06 ' + i18n.t(`trend.BarChartProjectStatusByAreas.title`) + '',
         textStyle: {
-            fontSize: 14,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -462,7 +732,7 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
         titleSub: {
             text: i18n.t(`trend.BarChartProjectStatusByAreas.titleSub`) + '',
             textStyle: {
-                fontSize: 14,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -506,8 +776,8 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
         }
     },
     toolbox: {
-        right: "6%",
-        bottom: "1%"
+        right: "2%",
+        bottom: "5%"
     },
     grid: {
         left: '3%',
@@ -516,15 +786,69 @@ export const defaultBarChartProjectStatusByAreas: IBarChart = {
         width: "90%",
         height: "70%"
     },
-    serieLabelShow: true,
     yAxisSplitNumber: 5,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
+    serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     serieName: [i18n.t(`trend.BarChartProjectStatusByAreas.serieName1`) + '',i18n.t(`trend.BarChartProjectStatusByAreas.serieName2`) + '',i18n.t(`trend.BarChartProjectStatusByAreas.serieName3`) + ''],
     xAxisText: [],
     series: [
-        { Value: [], itemStyle: { color: 'blue' } },
-        { Value: [], itemStyle: { color: 'red'  } },
-        { Value: [], itemStyle: { color: 'green'} },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
+            itemStyle: {
+                color: 'blue',
+            },
+            label: {
+                offset: [0, 0],
+                color: 'blue',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'red',
+            },
+            label: {
+                offset: [0, 0],
+                color: 'red',
+                rotate: 0,
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: undefined,
+            itemStyle: {
+                color: 'green',
+            },
+            label: {
+                offset: [0, 0],
+                color: 'green',
+                rotate: 0,
+            }
+        }
     ],
 }

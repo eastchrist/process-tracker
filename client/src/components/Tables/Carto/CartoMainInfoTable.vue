@@ -19,7 +19,6 @@
                     <td :style="getDesignTableCellsStyle(1, 3, numberRows)" >{{ tableData.fonctionInitAnnualPrice }}</td>
                     <td :style="getDesignTableCellsStyle(1, 4, numberRows)" >{{ tableData.columns.text[4] }}</td>
                 </tr>
-
                 <tr>
                     <td :style="getDesignTableCellsStyle(2, 0, numberRows)" ></td>
                     <td :style="getDesignTableCellsStyle(2, 1, numberRows)" ></td>
@@ -27,20 +26,16 @@
                     <td :style="getDesignTableCellsStyle(2, 3, numberRows)" >{{ tableData.fonctionCurrentAnnualPrice }}</td>
                     <td :style="getDesignTableCellsStyle(2, 4, numberRows)" >{{ tableData.columns.text[5] }}</td>
                 </tr>
-
-
                 <tr>
                     <td :style="getDesignTableCellsStyle(3, 0, numberRows)" >{{ tableData.columns.text[6] }}</td>
                     <td :style="getDesignTableCellsStyle(3, 1, numberRows)" >{{tableData.fonctionNotDone}}</td>
                     <td :style="getDesignTableCellsStyle(3, 2, numberRows)" colspan="3" >{{tableData.columns.text[7]}}</td>
                 </tr>
-
                 <tr>
                     <td :style="getDesignTableCellsStyle(4, 0, numberRows)" >{{ tableData.columns.text[8] }}</td>
                     <td :style="getDesignTableCellsStyle(4, 1, numberRows)" >{{tableData.fonctionDone}}</td>
                     <td :style="getDesignTableCellsStyle(4, 2, numberRows)" colspan="3" >{{ tableData.columns.text[9] }} {{ tableData.fonctionInAlarm }} {{ tableData.columns.text[10] }}</td>
                 </tr>
-
                 <tr>
                     <td :style="getDesignTableCellsStyle(5, 0, numberRows)" ></td>
                     <td :style="getDesignTableCellsStyle(5, 1, numberRows)" ></td>
@@ -48,13 +43,12 @@
                     <td :style="getDesignTableCellsStyle(5, 3, numberRows)" >{{ tableData.fonctionNotLink }}</td>
                     <td :style="getDesignTableCellsStyle(5, 4, numberRows)" >{{ tableData.columns.text[12] }}</td>
                 </tr>
-
                 <tr>
                     <th :style="getDesignTableCellsStyle(6, 0, numberRows)" ></th>
                     <td :style="getDesignTableCellsStyle(6, 1, numberRows)" ></td>
                     <td :style="getDesignTableCellsStyle(6, 2, numberRows)" >{{ tableData.columns.text[13] }}</td>
-                    <th :style="getDesignTableCellsStyle(6, 3, numberRows)" >{{ tableData.fonctionNotLinkInitialLosse }}</th>
-                    <th :style="getDesignTableCellsStyle(6, 4, numberRows)" >{{ tableData.columns.text[14] }}</th>
+                    <td :style="getDesignTableCellsStyle(6, 3, numberRows)" >{{ tableData.fonctionNotLinkInitialLosse }}</td>
+                    <td :style="getDesignTableCellsStyle(6, 4, numberRows)" >{{ tableData.columns.text[14] }}</td>
                 </tr>
             </tbody>
         </table>

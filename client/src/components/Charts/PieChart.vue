@@ -81,6 +81,7 @@ export default class extends mixins(ResizeMixin) {
                   top: chartData.legend.top,
                   right: chartData.legend.right,
                   align: chartData.legend.align,
+
                   textStyle: chartData.legend.textStyle,
                   data: Serie1Data.legendData,
                   itemGap: chartData.legend.itemGap,

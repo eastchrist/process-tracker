@@ -3,38 +3,38 @@
         <table style="width:100%">
             <thead>
                 <tr >
-                    <th :style="getDesignTableHeaderStyle(0,0)" colspan="16">{{ tableData.title.text }}</th>
+                    <td :style="getDesignTableHeaderStyle(0,0)" colspan="16">{{ tableData.title.text }}</td>
                 </tr>
                 <tr >
                     <td :style="getDesignTableHeaderStyle(1,0)" rowspan="2">{{ tableData.header.text[0] }}</td>
-                    <th :style="getDesignTableHeaderStyle(1,1)" colspan="3">{{ tableData.header.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(1,2)" colspan="3">{{ tableData.header.text[2] }}</th>
-                    <th :style="getDesignTableHeaderStyle(1,3)" colspan="3">{{ tableData.header.text[3] }}</th>
-                    <th :style="getDesignTableHeaderStyle(1,4)" colspan="3">{{ tableData.header.text[4] }}</th>
-                    <th :style="getDesignTableHeaderStyle(1,5)" colspan="3">{{ tableData.header.text[5] }}</th>
+                    <td :style="getDesignTableHeaderStyle(1,1)" colspan="3">{{ tableData.header.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(1,2)" colspan="3">{{ tableData.header.text[2] }}</td>
+                    <td :style="getDesignTableHeaderStyle(1,3)" colspan="3">{{ tableData.header.text[3] }}</td>
+                    <td :style="getDesignTableHeaderStyle(1,4)" colspan="3">{{ tableData.header.text[4] }}</td>
+                    <td :style="getDesignTableHeaderStyle(1,5)" colspan="3">{{ tableData.header.text[5] }}</td>
                 </tr>
                 <tr >
 
-                    <th :style="getDesignTableHeaderStyle(2,1)" >{{ tableData.headerSub.text[0] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,2)">{{ tableData.headerSub.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,3)">{{ tableData.headerSub.text[2] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,4)">{{ tableData.headerSub.text[0] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,5)">{{ tableData.headerSub.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,6)">{{ tableData.headerSub.text[2] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,7)">{{ tableData.headerSub.text[0] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,8)">{{ tableData.headerSub.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,9)">{{ tableData.headerSub.text[2] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,10)">{{ tableData.headerSub.text[0] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,11)">{{ tableData.headerSub.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,12)">{{ tableData.headerSub.text[2] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,13)">{{ tableData.headerSub.text[0] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,14)">{{ tableData.headerSub.text[1] }}</th>
-                    <th :style="getDesignTableHeaderStyle(2,15)">{{ tableData.headerSub.text[2] }}</th>
+                    <td :style="getDesignTableHeaderStyle(2,1)" >{{ tableData.headerSub.text[0] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,2)">{{ tableData.headerSub.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,3)">{{ tableData.headerSub.text[2] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,4)">{{ tableData.headerSub.text[0] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,5)">{{ tableData.headerSub.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,6)">{{ tableData.headerSub.text[2] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,7)">{{ tableData.headerSub.text[0] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,8)">{{ tableData.headerSub.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,9)">{{ tableData.headerSub.text[2] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,10)">{{ tableData.headerSub.text[0] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,11)">{{ tableData.headerSub.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,12)">{{ tableData.headerSub.text[2] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,13)">{{ tableData.headerSub.text[0] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,14)">{{ tableData.headerSub.text[1] }}</td>
+                    <td :style="getDesignTableHeaderStyle(2,15)">{{ tableData.headerSub.text[2] }}</td>
                 </tr>
             </thead>
             <tbody>
             <tr>
-                <th :style="getDesignTableCellsStyle(0, 0, 5)" >{{ tableData.columns.text[0] }}</th>
+                <td :style="getDesignTableCellsStyle(0, 0, 5)" >{{ tableData.columns.text[0] }}</td>
 
                 <td :style="getDesignTableCellsStyle(0, 1, 5)" >{{ tableData.veryHigh.veryHard.number }}</td>
                 <td :style="getDesignTableCellsStyle(0, 2, 5)" >{{ tableData.veryHigh.veryHard.projectFunctionLinkedFirstAnnualPrice }}</td>

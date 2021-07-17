@@ -28,6 +28,7 @@ interface IFont_TableData {
   "family": string,
   "color": string,
   "size": string
+  "weight": string
 }
 interface IBordure_TableData {
   length: number,
@@ -216,9 +217,37 @@ export interface ITableDataFonctionByAreasOld {
   //data: []
 }
 
-export interface IChart_oneSerie {
+export interface IChart_BarChartOneSerie {
   Value: number[]
-  itemStyle: { }
+  type: string | undefined,
+  serieStack: string, // 'Total'= On Top
+  yAxisIndex: number,
+  barGap: 0 | undefined,
+  symbolSize: number | undefined,
+  symbol: string | undefined,
+  itemStyle: {
+    color: string
+  },
+  label: {
+    offset: number[],
+    color: string,
+    rotate: number,
+  }
+}
+export interface IChart_PieChartOneSerie {
+  radius: any,
+  center: any,
+  legendHoverLink: boolean,
+  avoidLabelOverlap: boolean,
+  stillShowZeroSum: boolean,
+  animationEasing: string,
+  animationDuration: number
+  label: {
+    show: boolean,
+    position: string,
+    textStyle: IChart_TextStyle
+    overflow: string,
+  },
 }
 export interface IChart_TextStyle {
   fontSize: number,
@@ -264,7 +293,7 @@ export interface IChart_Toolbox {
   bottom: string,
 }
 
-export interface IBarChart {
+export interface IBarAndMixeChart {
   dimensions: {
     width: string,
     height: string,
@@ -280,37 +309,21 @@ export interface IBarChart {
     width: string
     height: string
   }
-  serieLabelShow: boolean
   yAxisSplitNumber: number
   xAxisRotation: number
-  serieStack: string // 'Total'= On Top
-  xAxisText: string[]
-  serieName: string[]
-  series: IChart_oneSerie[]
-}
-export interface IMixedChart {
-  dimensions: {
-    width: string,
-    height: string,
+  serieLabelShow: boolean
+  seriesLabels: {
+    fontSize: number,
+    position: string,
+    fontStyle: string,
+    fontWeight: string,
+    fontFamily: string,
   },
-  title: IChart_Title,
-  legend: IChart_Legend,
-  tooltip: IChart_Tooltip,
-  toolbox: IChart_Toolbox,
-  grid: {
-    left: string
-    right: string
-    bottom: string
-    width: string
-    height: string
-  }
-  serieLabelShow: boolean
-  yAxisSplitNumber: number
-  xAxisRotation: number
-  serieStack: string // 'Total'= On Top
+
+  //serieStack: string // 'Total'= On Top
   xAxisText: string[]
   serieName: string[]
-  series: IChart_oneSerie[ ]
+  series: IChart_BarChartOneSerie[]
 }
 export interface IPieChart {
   dimensions: {
@@ -321,24 +334,7 @@ export interface IPieChart {
   legend: IChart_Legend,
   tooltip: IChart_Tooltip,
   toolbox: IChart_Toolbox,
-  series: {
-    radius: any,
-    center: any,
-    legendHoverLink: boolean,
-    avoidLabelOverlap: boolean,
-    stillShowZeroSum: boolean,
-    animationEasing: string,
-    animationDuration: number
-    label: {
-      show: boolean,
-      position: string,
-      textStyle: IChart_TextStyle
-      //fontWeight: string,
-      //fontFamily: string,
-      //fontSize: number,
-      overflow: string,
-    },
-  },
+  series: IChart_PieChartOneSerie,
   serie1Name: string[]
   serie1Value: number[]
   serie1Color: string[]

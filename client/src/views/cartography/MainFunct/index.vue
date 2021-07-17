@@ -119,13 +119,12 @@
 
     } from '@/utils/traceability'
 
-    import CartoMainTableTest from '@/components/Tables/Carto/CartoMainTableTest.vue'
     import CartoMainTable from '@/components/Tables/Carto/CartoMainTable.vue'
     import CartoMainInfoTable from '@/components/Tables/Carto/CartoMainInfoTable.vue'
     import CartoProjectPriorityDifficulty from '@/components/Tables/Carto/CartoProjectPriorityDifficulty.vue'
     import CartoFonctionList from '@/components/Tables/Carto/CartoFonctionList.vue'
 
-    import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
+    import { IBarAndMixeChart, IPieChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
 
     import {    defaultBarChartInitialCurrentLossesQtyByAreas, defaultBarChartInitialCurrentLossesPriceByAreas, defaultBarChartMeasurePointStatusByAreas,
                 defaultBarChartMeasurePointInAlarmByAreas, defaultBarChartFonctionNotLinkedByAreas, defaultBarChartProjectStatusByAreas } from '@/configDesign/defaulDesignBarChart'
@@ -147,15 +146,15 @@
     const TableDataFonctionNeverDoneByAreas: ITableDataUiDesignedWithData = defaultFonctionNeverDoneByAreas
     const TableDataFonctionToCheckByAreas: ITableDataUiDesignedWithData = defaultFonctionToCheckByAreas
 
-    const BarChartInitialCurrentLossesQtyByAreas: IBarChart = defaultBarChartInitialCurrentLossesQtyByAreas
-    const BarChartInitialCurrentLossesPriceByAreas: IBarChart = defaultBarChartInitialCurrentLossesPriceByAreas
-    const BarChartMeasurePointStatusByAreas: IBarChart = defaultBarChartMeasurePointStatusByAreas
-    const BarChartMeasurePointInAlarmByAreas: IBarChart = defaultBarChartMeasurePointInAlarmByAreas
-    const BarChartFonctionNotLinkedByAreas: IBarChart = defaultBarChartFonctionNotLinkedByAreas
-    const BarChartProjectStatusByAreas: IBarChart = defaultBarChartProjectStatusByAreas
+    const BarChartInitialCurrentLossesQtyByAreas: IBarAndMixeChart = defaultBarChartInitialCurrentLossesQtyByAreas
+    const BarChartInitialCurrentLossesPriceByAreas: IBarAndMixeChart = defaultBarChartInitialCurrentLossesPriceByAreas
+    const BarChartMeasurePointStatusByAreas: IBarAndMixeChart = defaultBarChartMeasurePointStatusByAreas
+    const BarChartMeasurePointInAlarmByAreas: IBarAndMixeChart = defaultBarChartMeasurePointInAlarmByAreas
+    const BarChartFonctionNotLinkedByAreas: IBarAndMixeChart = defaultBarChartFonctionNotLinkedByAreas
+    const BarChartProjectStatusByAreas: IBarAndMixeChart = defaultBarChartProjectStatusByAreas
 
-    const MixedChartFactoryProjectAllNumberPrice: IMixedChart = defaultMixedChartFactoryProjectAllNumberPrice
-    const MixedChartFactoryProjectRunningNumberPrice: IMixedChart = defaultMixedChartFactoryProjectRunningNumberPrice
+    const MixedChartFactoryProjectAllNumberPrice: IBarAndMixeChart = defaultMixedChartFactoryProjectAllNumberPrice
+    const MixedChartFactoryProjectRunningNumberPrice: IBarAndMixeChart = defaultMixedChartFactoryProjectRunningNumberPrice
 
     const PieChartMeasurePointStatusByFactory: IPieChart = defaultPieChartMeasurePointStatusByFactory
     const PieChartProjectStatusByFactory: IPieChart = defaultPieChartProjectStatusByFactory
@@ -167,7 +166,6 @@
 
     @Component({
         components: {
-            CartoMainTableTest,
             CartoMainTable,
             CartoMainInfoTable,
             CartoProjectPriorityDifficulty,

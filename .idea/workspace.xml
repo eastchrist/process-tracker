@@ -3,320 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7cd0450-c7f7-4e5c-a025-b2cc6248b072" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a82a1b16.3e86f0ba.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/index.0a070369.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/precache-manifest.63e1d2da0b7f3f4049c5733098e7130b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.config.json.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.flows_DESKTOP.json.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.flows_DESKTOP_cred.json.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/aide.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_04_18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_04_19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_05_01.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_05_03.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_05_10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_05_11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Import/Import_BackUp/flows_DESKTOP_2021_05_19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Config/DB_Config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Flow_all.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Sql/factories.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Sql/factory.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Sql/sys_users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/Factory/Old/Sql/users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/bin/node-red-pi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/config/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/config/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/controllers/passportLocalController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/controllers/userController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/editor-api/red.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/flows_DESKTOP.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/flows_DESKTOP_cred.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/middlewares/flash_old.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/migrations/20210207141652-create-all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/migrations/Aide.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/models/all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/models/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/css/adminstyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/css/loginstyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/favicon_P.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/about" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/alert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/arduino.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/arrow-in.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/batch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/bluetooth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/bridge-dash.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/bridge.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/cog.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/comment.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/db.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/debug.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/envelope.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/feed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/file-in.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/file-out.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/function.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/hash.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/inject.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/join.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/leveldb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/link-out.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/mongodb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/mouse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/parser-csv.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/parser-html.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/parser-json.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/parser-xml.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/parser-yaml.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/range.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/redis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/rpi.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/serial.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/sort.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/split.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/status.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/subflow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/swap.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/switch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/template.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/timer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/trigger.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/watch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/icons/white-globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-flows-o.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-flows.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-full-o.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-full.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-nodes-o.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-nodes.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/deploy-reload.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/grip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/icons/arrow-in.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/node-red-256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/node-red-icon-black.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/node-red-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/node-red.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/spin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/subflow_tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/09.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/az.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/bin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/bool.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/env.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/expr.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/json.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/re.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/images/typedInput/target.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/keymap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/main.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/red.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/red.min - Copie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/red.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/red.min_CCA.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/red/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/ace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/ext-language_tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/ext-searchbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-handlebars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-nrjavascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-properties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-python.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-swift.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/mode-yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/handlebars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/nrjavascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/properties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/python.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/swift.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/snippets/yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/theme-chrome.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/theme-tomorrow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-nrjavascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/ace/worker-xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_444444_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_555555_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_777620_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_777777_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_cc0000_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/css/base/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/jquery/js/jquery-3.5.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/ace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/ext-language_tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/ext-searchbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-handlebars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-properties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-python.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-swift.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/mode-yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/handlebars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/markdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/properties.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/python.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/swift.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/snippets/yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/theme-chrome.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/theme-tomorrow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/worker-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/worker-html.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/worker-javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/worker-json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/ace/worker-xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/d3/d3.v3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/i18next/i18next.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_444444_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_555555_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_777620_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_777777_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_cc0000_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/css/base/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/js/jquery-3.5.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/js/jquery-migrate-3.3.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/js/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jquery/js/jquery.ui.touch-punch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jsonata/formatter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jsonata/mode-jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jsonata/snippets-jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/node-red-master/jsonata/worker-jsonata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/public/vendor/vendor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/routes/web.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/services/DataBaseServices.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/services/loginService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/services/registerService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/.config/masterPackageList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/.config/packageList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/.config/sioMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/.config/sioUse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/.config/uibMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/common/images/node-blue.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/uibuilder/uibuilder/src/uibuilder.appcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/validation/authValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/header.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/message.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/message_Old.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/navebar_logIn.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/navebar_logOut.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/_layouts/navebar_main.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/admin/GAlarms.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/admin/analog.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/admin/digital.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/admin/nodes.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/admin/password.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/login.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/login_new.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/login_old.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/register.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/carto_factory.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/carto_functions.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/carto_infoprojects.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/carto_measures.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/carto_projects.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/cip.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/optimisation.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/user/tracability.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/visitor/competence.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/visitor/contact.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverNode/views/visitor/reference.ejs" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -332,7 +18,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Process Tracking" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -351,19 +37,19 @@
       <recent name="http://142.93.119.179" />
       <recent name="http://64.227.29.171" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Tables\Carto" />
-      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\cartography\MainFunct" />
-      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server" />
-      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server\config" />
-      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\visitor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker" />
       <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server" />
       <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server\config" />
       <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\public" />
       <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Charts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Charts" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\components\Tables\Carto" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\client\src\views\cartography\MainFunct" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server" />
+      <recent name="D:\2 Project_Process Control\1 Process Tracking\process-tracker\server\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -378,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Compile Client">
+  <component name="RunManager" selected="npm.Dev Client Dev">
     <configuration name="Compile Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -410,7 +96,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Run Server Run" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="run" />
@@ -429,6 +115,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.buildedClientRun" />
+      <item itemvalue="npm.Compile Client" />
+      <item itemvalue="npm.Dev Client Dev" />
+      <item itemvalue="npm.Dev Server Dev" />
+      <item itemvalue="npm.Run Server Run" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -600,7 +293,12 @@
       <workItem from="1626301730410" duration="456000" />
       <workItem from="1626303402760" duration="4274000" />
       <workItem from="1626307908875" duration="14000" />
-      <workItem from="1626351099634" duration="2012000" />
+      <workItem from="1626351099634" duration="6304000" />
+      <workItem from="1626357763521" duration="1291000" />
+      <workItem from="1626435229319" duration="10760000" />
+      <workItem from="1626457166438" duration="267000" />
+      <workItem from="1626458986717" duration="10506000" />
+      <workItem from="1626516256398" duration="17268000" />
     </task>
     <servers />
   </component>
@@ -675,8 +373,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/configDesign/defaulDesignTableUi.ts</url>
-          <line>1686</line>
+          <line>1738</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/utils/tables.ts</url>
+          <line>594</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

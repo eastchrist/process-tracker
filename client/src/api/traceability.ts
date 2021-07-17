@@ -1,4 +1,4 @@
-import { IDataBaseTraceabilityData, IBarChart, IMixedChart, IPieChart,
+import { IDataBaseTraceabilityData, IBarAndMixeChart, IPieChart,
     ITableDataFactoryMain,
     ITableDataFactoryInfo,
     ITableProjectPriorityDifficulty,

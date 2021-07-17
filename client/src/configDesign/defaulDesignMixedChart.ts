@@ -1,8 +1,8 @@
-import {IMixedChart} from "@/api/types";
+import {IBarAndMixeChart} from "@/api/types";
 import i18n from "@/i18n";
 
 //'Mix01 ' +
-export const defaultMixedChartFactoryProjectAllNumberPrice: IMixedChart = {
+export const defaultMixedChartFactoryProjectAllNumberPrice: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
         height: '100%',
@@ -77,60 +77,110 @@ export const defaultMixedChartFactoryProjectAllNumberPrice: IMixedChart = {
         height: "70%"
     },
     serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     yAxisSplitNumber: 9,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
     serieName: [ i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.serieName1`) + '',
         i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.serieName2`) + '',
         i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.serieName3`) + '',
         i18n.t(`trend.MixedChartFactoryProjectAllNumberPrice.serieName4`) + '',],
     xAxisText: [],
     series: [
-        { Value: [],
+        {
+            Value: [],
+            type: 'line',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 1,
+            symbolSize: 10,
+            symbol: 'circle',
+            barGap: 0,
             itemStyle: {
                 color: 'orange',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            }, },
-        { Value: [],
+            },
+            label: {
+                offset: [0, 0],
+                color: 'orange',
+                rotate: 0,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'blue',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } },
-        { Value: [],
+            },
+            label: {
+                offset: [20, 0],
+                rotate: 45,
+                color: 'blue',
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'green',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } },
-        { Value: [],
+            },
+            label: {
+                offset: [20, 0],
+                color: 'green',
+                rotate: 45,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+        },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'red',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            }  }
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 45,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+        }
     ],
 }
 
 //'Mix02 ' +
-export const defaultMixedChartFactoryProjectRunningNumberPrice: IMixedChart = {
+export const defaultMixedChartFactoryProjectRunningNumberPrice: IBarAndMixeChart = {
     dimensions: {
         width: '100%',
         height: '100%',
@@ -205,54 +255,104 @@ export const defaultMixedChartFactoryProjectRunningNumberPrice: IMixedChart = {
         height: "70%"
     },
     serieLabelShow: true,
+    seriesLabels: {
+        fontSize: 10,
+        position: "top",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontFamily: "Arial",
+    },
     yAxisSplitNumber: 9,
     xAxisRotation: 45,
-    serieStack: '', // 'Total'= On Top
     serieName: [ i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.serieName1`) + '',
         i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.serieName2`) + '',
         i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.serieName3`) + '',
         i18n.t(`trend.MixedChartFactoryProjectRunningNumberPrice.serieName4`) + '',],
     xAxisText: [],
     series: [
-        { Value: [],
+        {
+            Value: [],
+            type: 'line',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 1,
+            symbolSize: 10,
+            symbol: 'circle',
+            barGap: 0,
             itemStyle: {
                 color: 'orange',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } },
-        { Value: [],
+            },
+            label: {
+                offset: [0, 0],
+                color: 'orange',
+                rotate: 0,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+            },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'blue',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } },
-        { Value: [],
+            },
+            label: {
+                offset: [20, 0],
+                color: 'blue',
+                rotate: 45,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+            },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'green',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } },
-        { Value: [],
+            },
+            label: {
+                offset: [20, 0],
+                color: 'green',
+                rotate: 45,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+            },
+        {
+            Value: [],
+            type: 'bar',
+            serieStack: '', // 'Total'= On Top
+            yAxisIndex: 0,
+            symbolSize: undefined,
+            symbol: undefined,
+            barGap: 0,
             itemStyle: {
                 color: 'red',
-                label: {
-                    show: true,
-                    textStyle: { color: '#fff' },
-                    position: 'insideTop',
-                    formatter(p: any) { return p.value > 0 ? p.value : '' }
-                }
-            } }
+            },
+            label: {
+                offset: [20, 0],
+                color: 'red',
+                rotate: 45,
+                //show: true,
+                //textStyle: { color: '#fff' },
+                //position: 'insideTop',
+                //formatter(p: any) { return p.value > 0 ? p.value : '' }
+            }
+        }
     ],
 }

@@ -15,6 +15,7 @@ export const defaultFonctionAlarmByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -38,6 +39,7 @@ export const defaultFonctionAlarmByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -49,12 +51,12 @@ export const defaultFonctionAlarmByAreas: ITableDataUiDesignedWithData = {
         height: "10px",
         enabled: [true,true,true,true,true,false],
         design: [
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal"} },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
         ],
         bordure: {
             length: 1,
@@ -75,6 +77,7 @@ export const defaultFonctionNotLinkedByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -98,6 +101,7 @@ export const defaultFonctionNotLinkedByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -108,12 +112,12 @@ export const defaultFonctionNotLinkedByAreas: ITableDataUiDesignedWithData = {
         height: "10px",
         enabled: [true,true,true,true,true,false],
         design: [
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
         ],
         bordure: {
             length: 1,
@@ -134,6 +138,7 @@ export const defaultFonctionNeverDoneByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -157,6 +162,7 @@ export const defaultFonctionNeverDoneByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -167,12 +173,12 @@ export const defaultFonctionNeverDoneByAreas: ITableDataUiDesignedWithData = {
         height: "10px",
         enabled: [true,true,false,true,false,true],
         design: [
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
         ],
         bordure: {
             length: 1,
@@ -193,6 +199,7 @@ export const defaultFonctionToCheckByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -216,6 +223,7 @@ export const defaultFonctionToCheckByAreas: ITableDataUiDesignedWithData = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": "10px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -226,12 +234,12 @@ export const defaultFonctionToCheckByAreas: ITableDataUiDesignedWithData = {
         height: "10px",
         enabled: [true,true,false,true,false,false],
         design: [
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": "10px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "0px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": "10px", "weight": "normal" } },
         ],
         bordure: {
             length: 1,
@@ -335,6 +343,7 @@ export const defaultUserDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -358,6 +367,7 @@ export const defaultUserDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -367,12 +377,12 @@ export const defaultUserDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": variables.tableColumnFontFamilySize + "px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": variables.tableColumnFontFamilySize + "px" } },
-            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '350px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "green", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            { "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '350px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            { "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -391,6 +401,7 @@ export const defaultAnalogDesignTable: ITableDataUiDesignedWithoutData = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -418,6 +429,7 @@ export const defaultAnalogDesignTable: ITableDataUiDesignedWithoutData = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -427,16 +439,16 @@ export const defaultAnalogDesignTable: ITableDataUiDesignedWithoutData = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '400px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -455,6 +467,7 @@ export const defaultAreaDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -478,6 +491,7 @@ export const defaultAreaDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -487,12 +501,12 @@ export const defaultAreaDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -511,6 +525,7 @@ export const defaultComputerDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -534,6 +549,7 @@ export const defaultComputerDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -543,12 +559,12 @@ export const defaultComputerDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '500px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '500px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -567,6 +583,7 @@ export const defaultDigitalDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -593,6 +610,7 @@ export const defaultDigitalDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -602,15 +620,15 @@ export const defaultDigitalDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -629,6 +647,7 @@ export const defaultEquipDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -655,6 +674,7 @@ export const defaultEquipDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -664,15 +684,15 @@ export const defaultEquipDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -691,6 +711,7 @@ export const defaultFactoryDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -719,6 +740,7 @@ export const defaultFactoryDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -728,17 +750,17 @@ export const defaultFactoryDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '350px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '350px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" }, },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -757,6 +779,7 @@ export const defaultFonctionDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -802,6 +825,7 @@ export const defaultFonctionDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -811,40 +835,40 @@ export const defaultFonctionDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
         ],
         bordure: {
@@ -864,6 +888,7 @@ export const defaultMeasureDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -897,6 +922,7 @@ export const defaultMeasureDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -906,22 +932,22 @@ export const defaultMeasureDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -940,6 +966,7 @@ export const defaultMeasureTypeDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -961,6 +988,7 @@ export const defaultMeasureTypeDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -970,10 +998,10 @@ export const defaultMeasureTypeDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -992,6 +1020,7 @@ export const defaultPlcDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1021,6 +1050,7 @@ export const defaultPlcDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1030,18 +1060,18 @@ export const defaultPlcDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1060,6 +1090,7 @@ export const defaultProductDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1083,6 +1114,7 @@ export const defaultProductDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1092,12 +1124,12 @@ export const defaultProductDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1116,6 +1148,7 @@ export const defaultProjectActionDesignTable: ITableDataUiDesignedWithoutData  =
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1141,6 +1174,7 @@ export const defaultProjectActionDesignTable: ITableDataUiDesignedWithoutData  =
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1150,14 +1184,14 @@ export const defaultProjectActionDesignTable: ITableDataUiDesignedWithoutData  =
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1176,6 +1210,7 @@ export const defaultProjectDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1209,6 +1244,7 @@ export const defaultProjectDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1218,27 +1254,27 @@ export const defaultProjectDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
 
         ],
         bordure: {
@@ -1258,6 +1294,7 @@ export const defaultProjectDesignTableSub1: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1278,6 +1315,7 @@ export const defaultProjectDesignTableSub1: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1287,10 +1325,10 @@ export const defaultProjectDesignTableSub1: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1309,6 +1347,7 @@ export const defaultProjectDesignTableSub2: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1331,6 +1370,7 @@ export const defaultProjectDesignTableSub2: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1340,10 +1380,10 @@ export const defaultProjectDesignTableSub2: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1362,6 +1402,7 @@ export const defaultProjectStatusDesignTable: ITableDataUiDesignedWithoutData  =
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1383,6 +1424,7 @@ export const defaultProjectStatusDesignTable: ITableDataUiDesignedWithoutData  =
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1392,10 +1434,10 @@ export const defaultProjectStatusDesignTable: ITableDataUiDesignedWithoutData  =
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1414,6 +1456,7 @@ export const defaultProjectTypeDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1435,6 +1478,7 @@ export const defaultProjectTypeDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1444,10 +1488,10 @@ export const defaultProjectTypeDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1466,6 +1510,7 @@ export const defaultServerDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1487,6 +1532,7 @@ export const defaultServerDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1496,10 +1542,10 @@ export const defaultServerDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1518,6 +1564,7 @@ export const defaultTankAreaDefEmptyingDesignTable: ITableDataUiDesignedWithoutD
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1542,6 +1589,7 @@ export const defaultTankAreaDefEmptyingDesignTable: ITableDataUiDesignedWithoutD
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1551,13 +1599,13 @@ export const defaultTankAreaDefEmptyingDesignTable: ITableDataUiDesignedWithoutD
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '120px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '150px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '120px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1576,6 +1624,7 @@ export const defaultTankAreaDefEmptyingDesignTableSub: ITableDataUiDesignedWitho
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1601,6 +1650,7 @@ export const defaultTankAreaDefEmptyingDesignTableSub: ITableDataUiDesignedWitho
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1610,14 +1660,14 @@ export const defaultTankAreaDefEmptyingDesignTableSub: ITableDataUiDesignedWitho
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1636,6 +1686,7 @@ export const defaultTankAreaDefFillingDesignTable: ITableDataUiDesignedWithoutDa
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1660,6 +1711,7 @@ export const defaultTankAreaDefFillingDesignTable: ITableDataUiDesignedWithoutDa
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1669,13 +1721,13 @@ export const defaultTankAreaDefFillingDesignTable: ITableDataUiDesignedWithoutDa
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '140px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '120px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '140px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '120px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1694,6 +1746,7 @@ export const defaultTankAreaDefFillingDesignTableSub: ITableDataUiDesignedWithou
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1719,6 +1772,7 @@ export const defaultTankAreaDefFillingDesignTableSub: ITableDataUiDesignedWithou
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1728,14 +1782,14 @@ export const defaultTankAreaDefFillingDesignTableSub: ITableDataUiDesignedWithou
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '170px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '80px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '100px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1754,6 +1808,7 @@ export const defaultTankAreaDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1776,6 +1831,7 @@ export const defaultTankAreaDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1785,11 +1841,11 @@ export const defaultTankAreaDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '270px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,
@@ -1808,6 +1864,7 @@ export const defaultTankDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableTitleFontFamily,
             "color": variables.tableTitleColor,
             "size": variables.tableTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableTitleBordureLength,
@@ -1833,6 +1890,7 @@ export const defaultTankDesignTable: ITableDataUiDesignedWithoutData  = {
             "family": variables.tableSubTitleFontFamily,
             "color": variables.tableSubTitleColor,
             "size": variables.tableSubTitleFontFamilySize + "px",
+            "weight": "bold",
         },
         "bordure": {
             length: variables.tableSubTitleBordureLength,
@@ -1842,14 +1900,14 @@ export const defaultTankDesignTable: ITableDataUiDesignedWithoutData  = {
     columns: {
         height: "20px",
         design: [
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
-            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '70px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '250px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"left", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
+            {   "textAlign":"center", "background-color": variables.tableTitleBgColor, "width": '200px', "padding": "5px", "font": { "family": variables.tableColumnFontFamily, "color": "black", "size": variables.tableColumnFontFamilySize + "px", "weight": "normal" } },
         ],
         bordure: {
             length: variables.tableColumnBordureLength,

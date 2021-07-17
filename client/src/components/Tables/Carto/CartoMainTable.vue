@@ -6,33 +6,33 @@
         <table style="width:100%;">
             <thead>
                     <tr >
-                        <th :style="getDesignTableHeaderStyle(0,0)" colspan="4">{{ tableData.title.text }}</th>
+                        <td :style="getDesignTableHeaderStyle(0,0)" colspan="4">{{ tableData.title.text }}</td>
                     </tr>
                     <tr >
-                            <th v-for="(textHeader,indexHeader) in tableData.header.text" :key="indexHeader" :style="getDesignTableHeaderStyle(1,indexHeader)">{{ tableData.header.text[indexHeader] }}</th>
+                            <td v-for="(textHeader,indexHeader) in tableData.header.text" :key="indexHeader" :style="getDesignTableHeaderStyle(1,indexHeader)">{{ tableData.header.text[indexHeader] }}</td>
                     </tr>
             </thead>
             <tbody>
                     <tr>
-                            <th :style="getDesignTableCellsStyle(0, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[0] }}</th>
+                            <td :style="getDesignTableCellsStyle(0, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[0] }}</td>
                             <td :style="getDesignTableCellsStyle(0, 1, 4, tableData.columns.text.length)" >{{ tableData.fonctionFirstAnnual.losses }}</td>
                             <td :style="getDesignTableCellsStyle(0, 2, 4, tableData.columns.text.length)" >{{ tableData.fonctionFirstAnnual.price  }}</td>
                             <td :style="getDesignTableCellsStyle(0, 3, 4, tableData.columns.text.length)" >{{ tableData.fonctionFirstAnnual.priceEuro }}</td>
                     </tr>
                     <tr>
-                            <th :style="getDesignTableCellsStyle(1, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[1] }}</th>
+                            <td :style="getDesignTableCellsStyle(1, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[1] }}</td>
                             <td :style="getDesignTableCellsStyle(1, 1, 4, tableData.columns.text.length)" >{{ tableData.fonctionCurrentAnnual.losses }}</td>
                             <td :style="getDesignTableCellsStyle(1, 2, 4, tableData.columns.text.length)" >{{ tableData.fonctionCurrentAnnual.price }}</td>
                             <td :style="getDesignTableCellsStyle(1, 3, 4, tableData.columns.text.length)" >{{ tableData.fonctionCurrentAnnual.priceEuro }}</td>
                     </tr>
                     <tr>
-                            <th :style="getDesignTableCellsStyle(2, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[2] }}</th>
+                            <td :style="getDesignTableCellsStyle(2, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[2] }}</td>
                             <td :style="getDesignTableCellsStyle(2, 1, 4, tableData.columns.text.length)" >{{ tableData.fonctionSavingAnnual.losses }}</td>
                             <td :style="getDesignTableCellsStyle(2, 2, 4, tableData.columns.text.length)" >{{ tableData.fonctionSavingAnnual.price }}</td>
                             <td :style="getDesignTableCellsStyle(2, 3, 4, tableData.columns.text.length)" >{{ tableData.fonctionSavingAnnual.priceEuro }}</td>
                     </tr>
                     <tr>
-                            <th :style="getDesignTableCellsStyle(3, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[3] }}</th>
+                            <td :style="getDesignTableCellsStyle(3, 0, 4, tableData.columns.text.length)" >{{ tableData.columns.text[3] }}</td>
                             <td :style="getDesignTableCellsStyle(3, 1, 4, tableData.columns.text.length)" >{{ tableData.fonctionProjectRecoveryRequestAnnual.losses }}</td>
                             <td :style="getDesignTableCellsStyle(3, 2, 4, tableData.columns.text.length)" >{{ tableData.fonctionProjectRecoveryRequestAnnual.price }}</td>
                             <td :style="getDesignTableCellsStyle(3, 3, 4, tableData.columns.text.length)" >{{ tableData.fonctionProjectRecoveryRequestAnnual.priceEuro }}</td>

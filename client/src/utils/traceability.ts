@@ -1,6 +1,5 @@
 import {IDataBaseFactoryData, IPriorityDifficulty} from '@/api/types'
-//import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataFonctionAlarmByAreas, ITableDataFonctionNotLinkedByAreas, ITableDataFonctionNeverDoneByAreas, ITableDataFonctionToCheckByAreas } from '@/api/types'
-import { IBarChart, IPieChart, IMixedChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
+import { IBarAndMixeChart, IPieChart, ITableDataFactoryMain, ITableDataFactoryInfo, ITableProjectPriorityDifficulty, ITableDataUiDesignedWithData } from '@/api/types'
 
 import { defaultPriorityDifficulty } from '@/api/traceability'
 import i18n from "@/i18n";
@@ -198,7 +197,7 @@ const getAnnualInfoProjectRunningByType = (area: any) => {
     return annualInfoProjectRunningByType
 }
 
-const initBarchar = (barChart: IBarChart, currency: string) => {
+const initBarchar = (barChart: IBarAndMixeChart, currency: string) => {
     barChart.title.text = barChart.title.text.replace("/*Currency/*", currency);
     barChart.title.titleSub.text = barChart.title.titleSub.text.replace("/*Currency/*", currency);
     //Replace currency inside serieName
@@ -212,7 +211,7 @@ const initPiechar = (pieChart: IPieChart, currency: string) => {
     pieChart.title.titleSub.text = pieChart.title.titleSub.text.replace("/*Currency/*", currency);
     return pieChart
 }
-const initMixedChart = (mixedChart: IMixedChart, currency: string) => {
+const initMixedChart = (mixedChart: IBarAndMixeChart, currency: string) => {
     mixedChart.title.text = mixedChart.title.text.replace("/*Currency/*", currency);
     mixedChart.title.titleSub.text = mixedChart.title.titleSub.text.replace("/*Currency/*", currency);
     //Replace currency inside serieName
@@ -291,7 +290,7 @@ export const getFactoryTableDataFactoryProjectAllPriorityDifficulty = (data: any
 }
 
 
-export const getFactoryProjectAllAndProjectRunningNumberPrice = (data: any, MixedChartFactoryProjectAllNumberPrice: IMixedChart, MixedChartFactoryProjectRunningNumberPrice: IMixedChart, factoryInfo: IDataBaseFactoryData) => {
+export const getFactoryProjectAllAndProjectRunningNumberPrice = (data: any, MixedChartFactoryProjectAllNumberPrice: IBarAndMixeChart, MixedChartFactoryProjectRunningNumberPrice: IBarAndMixeChart, factoryInfo: IDataBaseFactoryData) => {
     MixedChartFactoryProjectAllNumberPrice = initMixedChart( MixedChartFactoryProjectAllNumberPrice, factoryInfo.currency)
     MixedChartFactoryProjectRunningNumberPrice = initMixedChart( MixedChartFactoryProjectRunningNumberPrice, factoryInfo.currency)
     for (let indexArea = 0; indexArea < Object.values(data.areas).length; indexArea++) {
@@ -443,7 +442,7 @@ export const getFactoryProjectRunningTypeNumberAndInitialLossesAndCurrentLosses 
     }
 }
 
-export const getAreasInitialCurrentLossesQtyAndPrice = (data: any, BarChartInitialCurrentLossesQtyByAreas: IBarChart, BarChartInitialCurrentLossesPriceByAreas: IBarChart, BarChartProjectStatusByAreas: IBarChart, factoryInfo: IDataBaseFactoryData) => {
+export const getAreasInitialCurrentLossesQtyAndPrice = (data: any, BarChartInitialCurrentLossesQtyByAreas: IBarAndMixeChart, BarChartInitialCurrentLossesPriceByAreas: IBarAndMixeChart, BarChartProjectStatusByAreas: IBarAndMixeChart, factoryInfo: IDataBaseFactoryData) => {
     BarChartInitialCurrentLossesQtyByAreas = initBarchar( BarChartInitialCurrentLossesQtyByAreas, factoryInfo.currency)
     BarChartInitialCurrentLossesPriceByAreas = initBarchar( BarChartInitialCurrentLossesPriceByAreas, factoryInfo.currency)
     BarChartProjectStatusByAreas = initBarchar( BarChartProjectStatusByAreas, factoryInfo.currency)
@@ -474,7 +473,7 @@ export const getAreasInitialCurrentLossesQtyAndPrice = (data: any, BarChartIniti
         BarChartProjectStatusByAreas: BarChartProjectStatusByAreas,
     }
 }
-export const getAreasMeasurePointStatusAndAlarmAndFonctionNotLinked = (data: any, BarChartMeasurePointStatusByAreas: IBarChart, BarChartMeasurePointInAlarmByAreas: IBarChart, BarChartFonctionNotLinkedByAreas: IBarChart, factoryInfo: IDataBaseFactoryData) => {
+export const getAreasMeasurePointStatusAndAlarmAndFonctionNotLinked = (data: any, BarChartMeasurePointStatusByAreas: IBarAndMixeChart, BarChartMeasurePointInAlarmByAreas: IBarAndMixeChart, BarChartFonctionNotLinkedByAreas: IBarAndMixeChart, factoryInfo: IDataBaseFactoryData) => {
     BarChartMeasurePointStatusByAreas = initBarchar( BarChartMeasurePointStatusByAreas, factoryInfo.currency)
     BarChartMeasurePointInAlarmByAreas = initBarchar( BarChartMeasurePointInAlarmByAreas, factoryInfo.currency)
     BarChartFonctionNotLinkedByAreas = initBarchar( BarChartFonctionNotLinkedByAreas, factoryInfo.currency)

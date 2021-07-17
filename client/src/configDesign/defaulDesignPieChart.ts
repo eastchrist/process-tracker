@@ -11,7 +11,7 @@ export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
         show: true,
         text: 'Pie01 ' + i18n.t(`trend.PieChartMeasurePointStatusByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -22,7 +22,7 @@ export const defaultPieChartMeasurePointStatusByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartMeasurePointStatusByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'bold',
                 fontFamily: "Arial",
@@ -107,7 +107,7 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
         show: true,
         text: 'Pie02 ' + i18n.t(`trend.PieChartProjectStatusByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -118,7 +118,7 @@ export const defaultPieChartProjectStatusByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectStatusByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -203,7 +203,7 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
         show: true,
         text: 'Pie03 ' + i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -214,7 +214,7 @@ export const defaultPieChartProjectAllTypeNumberByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectAllTypeNumberByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -303,7 +303,7 @@ export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
         show: true,
         text: 'Pie04 ' + i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -314,7 +314,7 @@ export const defaultPieChartProjectAllInitialLossesByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectAllInitialLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -403,7 +403,7 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
         show: true,
         text: 'Pie05 ' + i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -414,7 +414,7 @@ export const defaultPieChartProjectRunningTypeNumberByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectRunningTypeNumberByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -503,7 +503,7 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
         show: true,
         text: 'Pie06 ' +i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -514,7 +514,7 @@ export const defaultPieChartProjectRunningInitialLossesByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectRunningInitialLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
@@ -603,7 +603,7 @@ export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
         show: true,
         text: 'Pie07 ' + i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.title`) + '',
         textStyle: {
-            fontSize: 10,
+            fontSize: 12,
             color: 'green',
             fontWeight: 'bold',
             fontFamily: "Arial",
@@ -614,7 +614,7 @@ export const defaultPieChartProjectRunningCurrentLossesByFactory: IPieChart = {
         titleSub: {
             text: i18n.t(`trend.PieChartProjectRunningCurrentLossesByFactory.titleSub`) + '',
             textStyle: {
-                fontSize: 10,
+                fontSize: 12,
                 color: "blue",
                 fontWeight: 'normal',
                 fontFamily: "Arial",
