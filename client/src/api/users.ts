@@ -66,15 +66,6 @@ export const updateDBUsers = (data: any) =>
         data
     })
 
-//export const getDBUserInfo = ( data: any) =>
-//    requestSql({
-//        headers: { },
-//        url: 'http://localhost:9528/users/info',
-//        method: 'post',
-//        withCredentials: true,
-//        data
-//    })
-
 export const getDBUserInfoWithToken = (data: any) =>
     requestSql({
         headers: { },

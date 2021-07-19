@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7cd0450-c7f7-4e5c-a025-b2cc6248b072" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/css/chunk-5fc7a246.8e6c7706.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-5fc7a246.d117e546.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-98999518.fbc6f171.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a82a1b16.ba1c77bf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/js/index.8d61471d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/precache-manifest.ae4e7cc8cabe36281a309678b42460a6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-22ef238a.744af399.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/js/chunk-a82a1b16.24da0cb7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/js/index.4dc94dc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/precache-manifest.464fe565286c19b636feb66141f0664b.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/public/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="Z:/process-tracker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Run Server Run">
+  <component name="RunManager" selected="npm.Compile Client">
     <configuration name="Compile Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -312,7 +308,8 @@
       <workItem from="1626645900917" duration="928000" />
       <workItem from="1626667531185" duration="18000" />
       <workItem from="1626667550839" duration="2165000" />
-      <workItem from="1626672654081" duration="555000" />
+      <workItem from="1626672654081" duration="934000" />
+      <workItem from="1626692439904" duration="2636000" />
     </task>
     <servers />
   </component>

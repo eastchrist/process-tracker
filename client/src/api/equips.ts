@@ -47,7 +47,7 @@ export const defaultEquipExcelHeader = ['id', 'idNode', 'name', 'name1', 'positi
 export const getDBEquips = (params: any) =>
     requestSql({
         headers: { },
-        url: 'http://localhost:9528/equips/all',
+        url: '/equips/all',
         method: 'get',
         params
     })
