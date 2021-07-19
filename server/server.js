@@ -54,10 +54,10 @@ app.use(bodyParser.urlencoded( {limit: '50mb', extended: true} ));
 app.use(cookieParser());
 
 // jwt
-app.get('*', checkUser);
-app.get('/jwtid', requireAuth, (req, res) => {
-  res.status(200).send(res.locals.user._id)
-});
+//app.get('*', checkUser);
+//app.get('/jwtid', requireAuth, (req, res) => {
+//  res.status(200).send(res.locals.user._id)
+//});
 
 // routes
 app.use('/users', userRoutes);
